@@ -2927,7 +2927,7 @@
   ],
   "doPositiveControlSynthesis": false,
   "id": 73,
-  "packageName": "RanitidineVsCimetidine",
+  "packageName": "RanitidineCancerRisk",
   "negativeControls": [
     {
       "targetId": 547,

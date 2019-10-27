@@ -2,7 +2,7 @@
 #
 # Copyright 2018 Observational Health Data Sciences and Informatics
 #
-# This file is part of RanitidineVsCimetidine
+# This file is part of RanitidineCancerRisk
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,10 +16,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#' RanitidineVsCimetidine
+#' RanitidineCancerRisk
 #'
 #' @docType package
-#' @name RanitidineVsCimetidine
+#' @name RanitidineCancerRisk
 #' @importFrom stats aggregate density pnorm qnorm quantile
 #' @importFrom utils read.csv write.csv install.packages menu setTxtProgressBar txtProgressBar write.table
 #' @import DatabaseConnector

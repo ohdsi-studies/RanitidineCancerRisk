@@ -1,4 +1,4 @@
-RanitidineVsCimetidine
+RanitidineCancerRisk
 ==============================
 
 
@@ -37,14 +37,14 @@ How to run
 	
 	Alternatively, ensure that you have installed both 32-bit and 64-bit JDK versions, as mentioned in the [video tutorial](https://youtu.be/K9_0s2Rchbo).
 	
-2. In 'R', use the following code to install the RanitidineVsCimetidine package:
+2. In 'R', use the following code to install the RanitidineCancerRisk package:
 
   To do: Need to provide some instructions for installing the study package itself.
 	
 3. Once installed, you can execute the study by modifying and using the following code:
 	
 	```r
-	library(RanitidineVsCimetidine)
+	library(RanitidineCancerRisk)
 	
 	# Optional: specify where the temporary files (used by the ff package) will be created:
 	options(fftempdir = "c:/FFtemp")
@@ -56,7 +56,7 @@ How to run
 	minCellCount <- 5
 	
 	# The folder where the study intermediate and result files will be written:
-	outputFolder <- "c:/RanitidineVsCimetidine"
+	outputFolder <- "c:/RanitidineCancerRisk"
 	
 	# Details for connecting to the server:
 	# See ?DatabaseConnector::createConnectionDetails for help
@@ -118,12 +118,12 @@ How to run
 
 License
 =======
-The RanitidineVsCimetidine package is licensed under Apache License 2.0
+The RanitidineCancerRisk package is licensed under Apache License 2.0
 
 
 Development
 ===========
-RanitidineVsCimetidine was developed in ATLAS and R Studio.
+RanitidineCancerRisk was developed in ATLAS and R Studio.
 
 ### Development status
 

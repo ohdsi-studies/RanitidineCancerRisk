@@ -5,11 +5,11 @@
 	"actions":[{
 		"type": "fileNameFindAndReplace",
 		"input": "packageName",
-		"find": "RanitidineVsCimetidine"
+		"find": "RanitidineCancerRisk"
 	},{
 		"type": "stringFindAndReplace",
 		"input": "packageName",
-		"find": "RanitidineVsCimetidine"
+		"find": "RanitidineCancerRisk"
 	},{
 		"type": "jsonArrayToCsv",
 		"input": "cohortDefinitions",

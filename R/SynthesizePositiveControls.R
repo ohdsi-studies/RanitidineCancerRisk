@@ -1,6 +1,6 @@
 # Copyright 2018 Observational Health Data Sciences and Informatics
 #
-# This file is part of RanitidineVsCimetidine
+# This file is part of RanitidineCancerRisk
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -55,12 +55,12 @@ synthesizePositiveControls <- function(connectionDetails,
   
   synthesisSummaryFile <- file.path(outputFolder, "SynthesisSummary.csv")
   if (!file.exists(synthesisSummaryFile)) {
-    pathToCsv <- system.file("settings", "NegativeControls.csv", package = "RanitidineVsCimetidine")
+    pathToCsv <- system.file("settings", "NegativeControls.csv", package = "RanitidineCancerRisk")
     negativeControls <- read.csv(pathToCsv)
     exposureOutcomePairs <- data.frame(exposureId = negativeControls$targetId,
                                        outcomeId = negativeControls$outcomeId)
     exposureOutcomePairs <- unique(exposureOutcomePairs)
-    pathToJson <- system.file("settings", "positiveControlSynthArgs.json", package = "RanitidineVsCimetidine")
+    pathToJson <- system.file("settings", "positiveControlSynthArgs.json", package = "RanitidineCancerRisk")
     args <- ParallelLogger::loadSettingsFromJson(pathToJson)
     args$control$threads <- min(c(10, maxCores))
     
@@ -103,7 +103,7 @@ synthesizePositiveControls <- function(connectionDetails,
     result <- read.csv(synthesisSummaryFile)
   }
   ParallelLogger::logTrace("Merging positive with negative controls ")
-  pathToCsv <- system.file("settings", "NegativeControls.csv", package = "RanitidineVsCimetidine")
+  pathToCsv <- system.file("settings", "NegativeControls.csv", package = "RanitidineCancerRisk")
   negativeControls <- read.csv(pathToCsv)
   
   synthesisSummary <- read.csv(synthesisSummaryFile)
@@ -114,7 +114,7 @@ synthesizePositiveControls <- function(connectionDetails,
   synthesisSummary$oldOutcomeId <- synthesisSummary$outcomeId
   synthesisSummary$outcomeId <- synthesisSummary$newOutcomeId
   
-  pathToCsv <- system.file("settings", "NegativeControls.csv", package = "RanitidineVsCimetidine")
+  pathToCsv <- system.file("settings", "NegativeControls.csv", package = "RanitidineCancerRisk")
   negativeControls <- read.csv(pathToCsv)
   negativeControls$targetEffectSize <- 1
   negativeControls$trueEffectSize <- 1

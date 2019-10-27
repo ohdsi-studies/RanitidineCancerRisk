@@ -1,6 +1,6 @@
 # Copyright 2018 Observational Health Data Sciences and Informatics
 #
-# This file is part of RanitidineVsCimetidine
+# This file is part of RanitidineCancerRisk
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@
 
 # Format and check code ---------------------------------------------------
 OhdsiRTools::formatRFolder()
-OhdsiRTools::checkUsagePackage("RanitidineVsCimetidine")
+OhdsiRTools::checkUsagePackage("RanitidineCancerRisk")
 OhdsiRTools::updateCopyrightYearFolder()
 
 # Create manual -----------------------------------------------------------
-shell("rm extras/RanitidineVsCimetidine.pdf")
-shell("R CMD Rd2pdf ./ --output=extras/RanitidineVsCimetidine.pdf")
+shell("rm extras/RanitidineCancerRisk.pdf")
+shell("R CMD Rd2pdf ./ --output=extras/RanitidineCancerRisk.pdf")
 
 # Create vignettes ---------------------------------------------------------
 rmarkdown::render("vignettes/UsingSkeletonPackage.Rmd",
@@ -42,7 +42,7 @@ OhdsiRTools::insertCohortDefinitionSetInPackage(fileName = "CohortsToCreate.csv"
                                                 insertTableSql = TRUE,
                                                 insertCohortCreationR = TRUE,
                                                 generateStats = FALSE,
-                                                packageName = "RanitidineVsCimetidine")
+                                                packageName = "RanitidineCancerRisk")
 
 # Create analysis details -------------------------------------------------
 source("extras/CreateStudyAnalysisDetails.R")
@@ -50,4 +50,4 @@ createAnalysesDetails("inst/settings/")
 createPositiveControlSynthesisArgs("inst/settings/")
 
 # Store environment in which the study was executed -----------------------
-OhdsiRTools::insertEnvironmentSnapshotInPackage("RanitidineVsCimetidine")
+OhdsiRTools::insertEnvironmentSnapshotInPackage("RanitidineCancerRisk")

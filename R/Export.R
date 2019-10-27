@@ -1,6 +1,6 @@
 # Copyright 2018 Observational Health Data Sciences and Informatics
 #
-# This file is part of RanitidineVsCimetidine
+# This file is part of RanitidineCancerRisk
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -87,7 +87,7 @@ exportAnalyses <- function(outputFolder, exportFolder) {
   
   cmAnalysisListFile <- system.file("settings",
                                     "cmAnalysisList.json",
-                                    package = "RanitidineVsCimetidine")
+                                    package = "RanitidineCancerRisk")
   cmAnalysisList <- CohortMethod::loadCmAnalysisList(cmAnalysisListFile)
   cmAnalysisToRow <- function(cmAnalysis) {
     ParallelLogger::saveSettingsToJson(cmAnalysis, tempFileName)
@@ -124,14 +124,14 @@ exportAnalyses <- function(outputFolder, exportFolder) {
 exportExposures <- function(outputFolder, exportFolder) {
   ParallelLogger::logInfo("Exporting exposures")
   ParallelLogger::logInfo("- exposure_of_interest table")
-  pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "RanitidineVsCimetidine")
+  pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "RanitidineCancerRisk")
   tcosOfInterest <- read.csv(pathToCsv, stringsAsFactors = FALSE)
-  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "RanitidineVsCimetidine")
+  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "RanitidineCancerRisk")
   cohortsToCreate <- read.csv(pathToCsv)
   createExposureRow <- function(exposureId) {
     atlasName <- as.character(cohortsToCreate$atlasName[cohortsToCreate$cohortId == exposureId])
     name <- as.character(cohortsToCreate$name[cohortsToCreate$cohortId == exposureId])
-    cohortFileName <- system.file("cohorts", paste0(name, ".json"), package = "RanitidineVsCimetidine")
+    cohortFileName <- system.file("cohorts", paste0(name, ".json"), package = "RanitidineCancerRisk")
     definition <- readChar(cohortFileName, file.info(cohortFileName)$size)
     return(data.frame(exposureId = exposureId,
                       exposureName = atlasName,
@@ -148,12 +148,12 @@ exportExposures <- function(outputFolder, exportFolder) {
 exportOutcomes <- function(outputFolder, exportFolder) {
   ParallelLogger::logInfo("Exporting outcomes")
   ParallelLogger::logInfo("- outcome_of_interest table")
-  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "RanitidineVsCimetidine")
+  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "RanitidineCancerRisk")
   cohortsToCreate <- read.csv(pathToCsv)
   createOutcomeRow <- function(outcomeId) {
     atlasName <- as.character(cohortsToCreate$atlasName[cohortsToCreate$cohortId == outcomeId])
     name <- as.character(cohortsToCreate$name[cohortsToCreate$cohortId == outcomeId])
-    cohortFileName <- system.file("cohorts", paste0(name, ".json"), package = "RanitidineVsCimetidine")
+    cohortFileName <- system.file("cohorts", paste0(name, ".json"), package = "RanitidineCancerRisk")
     definition <- readChar(cohortFileName, file.info(cohortFileName)$size)
     return(data.frame(outcomeId = outcomeId,
                       outcomeName = atlasName,
@@ -168,7 +168,7 @@ exportOutcomes <- function(outputFolder, exportFolder) {
   
   
   ParallelLogger::logInfo("- negative_control_outcome table")
-  pathToCsv <- system.file("settings", "NegativeControls.csv", package = "RanitidineVsCimetidine")
+  pathToCsv <- system.file("settings", "NegativeControls.csv", package = "RanitidineCancerRisk")
   negativeControls <- read.csv(pathToCsv)
   negativeControls <- negativeControls[tolower(negativeControls$type) == "outcome", ]
   negativeControls <- negativeControls[, c("outcomeId", "outcomeName")]
@@ -180,7 +180,7 @@ exportOutcomes <- function(outputFolder, exportFolder) {
   synthesisSummaryFile <- file.path(outputFolder, "SynthesisSummary.csv")
   if (file.exists(synthesisSummaryFile)) {
     positiveControls <- read.csv(synthesisSummaryFile, stringsAsFactors = FALSE)
-    pathToCsv <- system.file("settings", "NegativeControls.csv", package = "RanitidineVsCimetidine")
+    pathToCsv <- system.file("settings", "NegativeControls.csv", package = "RanitidineCancerRisk")
     negativeControls <- read.csv(pathToCsv)
     positiveControls <- merge(positiveControls,
                               negativeControls[, c("outcomeId", "outcomeName")])
