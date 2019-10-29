@@ -80,7 +80,7 @@ from
 (
   select de.* 
   FROM @cdm_database_schema.DRUG_ERA de
-where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 0)
+where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 3)
 ) C
 
 WHERE DATEDIFF(d,C.drug_era_start_date, C.drug_era_end_date) >= 30
@@ -157,7 +157,7 @@ from
 (
   select de.* 
   FROM @cdm_database_schema.DRUG_ERA de
-where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 3)
+where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 0)
 ) C
 
 
@@ -367,14 +367,14 @@ FROM (
 	select de.PERSON_ID, DRUG_EXPOSURE_START_DATE,  COALESCE(DRUG_EXPOSURE_END_DATE, DATEADD(day,DAYS_SUPPLY,DRUG_EXPOSURE_START_DATE), DATEADD(day,1,DRUG_EXPOSURE_START_DATE)) as DRUG_EXPOSURE_END_DATE 
 	FROM @cdm_database_schema.DRUG_EXPOSURE de
 	JOIN ctePersons p on de.person_id = p.person_id
-	JOIN #Codesets cs on cs.codeset_id = 0 AND de.drug_concept_id = cs.concept_id
+	JOIN #Codesets cs on cs.codeset_id = 3 AND de.drug_concept_id = cs.concept_id
 
 	UNION ALL
 
 	select de.PERSON_ID, DRUG_EXPOSURE_START_DATE,  COALESCE(DRUG_EXPOSURE_END_DATE, DATEADD(day,DAYS_SUPPLY,DRUG_EXPOSURE_START_DATE), DATEADD(day,1,DRUG_EXPOSURE_START_DATE)) as DRUG_EXPOSURE_END_DATE 
 	FROM @cdm_database_schema.DRUG_EXPOSURE de
 	JOIN ctePersons p on de.person_id = p.person_id
-	JOIN #Codesets cs on cs.codeset_id = 0 AND de.drug_source_concept_id = cs.concept_id
+	JOIN #Codesets cs on cs.codeset_id = 3 AND de.drug_source_concept_id = cs.concept_id
 ) E
 ;
 
@@ -464,7 +464,7 @@ from
 (
   select de.* 
   FROM @cdm_database_schema.DRUG_ERA de
-where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 3)
+where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 0)
 ) C
 
 

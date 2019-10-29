@@ -158,7 +158,7 @@
     }
   ],
   "EndStrategy": {"CustomEra": {
-    "DrugCodesetId": 0,
+    "DrugCodesetId": 3,
     "GapDays": 30,
     "Offset": 0
   }},
@@ -182,7 +182,7 @@
       "OccurrenceCount": null,
       "AgeAtStart": null,
       "GapDays": null,
-      "CodesetId": 3,
+      "CodesetId": 0,
       "AgeAtEnd": null,
       "First": null,
       "Gender": null,
@@ -280,7 +280,7 @@
               "OccurrenceCount": null,
               "AgeAtStart": null,
               "GapDays": null,
-              "CodesetId": 3,
+              "CodesetId": 0,
               "AgeAtEnd": null,
               "First": null,
               "Gender": null,
@@ -474,7 +474,7 @@
       "OccurrenceCount": null,
       "AgeAtStart": null,
       "GapDays": null,
-      "CodesetId": 0,
+      "CodesetId": 3,
       "AgeAtEnd": null,
       "First": null,
       "Gender": null,
