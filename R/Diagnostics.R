@@ -41,6 +41,8 @@ generateDiagnostics <- function(outputFolder, maxCores) {
   reference <- merge(reference, analysisSummary[, c("targetId", "comparatorId", "outcomeId", "analysisId", "logRr", "seLogRr")])
   allControls <- getAllControls(outputFolder)
   subsets <- split(reference, list(reference$targetId, reference$comparatorId, reference$analysisId))
+  #remove empty row in subsets
+  subsets<-subsets[lapply(subsets,nrow)>0]
   # subset <- subsets[[1]]
   cluster <- ParallelLogger::makeCluster(min(4, maxCores))
   ParallelLogger::clusterApply(cluster = cluster, 
