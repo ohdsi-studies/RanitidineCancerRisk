@@ -155,10 +155,31 @@
       }]},
       "name": "Gastric ulcer",
       "id": 6
+    },
+    {
+      "expression": {"items": [{
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 43009003,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "OMOP4700429",
+          "VOCABULARY_ID": "RxNorm Extension",
+          "CONCEPT_NAME": "lafutidine",
+          "DOMAIN_ID": "Drug",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Ingredient",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      }]},
+      "name": "lafutidine",
+      "id": 7
     }
   ],
   "EndStrategy": {"CustomEra": {
-    "DrugCodesetId": 3,
+    "DrugCodesetId": 1,
     "GapDays": 30,
     "Offset": 0
   }},
@@ -169,7 +190,7 @@
       "OccurrenceCount": null,
       "AgeAtStart": null,
       "GapDays": null,
-      "CodesetId": 1,
+      "CodesetId": 0,
       "AgeAtEnd": null,
       "First": null,
       "Gender": null,
@@ -182,7 +203,7 @@
       "OccurrenceCount": null,
       "AgeAtStart": null,
       "GapDays": null,
-      "CodesetId": 0,
+      "CodesetId": 3,
       "AgeAtEnd": null,
       "First": null,
       "Gender": null,
@@ -209,6 +230,19 @@
       "AgeAtStart": null,
       "GapDays": null,
       "CodesetId": 5,
+      "AgeAtEnd": null,
+      "First": null,
+      "Gender": null,
+      "EraLength": null,
+      "EraEndDate": null
+    }},
+    {"DrugEra": {
+      "EraStartDate": null,
+      "CorrelatedCriteria": null,
+      "OccurrenceCount": null,
+      "AgeAtStart": null,
+      "GapDays": null,
+      "CodesetId": 7,
       "AgeAtEnd": null,
       "First": null,
       "Gender": null,
@@ -245,7 +279,7 @@
               "OccurrenceCount": null,
               "AgeAtStart": null,
               "GapDays": null,
-              "CodesetId": 1,
+              "CodesetId": 0,
               "AgeAtEnd": null,
               "First": null,
               "Gender": null,
@@ -280,7 +314,7 @@
               "OccurrenceCount": null,
               "AgeAtStart": null,
               "GapDays": null,
-              "CodesetId": 0,
+              "CodesetId": 3,
               "AgeAtEnd": null,
               "First": null,
               "Gender": null,
@@ -351,6 +385,41 @@
               "AgeAtStart": null,
               "GapDays": null,
               "CodesetId": 5,
+              "AgeAtEnd": null,
+              "First": null,
+              "Gender": null,
+              "EraLength": null,
+              "EraEndDate": null
+            }},
+            "Occurrence": {
+              "Type": 1,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          },
+          {
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 0,
+                "Coeff": 1
+              },
+              "UseIndexEnd": null
+            },
+            "IgnoreObservationPeriod": false,
+            "EndWindow": null,
+            "Criteria": {"DrugEra": {
+              "EraStartDate": null,
+              "CorrelatedCriteria": null,
+              "OccurrenceCount": null,
+              "AgeAtStart": null,
+              "GapDays": null,
+              "CodesetId": 7,
               "AgeAtEnd": null,
               "First": null,
               "Gender": null,
@@ -474,7 +543,7 @@
       "OccurrenceCount": null,
       "AgeAtStart": null,
       "GapDays": null,
-      "CodesetId": 3,
+      "CodesetId": 1,
       "AgeAtEnd": null,
       "First": null,
       "Gender": null,

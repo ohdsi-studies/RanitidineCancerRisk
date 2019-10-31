@@ -49,5 +49,13 @@ source("extras/CreateStudyAnalysisDetails.R")
 createAnalysesDetails("inst/settings/")
 createPositiveControlSynthesisArgs("inst/settings/")
 
+# Create TCOs and negative controls----------------------------------------
+source("extras/createTcosOfInterest.r")
+createTcosOfInterest(workFolder="inst/settings/",
+                     outcomeIds=c(549,550),
+                     includedCovariateConceptIds="",
+                     updateNegativeControls=T,
+                     negativeControlConceptIds=NULL)
+
 # Store environment in which the study was executed -----------------------
 OhdsiRTools::insertEnvironmentSnapshotInPackage("RanitidineCancerRisk")

@@ -1,0 +1,7 @@
+Concept Set ID,Name,Concept ID,Concept Code,Concept Name,Domain,Vocabulary,Standard Concept,Exclude,Descendants,Mapped
+1857896,H2blocker,961047,9143,Ranitidine,Drug,RxNorm,S,FALSE,FALSE,FALSE
+1857896,H2blocker,43009003,OMOP4700429,lafutidine,Drug,RxNorm Extension,S,FALSE,FALSE,FALSE
+1857896,H2blocker,953076,4278,Famotidine,Drug,RxNorm,S,FALSE,FALSE,FALSE
+1857896,H2blocker,950696,42319,Nizatidine,Drug,RxNorm,S,FALSE,FALSE,FALSE
+1857896,H2blocker,19011685,114817,roxatidine,Drug,RxNorm,S,FALSE,FALSE,FALSE
+1857896,H2blocker,997276,2541,Cimetidine,Drug,RxNorm,S,FALSE,FALSE,FALSE

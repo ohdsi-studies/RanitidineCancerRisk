@@ -1,6 +1,9 @@
 atlasId,atlasName,cohortId,name
-547,SCYou:ranitidine,547,SCYouranitidine
-660,SCYou:cimetidine,660,SCYoucimetidine
-549,SCYou:cancer,549,SCYoucancer
-550,SCYou:gynecomastia,550,SCYougynecomastia
-661,SCYou:famotidine,661,SCYoufamotidine
+696,Ranitidine user without gastric ulcer,1857896,Ranitidine_user_without_gastric_ulcer
+698,Cimetidine user without gastric ulcer,1857896,Cimetidine_user_without_gastric_ulcer
+549,Cancer,549,Cancer
+550,Gynecomastia,550,Gynecomastia
+697,Lafutidine user without gastric ulcer,1857896,Lafutidine_user_without_gastric_ulcer
+700,Famotidine user without gastric ulcer,1857896,Famotidine_user_without_gastric_ulcer
+701,Nizatidine user without gastric ulcer,1857896,Nizatidine_user_without_gastric_ulcer
+702,Roxatidine user without gastric ulcer,1857896,Roxatidine_user_without_gastric_ulcer

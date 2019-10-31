@@ -5,9 +5,9 @@ CREATE TABLE #Codesets (
 ;
 
 INSERT INTO #Codesets (ancestor_concept_id, concept_id)
- SELECT ancestor_concept_id, descendant_concept_id
- FROM @cdm_database_schema.CONCEPT_ANCESTOR
- WHERE ancestor_concept_id IN (@outcome_ids)
+ SELECT concept_id, concept_id
+ FROM @cdm_database_schema.CONCEPT
+ WHERE concept_id IN (@outcome_ids)
 ;
 
 INSERT INTO @target_database_schema.@target_cohort_table (
