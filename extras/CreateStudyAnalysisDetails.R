@@ -52,7 +52,9 @@ createAnalysesDetails <- function(workFolder) {
                                                                                     startingVariance = 0.01,
                                                                                     noiseLevel = "quiet",
                                                                                     tolerance = 2e-07,
-                                                                                    cvRepetitions = 10))
+                                                                                    cvRepetitions = 10),
+                                                   errorOnHighCorrelation = TRUE,
+                                                   stopOnError = FALSE)
   
   matchOnPsArgs1 <- CohortMethod::createMatchOnPsArgs(maxRatio = 1)
   
