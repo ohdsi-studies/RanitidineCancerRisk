@@ -1,7 +1,14 @@
 atlasId,atlasName,cohortId,name
 696,Ranitidine user without gastric ulcer,961047,Ranitidine_user_without_gastric_ulcer
 698,Cimetidine user without gastric ulcer,997276,Cimetidine_user_without_gastric_ulcer
-549,Cancer,549,Cancer
+549,Overall Cancer,549,Cancer
+761,Thyroid Cancer,761,Thyroid_cancer
+765,Colorectal Cancer,765,Colorectal_cancer
+763,Lung cancer,763,Lung_cancer
+764,Stomach cancer,764,Stomach_cancer
+762,Liver cancer,762,Liver_cancer
+759,Prostate cancer,759,Prostate_cancer
+760,Breast cancer,760,Breast_cancer
 550,Gynecomastia,550,Gynecomastia
 697,Lafutidine user without gastric ulcer,43009003,Lafutidine_user_without_gastric_ulcer
 700,Famotidine user without gastric ulcer,953076,Famotidine_user_without_gastric_ulcer
