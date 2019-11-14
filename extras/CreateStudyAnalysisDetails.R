@@ -15,7 +15,13 @@
 # limitations under the License.
 
 createAnalysesDetails <- function(workFolder) {
-  covarSettings <- FeatureExtraction::createDefaultCovariateSettings(addDescendantsToExclude = TRUE)
+  covarSettings <- FeatureExtraction::createDefaultCovariateSettings(excludedCovariateConceptIds = c(19011685,
+                                                                                                     961047,
+                                                                                                     950696, 
+                                                                                                     43009003,
+                                                                                                     953076,
+                                                                                                     997276),
+                                                                     addDescendantsToExclude = TRUE)
   
   getDbCmDataArgs <- CohortMethod::createGetDbCohortMethodDataArgs(washoutPeriod = 365,
                                                                    restrictToCommonPeriod = TRUE,
