@@ -1,1021 +1,1531 @@
-outcomeId,outcomeName,targetId,comparatorId,type
-378256,Abnormal reflex,961047,953076,outcome
-4218106,Alcoholism,961047,953076,outcome
-317585,Aortic aneurysm,961047,953076,outcome
-440424,Aphasia,961047,953076,outcome
-439237,Assault,961047,953076,outcome
-378424,Astigmatism,961047,953076,outcome
-261880,Atelectasis,961047,953076,outcome
-134118,Atrophic condition of skin,961047,953076,outcome
-4224118,Bladder dysfunction,961047,953076,outcome
-80509,Bone cyst,961047,953076,outcome
-434626,Borderline personality disorder,961047,953076,outcome
-438407,Bulimia nervosa,961047,953076,outcome
-134765,Cachexia,961047,953076,outcome
-4172458,Candidiasis of skin,961047,953076,outcome
-436740,Cervical incompetence,961047,953076,outcome
-381581,Chalazion,961047,953076,outcome
-4307254,Closed fracture,961047,953076,outcome
-4047787,Colles' fracture,961047,953076,outcome
-198075,Condyloma acuminatum,961047,953076,outcome
-73302,Curvature of spine,961047,953076,outcome
-4242416,Cutis laxa,961047,953076,outcome
-433163,Deficiency of macronutrients,961047,953076,outcome
-4047269,Deformity of foot,961047,953076,outcome
-133228,Dental caries,961047,953076,outcome
-4095288,Diabetic coma with ketoacidosis,961047,953076,outcome
-4044391,Diabetic neuropathy,961047,953076,outcome
-443767,Diabetic oculopathy,961047,953076,outcome
-4174977,Diabetic retinopathy,961047,953076,outcome
-4132130,Dilatation of aorta,961047,953076,outcome
-4147672,Disease due to Papilloma virus,961047,953076,outcome
-4153380,Disorder of carotid artery,961047,953076,outcome
-4140510,Disorder of lymphatic vessel,961047,953076,outcome
-433440,Dysthymia,961047,953076,outcome
-376132,Ectropion,961047,953076,outcome
-440695,Encopresis,961047,953076,outcome
-438872,Excessive eating - polyphagia,961047,953076,outcome
-78804,Fibrocystic disease of breast,961047,953076,outcome
-4131595,Fracture of radius,961047,953076,outcome
-74855,Genital herpes simplex,961047,953076,outcome
-441788,Human papilloma virus infection,961047,953076,outcome
-76737,Hydrocele,961047,953076,outcome
-4029582,Hyperandrogenization syndrome,961047,953076,outcome
-195212,Hypercortisolism,961047,953076,outcome
-438134,Hypersomnia,961047,953076,outcome
-45768449,Hypertensive crisis,961047,953076,outcome
-140362,Hypoparathyroidism,961047,953076,outcome
-4322737,Infection of tooth,961047,953076,outcome
-4207688,Infectious enteritis,961047,953076,outcome
-79072,Inflammatory disorder of breast,961047,953076,outcome
-139099,Ingrowing nail,961047,953076,outcome
-4288544,Inguinal hernia,961047,953076,outcome
-444191,Injury of face,961047,953076,outcome
-444130,Injury of foot,961047,953076,outcome
-134222,Injury of forearm,961047,953076,outcome
-4029966,Intracranial aneurysm,961047,953076,outcome
-437409,Intracranial injury,961047,953076,outcome
-4297984,Local infection of wound,961047,953076,outcome
-4018050,Localized infection,961047,953076,outcome
-439840,Lymphangitis,961047,953076,outcome
-4163232,Mastitis,961047,953076,outcome
-440389,Mental retardation,961047,953076,outcome
-436100,Narcolepsy,961047,953076,outcome
-4262178,Neurogenic dysfunction of the urinary bladder,961047,953076,outcome
-193874,Nocturnal enuresis,961047,953076,outcome
-4171549,Nodular goiter,961047,953076,outcome
-442274,Oligomenorrhea,961047,953076,outcome
-4215978,Onychomycosis,961047,953076,outcome
-4171915,Orchitis,961047,953076,outcome
-380731,Otitis externa,961047,953076,outcome
-378160,Otorrhea,961047,953076,outcome
-192606,Paraplegia,961047,953076,outcome
-253796,Pneumothorax,961047,953076,outcome
-195501,Polycystic ovaries,961047,953076,outcome
-4164337,Polyp of large intestine,961047,953076,outcome
-4153877,Post-traumatic wound infection,961047,953076,outcome
-434319,Premature ejaculation,961047,953076,outcome
-373478,Presbyopia,961047,953076,outcome
-199876,Prolapse of female genital organs,961047,953076,outcome
-4295888,Prolapse of intestine,961047,953076,outcome
-194997,Prostatitis,961047,953076,outcome
-4146239,Pruritus of genital organs,961047,953076,outcome
-4285569,Pupillary disorder,961047,953076,outcome
-81336,Rectal prolapse,961047,953076,outcome
-380395,Retinal dystrophy,961047,953076,outcome
-141825,Simple goiter,961047,953076,outcome
-137054,Skin striae,961047,953076,outcome
-434630,Sleep-wake schedule disorder,961047,953076,outcome
-4195698,Tenosynovitis,961047,953076,outcome
-4339088,Testicular mass,961047,953076,outcome
-133141,Tinea pedis,961047,953076,outcome
-440814,Torticollis,961047,953076,outcome
-435140,Toxic effect of alcohol,961047,953076,outcome
-4270490,Tracheitis,961047,953076,outcome
-4028970,Tracheobronchitis,961047,953076,outcome
-4114197,Tumor of hypothalamus,961047,953076,outcome
-193326,Urge incontinence of urine,961047,953076,outcome
-4092565,Uterine prolapse,961047,953076,outcome
-140641,Verruca vulgaris,961047,953076,outcome
-197036,Vesicoureteric reflux,961047,953076,outcome
-133551,Vesicular eczema of hands and/or feet,961047,953076,outcome
-4223947,"Viral hepatitis, type A",961047,953076,outcome
-261326,Viral pneumonia,961047,953076,outcome
-378256,Abnormal reflex,961047,950696,outcome
-4218106,Alcoholism,961047,950696,outcome
-317585,Aortic aneurysm,961047,950696,outcome
-440424,Aphasia,961047,950696,outcome
-439237,Assault,961047,950696,outcome
-378424,Astigmatism,961047,950696,outcome
-261880,Atelectasis,961047,950696,outcome
-134118,Atrophic condition of skin,961047,950696,outcome
-4224118,Bladder dysfunction,961047,950696,outcome
-80509,Bone cyst,961047,950696,outcome
-434626,Borderline personality disorder,961047,950696,outcome
-438407,Bulimia nervosa,961047,950696,outcome
-134765,Cachexia,961047,950696,outcome
-4172458,Candidiasis of skin,961047,950696,outcome
-436740,Cervical incompetence,961047,950696,outcome
-381581,Chalazion,961047,950696,outcome
-4307254,Closed fracture,961047,950696,outcome
-4047787,Colles' fracture,961047,950696,outcome
-198075,Condyloma acuminatum,961047,950696,outcome
-73302,Curvature of spine,961047,950696,outcome
-4242416,Cutis laxa,961047,950696,outcome
-433163,Deficiency of macronutrients,961047,950696,outcome
-4047269,Deformity of foot,961047,950696,outcome
-133228,Dental caries,961047,950696,outcome
-4095288,Diabetic coma with ketoacidosis,961047,950696,outcome
-4044391,Diabetic neuropathy,961047,950696,outcome
-443767,Diabetic oculopathy,961047,950696,outcome
-4174977,Diabetic retinopathy,961047,950696,outcome
-4132130,Dilatation of aorta,961047,950696,outcome
-4147672,Disease due to Papilloma virus,961047,950696,outcome
-4153380,Disorder of carotid artery,961047,950696,outcome
-4140510,Disorder of lymphatic vessel,961047,950696,outcome
-433440,Dysthymia,961047,950696,outcome
-376132,Ectropion,961047,950696,outcome
-440695,Encopresis,961047,950696,outcome
-438872,Excessive eating - polyphagia,961047,950696,outcome
-78804,Fibrocystic disease of breast,961047,950696,outcome
-4131595,Fracture of radius,961047,950696,outcome
-74855,Genital herpes simplex,961047,950696,outcome
-441788,Human papilloma virus infection,961047,950696,outcome
-76737,Hydrocele,961047,950696,outcome
-4029582,Hyperandrogenization syndrome,961047,950696,outcome
-195212,Hypercortisolism,961047,950696,outcome
-438134,Hypersomnia,961047,950696,outcome
-45768449,Hypertensive crisis,961047,950696,outcome
-140362,Hypoparathyroidism,961047,950696,outcome
-4322737,Infection of tooth,961047,950696,outcome
-4207688,Infectious enteritis,961047,950696,outcome
-79072,Inflammatory disorder of breast,961047,950696,outcome
-139099,Ingrowing nail,961047,950696,outcome
-4288544,Inguinal hernia,961047,950696,outcome
-444191,Injury of face,961047,950696,outcome
-444130,Injury of foot,961047,950696,outcome
-134222,Injury of forearm,961047,950696,outcome
-4029966,Intracranial aneurysm,961047,950696,outcome
-437409,Intracranial injury,961047,950696,outcome
-4297984,Local infection of wound,961047,950696,outcome
-4018050,Localized infection,961047,950696,outcome
-439840,Lymphangitis,961047,950696,outcome
-4163232,Mastitis,961047,950696,outcome
-440389,Mental retardation,961047,950696,outcome
-436100,Narcolepsy,961047,950696,outcome
-4262178,Neurogenic dysfunction of the urinary bladder,961047,950696,outcome
-193874,Nocturnal enuresis,961047,950696,outcome
-4171549,Nodular goiter,961047,950696,outcome
-442274,Oligomenorrhea,961047,950696,outcome
-4215978,Onychomycosis,961047,950696,outcome
-4171915,Orchitis,961047,950696,outcome
-380731,Otitis externa,961047,950696,outcome
-378160,Otorrhea,961047,950696,outcome
-192606,Paraplegia,961047,950696,outcome
-253796,Pneumothorax,961047,950696,outcome
-195501,Polycystic ovaries,961047,950696,outcome
-4164337,Polyp of large intestine,961047,950696,outcome
-4153877,Post-traumatic wound infection,961047,950696,outcome
-434319,Premature ejaculation,961047,950696,outcome
-373478,Presbyopia,961047,950696,outcome
-199876,Prolapse of female genital organs,961047,950696,outcome
-4295888,Prolapse of intestine,961047,950696,outcome
-194997,Prostatitis,961047,950696,outcome
-4146239,Pruritus of genital organs,961047,950696,outcome
-4285569,Pupillary disorder,961047,950696,outcome
-81336,Rectal prolapse,961047,950696,outcome
-380395,Retinal dystrophy,961047,950696,outcome
-141825,Simple goiter,961047,950696,outcome
-137054,Skin striae,961047,950696,outcome
-434630,Sleep-wake schedule disorder,961047,950696,outcome
-4195698,Tenosynovitis,961047,950696,outcome
-4339088,Testicular mass,961047,950696,outcome
-133141,Tinea pedis,961047,950696,outcome
-440814,Torticollis,961047,950696,outcome
-435140,Toxic effect of alcohol,961047,950696,outcome
-4270490,Tracheitis,961047,950696,outcome
-4028970,Tracheobronchitis,961047,950696,outcome
-4114197,Tumor of hypothalamus,961047,950696,outcome
-193326,Urge incontinence of urine,961047,950696,outcome
-4092565,Uterine prolapse,961047,950696,outcome
-140641,Verruca vulgaris,961047,950696,outcome
-197036,Vesicoureteric reflux,961047,950696,outcome
-133551,Vesicular eczema of hands and/or feet,961047,950696,outcome
-4223947,"Viral hepatitis, type A",961047,950696,outcome
-261326,Viral pneumonia,961047,950696,outcome
-378256,Abnormal reflex,961047,19011685,outcome
-4218106,Alcoholism,961047,19011685,outcome
-317585,Aortic aneurysm,961047,19011685,outcome
-440424,Aphasia,961047,19011685,outcome
-439237,Assault,961047,19011685,outcome
-378424,Astigmatism,961047,19011685,outcome
-261880,Atelectasis,961047,19011685,outcome
-134118,Atrophic condition of skin,961047,19011685,outcome
-4224118,Bladder dysfunction,961047,19011685,outcome
-80509,Bone cyst,961047,19011685,outcome
-434626,Borderline personality disorder,961047,19011685,outcome
-438407,Bulimia nervosa,961047,19011685,outcome
-134765,Cachexia,961047,19011685,outcome
-4172458,Candidiasis of skin,961047,19011685,outcome
-436740,Cervical incompetence,961047,19011685,outcome
-381581,Chalazion,961047,19011685,outcome
-4307254,Closed fracture,961047,19011685,outcome
-4047787,Colles' fracture,961047,19011685,outcome
-198075,Condyloma acuminatum,961047,19011685,outcome
-73302,Curvature of spine,961047,19011685,outcome
-4242416,Cutis laxa,961047,19011685,outcome
-433163,Deficiency of macronutrients,961047,19011685,outcome
-4047269,Deformity of foot,961047,19011685,outcome
-133228,Dental caries,961047,19011685,outcome
-4095288,Diabetic coma with ketoacidosis,961047,19011685,outcome
-4044391,Diabetic neuropathy,961047,19011685,outcome
-443767,Diabetic oculopathy,961047,19011685,outcome
-4174977,Diabetic retinopathy,961047,19011685,outcome
-4132130,Dilatation of aorta,961047,19011685,outcome
-4147672,Disease due to Papilloma virus,961047,19011685,outcome
-4153380,Disorder of carotid artery,961047,19011685,outcome
-4140510,Disorder of lymphatic vessel,961047,19011685,outcome
-433440,Dysthymia,961047,19011685,outcome
-376132,Ectropion,961047,19011685,outcome
-440695,Encopresis,961047,19011685,outcome
-438872,Excessive eating - polyphagia,961047,19011685,outcome
-78804,Fibrocystic disease of breast,961047,19011685,outcome
-4131595,Fracture of radius,961047,19011685,outcome
-74855,Genital herpes simplex,961047,19011685,outcome
-441788,Human papilloma virus infection,961047,19011685,outcome
-76737,Hydrocele,961047,19011685,outcome
-4029582,Hyperandrogenization syndrome,961047,19011685,outcome
-195212,Hypercortisolism,961047,19011685,outcome
-438134,Hypersomnia,961047,19011685,outcome
-45768449,Hypertensive crisis,961047,19011685,outcome
-140362,Hypoparathyroidism,961047,19011685,outcome
-4322737,Infection of tooth,961047,19011685,outcome
-4207688,Infectious enteritis,961047,19011685,outcome
-79072,Inflammatory disorder of breast,961047,19011685,outcome
-139099,Ingrowing nail,961047,19011685,outcome
-4288544,Inguinal hernia,961047,19011685,outcome
-444191,Injury of face,961047,19011685,outcome
-444130,Injury of foot,961047,19011685,outcome
-134222,Injury of forearm,961047,19011685,outcome
-4029966,Intracranial aneurysm,961047,19011685,outcome
-437409,Intracranial injury,961047,19011685,outcome
-4297984,Local infection of wound,961047,19011685,outcome
-4018050,Localized infection,961047,19011685,outcome
-439840,Lymphangitis,961047,19011685,outcome
-4163232,Mastitis,961047,19011685,outcome
-440389,Mental retardation,961047,19011685,outcome
-436100,Narcolepsy,961047,19011685,outcome
-4262178,Neurogenic dysfunction of the urinary bladder,961047,19011685,outcome
-193874,Nocturnal enuresis,961047,19011685,outcome
-4171549,Nodular goiter,961047,19011685,outcome
-442274,Oligomenorrhea,961047,19011685,outcome
-4215978,Onychomycosis,961047,19011685,outcome
-4171915,Orchitis,961047,19011685,outcome
-380731,Otitis externa,961047,19011685,outcome
-378160,Otorrhea,961047,19011685,outcome
-192606,Paraplegia,961047,19011685,outcome
-253796,Pneumothorax,961047,19011685,outcome
-195501,Polycystic ovaries,961047,19011685,outcome
-4164337,Polyp of large intestine,961047,19011685,outcome
-4153877,Post-traumatic wound infection,961047,19011685,outcome
-434319,Premature ejaculation,961047,19011685,outcome
-373478,Presbyopia,961047,19011685,outcome
-199876,Prolapse of female genital organs,961047,19011685,outcome
-4295888,Prolapse of intestine,961047,19011685,outcome
-194997,Prostatitis,961047,19011685,outcome
-4146239,Pruritus of genital organs,961047,19011685,outcome
-4285569,Pupillary disorder,961047,19011685,outcome
-81336,Rectal prolapse,961047,19011685,outcome
-380395,Retinal dystrophy,961047,19011685,outcome
-141825,Simple goiter,961047,19011685,outcome
-137054,Skin striae,961047,19011685,outcome
-434630,Sleep-wake schedule disorder,961047,19011685,outcome
-4195698,Tenosynovitis,961047,19011685,outcome
-4339088,Testicular mass,961047,19011685,outcome
-133141,Tinea pedis,961047,19011685,outcome
-440814,Torticollis,961047,19011685,outcome
-435140,Toxic effect of alcohol,961047,19011685,outcome
-4270490,Tracheitis,961047,19011685,outcome
-4028970,Tracheobronchitis,961047,19011685,outcome
-4114197,Tumor of hypothalamus,961047,19011685,outcome
-193326,Urge incontinence of urine,961047,19011685,outcome
-4092565,Uterine prolapse,961047,19011685,outcome
-140641,Verruca vulgaris,961047,19011685,outcome
-197036,Vesicoureteric reflux,961047,19011685,outcome
-133551,Vesicular eczema of hands and/or feet,961047,19011685,outcome
-4223947,"Viral hepatitis, type A",961047,19011685,outcome
-261326,Viral pneumonia,961047,19011685,outcome
-378256,Abnormal reflex,961047,997276,outcome
-4218106,Alcoholism,961047,997276,outcome
-317585,Aortic aneurysm,961047,997276,outcome
-440424,Aphasia,961047,997276,outcome
-439237,Assault,961047,997276,outcome
-378424,Astigmatism,961047,997276,outcome
-261880,Atelectasis,961047,997276,outcome
-134118,Atrophic condition of skin,961047,997276,outcome
-4224118,Bladder dysfunction,961047,997276,outcome
-80509,Bone cyst,961047,997276,outcome
-434626,Borderline personality disorder,961047,997276,outcome
-438407,Bulimia nervosa,961047,997276,outcome
-134765,Cachexia,961047,997276,outcome
-4172458,Candidiasis of skin,961047,997276,outcome
-436740,Cervical incompetence,961047,997276,outcome
-381581,Chalazion,961047,997276,outcome
-4307254,Closed fracture,961047,997276,outcome
-4047787,Colles' fracture,961047,997276,outcome
-198075,Condyloma acuminatum,961047,997276,outcome
-73302,Curvature of spine,961047,997276,outcome
-4242416,Cutis laxa,961047,997276,outcome
-433163,Deficiency of macronutrients,961047,997276,outcome
-4047269,Deformity of foot,961047,997276,outcome
-133228,Dental caries,961047,997276,outcome
-4095288,Diabetic coma with ketoacidosis,961047,997276,outcome
-4044391,Diabetic neuropathy,961047,997276,outcome
-443767,Diabetic oculopathy,961047,997276,outcome
-4174977,Diabetic retinopathy,961047,997276,outcome
-4132130,Dilatation of aorta,961047,997276,outcome
-4147672,Disease due to Papilloma virus,961047,997276,outcome
-4153380,Disorder of carotid artery,961047,997276,outcome
-4140510,Disorder of lymphatic vessel,961047,997276,outcome
-433440,Dysthymia,961047,997276,outcome
-376132,Ectropion,961047,997276,outcome
-440695,Encopresis,961047,997276,outcome
-438872,Excessive eating - polyphagia,961047,997276,outcome
-78804,Fibrocystic disease of breast,961047,997276,outcome
-4131595,Fracture of radius,961047,997276,outcome
-74855,Genital herpes simplex,961047,997276,outcome
-441788,Human papilloma virus infection,961047,997276,outcome
-76737,Hydrocele,961047,997276,outcome
-4029582,Hyperandrogenization syndrome,961047,997276,outcome
-195212,Hypercortisolism,961047,997276,outcome
-438134,Hypersomnia,961047,997276,outcome
-45768449,Hypertensive crisis,961047,997276,outcome
-140362,Hypoparathyroidism,961047,997276,outcome
-4322737,Infection of tooth,961047,997276,outcome
-4207688,Infectious enteritis,961047,997276,outcome
-79072,Inflammatory disorder of breast,961047,997276,outcome
-139099,Ingrowing nail,961047,997276,outcome
-4288544,Inguinal hernia,961047,997276,outcome
-444191,Injury of face,961047,997276,outcome
-444130,Injury of foot,961047,997276,outcome
-134222,Injury of forearm,961047,997276,outcome
-4029966,Intracranial aneurysm,961047,997276,outcome
-437409,Intracranial injury,961047,997276,outcome
-4297984,Local infection of wound,961047,997276,outcome
-4018050,Localized infection,961047,997276,outcome
-439840,Lymphangitis,961047,997276,outcome
-4163232,Mastitis,961047,997276,outcome
-440389,Mental retardation,961047,997276,outcome
-436100,Narcolepsy,961047,997276,outcome
-4262178,Neurogenic dysfunction of the urinary bladder,961047,997276,outcome
-193874,Nocturnal enuresis,961047,997276,outcome
-4171549,Nodular goiter,961047,997276,outcome
-442274,Oligomenorrhea,961047,997276,outcome
-4215978,Onychomycosis,961047,997276,outcome
-4171915,Orchitis,961047,997276,outcome
-380731,Otitis externa,961047,997276,outcome
-378160,Otorrhea,961047,997276,outcome
-192606,Paraplegia,961047,997276,outcome
-253796,Pneumothorax,961047,997276,outcome
-195501,Polycystic ovaries,961047,997276,outcome
-4164337,Polyp of large intestine,961047,997276,outcome
-4153877,Post-traumatic wound infection,961047,997276,outcome
-434319,Premature ejaculation,961047,997276,outcome
-373478,Presbyopia,961047,997276,outcome
-199876,Prolapse of female genital organs,961047,997276,outcome
-4295888,Prolapse of intestine,961047,997276,outcome
-194997,Prostatitis,961047,997276,outcome
-4146239,Pruritus of genital organs,961047,997276,outcome
-4285569,Pupillary disorder,961047,997276,outcome
-81336,Rectal prolapse,961047,997276,outcome
-380395,Retinal dystrophy,961047,997276,outcome
-141825,Simple goiter,961047,997276,outcome
-137054,Skin striae,961047,997276,outcome
-434630,Sleep-wake schedule disorder,961047,997276,outcome
-4195698,Tenosynovitis,961047,997276,outcome
-4339088,Testicular mass,961047,997276,outcome
-133141,Tinea pedis,961047,997276,outcome
-440814,Torticollis,961047,997276,outcome
-435140,Toxic effect of alcohol,961047,997276,outcome
-4270490,Tracheitis,961047,997276,outcome
-4028970,Tracheobronchitis,961047,997276,outcome
-4114197,Tumor of hypothalamus,961047,997276,outcome
-193326,Urge incontinence of urine,961047,997276,outcome
-4092565,Uterine prolapse,961047,997276,outcome
-140641,Verruca vulgaris,961047,997276,outcome
-197036,Vesicoureteric reflux,961047,997276,outcome
-133551,Vesicular eczema of hands and/or feet,961047,997276,outcome
-4223947,"Viral hepatitis, type A",961047,997276,outcome
-261326,Viral pneumonia,961047,997276,outcome
-378256,Abnormal reflex,953076,950696,outcome
-4218106,Alcoholism,953076,950696,outcome
-317585,Aortic aneurysm,953076,950696,outcome
-440424,Aphasia,953076,950696,outcome
-439237,Assault,953076,950696,outcome
-378424,Astigmatism,953076,950696,outcome
-261880,Atelectasis,953076,950696,outcome
-134118,Atrophic condition of skin,953076,950696,outcome
-4224118,Bladder dysfunction,953076,950696,outcome
-80509,Bone cyst,953076,950696,outcome
-434626,Borderline personality disorder,953076,950696,outcome
-438407,Bulimia nervosa,953076,950696,outcome
-134765,Cachexia,953076,950696,outcome
-4172458,Candidiasis of skin,953076,950696,outcome
-436740,Cervical incompetence,953076,950696,outcome
-381581,Chalazion,953076,950696,outcome
-4307254,Closed fracture,953076,950696,outcome
-4047787,Colles' fracture,953076,950696,outcome
-198075,Condyloma acuminatum,953076,950696,outcome
-73302,Curvature of spine,953076,950696,outcome
-4242416,Cutis laxa,953076,950696,outcome
-433163,Deficiency of macronutrients,953076,950696,outcome
-4047269,Deformity of foot,953076,950696,outcome
-133228,Dental caries,953076,950696,outcome
-4095288,Diabetic coma with ketoacidosis,953076,950696,outcome
-4044391,Diabetic neuropathy,953076,950696,outcome
-443767,Diabetic oculopathy,953076,950696,outcome
-4174977,Diabetic retinopathy,953076,950696,outcome
-4132130,Dilatation of aorta,953076,950696,outcome
-4147672,Disease due to Papilloma virus,953076,950696,outcome
-4153380,Disorder of carotid artery,953076,950696,outcome
-4140510,Disorder of lymphatic vessel,953076,950696,outcome
-433440,Dysthymia,953076,950696,outcome
-376132,Ectropion,953076,950696,outcome
-440695,Encopresis,953076,950696,outcome
-438872,Excessive eating - polyphagia,953076,950696,outcome
-78804,Fibrocystic disease of breast,953076,950696,outcome
-4131595,Fracture of radius,953076,950696,outcome
-74855,Genital herpes simplex,953076,950696,outcome
-441788,Human papilloma virus infection,953076,950696,outcome
-76737,Hydrocele,953076,950696,outcome
-4029582,Hyperandrogenization syndrome,953076,950696,outcome
-195212,Hypercortisolism,953076,950696,outcome
-438134,Hypersomnia,953076,950696,outcome
-45768449,Hypertensive crisis,953076,950696,outcome
-140362,Hypoparathyroidism,953076,950696,outcome
-4322737,Infection of tooth,953076,950696,outcome
-4207688,Infectious enteritis,953076,950696,outcome
-79072,Inflammatory disorder of breast,953076,950696,outcome
-139099,Ingrowing nail,953076,950696,outcome
-4288544,Inguinal hernia,953076,950696,outcome
-444191,Injury of face,953076,950696,outcome
-444130,Injury of foot,953076,950696,outcome
-134222,Injury of forearm,953076,950696,outcome
-4029966,Intracranial aneurysm,953076,950696,outcome
-437409,Intracranial injury,953076,950696,outcome
-4297984,Local infection of wound,953076,950696,outcome
-4018050,Localized infection,953076,950696,outcome
-439840,Lymphangitis,953076,950696,outcome
-4163232,Mastitis,953076,950696,outcome
-440389,Mental retardation,953076,950696,outcome
-436100,Narcolepsy,953076,950696,outcome
-4262178,Neurogenic dysfunction of the urinary bladder,953076,950696,outcome
-193874,Nocturnal enuresis,953076,950696,outcome
-4171549,Nodular goiter,953076,950696,outcome
-442274,Oligomenorrhea,953076,950696,outcome
-4215978,Onychomycosis,953076,950696,outcome
-4171915,Orchitis,953076,950696,outcome
-380731,Otitis externa,953076,950696,outcome
-378160,Otorrhea,953076,950696,outcome
-192606,Paraplegia,953076,950696,outcome
-253796,Pneumothorax,953076,950696,outcome
-195501,Polycystic ovaries,953076,950696,outcome
-4164337,Polyp of large intestine,953076,950696,outcome
-4153877,Post-traumatic wound infection,953076,950696,outcome
-434319,Premature ejaculation,953076,950696,outcome
-373478,Presbyopia,953076,950696,outcome
-199876,Prolapse of female genital organs,953076,950696,outcome
-4295888,Prolapse of intestine,953076,950696,outcome
-194997,Prostatitis,953076,950696,outcome
-4146239,Pruritus of genital organs,953076,950696,outcome
-4285569,Pupillary disorder,953076,950696,outcome
-81336,Rectal prolapse,953076,950696,outcome
-380395,Retinal dystrophy,953076,950696,outcome
-141825,Simple goiter,953076,950696,outcome
-137054,Skin striae,953076,950696,outcome
-434630,Sleep-wake schedule disorder,953076,950696,outcome
-4195698,Tenosynovitis,953076,950696,outcome
-4339088,Testicular mass,953076,950696,outcome
-133141,Tinea pedis,953076,950696,outcome
-440814,Torticollis,953076,950696,outcome
-435140,Toxic effect of alcohol,953076,950696,outcome
-4270490,Tracheitis,953076,950696,outcome
-4028970,Tracheobronchitis,953076,950696,outcome
-4114197,Tumor of hypothalamus,953076,950696,outcome
-193326,Urge incontinence of urine,953076,950696,outcome
-4092565,Uterine prolapse,953076,950696,outcome
-140641,Verruca vulgaris,953076,950696,outcome
-197036,Vesicoureteric reflux,953076,950696,outcome
-133551,Vesicular eczema of hands and/or feet,953076,950696,outcome
-4223947,"Viral hepatitis, type A",953076,950696,outcome
-261326,Viral pneumonia,953076,950696,outcome
-378256,Abnormal reflex,953076,19011685,outcome
-4218106,Alcoholism,953076,19011685,outcome
-317585,Aortic aneurysm,953076,19011685,outcome
-440424,Aphasia,953076,19011685,outcome
-439237,Assault,953076,19011685,outcome
-378424,Astigmatism,953076,19011685,outcome
-261880,Atelectasis,953076,19011685,outcome
-134118,Atrophic condition of skin,953076,19011685,outcome
-4224118,Bladder dysfunction,953076,19011685,outcome
-80509,Bone cyst,953076,19011685,outcome
-434626,Borderline personality disorder,953076,19011685,outcome
-438407,Bulimia nervosa,953076,19011685,outcome
-134765,Cachexia,953076,19011685,outcome
-4172458,Candidiasis of skin,953076,19011685,outcome
-436740,Cervical incompetence,953076,19011685,outcome
-381581,Chalazion,953076,19011685,outcome
-4307254,Closed fracture,953076,19011685,outcome
-4047787,Colles' fracture,953076,19011685,outcome
-198075,Condyloma acuminatum,953076,19011685,outcome
-73302,Curvature of spine,953076,19011685,outcome
-4242416,Cutis laxa,953076,19011685,outcome
-433163,Deficiency of macronutrients,953076,19011685,outcome
-4047269,Deformity of foot,953076,19011685,outcome
-133228,Dental caries,953076,19011685,outcome
-4095288,Diabetic coma with ketoacidosis,953076,19011685,outcome
-4044391,Diabetic neuropathy,953076,19011685,outcome
-443767,Diabetic oculopathy,953076,19011685,outcome
-4174977,Diabetic retinopathy,953076,19011685,outcome
-4132130,Dilatation of aorta,953076,19011685,outcome
-4147672,Disease due to Papilloma virus,953076,19011685,outcome
-4153380,Disorder of carotid artery,953076,19011685,outcome
-4140510,Disorder of lymphatic vessel,953076,19011685,outcome
-433440,Dysthymia,953076,19011685,outcome
-376132,Ectropion,953076,19011685,outcome
-440695,Encopresis,953076,19011685,outcome
-438872,Excessive eating - polyphagia,953076,19011685,outcome
-78804,Fibrocystic disease of breast,953076,19011685,outcome
-4131595,Fracture of radius,953076,19011685,outcome
-74855,Genital herpes simplex,953076,19011685,outcome
-441788,Human papilloma virus infection,953076,19011685,outcome
-76737,Hydrocele,953076,19011685,outcome
-4029582,Hyperandrogenization syndrome,953076,19011685,outcome
-195212,Hypercortisolism,953076,19011685,outcome
-438134,Hypersomnia,953076,19011685,outcome
-45768449,Hypertensive crisis,953076,19011685,outcome
-140362,Hypoparathyroidism,953076,19011685,outcome
-4322737,Infection of tooth,953076,19011685,outcome
-4207688,Infectious enteritis,953076,19011685,outcome
-79072,Inflammatory disorder of breast,953076,19011685,outcome
-139099,Ingrowing nail,953076,19011685,outcome
-4288544,Inguinal hernia,953076,19011685,outcome
-444191,Injury of face,953076,19011685,outcome
-444130,Injury of foot,953076,19011685,outcome
-134222,Injury of forearm,953076,19011685,outcome
-4029966,Intracranial aneurysm,953076,19011685,outcome
-437409,Intracranial injury,953076,19011685,outcome
-4297984,Local infection of wound,953076,19011685,outcome
-4018050,Localized infection,953076,19011685,outcome
-439840,Lymphangitis,953076,19011685,outcome
-4163232,Mastitis,953076,19011685,outcome
-440389,Mental retardation,953076,19011685,outcome
-436100,Narcolepsy,953076,19011685,outcome
-4262178,Neurogenic dysfunction of the urinary bladder,953076,19011685,outcome
-193874,Nocturnal enuresis,953076,19011685,outcome
-4171549,Nodular goiter,953076,19011685,outcome
-442274,Oligomenorrhea,953076,19011685,outcome
-4215978,Onychomycosis,953076,19011685,outcome
-4171915,Orchitis,953076,19011685,outcome
-380731,Otitis externa,953076,19011685,outcome
-378160,Otorrhea,953076,19011685,outcome
-192606,Paraplegia,953076,19011685,outcome
-253796,Pneumothorax,953076,19011685,outcome
-195501,Polycystic ovaries,953076,19011685,outcome
-4164337,Polyp of large intestine,953076,19011685,outcome
-4153877,Post-traumatic wound infection,953076,19011685,outcome
-434319,Premature ejaculation,953076,19011685,outcome
-373478,Presbyopia,953076,19011685,outcome
-199876,Prolapse of female genital organs,953076,19011685,outcome
-4295888,Prolapse of intestine,953076,19011685,outcome
-194997,Prostatitis,953076,19011685,outcome
-4146239,Pruritus of genital organs,953076,19011685,outcome
-4285569,Pupillary disorder,953076,19011685,outcome
-81336,Rectal prolapse,953076,19011685,outcome
-380395,Retinal dystrophy,953076,19011685,outcome
-141825,Simple goiter,953076,19011685,outcome
-137054,Skin striae,953076,19011685,outcome
-434630,Sleep-wake schedule disorder,953076,19011685,outcome
-4195698,Tenosynovitis,953076,19011685,outcome
-4339088,Testicular mass,953076,19011685,outcome
-133141,Tinea pedis,953076,19011685,outcome
-440814,Torticollis,953076,19011685,outcome
-435140,Toxic effect of alcohol,953076,19011685,outcome
-4270490,Tracheitis,953076,19011685,outcome
-4028970,Tracheobronchitis,953076,19011685,outcome
-4114197,Tumor of hypothalamus,953076,19011685,outcome
-193326,Urge incontinence of urine,953076,19011685,outcome
-4092565,Uterine prolapse,953076,19011685,outcome
-140641,Verruca vulgaris,953076,19011685,outcome
-197036,Vesicoureteric reflux,953076,19011685,outcome
-133551,Vesicular eczema of hands and/or feet,953076,19011685,outcome
-4223947,"Viral hepatitis, type A",953076,19011685,outcome
-261326,Viral pneumonia,953076,19011685,outcome
-378256,Abnormal reflex,953076,997276,outcome
-4218106,Alcoholism,953076,997276,outcome
-317585,Aortic aneurysm,953076,997276,outcome
-440424,Aphasia,953076,997276,outcome
-439237,Assault,953076,997276,outcome
-378424,Astigmatism,953076,997276,outcome
-261880,Atelectasis,953076,997276,outcome
-134118,Atrophic condition of skin,953076,997276,outcome
-4224118,Bladder dysfunction,953076,997276,outcome
-80509,Bone cyst,953076,997276,outcome
-434626,Borderline personality disorder,953076,997276,outcome
-438407,Bulimia nervosa,953076,997276,outcome
-134765,Cachexia,953076,997276,outcome
-4172458,Candidiasis of skin,953076,997276,outcome
-436740,Cervical incompetence,953076,997276,outcome
-381581,Chalazion,953076,997276,outcome
-4307254,Closed fracture,953076,997276,outcome
-4047787,Colles' fracture,953076,997276,outcome
-198075,Condyloma acuminatum,953076,997276,outcome
-73302,Curvature of spine,953076,997276,outcome
-4242416,Cutis laxa,953076,997276,outcome
-433163,Deficiency of macronutrients,953076,997276,outcome
-4047269,Deformity of foot,953076,997276,outcome
-133228,Dental caries,953076,997276,outcome
-4095288,Diabetic coma with ketoacidosis,953076,997276,outcome
-4044391,Diabetic neuropathy,953076,997276,outcome
-443767,Diabetic oculopathy,953076,997276,outcome
-4174977,Diabetic retinopathy,953076,997276,outcome
-4132130,Dilatation of aorta,953076,997276,outcome
-4147672,Disease due to Papilloma virus,953076,997276,outcome
-4153380,Disorder of carotid artery,953076,997276,outcome
-4140510,Disorder of lymphatic vessel,953076,997276,outcome
-433440,Dysthymia,953076,997276,outcome
-376132,Ectropion,953076,997276,outcome
-440695,Encopresis,953076,997276,outcome
-438872,Excessive eating - polyphagia,953076,997276,outcome
-78804,Fibrocystic disease of breast,953076,997276,outcome
-4131595,Fracture of radius,953076,997276,outcome
-74855,Genital herpes simplex,953076,997276,outcome
-441788,Human papilloma virus infection,953076,997276,outcome
-76737,Hydrocele,953076,997276,outcome
-4029582,Hyperandrogenization syndrome,953076,997276,outcome
-195212,Hypercortisolism,953076,997276,outcome
-438134,Hypersomnia,953076,997276,outcome
-45768449,Hypertensive crisis,953076,997276,outcome
-140362,Hypoparathyroidism,953076,997276,outcome
-4322737,Infection of tooth,953076,997276,outcome
-4207688,Infectious enteritis,953076,997276,outcome
-79072,Inflammatory disorder of breast,953076,997276,outcome
-139099,Ingrowing nail,953076,997276,outcome
-4288544,Inguinal hernia,953076,997276,outcome
-444191,Injury of face,953076,997276,outcome
-444130,Injury of foot,953076,997276,outcome
-134222,Injury of forearm,953076,997276,outcome
-4029966,Intracranial aneurysm,953076,997276,outcome
-437409,Intracranial injury,953076,997276,outcome
-4297984,Local infection of wound,953076,997276,outcome
-4018050,Localized infection,953076,997276,outcome
-439840,Lymphangitis,953076,997276,outcome
-4163232,Mastitis,953076,997276,outcome
-440389,Mental retardation,953076,997276,outcome
-436100,Narcolepsy,953076,997276,outcome
-4262178,Neurogenic dysfunction of the urinary bladder,953076,997276,outcome
-193874,Nocturnal enuresis,953076,997276,outcome
-4171549,Nodular goiter,953076,997276,outcome
-442274,Oligomenorrhea,953076,997276,outcome
-4215978,Onychomycosis,953076,997276,outcome
-4171915,Orchitis,953076,997276,outcome
-380731,Otitis externa,953076,997276,outcome
-378160,Otorrhea,953076,997276,outcome
-192606,Paraplegia,953076,997276,outcome
-253796,Pneumothorax,953076,997276,outcome
-195501,Polycystic ovaries,953076,997276,outcome
-4164337,Polyp of large intestine,953076,997276,outcome
-4153877,Post-traumatic wound infection,953076,997276,outcome
-434319,Premature ejaculation,953076,997276,outcome
-373478,Presbyopia,953076,997276,outcome
-199876,Prolapse of female genital organs,953076,997276,outcome
-4295888,Prolapse of intestine,953076,997276,outcome
-194997,Prostatitis,953076,997276,outcome
-4146239,Pruritus of genital organs,953076,997276,outcome
-4285569,Pupillary disorder,953076,997276,outcome
-81336,Rectal prolapse,953076,997276,outcome
-380395,Retinal dystrophy,953076,997276,outcome
-141825,Simple goiter,953076,997276,outcome
-137054,Skin striae,953076,997276,outcome
-434630,Sleep-wake schedule disorder,953076,997276,outcome
-4195698,Tenosynovitis,953076,997276,outcome
-4339088,Testicular mass,953076,997276,outcome
-133141,Tinea pedis,953076,997276,outcome
-440814,Torticollis,953076,997276,outcome
-435140,Toxic effect of alcohol,953076,997276,outcome
-4270490,Tracheitis,953076,997276,outcome
-4028970,Tracheobronchitis,953076,997276,outcome
-4114197,Tumor of hypothalamus,953076,997276,outcome
-193326,Urge incontinence of urine,953076,997276,outcome
-4092565,Uterine prolapse,953076,997276,outcome
-140641,Verruca vulgaris,953076,997276,outcome
-197036,Vesicoureteric reflux,953076,997276,outcome
-133551,Vesicular eczema of hands and/or feet,953076,997276,outcome
-4223947,"Viral hepatitis, type A",953076,997276,outcome
-261326,Viral pneumonia,953076,997276,outcome
-378256,Abnormal reflex,950696,19011685,outcome
-4218106,Alcoholism,950696,19011685,outcome
-317585,Aortic aneurysm,950696,19011685,outcome
-440424,Aphasia,950696,19011685,outcome
-439237,Assault,950696,19011685,outcome
-378424,Astigmatism,950696,19011685,outcome
-261880,Atelectasis,950696,19011685,outcome
-134118,Atrophic condition of skin,950696,19011685,outcome
-4224118,Bladder dysfunction,950696,19011685,outcome
-80509,Bone cyst,950696,19011685,outcome
-434626,Borderline personality disorder,950696,19011685,outcome
-438407,Bulimia nervosa,950696,19011685,outcome
-134765,Cachexia,950696,19011685,outcome
-4172458,Candidiasis of skin,950696,19011685,outcome
-436740,Cervical incompetence,950696,19011685,outcome
-381581,Chalazion,950696,19011685,outcome
-4307254,Closed fracture,950696,19011685,outcome
-4047787,Colles' fracture,950696,19011685,outcome
-198075,Condyloma acuminatum,950696,19011685,outcome
-73302,Curvature of spine,950696,19011685,outcome
-4242416,Cutis laxa,950696,19011685,outcome
-433163,Deficiency of macronutrients,950696,19011685,outcome
-4047269,Deformity of foot,950696,19011685,outcome
-133228,Dental caries,950696,19011685,outcome
-4095288,Diabetic coma with ketoacidosis,950696,19011685,outcome
-4044391,Diabetic neuropathy,950696,19011685,outcome
-443767,Diabetic oculopathy,950696,19011685,outcome
-4174977,Diabetic retinopathy,950696,19011685,outcome
-4132130,Dilatation of aorta,950696,19011685,outcome
-4147672,Disease due to Papilloma virus,950696,19011685,outcome
-4153380,Disorder of carotid artery,950696,19011685,outcome
-4140510,Disorder of lymphatic vessel,950696,19011685,outcome
-433440,Dysthymia,950696,19011685,outcome
-376132,Ectropion,950696,19011685,outcome
-440695,Encopresis,950696,19011685,outcome
-438872,Excessive eating - polyphagia,950696,19011685,outcome
-78804,Fibrocystic disease of breast,950696,19011685,outcome
-4131595,Fracture of radius,950696,19011685,outcome
-74855,Genital herpes simplex,950696,19011685,outcome
-441788,Human papilloma virus infection,950696,19011685,outcome
-76737,Hydrocele,950696,19011685,outcome
-4029582,Hyperandrogenization syndrome,950696,19011685,outcome
-195212,Hypercortisolism,950696,19011685,outcome
-438134,Hypersomnia,950696,19011685,outcome
-45768449,Hypertensive crisis,950696,19011685,outcome
-140362,Hypoparathyroidism,950696,19011685,outcome
-4322737,Infection of tooth,950696,19011685,outcome
-4207688,Infectious enteritis,950696,19011685,outcome
-79072,Inflammatory disorder of breast,950696,19011685,outcome
-139099,Ingrowing nail,950696,19011685,outcome
-4288544,Inguinal hernia,950696,19011685,outcome
-444191,Injury of face,950696,19011685,outcome
-444130,Injury of foot,950696,19011685,outcome
-134222,Injury of forearm,950696,19011685,outcome
-4029966,Intracranial aneurysm,950696,19011685,outcome
-437409,Intracranial injury,950696,19011685,outcome
-4297984,Local infection of wound,950696,19011685,outcome
-4018050,Localized infection,950696,19011685,outcome
-439840,Lymphangitis,950696,19011685,outcome
-4163232,Mastitis,950696,19011685,outcome
-440389,Mental retardation,950696,19011685,outcome
-436100,Narcolepsy,950696,19011685,outcome
-4262178,Neurogenic dysfunction of the urinary bladder,950696,19011685,outcome
-193874,Nocturnal enuresis,950696,19011685,outcome
-4171549,Nodular goiter,950696,19011685,outcome
-442274,Oligomenorrhea,950696,19011685,outcome
-4215978,Onychomycosis,950696,19011685,outcome
-4171915,Orchitis,950696,19011685,outcome
-380731,Otitis externa,950696,19011685,outcome
-378160,Otorrhea,950696,19011685,outcome
-192606,Paraplegia,950696,19011685,outcome
-253796,Pneumothorax,950696,19011685,outcome
-195501,Polycystic ovaries,950696,19011685,outcome
-4164337,Polyp of large intestine,950696,19011685,outcome
-4153877,Post-traumatic wound infection,950696,19011685,outcome
-434319,Premature ejaculation,950696,19011685,outcome
-373478,Presbyopia,950696,19011685,outcome
-199876,Prolapse of female genital organs,950696,19011685,outcome
-4295888,Prolapse of intestine,950696,19011685,outcome
-194997,Prostatitis,950696,19011685,outcome
-4146239,Pruritus of genital organs,950696,19011685,outcome
-4285569,Pupillary disorder,950696,19011685,outcome
-81336,Rectal prolapse,950696,19011685,outcome
-380395,Retinal dystrophy,950696,19011685,outcome
-141825,Simple goiter,950696,19011685,outcome
-137054,Skin striae,950696,19011685,outcome
-434630,Sleep-wake schedule disorder,950696,19011685,outcome
-4195698,Tenosynovitis,950696,19011685,outcome
-4339088,Testicular mass,950696,19011685,outcome
-133141,Tinea pedis,950696,19011685,outcome
-440814,Torticollis,950696,19011685,outcome
-435140,Toxic effect of alcohol,950696,19011685,outcome
-4270490,Tracheitis,950696,19011685,outcome
-4028970,Tracheobronchitis,950696,19011685,outcome
-4114197,Tumor of hypothalamus,950696,19011685,outcome
-193326,Urge incontinence of urine,950696,19011685,outcome
-4092565,Uterine prolapse,950696,19011685,outcome
-140641,Verruca vulgaris,950696,19011685,outcome
-197036,Vesicoureteric reflux,950696,19011685,outcome
-133551,Vesicular eczema of hands and/or feet,950696,19011685,outcome
-4223947,"Viral hepatitis, type A",950696,19011685,outcome
-261326,Viral pneumonia,950696,19011685,outcome
-378256,Abnormal reflex,950696,997276,outcome
-4218106,Alcoholism,950696,997276,outcome
-317585,Aortic aneurysm,950696,997276,outcome
-440424,Aphasia,950696,997276,outcome
-439237,Assault,950696,997276,outcome
-378424,Astigmatism,950696,997276,outcome
-261880,Atelectasis,950696,997276,outcome
-134118,Atrophic condition of skin,950696,997276,outcome
-4224118,Bladder dysfunction,950696,997276,outcome
-80509,Bone cyst,950696,997276,outcome
-434626,Borderline personality disorder,950696,997276,outcome
-438407,Bulimia nervosa,950696,997276,outcome
-134765,Cachexia,950696,997276,outcome
-4172458,Candidiasis of skin,950696,997276,outcome
-436740,Cervical incompetence,950696,997276,outcome
-381581,Chalazion,950696,997276,outcome
-4307254,Closed fracture,950696,997276,outcome
-4047787,Colles' fracture,950696,997276,outcome
-198075,Condyloma acuminatum,950696,997276,outcome
-73302,Curvature of spine,950696,997276,outcome
-4242416,Cutis laxa,950696,997276,outcome
-433163,Deficiency of macronutrients,950696,997276,outcome
-4047269,Deformity of foot,950696,997276,outcome
-133228,Dental caries,950696,997276,outcome
-4095288,Diabetic coma with ketoacidosis,950696,997276,outcome
-4044391,Diabetic neuropathy,950696,997276,outcome
-443767,Diabetic oculopathy,950696,997276,outcome
-4174977,Diabetic retinopathy,950696,997276,outcome
-4132130,Dilatation of aorta,950696,997276,outcome
-4147672,Disease due to Papilloma virus,950696,997276,outcome
-4153380,Disorder of carotid artery,950696,997276,outcome
-4140510,Disorder of lymphatic vessel,950696,997276,outcome
-433440,Dysthymia,950696,997276,outcome
-376132,Ectropion,950696,997276,outcome
-440695,Encopresis,950696,997276,outcome
-438872,Excessive eating - polyphagia,950696,997276,outcome
-78804,Fibrocystic disease of breast,950696,997276,outcome
-4131595,Fracture of radius,950696,997276,outcome
-74855,Genital herpes simplex,950696,997276,outcome
-441788,Human papilloma virus infection,950696,997276,outcome
-76737,Hydrocele,950696,997276,outcome
-4029582,Hyperandrogenization syndrome,950696,997276,outcome
-195212,Hypercortisolism,950696,997276,outcome
-438134,Hypersomnia,950696,997276,outcome
-45768449,Hypertensive crisis,950696,997276,outcome
-140362,Hypoparathyroidism,950696,997276,outcome
-4322737,Infection of tooth,950696,997276,outcome
-4207688,Infectious enteritis,950696,997276,outcome
-79072,Inflammatory disorder of breast,950696,997276,outcome
-139099,Ingrowing nail,950696,997276,outcome
-4288544,Inguinal hernia,950696,997276,outcome
-444191,Injury of face,950696,997276,outcome
-444130,Injury of foot,950696,997276,outcome
-134222,Injury of forearm,950696,997276,outcome
-4029966,Intracranial aneurysm,950696,997276,outcome
-437409,Intracranial injury,950696,997276,outcome
-4297984,Local infection of wound,950696,997276,outcome
-4018050,Localized infection,950696,997276,outcome
-439840,Lymphangitis,950696,997276,outcome
-4163232,Mastitis,950696,997276,outcome
-440389,Mental retardation,950696,997276,outcome
-436100,Narcolepsy,950696,997276,outcome
-4262178,Neurogenic dysfunction of the urinary bladder,950696,997276,outcome
-193874,Nocturnal enuresis,950696,997276,outcome
-4171549,Nodular goiter,950696,997276,outcome
-442274,Oligomenorrhea,950696,997276,outcome
-4215978,Onychomycosis,950696,997276,outcome
-4171915,Orchitis,950696,997276,outcome
-380731,Otitis externa,950696,997276,outcome
-378160,Otorrhea,950696,997276,outcome
-192606,Paraplegia,950696,997276,outcome
-253796,Pneumothorax,950696,997276,outcome
-195501,Polycystic ovaries,950696,997276,outcome
-4164337,Polyp of large intestine,950696,997276,outcome
-4153877,Post-traumatic wound infection,950696,997276,outcome
-434319,Premature ejaculation,950696,997276,outcome
-373478,Presbyopia,950696,997276,outcome
-199876,Prolapse of female genital organs,950696,997276,outcome
-4295888,Prolapse of intestine,950696,997276,outcome
-194997,Prostatitis,950696,997276,outcome
-4146239,Pruritus of genital organs,950696,997276,outcome
-4285569,Pupillary disorder,950696,997276,outcome
-81336,Rectal prolapse,950696,997276,outcome
-380395,Retinal dystrophy,950696,997276,outcome
-141825,Simple goiter,950696,997276,outcome
-137054,Skin striae,950696,997276,outcome
-434630,Sleep-wake schedule disorder,950696,997276,outcome
-4195698,Tenosynovitis,950696,997276,outcome
-4339088,Testicular mass,950696,997276,outcome
-133141,Tinea pedis,950696,997276,outcome
-440814,Torticollis,950696,997276,outcome
-435140,Toxic effect of alcohol,950696,997276,outcome
-4270490,Tracheitis,950696,997276,outcome
-4028970,Tracheobronchitis,950696,997276,outcome
-4114197,Tumor of hypothalamus,950696,997276,outcome
-193326,Urge incontinence of urine,950696,997276,outcome
-4092565,Uterine prolapse,950696,997276,outcome
-140641,Verruca vulgaris,950696,997276,outcome
-197036,Vesicoureteric reflux,950696,997276,outcome
-133551,Vesicular eczema of hands and/or feet,950696,997276,outcome
-4223947,"Viral hepatitis, type A",950696,997276,outcome
-261326,Viral pneumonia,950696,997276,outcome
-378256,Abnormal reflex,19011685,997276,outcome
-4218106,Alcoholism,19011685,997276,outcome
-317585,Aortic aneurysm,19011685,997276,outcome
-440424,Aphasia,19011685,997276,outcome
-439237,Assault,19011685,997276,outcome
-378424,Astigmatism,19011685,997276,outcome
-261880,Atelectasis,19011685,997276,outcome
-134118,Atrophic condition of skin,19011685,997276,outcome
-4224118,Bladder dysfunction,19011685,997276,outcome
-80509,Bone cyst,19011685,997276,outcome
-434626,Borderline personality disorder,19011685,997276,outcome
-438407,Bulimia nervosa,19011685,997276,outcome
-134765,Cachexia,19011685,997276,outcome
-4172458,Candidiasis of skin,19011685,997276,outcome
-436740,Cervical incompetence,19011685,997276,outcome
-381581,Chalazion,19011685,997276,outcome
-4307254,Closed fracture,19011685,997276,outcome
-4047787,Colles' fracture,19011685,997276,outcome
-198075,Condyloma acuminatum,19011685,997276,outcome
-73302,Curvature of spine,19011685,997276,outcome
-4242416,Cutis laxa,19011685,997276,outcome
-433163,Deficiency of macronutrients,19011685,997276,outcome
-4047269,Deformity of foot,19011685,997276,outcome
-133228,Dental caries,19011685,997276,outcome
-4095288,Diabetic coma with ketoacidosis,19011685,997276,outcome
-4044391,Diabetic neuropathy,19011685,997276,outcome
-443767,Diabetic oculopathy,19011685,997276,outcome
-4174977,Diabetic retinopathy,19011685,997276,outcome
-4132130,Dilatation of aorta,19011685,997276,outcome
-4147672,Disease due to Papilloma virus,19011685,997276,outcome
-4153380,Disorder of carotid artery,19011685,997276,outcome
-4140510,Disorder of lymphatic vessel,19011685,997276,outcome
-433440,Dysthymia,19011685,997276,outcome
-376132,Ectropion,19011685,997276,outcome
-440695,Encopresis,19011685,997276,outcome
-438872,Excessive eating - polyphagia,19011685,997276,outcome
-78804,Fibrocystic disease of breast,19011685,997276,outcome
-4131595,Fracture of radius,19011685,997276,outcome
-74855,Genital herpes simplex,19011685,997276,outcome
-441788,Human papilloma virus infection,19011685,997276,outcome
-76737,Hydrocele,19011685,997276,outcome
-4029582,Hyperandrogenization syndrome,19011685,997276,outcome
-195212,Hypercortisolism,19011685,997276,outcome
-438134,Hypersomnia,19011685,997276,outcome
-45768449,Hypertensive crisis,19011685,997276,outcome
-140362,Hypoparathyroidism,19011685,997276,outcome
-4322737,Infection of tooth,19011685,997276,outcome
-4207688,Infectious enteritis,19011685,997276,outcome
-79072,Inflammatory disorder of breast,19011685,997276,outcome
-139099,Ingrowing nail,19011685,997276,outcome
-4288544,Inguinal hernia,19011685,997276,outcome
-444191,Injury of face,19011685,997276,outcome
-444130,Injury of foot,19011685,997276,outcome
-134222,Injury of forearm,19011685,997276,outcome
-4029966,Intracranial aneurysm,19011685,997276,outcome
-437409,Intracranial injury,19011685,997276,outcome
-4297984,Local infection of wound,19011685,997276,outcome
-4018050,Localized infection,19011685,997276,outcome
-439840,Lymphangitis,19011685,997276,outcome
-4163232,Mastitis,19011685,997276,outcome
-440389,Mental retardation,19011685,997276,outcome
-436100,Narcolepsy,19011685,997276,outcome
-4262178,Neurogenic dysfunction of the urinary bladder,19011685,997276,outcome
-193874,Nocturnal enuresis,19011685,997276,outcome
-4171549,Nodular goiter,19011685,997276,outcome
-442274,Oligomenorrhea,19011685,997276,outcome
-4215978,Onychomycosis,19011685,997276,outcome
-4171915,Orchitis,19011685,997276,outcome
-380731,Otitis externa,19011685,997276,outcome
-378160,Otorrhea,19011685,997276,outcome
-192606,Paraplegia,19011685,997276,outcome
-253796,Pneumothorax,19011685,997276,outcome
-195501,Polycystic ovaries,19011685,997276,outcome
-4164337,Polyp of large intestine,19011685,997276,outcome
-4153877,Post-traumatic wound infection,19011685,997276,outcome
-434319,Premature ejaculation,19011685,997276,outcome
-373478,Presbyopia,19011685,997276,outcome
-199876,Prolapse of female genital organs,19011685,997276,outcome
-4295888,Prolapse of intestine,19011685,997276,outcome
-194997,Prostatitis,19011685,997276,outcome
-4146239,Pruritus of genital organs,19011685,997276,outcome
-4285569,Pupillary disorder,19011685,997276,outcome
-81336,Rectal prolapse,19011685,997276,outcome
-380395,Retinal dystrophy,19011685,997276,outcome
-141825,Simple goiter,19011685,997276,outcome
-137054,Skin striae,19011685,997276,outcome
-434630,Sleep-wake schedule disorder,19011685,997276,outcome
-4195698,Tenosynovitis,19011685,997276,outcome
-4339088,Testicular mass,19011685,997276,outcome
-133141,Tinea pedis,19011685,997276,outcome
-440814,Torticollis,19011685,997276,outcome
-435140,Toxic effect of alcohol,19011685,997276,outcome
-4270490,Tracheitis,19011685,997276,outcome
-4028970,Tracheobronchitis,19011685,997276,outcome
-4114197,Tumor of hypothalamus,19011685,997276,outcome
-193326,Urge incontinence of urine,19011685,997276,outcome
-4092565,Uterine prolapse,19011685,997276,outcome
-140641,Verruca vulgaris,19011685,997276,outcome
-197036,Vesicoureteric reflux,19011685,997276,outcome
-133551,Vesicular eczema of hands and/or feet,19011685,997276,outcome
-4223947,"Viral hepatitis, type A",19011685,997276,outcome
-261326,Viral pneumonia,19011685,997276,outcome
+"outcomeId","outcomeName","targetId","comparatorId","type"
+378256,"Abnormal reflex",961047,43009003,"outcome"
+4218106,"Alcoholism",961047,43009003,"outcome"
+317585,"Aortic aneurysm",961047,43009003,"outcome"
+440424,"Aphasia",961047,43009003,"outcome"
+439237,"Assault",961047,43009003,"outcome"
+378424,"Astigmatism",961047,43009003,"outcome"
+261880,"Atelectasis",961047,43009003,"outcome"
+134118,"Atrophic condition of skin",961047,43009003,"outcome"
+4224118,"Bladder dysfunction",961047,43009003,"outcome"
+80509,"Bone cyst",961047,43009003,"outcome"
+434626,"Borderline personality disorder",961047,43009003,"outcome"
+438407,"Bulimia nervosa",961047,43009003,"outcome"
+134765,"Cachexia",961047,43009003,"outcome"
+4172458,"Candidiasis of skin",961047,43009003,"outcome"
+436740,"Cervical incompetence",961047,43009003,"outcome"
+381581,"Chalazion",961047,43009003,"outcome"
+4307254,"Closed fracture",961047,43009003,"outcome"
+4047787,"Colles' fracture",961047,43009003,"outcome"
+198075,"Condyloma acuminatum",961047,43009003,"outcome"
+73302,"Curvature of spine",961047,43009003,"outcome"
+4242416,"Cutis laxa",961047,43009003,"outcome"
+433163,"Deficiency of macronutrients",961047,43009003,"outcome"
+4047269,"Deformity of foot",961047,43009003,"outcome"
+133228,"Dental caries",961047,43009003,"outcome"
+4095288,"Diabetic coma with ketoacidosis",961047,43009003,"outcome"
+4044391,"Diabetic neuropathy",961047,43009003,"outcome"
+443767,"Diabetic oculopathy",961047,43009003,"outcome"
+4174977,"Diabetic retinopathy",961047,43009003,"outcome"
+4132130,"Dilatation of aorta",961047,43009003,"outcome"
+4147672,"Disease due to Papilloma virus",961047,43009003,"outcome"
+4153380,"Disorder of carotid artery",961047,43009003,"outcome"
+4140510,"Disorder of lymphatic vessel",961047,43009003,"outcome"
+433440,"Dysthymia",961047,43009003,"outcome"
+376132,"Ectropion",961047,43009003,"outcome"
+440695,"Encopresis",961047,43009003,"outcome"
+438872,"Excessive eating - polyphagia",961047,43009003,"outcome"
+78804,"Fibrocystic disease of breast",961047,43009003,"outcome"
+4131595,"Fracture of radius",961047,43009003,"outcome"
+74855,"Genital herpes simplex",961047,43009003,"outcome"
+441788,"Human papilloma virus infection",961047,43009003,"outcome"
+76737,"Hydrocele",961047,43009003,"outcome"
+4029582,"Hyperandrogenization syndrome",961047,43009003,"outcome"
+195212,"Hypercortisolism",961047,43009003,"outcome"
+438134,"Hypersomnia",961047,43009003,"outcome"
+45768449,"Hypertensive crisis",961047,43009003,"outcome"
+140362,"Hypoparathyroidism",961047,43009003,"outcome"
+4322737,"Infection of tooth",961047,43009003,"outcome"
+4207688,"Infectious enteritis",961047,43009003,"outcome"
+79072,"Inflammatory disorder of breast",961047,43009003,"outcome"
+139099,"Ingrowing nail",961047,43009003,"outcome"
+4288544,"Inguinal hernia",961047,43009003,"outcome"
+444191,"Injury of face",961047,43009003,"outcome"
+444130,"Injury of foot",961047,43009003,"outcome"
+134222,"Injury of forearm",961047,43009003,"outcome"
+4029966,"Intracranial aneurysm",961047,43009003,"outcome"
+437409,"Intracranial injury",961047,43009003,"outcome"
+4297984,"Local infection of wound",961047,43009003,"outcome"
+4018050,"Localized infection",961047,43009003,"outcome"
+439840,"Lymphangitis",961047,43009003,"outcome"
+4163232,"Mastitis",961047,43009003,"outcome"
+440389,"Mental retardation",961047,43009003,"outcome"
+436100,"Narcolepsy",961047,43009003,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",961047,43009003,"outcome"
+193874,"Nocturnal enuresis",961047,43009003,"outcome"
+4171549,"Nodular goiter",961047,43009003,"outcome"
+442274,"Oligomenorrhea",961047,43009003,"outcome"
+4215978,"Onychomycosis",961047,43009003,"outcome"
+4171915,"Orchitis",961047,43009003,"outcome"
+380731,"Otitis externa",961047,43009003,"outcome"
+378160,"Otorrhea",961047,43009003,"outcome"
+192606,"Paraplegia",961047,43009003,"outcome"
+253796,"Pneumothorax",961047,43009003,"outcome"
+195501,"Polycystic ovaries",961047,43009003,"outcome"
+4164337,"Polyp of large intestine",961047,43009003,"outcome"
+4153877,"Post-traumatic wound infection",961047,43009003,"outcome"
+434319,"Premature ejaculation",961047,43009003,"outcome"
+373478,"Presbyopia",961047,43009003,"outcome"
+199876,"Prolapse of female genital organs",961047,43009003,"outcome"
+4295888,"Prolapse of intestine",961047,43009003,"outcome"
+194997,"Prostatitis",961047,43009003,"outcome"
+4146239,"Pruritus of genital organs",961047,43009003,"outcome"
+4285569,"Pupillary disorder",961047,43009003,"outcome"
+81336,"Rectal prolapse",961047,43009003,"outcome"
+380395,"Retinal dystrophy",961047,43009003,"outcome"
+141825,"Simple goiter",961047,43009003,"outcome"
+137054,"Skin striae",961047,43009003,"outcome"
+434630,"Sleep-wake schedule disorder",961047,43009003,"outcome"
+4195698,"Tenosynovitis",961047,43009003,"outcome"
+4339088,"Testicular mass",961047,43009003,"outcome"
+133141,"Tinea pedis",961047,43009003,"outcome"
+440814,"Torticollis",961047,43009003,"outcome"
+435140,"Toxic effect of alcohol",961047,43009003,"outcome"
+4270490,"Tracheitis",961047,43009003,"outcome"
+4028970,"Tracheobronchitis",961047,43009003,"outcome"
+4114197,"Tumor of hypothalamus",961047,43009003,"outcome"
+193326,"Urge incontinence of urine",961047,43009003,"outcome"
+4092565,"Uterine prolapse",961047,43009003,"outcome"
+140641,"Verruca vulgaris",961047,43009003,"outcome"
+197036,"Vesicoureteric reflux",961047,43009003,"outcome"
+133551,"Vesicular eczema of hands and/or feet",961047,43009003,"outcome"
+4223947,"Viral hepatitis, type A",961047,43009003,"outcome"
+261326,"Viral pneumonia",961047,43009003,"outcome"
+378256,"Abnormal reflex",961047,953076,"outcome"
+4218106,"Alcoholism",961047,953076,"outcome"
+317585,"Aortic aneurysm",961047,953076,"outcome"
+440424,"Aphasia",961047,953076,"outcome"
+439237,"Assault",961047,953076,"outcome"
+378424,"Astigmatism",961047,953076,"outcome"
+261880,"Atelectasis",961047,953076,"outcome"
+134118,"Atrophic condition of skin",961047,953076,"outcome"
+4224118,"Bladder dysfunction",961047,953076,"outcome"
+80509,"Bone cyst",961047,953076,"outcome"
+434626,"Borderline personality disorder",961047,953076,"outcome"
+438407,"Bulimia nervosa",961047,953076,"outcome"
+134765,"Cachexia",961047,953076,"outcome"
+4172458,"Candidiasis of skin",961047,953076,"outcome"
+436740,"Cervical incompetence",961047,953076,"outcome"
+381581,"Chalazion",961047,953076,"outcome"
+4307254,"Closed fracture",961047,953076,"outcome"
+4047787,"Colles' fracture",961047,953076,"outcome"
+198075,"Condyloma acuminatum",961047,953076,"outcome"
+73302,"Curvature of spine",961047,953076,"outcome"
+4242416,"Cutis laxa",961047,953076,"outcome"
+433163,"Deficiency of macronutrients",961047,953076,"outcome"
+4047269,"Deformity of foot",961047,953076,"outcome"
+133228,"Dental caries",961047,953076,"outcome"
+4095288,"Diabetic coma with ketoacidosis",961047,953076,"outcome"
+4044391,"Diabetic neuropathy",961047,953076,"outcome"
+443767,"Diabetic oculopathy",961047,953076,"outcome"
+4174977,"Diabetic retinopathy",961047,953076,"outcome"
+4132130,"Dilatation of aorta",961047,953076,"outcome"
+4147672,"Disease due to Papilloma virus",961047,953076,"outcome"
+4153380,"Disorder of carotid artery",961047,953076,"outcome"
+4140510,"Disorder of lymphatic vessel",961047,953076,"outcome"
+433440,"Dysthymia",961047,953076,"outcome"
+376132,"Ectropion",961047,953076,"outcome"
+440695,"Encopresis",961047,953076,"outcome"
+438872,"Excessive eating - polyphagia",961047,953076,"outcome"
+78804,"Fibrocystic disease of breast",961047,953076,"outcome"
+4131595,"Fracture of radius",961047,953076,"outcome"
+74855,"Genital herpes simplex",961047,953076,"outcome"
+441788,"Human papilloma virus infection",961047,953076,"outcome"
+76737,"Hydrocele",961047,953076,"outcome"
+4029582,"Hyperandrogenization syndrome",961047,953076,"outcome"
+195212,"Hypercortisolism",961047,953076,"outcome"
+438134,"Hypersomnia",961047,953076,"outcome"
+45768449,"Hypertensive crisis",961047,953076,"outcome"
+140362,"Hypoparathyroidism",961047,953076,"outcome"
+4322737,"Infection of tooth",961047,953076,"outcome"
+4207688,"Infectious enteritis",961047,953076,"outcome"
+79072,"Inflammatory disorder of breast",961047,953076,"outcome"
+139099,"Ingrowing nail",961047,953076,"outcome"
+4288544,"Inguinal hernia",961047,953076,"outcome"
+444191,"Injury of face",961047,953076,"outcome"
+444130,"Injury of foot",961047,953076,"outcome"
+134222,"Injury of forearm",961047,953076,"outcome"
+4029966,"Intracranial aneurysm",961047,953076,"outcome"
+437409,"Intracranial injury",961047,953076,"outcome"
+4297984,"Local infection of wound",961047,953076,"outcome"
+4018050,"Localized infection",961047,953076,"outcome"
+439840,"Lymphangitis",961047,953076,"outcome"
+4163232,"Mastitis",961047,953076,"outcome"
+440389,"Mental retardation",961047,953076,"outcome"
+436100,"Narcolepsy",961047,953076,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",961047,953076,"outcome"
+193874,"Nocturnal enuresis",961047,953076,"outcome"
+4171549,"Nodular goiter",961047,953076,"outcome"
+442274,"Oligomenorrhea",961047,953076,"outcome"
+4215978,"Onychomycosis",961047,953076,"outcome"
+4171915,"Orchitis",961047,953076,"outcome"
+380731,"Otitis externa",961047,953076,"outcome"
+378160,"Otorrhea",961047,953076,"outcome"
+192606,"Paraplegia",961047,953076,"outcome"
+253796,"Pneumothorax",961047,953076,"outcome"
+195501,"Polycystic ovaries",961047,953076,"outcome"
+4164337,"Polyp of large intestine",961047,953076,"outcome"
+4153877,"Post-traumatic wound infection",961047,953076,"outcome"
+434319,"Premature ejaculation",961047,953076,"outcome"
+373478,"Presbyopia",961047,953076,"outcome"
+199876,"Prolapse of female genital organs",961047,953076,"outcome"
+4295888,"Prolapse of intestine",961047,953076,"outcome"
+194997,"Prostatitis",961047,953076,"outcome"
+4146239,"Pruritus of genital organs",961047,953076,"outcome"
+4285569,"Pupillary disorder",961047,953076,"outcome"
+81336,"Rectal prolapse",961047,953076,"outcome"
+380395,"Retinal dystrophy",961047,953076,"outcome"
+141825,"Simple goiter",961047,953076,"outcome"
+137054,"Skin striae",961047,953076,"outcome"
+434630,"Sleep-wake schedule disorder",961047,953076,"outcome"
+4195698,"Tenosynovitis",961047,953076,"outcome"
+4339088,"Testicular mass",961047,953076,"outcome"
+133141,"Tinea pedis",961047,953076,"outcome"
+440814,"Torticollis",961047,953076,"outcome"
+435140,"Toxic effect of alcohol",961047,953076,"outcome"
+4270490,"Tracheitis",961047,953076,"outcome"
+4028970,"Tracheobronchitis",961047,953076,"outcome"
+4114197,"Tumor of hypothalamus",961047,953076,"outcome"
+193326,"Urge incontinence of urine",961047,953076,"outcome"
+4092565,"Uterine prolapse",961047,953076,"outcome"
+140641,"Verruca vulgaris",961047,953076,"outcome"
+197036,"Vesicoureteric reflux",961047,953076,"outcome"
+133551,"Vesicular eczema of hands and/or feet",961047,953076,"outcome"
+4223947,"Viral hepatitis, type A",961047,953076,"outcome"
+261326,"Viral pneumonia",961047,953076,"outcome"
+378256,"Abnormal reflex",961047,950696,"outcome"
+4218106,"Alcoholism",961047,950696,"outcome"
+317585,"Aortic aneurysm",961047,950696,"outcome"
+440424,"Aphasia",961047,950696,"outcome"
+439237,"Assault",961047,950696,"outcome"
+378424,"Astigmatism",961047,950696,"outcome"
+261880,"Atelectasis",961047,950696,"outcome"
+134118,"Atrophic condition of skin",961047,950696,"outcome"
+4224118,"Bladder dysfunction",961047,950696,"outcome"
+80509,"Bone cyst",961047,950696,"outcome"
+434626,"Borderline personality disorder",961047,950696,"outcome"
+438407,"Bulimia nervosa",961047,950696,"outcome"
+134765,"Cachexia",961047,950696,"outcome"
+4172458,"Candidiasis of skin",961047,950696,"outcome"
+436740,"Cervical incompetence",961047,950696,"outcome"
+381581,"Chalazion",961047,950696,"outcome"
+4307254,"Closed fracture",961047,950696,"outcome"
+4047787,"Colles' fracture",961047,950696,"outcome"
+198075,"Condyloma acuminatum",961047,950696,"outcome"
+73302,"Curvature of spine",961047,950696,"outcome"
+4242416,"Cutis laxa",961047,950696,"outcome"
+433163,"Deficiency of macronutrients",961047,950696,"outcome"
+4047269,"Deformity of foot",961047,950696,"outcome"
+133228,"Dental caries",961047,950696,"outcome"
+4095288,"Diabetic coma with ketoacidosis",961047,950696,"outcome"
+4044391,"Diabetic neuropathy",961047,950696,"outcome"
+443767,"Diabetic oculopathy",961047,950696,"outcome"
+4174977,"Diabetic retinopathy",961047,950696,"outcome"
+4132130,"Dilatation of aorta",961047,950696,"outcome"
+4147672,"Disease due to Papilloma virus",961047,950696,"outcome"
+4153380,"Disorder of carotid artery",961047,950696,"outcome"
+4140510,"Disorder of lymphatic vessel",961047,950696,"outcome"
+433440,"Dysthymia",961047,950696,"outcome"
+376132,"Ectropion",961047,950696,"outcome"
+440695,"Encopresis",961047,950696,"outcome"
+438872,"Excessive eating - polyphagia",961047,950696,"outcome"
+78804,"Fibrocystic disease of breast",961047,950696,"outcome"
+4131595,"Fracture of radius",961047,950696,"outcome"
+74855,"Genital herpes simplex",961047,950696,"outcome"
+441788,"Human papilloma virus infection",961047,950696,"outcome"
+76737,"Hydrocele",961047,950696,"outcome"
+4029582,"Hyperandrogenization syndrome",961047,950696,"outcome"
+195212,"Hypercortisolism",961047,950696,"outcome"
+438134,"Hypersomnia",961047,950696,"outcome"
+45768449,"Hypertensive crisis",961047,950696,"outcome"
+140362,"Hypoparathyroidism",961047,950696,"outcome"
+4322737,"Infection of tooth",961047,950696,"outcome"
+4207688,"Infectious enteritis",961047,950696,"outcome"
+79072,"Inflammatory disorder of breast",961047,950696,"outcome"
+139099,"Ingrowing nail",961047,950696,"outcome"
+4288544,"Inguinal hernia",961047,950696,"outcome"
+444191,"Injury of face",961047,950696,"outcome"
+444130,"Injury of foot",961047,950696,"outcome"
+134222,"Injury of forearm",961047,950696,"outcome"
+4029966,"Intracranial aneurysm",961047,950696,"outcome"
+437409,"Intracranial injury",961047,950696,"outcome"
+4297984,"Local infection of wound",961047,950696,"outcome"
+4018050,"Localized infection",961047,950696,"outcome"
+439840,"Lymphangitis",961047,950696,"outcome"
+4163232,"Mastitis",961047,950696,"outcome"
+440389,"Mental retardation",961047,950696,"outcome"
+436100,"Narcolepsy",961047,950696,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",961047,950696,"outcome"
+193874,"Nocturnal enuresis",961047,950696,"outcome"
+4171549,"Nodular goiter",961047,950696,"outcome"
+442274,"Oligomenorrhea",961047,950696,"outcome"
+4215978,"Onychomycosis",961047,950696,"outcome"
+4171915,"Orchitis",961047,950696,"outcome"
+380731,"Otitis externa",961047,950696,"outcome"
+378160,"Otorrhea",961047,950696,"outcome"
+192606,"Paraplegia",961047,950696,"outcome"
+253796,"Pneumothorax",961047,950696,"outcome"
+195501,"Polycystic ovaries",961047,950696,"outcome"
+4164337,"Polyp of large intestine",961047,950696,"outcome"
+4153877,"Post-traumatic wound infection",961047,950696,"outcome"
+434319,"Premature ejaculation",961047,950696,"outcome"
+373478,"Presbyopia",961047,950696,"outcome"
+199876,"Prolapse of female genital organs",961047,950696,"outcome"
+4295888,"Prolapse of intestine",961047,950696,"outcome"
+194997,"Prostatitis",961047,950696,"outcome"
+4146239,"Pruritus of genital organs",961047,950696,"outcome"
+4285569,"Pupillary disorder",961047,950696,"outcome"
+81336,"Rectal prolapse",961047,950696,"outcome"
+380395,"Retinal dystrophy",961047,950696,"outcome"
+141825,"Simple goiter",961047,950696,"outcome"
+137054,"Skin striae",961047,950696,"outcome"
+434630,"Sleep-wake schedule disorder",961047,950696,"outcome"
+4195698,"Tenosynovitis",961047,950696,"outcome"
+4339088,"Testicular mass",961047,950696,"outcome"
+133141,"Tinea pedis",961047,950696,"outcome"
+440814,"Torticollis",961047,950696,"outcome"
+435140,"Toxic effect of alcohol",961047,950696,"outcome"
+4270490,"Tracheitis",961047,950696,"outcome"
+4028970,"Tracheobronchitis",961047,950696,"outcome"
+4114197,"Tumor of hypothalamus",961047,950696,"outcome"
+193326,"Urge incontinence of urine",961047,950696,"outcome"
+4092565,"Uterine prolapse",961047,950696,"outcome"
+140641,"Verruca vulgaris",961047,950696,"outcome"
+197036,"Vesicoureteric reflux",961047,950696,"outcome"
+133551,"Vesicular eczema of hands and/or feet",961047,950696,"outcome"
+4223947,"Viral hepatitis, type A",961047,950696,"outcome"
+261326,"Viral pneumonia",961047,950696,"outcome"
+378256,"Abnormal reflex",961047,19011685,"outcome"
+4218106,"Alcoholism",961047,19011685,"outcome"
+317585,"Aortic aneurysm",961047,19011685,"outcome"
+440424,"Aphasia",961047,19011685,"outcome"
+439237,"Assault",961047,19011685,"outcome"
+378424,"Astigmatism",961047,19011685,"outcome"
+261880,"Atelectasis",961047,19011685,"outcome"
+134118,"Atrophic condition of skin",961047,19011685,"outcome"
+4224118,"Bladder dysfunction",961047,19011685,"outcome"
+80509,"Bone cyst",961047,19011685,"outcome"
+434626,"Borderline personality disorder",961047,19011685,"outcome"
+438407,"Bulimia nervosa",961047,19011685,"outcome"
+134765,"Cachexia",961047,19011685,"outcome"
+4172458,"Candidiasis of skin",961047,19011685,"outcome"
+436740,"Cervical incompetence",961047,19011685,"outcome"
+381581,"Chalazion",961047,19011685,"outcome"
+4307254,"Closed fracture",961047,19011685,"outcome"
+4047787,"Colles' fracture",961047,19011685,"outcome"
+198075,"Condyloma acuminatum",961047,19011685,"outcome"
+73302,"Curvature of spine",961047,19011685,"outcome"
+4242416,"Cutis laxa",961047,19011685,"outcome"
+433163,"Deficiency of macronutrients",961047,19011685,"outcome"
+4047269,"Deformity of foot",961047,19011685,"outcome"
+133228,"Dental caries",961047,19011685,"outcome"
+4095288,"Diabetic coma with ketoacidosis",961047,19011685,"outcome"
+4044391,"Diabetic neuropathy",961047,19011685,"outcome"
+443767,"Diabetic oculopathy",961047,19011685,"outcome"
+4174977,"Diabetic retinopathy",961047,19011685,"outcome"
+4132130,"Dilatation of aorta",961047,19011685,"outcome"
+4147672,"Disease due to Papilloma virus",961047,19011685,"outcome"
+4153380,"Disorder of carotid artery",961047,19011685,"outcome"
+4140510,"Disorder of lymphatic vessel",961047,19011685,"outcome"
+433440,"Dysthymia",961047,19011685,"outcome"
+376132,"Ectropion",961047,19011685,"outcome"
+440695,"Encopresis",961047,19011685,"outcome"
+438872,"Excessive eating - polyphagia",961047,19011685,"outcome"
+78804,"Fibrocystic disease of breast",961047,19011685,"outcome"
+4131595,"Fracture of radius",961047,19011685,"outcome"
+74855,"Genital herpes simplex",961047,19011685,"outcome"
+441788,"Human papilloma virus infection",961047,19011685,"outcome"
+76737,"Hydrocele",961047,19011685,"outcome"
+4029582,"Hyperandrogenization syndrome",961047,19011685,"outcome"
+195212,"Hypercortisolism",961047,19011685,"outcome"
+438134,"Hypersomnia",961047,19011685,"outcome"
+45768449,"Hypertensive crisis",961047,19011685,"outcome"
+140362,"Hypoparathyroidism",961047,19011685,"outcome"
+4322737,"Infection of tooth",961047,19011685,"outcome"
+4207688,"Infectious enteritis",961047,19011685,"outcome"
+79072,"Inflammatory disorder of breast",961047,19011685,"outcome"
+139099,"Ingrowing nail",961047,19011685,"outcome"
+4288544,"Inguinal hernia",961047,19011685,"outcome"
+444191,"Injury of face",961047,19011685,"outcome"
+444130,"Injury of foot",961047,19011685,"outcome"
+134222,"Injury of forearm",961047,19011685,"outcome"
+4029966,"Intracranial aneurysm",961047,19011685,"outcome"
+437409,"Intracranial injury",961047,19011685,"outcome"
+4297984,"Local infection of wound",961047,19011685,"outcome"
+4018050,"Localized infection",961047,19011685,"outcome"
+439840,"Lymphangitis",961047,19011685,"outcome"
+4163232,"Mastitis",961047,19011685,"outcome"
+440389,"Mental retardation",961047,19011685,"outcome"
+436100,"Narcolepsy",961047,19011685,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",961047,19011685,"outcome"
+193874,"Nocturnal enuresis",961047,19011685,"outcome"
+4171549,"Nodular goiter",961047,19011685,"outcome"
+442274,"Oligomenorrhea",961047,19011685,"outcome"
+4215978,"Onychomycosis",961047,19011685,"outcome"
+4171915,"Orchitis",961047,19011685,"outcome"
+380731,"Otitis externa",961047,19011685,"outcome"
+378160,"Otorrhea",961047,19011685,"outcome"
+192606,"Paraplegia",961047,19011685,"outcome"
+253796,"Pneumothorax",961047,19011685,"outcome"
+195501,"Polycystic ovaries",961047,19011685,"outcome"
+4164337,"Polyp of large intestine",961047,19011685,"outcome"
+4153877,"Post-traumatic wound infection",961047,19011685,"outcome"
+434319,"Premature ejaculation",961047,19011685,"outcome"
+373478,"Presbyopia",961047,19011685,"outcome"
+199876,"Prolapse of female genital organs",961047,19011685,"outcome"
+4295888,"Prolapse of intestine",961047,19011685,"outcome"
+194997,"Prostatitis",961047,19011685,"outcome"
+4146239,"Pruritus of genital organs",961047,19011685,"outcome"
+4285569,"Pupillary disorder",961047,19011685,"outcome"
+81336,"Rectal prolapse",961047,19011685,"outcome"
+380395,"Retinal dystrophy",961047,19011685,"outcome"
+141825,"Simple goiter",961047,19011685,"outcome"
+137054,"Skin striae",961047,19011685,"outcome"
+434630,"Sleep-wake schedule disorder",961047,19011685,"outcome"
+4195698,"Tenosynovitis",961047,19011685,"outcome"
+4339088,"Testicular mass",961047,19011685,"outcome"
+133141,"Tinea pedis",961047,19011685,"outcome"
+440814,"Torticollis",961047,19011685,"outcome"
+435140,"Toxic effect of alcohol",961047,19011685,"outcome"
+4270490,"Tracheitis",961047,19011685,"outcome"
+4028970,"Tracheobronchitis",961047,19011685,"outcome"
+4114197,"Tumor of hypothalamus",961047,19011685,"outcome"
+193326,"Urge incontinence of urine",961047,19011685,"outcome"
+4092565,"Uterine prolapse",961047,19011685,"outcome"
+140641,"Verruca vulgaris",961047,19011685,"outcome"
+197036,"Vesicoureteric reflux",961047,19011685,"outcome"
+133551,"Vesicular eczema of hands and/or feet",961047,19011685,"outcome"
+4223947,"Viral hepatitis, type A",961047,19011685,"outcome"
+261326,"Viral pneumonia",961047,19011685,"outcome"
+378256,"Abnormal reflex",961047,997276,"outcome"
+4218106,"Alcoholism",961047,997276,"outcome"
+317585,"Aortic aneurysm",961047,997276,"outcome"
+440424,"Aphasia",961047,997276,"outcome"
+439237,"Assault",961047,997276,"outcome"
+378424,"Astigmatism",961047,997276,"outcome"
+261880,"Atelectasis",961047,997276,"outcome"
+134118,"Atrophic condition of skin",961047,997276,"outcome"
+4224118,"Bladder dysfunction",961047,997276,"outcome"
+80509,"Bone cyst",961047,997276,"outcome"
+434626,"Borderline personality disorder",961047,997276,"outcome"
+438407,"Bulimia nervosa",961047,997276,"outcome"
+134765,"Cachexia",961047,997276,"outcome"
+4172458,"Candidiasis of skin",961047,997276,"outcome"
+436740,"Cervical incompetence",961047,997276,"outcome"
+381581,"Chalazion",961047,997276,"outcome"
+4307254,"Closed fracture",961047,997276,"outcome"
+4047787,"Colles' fracture",961047,997276,"outcome"
+198075,"Condyloma acuminatum",961047,997276,"outcome"
+73302,"Curvature of spine",961047,997276,"outcome"
+4242416,"Cutis laxa",961047,997276,"outcome"
+433163,"Deficiency of macronutrients",961047,997276,"outcome"
+4047269,"Deformity of foot",961047,997276,"outcome"
+133228,"Dental caries",961047,997276,"outcome"
+4095288,"Diabetic coma with ketoacidosis",961047,997276,"outcome"
+4044391,"Diabetic neuropathy",961047,997276,"outcome"
+443767,"Diabetic oculopathy",961047,997276,"outcome"
+4174977,"Diabetic retinopathy",961047,997276,"outcome"
+4132130,"Dilatation of aorta",961047,997276,"outcome"
+4147672,"Disease due to Papilloma virus",961047,997276,"outcome"
+4153380,"Disorder of carotid artery",961047,997276,"outcome"
+4140510,"Disorder of lymphatic vessel",961047,997276,"outcome"
+433440,"Dysthymia",961047,997276,"outcome"
+376132,"Ectropion",961047,997276,"outcome"
+440695,"Encopresis",961047,997276,"outcome"
+438872,"Excessive eating - polyphagia",961047,997276,"outcome"
+78804,"Fibrocystic disease of breast",961047,997276,"outcome"
+4131595,"Fracture of radius",961047,997276,"outcome"
+74855,"Genital herpes simplex",961047,997276,"outcome"
+441788,"Human papilloma virus infection",961047,997276,"outcome"
+76737,"Hydrocele",961047,997276,"outcome"
+4029582,"Hyperandrogenization syndrome",961047,997276,"outcome"
+195212,"Hypercortisolism",961047,997276,"outcome"
+438134,"Hypersomnia",961047,997276,"outcome"
+45768449,"Hypertensive crisis",961047,997276,"outcome"
+140362,"Hypoparathyroidism",961047,997276,"outcome"
+4322737,"Infection of tooth",961047,997276,"outcome"
+4207688,"Infectious enteritis",961047,997276,"outcome"
+79072,"Inflammatory disorder of breast",961047,997276,"outcome"
+139099,"Ingrowing nail",961047,997276,"outcome"
+4288544,"Inguinal hernia",961047,997276,"outcome"
+444191,"Injury of face",961047,997276,"outcome"
+444130,"Injury of foot",961047,997276,"outcome"
+134222,"Injury of forearm",961047,997276,"outcome"
+4029966,"Intracranial aneurysm",961047,997276,"outcome"
+437409,"Intracranial injury",961047,997276,"outcome"
+4297984,"Local infection of wound",961047,997276,"outcome"
+4018050,"Localized infection",961047,997276,"outcome"
+439840,"Lymphangitis",961047,997276,"outcome"
+4163232,"Mastitis",961047,997276,"outcome"
+440389,"Mental retardation",961047,997276,"outcome"
+436100,"Narcolepsy",961047,997276,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",961047,997276,"outcome"
+193874,"Nocturnal enuresis",961047,997276,"outcome"
+4171549,"Nodular goiter",961047,997276,"outcome"
+442274,"Oligomenorrhea",961047,997276,"outcome"
+4215978,"Onychomycosis",961047,997276,"outcome"
+4171915,"Orchitis",961047,997276,"outcome"
+380731,"Otitis externa",961047,997276,"outcome"
+378160,"Otorrhea",961047,997276,"outcome"
+192606,"Paraplegia",961047,997276,"outcome"
+253796,"Pneumothorax",961047,997276,"outcome"
+195501,"Polycystic ovaries",961047,997276,"outcome"
+4164337,"Polyp of large intestine",961047,997276,"outcome"
+4153877,"Post-traumatic wound infection",961047,997276,"outcome"
+434319,"Premature ejaculation",961047,997276,"outcome"
+373478,"Presbyopia",961047,997276,"outcome"
+199876,"Prolapse of female genital organs",961047,997276,"outcome"
+4295888,"Prolapse of intestine",961047,997276,"outcome"
+194997,"Prostatitis",961047,997276,"outcome"
+4146239,"Pruritus of genital organs",961047,997276,"outcome"
+4285569,"Pupillary disorder",961047,997276,"outcome"
+81336,"Rectal prolapse",961047,997276,"outcome"
+380395,"Retinal dystrophy",961047,997276,"outcome"
+141825,"Simple goiter",961047,997276,"outcome"
+137054,"Skin striae",961047,997276,"outcome"
+434630,"Sleep-wake schedule disorder",961047,997276,"outcome"
+4195698,"Tenosynovitis",961047,997276,"outcome"
+4339088,"Testicular mass",961047,997276,"outcome"
+133141,"Tinea pedis",961047,997276,"outcome"
+440814,"Torticollis",961047,997276,"outcome"
+435140,"Toxic effect of alcohol",961047,997276,"outcome"
+4270490,"Tracheitis",961047,997276,"outcome"
+4028970,"Tracheobronchitis",961047,997276,"outcome"
+4114197,"Tumor of hypothalamus",961047,997276,"outcome"
+193326,"Urge incontinence of urine",961047,997276,"outcome"
+4092565,"Uterine prolapse",961047,997276,"outcome"
+140641,"Verruca vulgaris",961047,997276,"outcome"
+197036,"Vesicoureteric reflux",961047,997276,"outcome"
+133551,"Vesicular eczema of hands and/or feet",961047,997276,"outcome"
+4223947,"Viral hepatitis, type A",961047,997276,"outcome"
+261326,"Viral pneumonia",961047,997276,"outcome"
+378256,"Abnormal reflex",43009003,953076,"outcome"
+4218106,"Alcoholism",43009003,953076,"outcome"
+317585,"Aortic aneurysm",43009003,953076,"outcome"
+440424,"Aphasia",43009003,953076,"outcome"
+439237,"Assault",43009003,953076,"outcome"
+378424,"Astigmatism",43009003,953076,"outcome"
+261880,"Atelectasis",43009003,953076,"outcome"
+134118,"Atrophic condition of skin",43009003,953076,"outcome"
+4224118,"Bladder dysfunction",43009003,953076,"outcome"
+80509,"Bone cyst",43009003,953076,"outcome"
+434626,"Borderline personality disorder",43009003,953076,"outcome"
+438407,"Bulimia nervosa",43009003,953076,"outcome"
+134765,"Cachexia",43009003,953076,"outcome"
+4172458,"Candidiasis of skin",43009003,953076,"outcome"
+436740,"Cervical incompetence",43009003,953076,"outcome"
+381581,"Chalazion",43009003,953076,"outcome"
+4307254,"Closed fracture",43009003,953076,"outcome"
+4047787,"Colles' fracture",43009003,953076,"outcome"
+198075,"Condyloma acuminatum",43009003,953076,"outcome"
+73302,"Curvature of spine",43009003,953076,"outcome"
+4242416,"Cutis laxa",43009003,953076,"outcome"
+433163,"Deficiency of macronutrients",43009003,953076,"outcome"
+4047269,"Deformity of foot",43009003,953076,"outcome"
+133228,"Dental caries",43009003,953076,"outcome"
+4095288,"Diabetic coma with ketoacidosis",43009003,953076,"outcome"
+4044391,"Diabetic neuropathy",43009003,953076,"outcome"
+443767,"Diabetic oculopathy",43009003,953076,"outcome"
+4174977,"Diabetic retinopathy",43009003,953076,"outcome"
+4132130,"Dilatation of aorta",43009003,953076,"outcome"
+4147672,"Disease due to Papilloma virus",43009003,953076,"outcome"
+4153380,"Disorder of carotid artery",43009003,953076,"outcome"
+4140510,"Disorder of lymphatic vessel",43009003,953076,"outcome"
+433440,"Dysthymia",43009003,953076,"outcome"
+376132,"Ectropion",43009003,953076,"outcome"
+440695,"Encopresis",43009003,953076,"outcome"
+438872,"Excessive eating - polyphagia",43009003,953076,"outcome"
+78804,"Fibrocystic disease of breast",43009003,953076,"outcome"
+4131595,"Fracture of radius",43009003,953076,"outcome"
+74855,"Genital herpes simplex",43009003,953076,"outcome"
+441788,"Human papilloma virus infection",43009003,953076,"outcome"
+76737,"Hydrocele",43009003,953076,"outcome"
+4029582,"Hyperandrogenization syndrome",43009003,953076,"outcome"
+195212,"Hypercortisolism",43009003,953076,"outcome"
+438134,"Hypersomnia",43009003,953076,"outcome"
+45768449,"Hypertensive crisis",43009003,953076,"outcome"
+140362,"Hypoparathyroidism",43009003,953076,"outcome"
+4322737,"Infection of tooth",43009003,953076,"outcome"
+4207688,"Infectious enteritis",43009003,953076,"outcome"
+79072,"Inflammatory disorder of breast",43009003,953076,"outcome"
+139099,"Ingrowing nail",43009003,953076,"outcome"
+4288544,"Inguinal hernia",43009003,953076,"outcome"
+444191,"Injury of face",43009003,953076,"outcome"
+444130,"Injury of foot",43009003,953076,"outcome"
+134222,"Injury of forearm",43009003,953076,"outcome"
+4029966,"Intracranial aneurysm",43009003,953076,"outcome"
+437409,"Intracranial injury",43009003,953076,"outcome"
+4297984,"Local infection of wound",43009003,953076,"outcome"
+4018050,"Localized infection",43009003,953076,"outcome"
+439840,"Lymphangitis",43009003,953076,"outcome"
+4163232,"Mastitis",43009003,953076,"outcome"
+440389,"Mental retardation",43009003,953076,"outcome"
+436100,"Narcolepsy",43009003,953076,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",43009003,953076,"outcome"
+193874,"Nocturnal enuresis",43009003,953076,"outcome"
+4171549,"Nodular goiter",43009003,953076,"outcome"
+442274,"Oligomenorrhea",43009003,953076,"outcome"
+4215978,"Onychomycosis",43009003,953076,"outcome"
+4171915,"Orchitis",43009003,953076,"outcome"
+380731,"Otitis externa",43009003,953076,"outcome"
+378160,"Otorrhea",43009003,953076,"outcome"
+192606,"Paraplegia",43009003,953076,"outcome"
+253796,"Pneumothorax",43009003,953076,"outcome"
+195501,"Polycystic ovaries",43009003,953076,"outcome"
+4164337,"Polyp of large intestine",43009003,953076,"outcome"
+4153877,"Post-traumatic wound infection",43009003,953076,"outcome"
+434319,"Premature ejaculation",43009003,953076,"outcome"
+373478,"Presbyopia",43009003,953076,"outcome"
+199876,"Prolapse of female genital organs",43009003,953076,"outcome"
+4295888,"Prolapse of intestine",43009003,953076,"outcome"
+194997,"Prostatitis",43009003,953076,"outcome"
+4146239,"Pruritus of genital organs",43009003,953076,"outcome"
+4285569,"Pupillary disorder",43009003,953076,"outcome"
+81336,"Rectal prolapse",43009003,953076,"outcome"
+380395,"Retinal dystrophy",43009003,953076,"outcome"
+141825,"Simple goiter",43009003,953076,"outcome"
+137054,"Skin striae",43009003,953076,"outcome"
+434630,"Sleep-wake schedule disorder",43009003,953076,"outcome"
+4195698,"Tenosynovitis",43009003,953076,"outcome"
+4339088,"Testicular mass",43009003,953076,"outcome"
+133141,"Tinea pedis",43009003,953076,"outcome"
+440814,"Torticollis",43009003,953076,"outcome"
+435140,"Toxic effect of alcohol",43009003,953076,"outcome"
+4270490,"Tracheitis",43009003,953076,"outcome"
+4028970,"Tracheobronchitis",43009003,953076,"outcome"
+4114197,"Tumor of hypothalamus",43009003,953076,"outcome"
+193326,"Urge incontinence of urine",43009003,953076,"outcome"
+4092565,"Uterine prolapse",43009003,953076,"outcome"
+140641,"Verruca vulgaris",43009003,953076,"outcome"
+197036,"Vesicoureteric reflux",43009003,953076,"outcome"
+133551,"Vesicular eczema of hands and/or feet",43009003,953076,"outcome"
+4223947,"Viral hepatitis, type A",43009003,953076,"outcome"
+261326,"Viral pneumonia",43009003,953076,"outcome"
+378256,"Abnormal reflex",43009003,950696,"outcome"
+4218106,"Alcoholism",43009003,950696,"outcome"
+317585,"Aortic aneurysm",43009003,950696,"outcome"
+440424,"Aphasia",43009003,950696,"outcome"
+439237,"Assault",43009003,950696,"outcome"
+378424,"Astigmatism",43009003,950696,"outcome"
+261880,"Atelectasis",43009003,950696,"outcome"
+134118,"Atrophic condition of skin",43009003,950696,"outcome"
+4224118,"Bladder dysfunction",43009003,950696,"outcome"
+80509,"Bone cyst",43009003,950696,"outcome"
+434626,"Borderline personality disorder",43009003,950696,"outcome"
+438407,"Bulimia nervosa",43009003,950696,"outcome"
+134765,"Cachexia",43009003,950696,"outcome"
+4172458,"Candidiasis of skin",43009003,950696,"outcome"
+436740,"Cervical incompetence",43009003,950696,"outcome"
+381581,"Chalazion",43009003,950696,"outcome"
+4307254,"Closed fracture",43009003,950696,"outcome"
+4047787,"Colles' fracture",43009003,950696,"outcome"
+198075,"Condyloma acuminatum",43009003,950696,"outcome"
+73302,"Curvature of spine",43009003,950696,"outcome"
+4242416,"Cutis laxa",43009003,950696,"outcome"
+433163,"Deficiency of macronutrients",43009003,950696,"outcome"
+4047269,"Deformity of foot",43009003,950696,"outcome"
+133228,"Dental caries",43009003,950696,"outcome"
+4095288,"Diabetic coma with ketoacidosis",43009003,950696,"outcome"
+4044391,"Diabetic neuropathy",43009003,950696,"outcome"
+443767,"Diabetic oculopathy",43009003,950696,"outcome"
+4174977,"Diabetic retinopathy",43009003,950696,"outcome"
+4132130,"Dilatation of aorta",43009003,950696,"outcome"
+4147672,"Disease due to Papilloma virus",43009003,950696,"outcome"
+4153380,"Disorder of carotid artery",43009003,950696,"outcome"
+4140510,"Disorder of lymphatic vessel",43009003,950696,"outcome"
+433440,"Dysthymia",43009003,950696,"outcome"
+376132,"Ectropion",43009003,950696,"outcome"
+440695,"Encopresis",43009003,950696,"outcome"
+438872,"Excessive eating - polyphagia",43009003,950696,"outcome"
+78804,"Fibrocystic disease of breast",43009003,950696,"outcome"
+4131595,"Fracture of radius",43009003,950696,"outcome"
+74855,"Genital herpes simplex",43009003,950696,"outcome"
+441788,"Human papilloma virus infection",43009003,950696,"outcome"
+76737,"Hydrocele",43009003,950696,"outcome"
+4029582,"Hyperandrogenization syndrome",43009003,950696,"outcome"
+195212,"Hypercortisolism",43009003,950696,"outcome"
+438134,"Hypersomnia",43009003,950696,"outcome"
+45768449,"Hypertensive crisis",43009003,950696,"outcome"
+140362,"Hypoparathyroidism",43009003,950696,"outcome"
+4322737,"Infection of tooth",43009003,950696,"outcome"
+4207688,"Infectious enteritis",43009003,950696,"outcome"
+79072,"Inflammatory disorder of breast",43009003,950696,"outcome"
+139099,"Ingrowing nail",43009003,950696,"outcome"
+4288544,"Inguinal hernia",43009003,950696,"outcome"
+444191,"Injury of face",43009003,950696,"outcome"
+444130,"Injury of foot",43009003,950696,"outcome"
+134222,"Injury of forearm",43009003,950696,"outcome"
+4029966,"Intracranial aneurysm",43009003,950696,"outcome"
+437409,"Intracranial injury",43009003,950696,"outcome"
+4297984,"Local infection of wound",43009003,950696,"outcome"
+4018050,"Localized infection",43009003,950696,"outcome"
+439840,"Lymphangitis",43009003,950696,"outcome"
+4163232,"Mastitis",43009003,950696,"outcome"
+440389,"Mental retardation",43009003,950696,"outcome"
+436100,"Narcolepsy",43009003,950696,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",43009003,950696,"outcome"
+193874,"Nocturnal enuresis",43009003,950696,"outcome"
+4171549,"Nodular goiter",43009003,950696,"outcome"
+442274,"Oligomenorrhea",43009003,950696,"outcome"
+4215978,"Onychomycosis",43009003,950696,"outcome"
+4171915,"Orchitis",43009003,950696,"outcome"
+380731,"Otitis externa",43009003,950696,"outcome"
+378160,"Otorrhea",43009003,950696,"outcome"
+192606,"Paraplegia",43009003,950696,"outcome"
+253796,"Pneumothorax",43009003,950696,"outcome"
+195501,"Polycystic ovaries",43009003,950696,"outcome"
+4164337,"Polyp of large intestine",43009003,950696,"outcome"
+4153877,"Post-traumatic wound infection",43009003,950696,"outcome"
+434319,"Premature ejaculation",43009003,950696,"outcome"
+373478,"Presbyopia",43009003,950696,"outcome"
+199876,"Prolapse of female genital organs",43009003,950696,"outcome"
+4295888,"Prolapse of intestine",43009003,950696,"outcome"
+194997,"Prostatitis",43009003,950696,"outcome"
+4146239,"Pruritus of genital organs",43009003,950696,"outcome"
+4285569,"Pupillary disorder",43009003,950696,"outcome"
+81336,"Rectal prolapse",43009003,950696,"outcome"
+380395,"Retinal dystrophy",43009003,950696,"outcome"
+141825,"Simple goiter",43009003,950696,"outcome"
+137054,"Skin striae",43009003,950696,"outcome"
+434630,"Sleep-wake schedule disorder",43009003,950696,"outcome"
+4195698,"Tenosynovitis",43009003,950696,"outcome"
+4339088,"Testicular mass",43009003,950696,"outcome"
+133141,"Tinea pedis",43009003,950696,"outcome"
+440814,"Torticollis",43009003,950696,"outcome"
+435140,"Toxic effect of alcohol",43009003,950696,"outcome"
+4270490,"Tracheitis",43009003,950696,"outcome"
+4028970,"Tracheobronchitis",43009003,950696,"outcome"
+4114197,"Tumor of hypothalamus",43009003,950696,"outcome"
+193326,"Urge incontinence of urine",43009003,950696,"outcome"
+4092565,"Uterine prolapse",43009003,950696,"outcome"
+140641,"Verruca vulgaris",43009003,950696,"outcome"
+197036,"Vesicoureteric reflux",43009003,950696,"outcome"
+133551,"Vesicular eczema of hands and/or feet",43009003,950696,"outcome"
+4223947,"Viral hepatitis, type A",43009003,950696,"outcome"
+261326,"Viral pneumonia",43009003,950696,"outcome"
+378256,"Abnormal reflex",43009003,19011685,"outcome"
+4218106,"Alcoholism",43009003,19011685,"outcome"
+317585,"Aortic aneurysm",43009003,19011685,"outcome"
+440424,"Aphasia",43009003,19011685,"outcome"
+439237,"Assault",43009003,19011685,"outcome"
+378424,"Astigmatism",43009003,19011685,"outcome"
+261880,"Atelectasis",43009003,19011685,"outcome"
+134118,"Atrophic condition of skin",43009003,19011685,"outcome"
+4224118,"Bladder dysfunction",43009003,19011685,"outcome"
+80509,"Bone cyst",43009003,19011685,"outcome"
+434626,"Borderline personality disorder",43009003,19011685,"outcome"
+438407,"Bulimia nervosa",43009003,19011685,"outcome"
+134765,"Cachexia",43009003,19011685,"outcome"
+4172458,"Candidiasis of skin",43009003,19011685,"outcome"
+436740,"Cervical incompetence",43009003,19011685,"outcome"
+381581,"Chalazion",43009003,19011685,"outcome"
+4307254,"Closed fracture",43009003,19011685,"outcome"
+4047787,"Colles' fracture",43009003,19011685,"outcome"
+198075,"Condyloma acuminatum",43009003,19011685,"outcome"
+73302,"Curvature of spine",43009003,19011685,"outcome"
+4242416,"Cutis laxa",43009003,19011685,"outcome"
+433163,"Deficiency of macronutrients",43009003,19011685,"outcome"
+4047269,"Deformity of foot",43009003,19011685,"outcome"
+133228,"Dental caries",43009003,19011685,"outcome"
+4095288,"Diabetic coma with ketoacidosis",43009003,19011685,"outcome"
+4044391,"Diabetic neuropathy",43009003,19011685,"outcome"
+443767,"Diabetic oculopathy",43009003,19011685,"outcome"
+4174977,"Diabetic retinopathy",43009003,19011685,"outcome"
+4132130,"Dilatation of aorta",43009003,19011685,"outcome"
+4147672,"Disease due to Papilloma virus",43009003,19011685,"outcome"
+4153380,"Disorder of carotid artery",43009003,19011685,"outcome"
+4140510,"Disorder of lymphatic vessel",43009003,19011685,"outcome"
+433440,"Dysthymia",43009003,19011685,"outcome"
+376132,"Ectropion",43009003,19011685,"outcome"
+440695,"Encopresis",43009003,19011685,"outcome"
+438872,"Excessive eating - polyphagia",43009003,19011685,"outcome"
+78804,"Fibrocystic disease of breast",43009003,19011685,"outcome"
+4131595,"Fracture of radius",43009003,19011685,"outcome"
+74855,"Genital herpes simplex",43009003,19011685,"outcome"
+441788,"Human papilloma virus infection",43009003,19011685,"outcome"
+76737,"Hydrocele",43009003,19011685,"outcome"
+4029582,"Hyperandrogenization syndrome",43009003,19011685,"outcome"
+195212,"Hypercortisolism",43009003,19011685,"outcome"
+438134,"Hypersomnia",43009003,19011685,"outcome"
+45768449,"Hypertensive crisis",43009003,19011685,"outcome"
+140362,"Hypoparathyroidism",43009003,19011685,"outcome"
+4322737,"Infection of tooth",43009003,19011685,"outcome"
+4207688,"Infectious enteritis",43009003,19011685,"outcome"
+79072,"Inflammatory disorder of breast",43009003,19011685,"outcome"
+139099,"Ingrowing nail",43009003,19011685,"outcome"
+4288544,"Inguinal hernia",43009003,19011685,"outcome"
+444191,"Injury of face",43009003,19011685,"outcome"
+444130,"Injury of foot",43009003,19011685,"outcome"
+134222,"Injury of forearm",43009003,19011685,"outcome"
+4029966,"Intracranial aneurysm",43009003,19011685,"outcome"
+437409,"Intracranial injury",43009003,19011685,"outcome"
+4297984,"Local infection of wound",43009003,19011685,"outcome"
+4018050,"Localized infection",43009003,19011685,"outcome"
+439840,"Lymphangitis",43009003,19011685,"outcome"
+4163232,"Mastitis",43009003,19011685,"outcome"
+440389,"Mental retardation",43009003,19011685,"outcome"
+436100,"Narcolepsy",43009003,19011685,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",43009003,19011685,"outcome"
+193874,"Nocturnal enuresis",43009003,19011685,"outcome"
+4171549,"Nodular goiter",43009003,19011685,"outcome"
+442274,"Oligomenorrhea",43009003,19011685,"outcome"
+4215978,"Onychomycosis",43009003,19011685,"outcome"
+4171915,"Orchitis",43009003,19011685,"outcome"
+380731,"Otitis externa",43009003,19011685,"outcome"
+378160,"Otorrhea",43009003,19011685,"outcome"
+192606,"Paraplegia",43009003,19011685,"outcome"
+253796,"Pneumothorax",43009003,19011685,"outcome"
+195501,"Polycystic ovaries",43009003,19011685,"outcome"
+4164337,"Polyp of large intestine",43009003,19011685,"outcome"
+4153877,"Post-traumatic wound infection",43009003,19011685,"outcome"
+434319,"Premature ejaculation",43009003,19011685,"outcome"
+373478,"Presbyopia",43009003,19011685,"outcome"
+199876,"Prolapse of female genital organs",43009003,19011685,"outcome"
+4295888,"Prolapse of intestine",43009003,19011685,"outcome"
+194997,"Prostatitis",43009003,19011685,"outcome"
+4146239,"Pruritus of genital organs",43009003,19011685,"outcome"
+4285569,"Pupillary disorder",43009003,19011685,"outcome"
+81336,"Rectal prolapse",43009003,19011685,"outcome"
+380395,"Retinal dystrophy",43009003,19011685,"outcome"
+141825,"Simple goiter",43009003,19011685,"outcome"
+137054,"Skin striae",43009003,19011685,"outcome"
+434630,"Sleep-wake schedule disorder",43009003,19011685,"outcome"
+4195698,"Tenosynovitis",43009003,19011685,"outcome"
+4339088,"Testicular mass",43009003,19011685,"outcome"
+133141,"Tinea pedis",43009003,19011685,"outcome"
+440814,"Torticollis",43009003,19011685,"outcome"
+435140,"Toxic effect of alcohol",43009003,19011685,"outcome"
+4270490,"Tracheitis",43009003,19011685,"outcome"
+4028970,"Tracheobronchitis",43009003,19011685,"outcome"
+4114197,"Tumor of hypothalamus",43009003,19011685,"outcome"
+193326,"Urge incontinence of urine",43009003,19011685,"outcome"
+4092565,"Uterine prolapse",43009003,19011685,"outcome"
+140641,"Verruca vulgaris",43009003,19011685,"outcome"
+197036,"Vesicoureteric reflux",43009003,19011685,"outcome"
+133551,"Vesicular eczema of hands and/or feet",43009003,19011685,"outcome"
+4223947,"Viral hepatitis, type A",43009003,19011685,"outcome"
+261326,"Viral pneumonia",43009003,19011685,"outcome"
+378256,"Abnormal reflex",43009003,997276,"outcome"
+4218106,"Alcoholism",43009003,997276,"outcome"
+317585,"Aortic aneurysm",43009003,997276,"outcome"
+440424,"Aphasia",43009003,997276,"outcome"
+439237,"Assault",43009003,997276,"outcome"
+378424,"Astigmatism",43009003,997276,"outcome"
+261880,"Atelectasis",43009003,997276,"outcome"
+134118,"Atrophic condition of skin",43009003,997276,"outcome"
+4224118,"Bladder dysfunction",43009003,997276,"outcome"
+80509,"Bone cyst",43009003,997276,"outcome"
+434626,"Borderline personality disorder",43009003,997276,"outcome"
+438407,"Bulimia nervosa",43009003,997276,"outcome"
+134765,"Cachexia",43009003,997276,"outcome"
+4172458,"Candidiasis of skin",43009003,997276,"outcome"
+436740,"Cervical incompetence",43009003,997276,"outcome"
+381581,"Chalazion",43009003,997276,"outcome"
+4307254,"Closed fracture",43009003,997276,"outcome"
+4047787,"Colles' fracture",43009003,997276,"outcome"
+198075,"Condyloma acuminatum",43009003,997276,"outcome"
+73302,"Curvature of spine",43009003,997276,"outcome"
+4242416,"Cutis laxa",43009003,997276,"outcome"
+433163,"Deficiency of macronutrients",43009003,997276,"outcome"
+4047269,"Deformity of foot",43009003,997276,"outcome"
+133228,"Dental caries",43009003,997276,"outcome"
+4095288,"Diabetic coma with ketoacidosis",43009003,997276,"outcome"
+4044391,"Diabetic neuropathy",43009003,997276,"outcome"
+443767,"Diabetic oculopathy",43009003,997276,"outcome"
+4174977,"Diabetic retinopathy",43009003,997276,"outcome"
+4132130,"Dilatation of aorta",43009003,997276,"outcome"
+4147672,"Disease due to Papilloma virus",43009003,997276,"outcome"
+4153380,"Disorder of carotid artery",43009003,997276,"outcome"
+4140510,"Disorder of lymphatic vessel",43009003,997276,"outcome"
+433440,"Dysthymia",43009003,997276,"outcome"
+376132,"Ectropion",43009003,997276,"outcome"
+440695,"Encopresis",43009003,997276,"outcome"
+438872,"Excessive eating - polyphagia",43009003,997276,"outcome"
+78804,"Fibrocystic disease of breast",43009003,997276,"outcome"
+4131595,"Fracture of radius",43009003,997276,"outcome"
+74855,"Genital herpes simplex",43009003,997276,"outcome"
+441788,"Human papilloma virus infection",43009003,997276,"outcome"
+76737,"Hydrocele",43009003,997276,"outcome"
+4029582,"Hyperandrogenization syndrome",43009003,997276,"outcome"
+195212,"Hypercortisolism",43009003,997276,"outcome"
+438134,"Hypersomnia",43009003,997276,"outcome"
+45768449,"Hypertensive crisis",43009003,997276,"outcome"
+140362,"Hypoparathyroidism",43009003,997276,"outcome"
+4322737,"Infection of tooth",43009003,997276,"outcome"
+4207688,"Infectious enteritis",43009003,997276,"outcome"
+79072,"Inflammatory disorder of breast",43009003,997276,"outcome"
+139099,"Ingrowing nail",43009003,997276,"outcome"
+4288544,"Inguinal hernia",43009003,997276,"outcome"
+444191,"Injury of face",43009003,997276,"outcome"
+444130,"Injury of foot",43009003,997276,"outcome"
+134222,"Injury of forearm",43009003,997276,"outcome"
+4029966,"Intracranial aneurysm",43009003,997276,"outcome"
+437409,"Intracranial injury",43009003,997276,"outcome"
+4297984,"Local infection of wound",43009003,997276,"outcome"
+4018050,"Localized infection",43009003,997276,"outcome"
+439840,"Lymphangitis",43009003,997276,"outcome"
+4163232,"Mastitis",43009003,997276,"outcome"
+440389,"Mental retardation",43009003,997276,"outcome"
+436100,"Narcolepsy",43009003,997276,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",43009003,997276,"outcome"
+193874,"Nocturnal enuresis",43009003,997276,"outcome"
+4171549,"Nodular goiter",43009003,997276,"outcome"
+442274,"Oligomenorrhea",43009003,997276,"outcome"
+4215978,"Onychomycosis",43009003,997276,"outcome"
+4171915,"Orchitis",43009003,997276,"outcome"
+380731,"Otitis externa",43009003,997276,"outcome"
+378160,"Otorrhea",43009003,997276,"outcome"
+192606,"Paraplegia",43009003,997276,"outcome"
+253796,"Pneumothorax",43009003,997276,"outcome"
+195501,"Polycystic ovaries",43009003,997276,"outcome"
+4164337,"Polyp of large intestine",43009003,997276,"outcome"
+4153877,"Post-traumatic wound infection",43009003,997276,"outcome"
+434319,"Premature ejaculation",43009003,997276,"outcome"
+373478,"Presbyopia",43009003,997276,"outcome"
+199876,"Prolapse of female genital organs",43009003,997276,"outcome"
+4295888,"Prolapse of intestine",43009003,997276,"outcome"
+194997,"Prostatitis",43009003,997276,"outcome"
+4146239,"Pruritus of genital organs",43009003,997276,"outcome"
+4285569,"Pupillary disorder",43009003,997276,"outcome"
+81336,"Rectal prolapse",43009003,997276,"outcome"
+380395,"Retinal dystrophy",43009003,997276,"outcome"
+141825,"Simple goiter",43009003,997276,"outcome"
+137054,"Skin striae",43009003,997276,"outcome"
+434630,"Sleep-wake schedule disorder",43009003,997276,"outcome"
+4195698,"Tenosynovitis",43009003,997276,"outcome"
+4339088,"Testicular mass",43009003,997276,"outcome"
+133141,"Tinea pedis",43009003,997276,"outcome"
+440814,"Torticollis",43009003,997276,"outcome"
+435140,"Toxic effect of alcohol",43009003,997276,"outcome"
+4270490,"Tracheitis",43009003,997276,"outcome"
+4028970,"Tracheobronchitis",43009003,997276,"outcome"
+4114197,"Tumor of hypothalamus",43009003,997276,"outcome"
+193326,"Urge incontinence of urine",43009003,997276,"outcome"
+4092565,"Uterine prolapse",43009003,997276,"outcome"
+140641,"Verruca vulgaris",43009003,997276,"outcome"
+197036,"Vesicoureteric reflux",43009003,997276,"outcome"
+133551,"Vesicular eczema of hands and/or feet",43009003,997276,"outcome"
+4223947,"Viral hepatitis, type A",43009003,997276,"outcome"
+261326,"Viral pneumonia",43009003,997276,"outcome"
+378256,"Abnormal reflex",953076,950696,"outcome"
+4218106,"Alcoholism",953076,950696,"outcome"
+317585,"Aortic aneurysm",953076,950696,"outcome"
+440424,"Aphasia",953076,950696,"outcome"
+439237,"Assault",953076,950696,"outcome"
+378424,"Astigmatism",953076,950696,"outcome"
+261880,"Atelectasis",953076,950696,"outcome"
+134118,"Atrophic condition of skin",953076,950696,"outcome"
+4224118,"Bladder dysfunction",953076,950696,"outcome"
+80509,"Bone cyst",953076,950696,"outcome"
+434626,"Borderline personality disorder",953076,950696,"outcome"
+438407,"Bulimia nervosa",953076,950696,"outcome"
+134765,"Cachexia",953076,950696,"outcome"
+4172458,"Candidiasis of skin",953076,950696,"outcome"
+436740,"Cervical incompetence",953076,950696,"outcome"
+381581,"Chalazion",953076,950696,"outcome"
+4307254,"Closed fracture",953076,950696,"outcome"
+4047787,"Colles' fracture",953076,950696,"outcome"
+198075,"Condyloma acuminatum",953076,950696,"outcome"
+73302,"Curvature of spine",953076,950696,"outcome"
+4242416,"Cutis laxa",953076,950696,"outcome"
+433163,"Deficiency of macronutrients",953076,950696,"outcome"
+4047269,"Deformity of foot",953076,950696,"outcome"
+133228,"Dental caries",953076,950696,"outcome"
+4095288,"Diabetic coma with ketoacidosis",953076,950696,"outcome"
+4044391,"Diabetic neuropathy",953076,950696,"outcome"
+443767,"Diabetic oculopathy",953076,950696,"outcome"
+4174977,"Diabetic retinopathy",953076,950696,"outcome"
+4132130,"Dilatation of aorta",953076,950696,"outcome"
+4147672,"Disease due to Papilloma virus",953076,950696,"outcome"
+4153380,"Disorder of carotid artery",953076,950696,"outcome"
+4140510,"Disorder of lymphatic vessel",953076,950696,"outcome"
+433440,"Dysthymia",953076,950696,"outcome"
+376132,"Ectropion",953076,950696,"outcome"
+440695,"Encopresis",953076,950696,"outcome"
+438872,"Excessive eating - polyphagia",953076,950696,"outcome"
+78804,"Fibrocystic disease of breast",953076,950696,"outcome"
+4131595,"Fracture of radius",953076,950696,"outcome"
+74855,"Genital herpes simplex",953076,950696,"outcome"
+441788,"Human papilloma virus infection",953076,950696,"outcome"
+76737,"Hydrocele",953076,950696,"outcome"
+4029582,"Hyperandrogenization syndrome",953076,950696,"outcome"
+195212,"Hypercortisolism",953076,950696,"outcome"
+438134,"Hypersomnia",953076,950696,"outcome"
+45768449,"Hypertensive crisis",953076,950696,"outcome"
+140362,"Hypoparathyroidism",953076,950696,"outcome"
+4322737,"Infection of tooth",953076,950696,"outcome"
+4207688,"Infectious enteritis",953076,950696,"outcome"
+79072,"Inflammatory disorder of breast",953076,950696,"outcome"
+139099,"Ingrowing nail",953076,950696,"outcome"
+4288544,"Inguinal hernia",953076,950696,"outcome"
+444191,"Injury of face",953076,950696,"outcome"
+444130,"Injury of foot",953076,950696,"outcome"
+134222,"Injury of forearm",953076,950696,"outcome"
+4029966,"Intracranial aneurysm",953076,950696,"outcome"
+437409,"Intracranial injury",953076,950696,"outcome"
+4297984,"Local infection of wound",953076,950696,"outcome"
+4018050,"Localized infection",953076,950696,"outcome"
+439840,"Lymphangitis",953076,950696,"outcome"
+4163232,"Mastitis",953076,950696,"outcome"
+440389,"Mental retardation",953076,950696,"outcome"
+436100,"Narcolepsy",953076,950696,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",953076,950696,"outcome"
+193874,"Nocturnal enuresis",953076,950696,"outcome"
+4171549,"Nodular goiter",953076,950696,"outcome"
+442274,"Oligomenorrhea",953076,950696,"outcome"
+4215978,"Onychomycosis",953076,950696,"outcome"
+4171915,"Orchitis",953076,950696,"outcome"
+380731,"Otitis externa",953076,950696,"outcome"
+378160,"Otorrhea",953076,950696,"outcome"
+192606,"Paraplegia",953076,950696,"outcome"
+253796,"Pneumothorax",953076,950696,"outcome"
+195501,"Polycystic ovaries",953076,950696,"outcome"
+4164337,"Polyp of large intestine",953076,950696,"outcome"
+4153877,"Post-traumatic wound infection",953076,950696,"outcome"
+434319,"Premature ejaculation",953076,950696,"outcome"
+373478,"Presbyopia",953076,950696,"outcome"
+199876,"Prolapse of female genital organs",953076,950696,"outcome"
+4295888,"Prolapse of intestine",953076,950696,"outcome"
+194997,"Prostatitis",953076,950696,"outcome"
+4146239,"Pruritus of genital organs",953076,950696,"outcome"
+4285569,"Pupillary disorder",953076,950696,"outcome"
+81336,"Rectal prolapse",953076,950696,"outcome"
+380395,"Retinal dystrophy",953076,950696,"outcome"
+141825,"Simple goiter",953076,950696,"outcome"
+137054,"Skin striae",953076,950696,"outcome"
+434630,"Sleep-wake schedule disorder",953076,950696,"outcome"
+4195698,"Tenosynovitis",953076,950696,"outcome"
+4339088,"Testicular mass",953076,950696,"outcome"
+133141,"Tinea pedis",953076,950696,"outcome"
+440814,"Torticollis",953076,950696,"outcome"
+435140,"Toxic effect of alcohol",953076,950696,"outcome"
+4270490,"Tracheitis",953076,950696,"outcome"
+4028970,"Tracheobronchitis",953076,950696,"outcome"
+4114197,"Tumor of hypothalamus",953076,950696,"outcome"
+193326,"Urge incontinence of urine",953076,950696,"outcome"
+4092565,"Uterine prolapse",953076,950696,"outcome"
+140641,"Verruca vulgaris",953076,950696,"outcome"
+197036,"Vesicoureteric reflux",953076,950696,"outcome"
+133551,"Vesicular eczema of hands and/or feet",953076,950696,"outcome"
+4223947,"Viral hepatitis, type A",953076,950696,"outcome"
+261326,"Viral pneumonia",953076,950696,"outcome"
+378256,"Abnormal reflex",953076,19011685,"outcome"
+4218106,"Alcoholism",953076,19011685,"outcome"
+317585,"Aortic aneurysm",953076,19011685,"outcome"
+440424,"Aphasia",953076,19011685,"outcome"
+439237,"Assault",953076,19011685,"outcome"
+378424,"Astigmatism",953076,19011685,"outcome"
+261880,"Atelectasis",953076,19011685,"outcome"
+134118,"Atrophic condition of skin",953076,19011685,"outcome"
+4224118,"Bladder dysfunction",953076,19011685,"outcome"
+80509,"Bone cyst",953076,19011685,"outcome"
+434626,"Borderline personality disorder",953076,19011685,"outcome"
+438407,"Bulimia nervosa",953076,19011685,"outcome"
+134765,"Cachexia",953076,19011685,"outcome"
+4172458,"Candidiasis of skin",953076,19011685,"outcome"
+436740,"Cervical incompetence",953076,19011685,"outcome"
+381581,"Chalazion",953076,19011685,"outcome"
+4307254,"Closed fracture",953076,19011685,"outcome"
+4047787,"Colles' fracture",953076,19011685,"outcome"
+198075,"Condyloma acuminatum",953076,19011685,"outcome"
+73302,"Curvature of spine",953076,19011685,"outcome"
+4242416,"Cutis laxa",953076,19011685,"outcome"
+433163,"Deficiency of macronutrients",953076,19011685,"outcome"
+4047269,"Deformity of foot",953076,19011685,"outcome"
+133228,"Dental caries",953076,19011685,"outcome"
+4095288,"Diabetic coma with ketoacidosis",953076,19011685,"outcome"
+4044391,"Diabetic neuropathy",953076,19011685,"outcome"
+443767,"Diabetic oculopathy",953076,19011685,"outcome"
+4174977,"Diabetic retinopathy",953076,19011685,"outcome"
+4132130,"Dilatation of aorta",953076,19011685,"outcome"
+4147672,"Disease due to Papilloma virus",953076,19011685,"outcome"
+4153380,"Disorder of carotid artery",953076,19011685,"outcome"
+4140510,"Disorder of lymphatic vessel",953076,19011685,"outcome"
+433440,"Dysthymia",953076,19011685,"outcome"
+376132,"Ectropion",953076,19011685,"outcome"
+440695,"Encopresis",953076,19011685,"outcome"
+438872,"Excessive eating - polyphagia",953076,19011685,"outcome"
+78804,"Fibrocystic disease of breast",953076,19011685,"outcome"
+4131595,"Fracture of radius",953076,19011685,"outcome"
+74855,"Genital herpes simplex",953076,19011685,"outcome"
+441788,"Human papilloma virus infection",953076,19011685,"outcome"
+76737,"Hydrocele",953076,19011685,"outcome"
+4029582,"Hyperandrogenization syndrome",953076,19011685,"outcome"
+195212,"Hypercortisolism",953076,19011685,"outcome"
+438134,"Hypersomnia",953076,19011685,"outcome"
+45768449,"Hypertensive crisis",953076,19011685,"outcome"
+140362,"Hypoparathyroidism",953076,19011685,"outcome"
+4322737,"Infection of tooth",953076,19011685,"outcome"
+4207688,"Infectious enteritis",953076,19011685,"outcome"
+79072,"Inflammatory disorder of breast",953076,19011685,"outcome"
+139099,"Ingrowing nail",953076,19011685,"outcome"
+4288544,"Inguinal hernia",953076,19011685,"outcome"
+444191,"Injury of face",953076,19011685,"outcome"
+444130,"Injury of foot",953076,19011685,"outcome"
+134222,"Injury of forearm",953076,19011685,"outcome"
+4029966,"Intracranial aneurysm",953076,19011685,"outcome"
+437409,"Intracranial injury",953076,19011685,"outcome"
+4297984,"Local infection of wound",953076,19011685,"outcome"
+4018050,"Localized infection",953076,19011685,"outcome"
+439840,"Lymphangitis",953076,19011685,"outcome"
+4163232,"Mastitis",953076,19011685,"outcome"
+440389,"Mental retardation",953076,19011685,"outcome"
+436100,"Narcolepsy",953076,19011685,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",953076,19011685,"outcome"
+193874,"Nocturnal enuresis",953076,19011685,"outcome"
+4171549,"Nodular goiter",953076,19011685,"outcome"
+442274,"Oligomenorrhea",953076,19011685,"outcome"
+4215978,"Onychomycosis",953076,19011685,"outcome"
+4171915,"Orchitis",953076,19011685,"outcome"
+380731,"Otitis externa",953076,19011685,"outcome"
+378160,"Otorrhea",953076,19011685,"outcome"
+192606,"Paraplegia",953076,19011685,"outcome"
+253796,"Pneumothorax",953076,19011685,"outcome"
+195501,"Polycystic ovaries",953076,19011685,"outcome"
+4164337,"Polyp of large intestine",953076,19011685,"outcome"
+4153877,"Post-traumatic wound infection",953076,19011685,"outcome"
+434319,"Premature ejaculation",953076,19011685,"outcome"
+373478,"Presbyopia",953076,19011685,"outcome"
+199876,"Prolapse of female genital organs",953076,19011685,"outcome"
+4295888,"Prolapse of intestine",953076,19011685,"outcome"
+194997,"Prostatitis",953076,19011685,"outcome"
+4146239,"Pruritus of genital organs",953076,19011685,"outcome"
+4285569,"Pupillary disorder",953076,19011685,"outcome"
+81336,"Rectal prolapse",953076,19011685,"outcome"
+380395,"Retinal dystrophy",953076,19011685,"outcome"
+141825,"Simple goiter",953076,19011685,"outcome"
+137054,"Skin striae",953076,19011685,"outcome"
+434630,"Sleep-wake schedule disorder",953076,19011685,"outcome"
+4195698,"Tenosynovitis",953076,19011685,"outcome"
+4339088,"Testicular mass",953076,19011685,"outcome"
+133141,"Tinea pedis",953076,19011685,"outcome"
+440814,"Torticollis",953076,19011685,"outcome"
+435140,"Toxic effect of alcohol",953076,19011685,"outcome"
+4270490,"Tracheitis",953076,19011685,"outcome"
+4028970,"Tracheobronchitis",953076,19011685,"outcome"
+4114197,"Tumor of hypothalamus",953076,19011685,"outcome"
+193326,"Urge incontinence of urine",953076,19011685,"outcome"
+4092565,"Uterine prolapse",953076,19011685,"outcome"
+140641,"Verruca vulgaris",953076,19011685,"outcome"
+197036,"Vesicoureteric reflux",953076,19011685,"outcome"
+133551,"Vesicular eczema of hands and/or feet",953076,19011685,"outcome"
+4223947,"Viral hepatitis, type A",953076,19011685,"outcome"
+261326,"Viral pneumonia",953076,19011685,"outcome"
+378256,"Abnormal reflex",953076,997276,"outcome"
+4218106,"Alcoholism",953076,997276,"outcome"
+317585,"Aortic aneurysm",953076,997276,"outcome"
+440424,"Aphasia",953076,997276,"outcome"
+439237,"Assault",953076,997276,"outcome"
+378424,"Astigmatism",953076,997276,"outcome"
+261880,"Atelectasis",953076,997276,"outcome"
+134118,"Atrophic condition of skin",953076,997276,"outcome"
+4224118,"Bladder dysfunction",953076,997276,"outcome"
+80509,"Bone cyst",953076,997276,"outcome"
+434626,"Borderline personality disorder",953076,997276,"outcome"
+438407,"Bulimia nervosa",953076,997276,"outcome"
+134765,"Cachexia",953076,997276,"outcome"
+4172458,"Candidiasis of skin",953076,997276,"outcome"
+436740,"Cervical incompetence",953076,997276,"outcome"
+381581,"Chalazion",953076,997276,"outcome"
+4307254,"Closed fracture",953076,997276,"outcome"
+4047787,"Colles' fracture",953076,997276,"outcome"
+198075,"Condyloma acuminatum",953076,997276,"outcome"
+73302,"Curvature of spine",953076,997276,"outcome"
+4242416,"Cutis laxa",953076,997276,"outcome"
+433163,"Deficiency of macronutrients",953076,997276,"outcome"
+4047269,"Deformity of foot",953076,997276,"outcome"
+133228,"Dental caries",953076,997276,"outcome"
+4095288,"Diabetic coma with ketoacidosis",953076,997276,"outcome"
+4044391,"Diabetic neuropathy",953076,997276,"outcome"
+443767,"Diabetic oculopathy",953076,997276,"outcome"
+4174977,"Diabetic retinopathy",953076,997276,"outcome"
+4132130,"Dilatation of aorta",953076,997276,"outcome"
+4147672,"Disease due to Papilloma virus",953076,997276,"outcome"
+4153380,"Disorder of carotid artery",953076,997276,"outcome"
+4140510,"Disorder of lymphatic vessel",953076,997276,"outcome"
+433440,"Dysthymia",953076,997276,"outcome"
+376132,"Ectropion",953076,997276,"outcome"
+440695,"Encopresis",953076,997276,"outcome"
+438872,"Excessive eating - polyphagia",953076,997276,"outcome"
+78804,"Fibrocystic disease of breast",953076,997276,"outcome"
+4131595,"Fracture of radius",953076,997276,"outcome"
+74855,"Genital herpes simplex",953076,997276,"outcome"
+441788,"Human papilloma virus infection",953076,997276,"outcome"
+76737,"Hydrocele",953076,997276,"outcome"
+4029582,"Hyperandrogenization syndrome",953076,997276,"outcome"
+195212,"Hypercortisolism",953076,997276,"outcome"
+438134,"Hypersomnia",953076,997276,"outcome"
+45768449,"Hypertensive crisis",953076,997276,"outcome"
+140362,"Hypoparathyroidism",953076,997276,"outcome"
+4322737,"Infection of tooth",953076,997276,"outcome"
+4207688,"Infectious enteritis",953076,997276,"outcome"
+79072,"Inflammatory disorder of breast",953076,997276,"outcome"
+139099,"Ingrowing nail",953076,997276,"outcome"
+4288544,"Inguinal hernia",953076,997276,"outcome"
+444191,"Injury of face",953076,997276,"outcome"
+444130,"Injury of foot",953076,997276,"outcome"
+134222,"Injury of forearm",953076,997276,"outcome"
+4029966,"Intracranial aneurysm",953076,997276,"outcome"
+437409,"Intracranial injury",953076,997276,"outcome"
+4297984,"Local infection of wound",953076,997276,"outcome"
+4018050,"Localized infection",953076,997276,"outcome"
+439840,"Lymphangitis",953076,997276,"outcome"
+4163232,"Mastitis",953076,997276,"outcome"
+440389,"Mental retardation",953076,997276,"outcome"
+436100,"Narcolepsy",953076,997276,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",953076,997276,"outcome"
+193874,"Nocturnal enuresis",953076,997276,"outcome"
+4171549,"Nodular goiter",953076,997276,"outcome"
+442274,"Oligomenorrhea",953076,997276,"outcome"
+4215978,"Onychomycosis",953076,997276,"outcome"
+4171915,"Orchitis",953076,997276,"outcome"
+380731,"Otitis externa",953076,997276,"outcome"
+378160,"Otorrhea",953076,997276,"outcome"
+192606,"Paraplegia",953076,997276,"outcome"
+253796,"Pneumothorax",953076,997276,"outcome"
+195501,"Polycystic ovaries",953076,997276,"outcome"
+4164337,"Polyp of large intestine",953076,997276,"outcome"
+4153877,"Post-traumatic wound infection",953076,997276,"outcome"
+434319,"Premature ejaculation",953076,997276,"outcome"
+373478,"Presbyopia",953076,997276,"outcome"
+199876,"Prolapse of female genital organs",953076,997276,"outcome"
+4295888,"Prolapse of intestine",953076,997276,"outcome"
+194997,"Prostatitis",953076,997276,"outcome"
+4146239,"Pruritus of genital organs",953076,997276,"outcome"
+4285569,"Pupillary disorder",953076,997276,"outcome"
+81336,"Rectal prolapse",953076,997276,"outcome"
+380395,"Retinal dystrophy",953076,997276,"outcome"
+141825,"Simple goiter",953076,997276,"outcome"
+137054,"Skin striae",953076,997276,"outcome"
+434630,"Sleep-wake schedule disorder",953076,997276,"outcome"
+4195698,"Tenosynovitis",953076,997276,"outcome"
+4339088,"Testicular mass",953076,997276,"outcome"
+133141,"Tinea pedis",953076,997276,"outcome"
+440814,"Torticollis",953076,997276,"outcome"
+435140,"Toxic effect of alcohol",953076,997276,"outcome"
+4270490,"Tracheitis",953076,997276,"outcome"
+4028970,"Tracheobronchitis",953076,997276,"outcome"
+4114197,"Tumor of hypothalamus",953076,997276,"outcome"
+193326,"Urge incontinence of urine",953076,997276,"outcome"
+4092565,"Uterine prolapse",953076,997276,"outcome"
+140641,"Verruca vulgaris",953076,997276,"outcome"
+197036,"Vesicoureteric reflux",953076,997276,"outcome"
+133551,"Vesicular eczema of hands and/or feet",953076,997276,"outcome"
+4223947,"Viral hepatitis, type A",953076,997276,"outcome"
+261326,"Viral pneumonia",953076,997276,"outcome"
+378256,"Abnormal reflex",950696,19011685,"outcome"
+4218106,"Alcoholism",950696,19011685,"outcome"
+317585,"Aortic aneurysm",950696,19011685,"outcome"
+440424,"Aphasia",950696,19011685,"outcome"
+439237,"Assault",950696,19011685,"outcome"
+378424,"Astigmatism",950696,19011685,"outcome"
+261880,"Atelectasis",950696,19011685,"outcome"
+134118,"Atrophic condition of skin",950696,19011685,"outcome"
+4224118,"Bladder dysfunction",950696,19011685,"outcome"
+80509,"Bone cyst",950696,19011685,"outcome"
+434626,"Borderline personality disorder",950696,19011685,"outcome"
+438407,"Bulimia nervosa",950696,19011685,"outcome"
+134765,"Cachexia",950696,19011685,"outcome"
+4172458,"Candidiasis of skin",950696,19011685,"outcome"
+436740,"Cervical incompetence",950696,19011685,"outcome"
+381581,"Chalazion",950696,19011685,"outcome"
+4307254,"Closed fracture",950696,19011685,"outcome"
+4047787,"Colles' fracture",950696,19011685,"outcome"
+198075,"Condyloma acuminatum",950696,19011685,"outcome"
+73302,"Curvature of spine",950696,19011685,"outcome"
+4242416,"Cutis laxa",950696,19011685,"outcome"
+433163,"Deficiency of macronutrients",950696,19011685,"outcome"
+4047269,"Deformity of foot",950696,19011685,"outcome"
+133228,"Dental caries",950696,19011685,"outcome"
+4095288,"Diabetic coma with ketoacidosis",950696,19011685,"outcome"
+4044391,"Diabetic neuropathy",950696,19011685,"outcome"
+443767,"Diabetic oculopathy",950696,19011685,"outcome"
+4174977,"Diabetic retinopathy",950696,19011685,"outcome"
+4132130,"Dilatation of aorta",950696,19011685,"outcome"
+4147672,"Disease due to Papilloma virus",950696,19011685,"outcome"
+4153380,"Disorder of carotid artery",950696,19011685,"outcome"
+4140510,"Disorder of lymphatic vessel",950696,19011685,"outcome"
+433440,"Dysthymia",950696,19011685,"outcome"
+376132,"Ectropion",950696,19011685,"outcome"
+440695,"Encopresis",950696,19011685,"outcome"
+438872,"Excessive eating - polyphagia",950696,19011685,"outcome"
+78804,"Fibrocystic disease of breast",950696,19011685,"outcome"
+4131595,"Fracture of radius",950696,19011685,"outcome"
+74855,"Genital herpes simplex",950696,19011685,"outcome"
+441788,"Human papilloma virus infection",950696,19011685,"outcome"
+76737,"Hydrocele",950696,19011685,"outcome"
+4029582,"Hyperandrogenization syndrome",950696,19011685,"outcome"
+195212,"Hypercortisolism",950696,19011685,"outcome"
+438134,"Hypersomnia",950696,19011685,"outcome"
+45768449,"Hypertensive crisis",950696,19011685,"outcome"
+140362,"Hypoparathyroidism",950696,19011685,"outcome"
+4322737,"Infection of tooth",950696,19011685,"outcome"
+4207688,"Infectious enteritis",950696,19011685,"outcome"
+79072,"Inflammatory disorder of breast",950696,19011685,"outcome"
+139099,"Ingrowing nail",950696,19011685,"outcome"
+4288544,"Inguinal hernia",950696,19011685,"outcome"
+444191,"Injury of face",950696,19011685,"outcome"
+444130,"Injury of foot",950696,19011685,"outcome"
+134222,"Injury of forearm",950696,19011685,"outcome"
+4029966,"Intracranial aneurysm",950696,19011685,"outcome"
+437409,"Intracranial injury",950696,19011685,"outcome"
+4297984,"Local infection of wound",950696,19011685,"outcome"
+4018050,"Localized infection",950696,19011685,"outcome"
+439840,"Lymphangitis",950696,19011685,"outcome"
+4163232,"Mastitis",950696,19011685,"outcome"
+440389,"Mental retardation",950696,19011685,"outcome"
+436100,"Narcolepsy",950696,19011685,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",950696,19011685,"outcome"
+193874,"Nocturnal enuresis",950696,19011685,"outcome"
+4171549,"Nodular goiter",950696,19011685,"outcome"
+442274,"Oligomenorrhea",950696,19011685,"outcome"
+4215978,"Onychomycosis",950696,19011685,"outcome"
+4171915,"Orchitis",950696,19011685,"outcome"
+380731,"Otitis externa",950696,19011685,"outcome"
+378160,"Otorrhea",950696,19011685,"outcome"
+192606,"Paraplegia",950696,19011685,"outcome"
+253796,"Pneumothorax",950696,19011685,"outcome"
+195501,"Polycystic ovaries",950696,19011685,"outcome"
+4164337,"Polyp of large intestine",950696,19011685,"outcome"
+4153877,"Post-traumatic wound infection",950696,19011685,"outcome"
+434319,"Premature ejaculation",950696,19011685,"outcome"
+373478,"Presbyopia",950696,19011685,"outcome"
+199876,"Prolapse of female genital organs",950696,19011685,"outcome"
+4295888,"Prolapse of intestine",950696,19011685,"outcome"
+194997,"Prostatitis",950696,19011685,"outcome"
+4146239,"Pruritus of genital organs",950696,19011685,"outcome"
+4285569,"Pupillary disorder",950696,19011685,"outcome"
+81336,"Rectal prolapse",950696,19011685,"outcome"
+380395,"Retinal dystrophy",950696,19011685,"outcome"
+141825,"Simple goiter",950696,19011685,"outcome"
+137054,"Skin striae",950696,19011685,"outcome"
+434630,"Sleep-wake schedule disorder",950696,19011685,"outcome"
+4195698,"Tenosynovitis",950696,19011685,"outcome"
+4339088,"Testicular mass",950696,19011685,"outcome"
+133141,"Tinea pedis",950696,19011685,"outcome"
+440814,"Torticollis",950696,19011685,"outcome"
+435140,"Toxic effect of alcohol",950696,19011685,"outcome"
+4270490,"Tracheitis",950696,19011685,"outcome"
+4028970,"Tracheobronchitis",950696,19011685,"outcome"
+4114197,"Tumor of hypothalamus",950696,19011685,"outcome"
+193326,"Urge incontinence of urine",950696,19011685,"outcome"
+4092565,"Uterine prolapse",950696,19011685,"outcome"
+140641,"Verruca vulgaris",950696,19011685,"outcome"
+197036,"Vesicoureteric reflux",950696,19011685,"outcome"
+133551,"Vesicular eczema of hands and/or feet",950696,19011685,"outcome"
+4223947,"Viral hepatitis, type A",950696,19011685,"outcome"
+261326,"Viral pneumonia",950696,19011685,"outcome"
+378256,"Abnormal reflex",950696,997276,"outcome"
+4218106,"Alcoholism",950696,997276,"outcome"
+317585,"Aortic aneurysm",950696,997276,"outcome"
+440424,"Aphasia",950696,997276,"outcome"
+439237,"Assault",950696,997276,"outcome"
+378424,"Astigmatism",950696,997276,"outcome"
+261880,"Atelectasis",950696,997276,"outcome"
+134118,"Atrophic condition of skin",950696,997276,"outcome"
+4224118,"Bladder dysfunction",950696,997276,"outcome"
+80509,"Bone cyst",950696,997276,"outcome"
+434626,"Borderline personality disorder",950696,997276,"outcome"
+438407,"Bulimia nervosa",950696,997276,"outcome"
+134765,"Cachexia",950696,997276,"outcome"
+4172458,"Candidiasis of skin",950696,997276,"outcome"
+436740,"Cervical incompetence",950696,997276,"outcome"
+381581,"Chalazion",950696,997276,"outcome"
+4307254,"Closed fracture",950696,997276,"outcome"
+4047787,"Colles' fracture",950696,997276,"outcome"
+198075,"Condyloma acuminatum",950696,997276,"outcome"
+73302,"Curvature of spine",950696,997276,"outcome"
+4242416,"Cutis laxa",950696,997276,"outcome"
+433163,"Deficiency of macronutrients",950696,997276,"outcome"
+4047269,"Deformity of foot",950696,997276,"outcome"
+133228,"Dental caries",950696,997276,"outcome"
+4095288,"Diabetic coma with ketoacidosis",950696,997276,"outcome"
+4044391,"Diabetic neuropathy",950696,997276,"outcome"
+443767,"Diabetic oculopathy",950696,997276,"outcome"
+4174977,"Diabetic retinopathy",950696,997276,"outcome"
+4132130,"Dilatation of aorta",950696,997276,"outcome"
+4147672,"Disease due to Papilloma virus",950696,997276,"outcome"
+4153380,"Disorder of carotid artery",950696,997276,"outcome"
+4140510,"Disorder of lymphatic vessel",950696,997276,"outcome"
+433440,"Dysthymia",950696,997276,"outcome"
+376132,"Ectropion",950696,997276,"outcome"
+440695,"Encopresis",950696,997276,"outcome"
+438872,"Excessive eating - polyphagia",950696,997276,"outcome"
+78804,"Fibrocystic disease of breast",950696,997276,"outcome"
+4131595,"Fracture of radius",950696,997276,"outcome"
+74855,"Genital herpes simplex",950696,997276,"outcome"
+441788,"Human papilloma virus infection",950696,997276,"outcome"
+76737,"Hydrocele",950696,997276,"outcome"
+4029582,"Hyperandrogenization syndrome",950696,997276,"outcome"
+195212,"Hypercortisolism",950696,997276,"outcome"
+438134,"Hypersomnia",950696,997276,"outcome"
+45768449,"Hypertensive crisis",950696,997276,"outcome"
+140362,"Hypoparathyroidism",950696,997276,"outcome"
+4322737,"Infection of tooth",950696,997276,"outcome"
+4207688,"Infectious enteritis",950696,997276,"outcome"
+79072,"Inflammatory disorder of breast",950696,997276,"outcome"
+139099,"Ingrowing nail",950696,997276,"outcome"
+4288544,"Inguinal hernia",950696,997276,"outcome"
+444191,"Injury of face",950696,997276,"outcome"
+444130,"Injury of foot",950696,997276,"outcome"
+134222,"Injury of forearm",950696,997276,"outcome"
+4029966,"Intracranial aneurysm",950696,997276,"outcome"
+437409,"Intracranial injury",950696,997276,"outcome"
+4297984,"Local infection of wound",950696,997276,"outcome"
+4018050,"Localized infection",950696,997276,"outcome"
+439840,"Lymphangitis",950696,997276,"outcome"
+4163232,"Mastitis",950696,997276,"outcome"
+440389,"Mental retardation",950696,997276,"outcome"
+436100,"Narcolepsy",950696,997276,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",950696,997276,"outcome"
+193874,"Nocturnal enuresis",950696,997276,"outcome"
+4171549,"Nodular goiter",950696,997276,"outcome"
+442274,"Oligomenorrhea",950696,997276,"outcome"
+4215978,"Onychomycosis",950696,997276,"outcome"
+4171915,"Orchitis",950696,997276,"outcome"
+380731,"Otitis externa",950696,997276,"outcome"
+378160,"Otorrhea",950696,997276,"outcome"
+192606,"Paraplegia",950696,997276,"outcome"
+253796,"Pneumothorax",950696,997276,"outcome"
+195501,"Polycystic ovaries",950696,997276,"outcome"
+4164337,"Polyp of large intestine",950696,997276,"outcome"
+4153877,"Post-traumatic wound infection",950696,997276,"outcome"
+434319,"Premature ejaculation",950696,997276,"outcome"
+373478,"Presbyopia",950696,997276,"outcome"
+199876,"Prolapse of female genital organs",950696,997276,"outcome"
+4295888,"Prolapse of intestine",950696,997276,"outcome"
+194997,"Prostatitis",950696,997276,"outcome"
+4146239,"Pruritus of genital organs",950696,997276,"outcome"
+4285569,"Pupillary disorder",950696,997276,"outcome"
+81336,"Rectal prolapse",950696,997276,"outcome"
+380395,"Retinal dystrophy",950696,997276,"outcome"
+141825,"Simple goiter",950696,997276,"outcome"
+137054,"Skin striae",950696,997276,"outcome"
+434630,"Sleep-wake schedule disorder",950696,997276,"outcome"
+4195698,"Tenosynovitis",950696,997276,"outcome"
+4339088,"Testicular mass",950696,997276,"outcome"
+133141,"Tinea pedis",950696,997276,"outcome"
+440814,"Torticollis",950696,997276,"outcome"
+435140,"Toxic effect of alcohol",950696,997276,"outcome"
+4270490,"Tracheitis",950696,997276,"outcome"
+4028970,"Tracheobronchitis",950696,997276,"outcome"
+4114197,"Tumor of hypothalamus",950696,997276,"outcome"
+193326,"Urge incontinence of urine",950696,997276,"outcome"
+4092565,"Uterine prolapse",950696,997276,"outcome"
+140641,"Verruca vulgaris",950696,997276,"outcome"
+197036,"Vesicoureteric reflux",950696,997276,"outcome"
+133551,"Vesicular eczema of hands and/or feet",950696,997276,"outcome"
+4223947,"Viral hepatitis, type A",950696,997276,"outcome"
+261326,"Viral pneumonia",950696,997276,"outcome"
+378256,"Abnormal reflex",19011685,997276,"outcome"
+4218106,"Alcoholism",19011685,997276,"outcome"
+317585,"Aortic aneurysm",19011685,997276,"outcome"
+440424,"Aphasia",19011685,997276,"outcome"
+439237,"Assault",19011685,997276,"outcome"
+378424,"Astigmatism",19011685,997276,"outcome"
+261880,"Atelectasis",19011685,997276,"outcome"
+134118,"Atrophic condition of skin",19011685,997276,"outcome"
+4224118,"Bladder dysfunction",19011685,997276,"outcome"
+80509,"Bone cyst",19011685,997276,"outcome"
+434626,"Borderline personality disorder",19011685,997276,"outcome"
+438407,"Bulimia nervosa",19011685,997276,"outcome"
+134765,"Cachexia",19011685,997276,"outcome"
+4172458,"Candidiasis of skin",19011685,997276,"outcome"
+436740,"Cervical incompetence",19011685,997276,"outcome"
+381581,"Chalazion",19011685,997276,"outcome"
+4307254,"Closed fracture",19011685,997276,"outcome"
+4047787,"Colles' fracture",19011685,997276,"outcome"
+198075,"Condyloma acuminatum",19011685,997276,"outcome"
+73302,"Curvature of spine",19011685,997276,"outcome"
+4242416,"Cutis laxa",19011685,997276,"outcome"
+433163,"Deficiency of macronutrients",19011685,997276,"outcome"
+4047269,"Deformity of foot",19011685,997276,"outcome"
+133228,"Dental caries",19011685,997276,"outcome"
+4095288,"Diabetic coma with ketoacidosis",19011685,997276,"outcome"
+4044391,"Diabetic neuropathy",19011685,997276,"outcome"
+443767,"Diabetic oculopathy",19011685,997276,"outcome"
+4174977,"Diabetic retinopathy",19011685,997276,"outcome"
+4132130,"Dilatation of aorta",19011685,997276,"outcome"
+4147672,"Disease due to Papilloma virus",19011685,997276,"outcome"
+4153380,"Disorder of carotid artery",19011685,997276,"outcome"
+4140510,"Disorder of lymphatic vessel",19011685,997276,"outcome"
+433440,"Dysthymia",19011685,997276,"outcome"
+376132,"Ectropion",19011685,997276,"outcome"
+440695,"Encopresis",19011685,997276,"outcome"
+438872,"Excessive eating - polyphagia",19011685,997276,"outcome"
+78804,"Fibrocystic disease of breast",19011685,997276,"outcome"
+4131595,"Fracture of radius",19011685,997276,"outcome"
+74855,"Genital herpes simplex",19011685,997276,"outcome"
+441788,"Human papilloma virus infection",19011685,997276,"outcome"
+76737,"Hydrocele",19011685,997276,"outcome"
+4029582,"Hyperandrogenization syndrome",19011685,997276,"outcome"
+195212,"Hypercortisolism",19011685,997276,"outcome"
+438134,"Hypersomnia",19011685,997276,"outcome"
+45768449,"Hypertensive crisis",19011685,997276,"outcome"
+140362,"Hypoparathyroidism",19011685,997276,"outcome"
+4322737,"Infection of tooth",19011685,997276,"outcome"
+4207688,"Infectious enteritis",19011685,997276,"outcome"
+79072,"Inflammatory disorder of breast",19011685,997276,"outcome"
+139099,"Ingrowing nail",19011685,997276,"outcome"
+4288544,"Inguinal hernia",19011685,997276,"outcome"
+444191,"Injury of face",19011685,997276,"outcome"
+444130,"Injury of foot",19011685,997276,"outcome"
+134222,"Injury of forearm",19011685,997276,"outcome"
+4029966,"Intracranial aneurysm",19011685,997276,"outcome"
+437409,"Intracranial injury",19011685,997276,"outcome"
+4297984,"Local infection of wound",19011685,997276,"outcome"
+4018050,"Localized infection",19011685,997276,"outcome"
+439840,"Lymphangitis",19011685,997276,"outcome"
+4163232,"Mastitis",19011685,997276,"outcome"
+440389,"Mental retardation",19011685,997276,"outcome"
+436100,"Narcolepsy",19011685,997276,"outcome"
+4262178,"Neurogenic dysfunction of the urinary bladder",19011685,997276,"outcome"
+193874,"Nocturnal enuresis",19011685,997276,"outcome"
+4171549,"Nodular goiter",19011685,997276,"outcome"
+442274,"Oligomenorrhea",19011685,997276,"outcome"
+4215978,"Onychomycosis",19011685,997276,"outcome"
+4171915,"Orchitis",19011685,997276,"outcome"
+380731,"Otitis externa",19011685,997276,"outcome"
+378160,"Otorrhea",19011685,997276,"outcome"
+192606,"Paraplegia",19011685,997276,"outcome"
+253796,"Pneumothorax",19011685,997276,"outcome"
+195501,"Polycystic ovaries",19011685,997276,"outcome"
+4164337,"Polyp of large intestine",19011685,997276,"outcome"
+4153877,"Post-traumatic wound infection",19011685,997276,"outcome"
+434319,"Premature ejaculation",19011685,997276,"outcome"
+373478,"Presbyopia",19011685,997276,"outcome"
+199876,"Prolapse of female genital organs",19011685,997276,"outcome"
+4295888,"Prolapse of intestine",19011685,997276,"outcome"
+194997,"Prostatitis",19011685,997276,"outcome"
+4146239,"Pruritus of genital organs",19011685,997276,"outcome"
+4285569,"Pupillary disorder",19011685,997276,"outcome"
+81336,"Rectal prolapse",19011685,997276,"outcome"
+380395,"Retinal dystrophy",19011685,997276,"outcome"
+141825,"Simple goiter",19011685,997276,"outcome"
+137054,"Skin striae",19011685,997276,"outcome"
+434630,"Sleep-wake schedule disorder",19011685,997276,"outcome"
+4195698,"Tenosynovitis",19011685,997276,"outcome"
+4339088,"Testicular mass",19011685,997276,"outcome"
+133141,"Tinea pedis",19011685,997276,"outcome"
+440814,"Torticollis",19011685,997276,"outcome"
+435140,"Toxic effect of alcohol",19011685,997276,"outcome"
+4270490,"Tracheitis",19011685,997276,"outcome"
+4028970,"Tracheobronchitis",19011685,997276,"outcome"
+4114197,"Tumor of hypothalamus",19011685,997276,"outcome"
+193326,"Urge incontinence of urine",19011685,997276,"outcome"
+4092565,"Uterine prolapse",19011685,997276,"outcome"
+140641,"Verruca vulgaris",19011685,997276,"outcome"
+197036,"Vesicoureteric reflux",19011685,997276,"outcome"
+133551,"Vesicular eczema of hands and/or feet",19011685,997276,"outcome"
+4223947,"Viral hepatitis, type A",19011685,997276,"outcome"
+261326,"Viral pneumonia",19011685,997276,"outcome"
