@@ -1,266 +1,260 @@
 {
-  "ExpressionLimit": {"Type": "First"},
-  "CollapseSettings": {
-    "CollapseType": "ERA",
-    "EraPad": 0
-  },
-  "CensorWindow": {
-    "StartDate": null,
-    "EndDate": null
-  },
   "ConceptSets": [
     {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Valid",
-          "CONCEPT_ID": 961047,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "9143",
-          "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "Ranitidine",
-          "DOMAIN_ID": "Drug",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Ingredient",
-          "INVALID_REASON": "V"
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
+      "id": 0,
       "name": "ranitidine",
-      "id": 0
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "9143",
+              "CONCEPT_ID": 961047,
+              "CONCEPT_NAME": "Ranitidine",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            }
+          }
+        ]
+      }
     },
     {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Valid",
-          "CONCEPT_ID": 997276,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "2541",
-          "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "Cimetidine",
-          "DOMAIN_ID": "Drug",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Ingredient",
-          "INVALID_REASON": "V"
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
+      "id": 1,
       "name": "cimetidine",
-      "id": 1
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "2541",
+              "CONCEPT_ID": 997276,
+              "CONCEPT_NAME": "Cimetidine",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            }
+          }
+        ]
+      }
     },
     {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Valid",
-          "CONCEPT_ID": 443392,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "363346000",
-          "VOCABULARY_ID": "SNOMED",
-          "CONCEPT_NAME": "Malignant neoplastic disease",
-          "DOMAIN_ID": "Condition",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Clinical Finding",
-          "INVALID_REASON": "V"
-        },
-        "includeMapped": false,
-        "includeDescendants": true
-      }]},
+      "id": 2,
       "name": "cancer",
-      "id": 2
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "CONCEPT_CODE": "363346000",
+              "CONCEPT_ID": 443392,
+              "CONCEPT_NAME": "Malignant neoplastic disease",
+              "DOMAIN_ID": "Condition",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "SNOMED"
+            },
+            "includeDescendants": true
+          }
+        ]
+      }
     },
     {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Valid",
-          "CONCEPT_ID": 953076,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "4278",
-          "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "Famotidine",
-          "DOMAIN_ID": "Drug",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Ingredient",
-          "INVALID_REASON": "V"
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
+      "id": 3,
       "name": "famotidine",
-      "id": 3
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "4278",
+              "CONCEPT_ID": 953076,
+              "CONCEPT_NAME": "Famotidine",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            }
+          }
+        ]
+      }
     },
     {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Valid",
-          "CONCEPT_ID": 950696,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "42319",
-          "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "Nizatidine",
-          "DOMAIN_ID": "Drug",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Ingredient",
-          "INVALID_REASON": "V"
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
+      "id": 4,
       "name": "nizatidine",
-      "id": 4
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "42319",
+              "CONCEPT_ID": 950696,
+              "CONCEPT_NAME": "Nizatidine",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            }
+          }
+        ]
+      }
     },
     {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Valid",
-          "CONCEPT_ID": 19011685,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "114817",
-          "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "roxatidine",
-          "DOMAIN_ID": "Drug",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Ingredient",
-          "INVALID_REASON": "V"
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
+      "id": 5,
       "name": "roxatidine",
-      "id": 5
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "114817",
+              "CONCEPT_ID": 19011685,
+              "CONCEPT_NAME": "roxatidine",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            }
+          }
+        ]
+      }
     },
     {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Valid",
-          "CONCEPT_ID": 4265600,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "397825006",
-          "VOCABULARY_ID": "SNOMED",
-          "CONCEPT_NAME": "Gastric ulcer",
-          "DOMAIN_ID": "Condition",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Clinical Finding",
-          "INVALID_REASON": "V"
-        },
-        "includeMapped": false,
-        "includeDescendants": true
-      }]},
+      "id": 6,
       "name": "Gastric ulcer",
-      "id": 6
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "CONCEPT_CODE": "397825006",
+              "CONCEPT_ID": 4265600,
+              "CONCEPT_NAME": "Gastric ulcer",
+              "DOMAIN_ID": "Condition",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "SNOMED"
+            },
+            "includeDescendants": true
+          }
+        ]
+      }
     },
     {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Valid",
-          "CONCEPT_ID": 43009003,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "OMOP4700429",
-          "VOCABULARY_ID": "RxNorm Extension",
-          "CONCEPT_NAME": "lafutidine",
-          "DOMAIN_ID": "Drug",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Ingredient",
-          "INVALID_REASON": "V"
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
+      "id": 7,
       "name": "lafutidine",
-      "id": 7
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "OMOP4700429",
+              "CONCEPT_ID": 43009003,
+              "CONCEPT_NAME": "lafutidine",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm Extension"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "Bismuth and Sulcralfate",
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "10156",
+              "CONCEPT_ID": 1036228,
+              "CONCEPT_NAME": "Sucralfate",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            }
+          },
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "47181",
+              "CONCEPT_ID": 958134,
+              "CONCEPT_NAME": "bismuth subcitrate",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            }
+          }
+        ]
+      }
     }
   ],
-  "EndStrategy": {"CustomEra": {
-    "DrugCodesetId": 4,
-    "GapDays": 30,
-    "Offset": 0
-  }},
-  "CensoringCriteria": [
-    {"DrugEra": {
-      "EraStartDate": null,
-      "CorrelatedCriteria": null,
-      "OccurrenceCount": null,
-      "AgeAtStart": null,
-      "GapDays": null,
-      "CodesetId": 1,
-      "AgeAtEnd": null,
-      "First": null,
-      "Gender": null,
-      "EraLength": null,
-      "EraEndDate": null
-    }},
-    {"DrugEra": {
-      "EraStartDate": null,
-      "CorrelatedCriteria": null,
-      "OccurrenceCount": null,
-      "AgeAtStart": null,
-      "GapDays": null,
-      "CodesetId": 0,
-      "AgeAtEnd": null,
-      "First": null,
-      "Gender": null,
-      "EraLength": null,
-      "EraEndDate": null
-    }},
-    {"DrugEra": {
-      "EraStartDate": null,
-      "CorrelatedCriteria": null,
-      "OccurrenceCount": null,
-      "AgeAtStart": null,
-      "GapDays": null,
-      "CodesetId": 3,
-      "AgeAtEnd": null,
-      "First": null,
-      "Gender": null,
-      "EraLength": null,
-      "EraEndDate": null
-    }},
-    {"DrugEra": {
-      "EraStartDate": null,
-      "CorrelatedCriteria": null,
-      "OccurrenceCount": null,
-      "AgeAtStart": null,
-      "GapDays": null,
-      "CodesetId": 5,
-      "AgeAtEnd": null,
-      "First": null,
-      "Gender": null,
-      "EraLength": null,
-      "EraEndDate": null
-    }},
-    {"DrugEra": {
-      "EraStartDate": null,
-      "CorrelatedCriteria": null,
-      "OccurrenceCount": null,
-      "AgeAtStart": null,
-      "GapDays": null,
-      "CodesetId": 7,
-      "AgeAtEnd": null,
-      "First": null,
-      "Gender": null,
-      "EraLength": null,
-      "EraEndDate": null
-    }}
-  ],
-  "Title": null,
-  "AdditionalCriteria": null,
-  "QualifiedLimit": {"Type": "First"},
+  "PrimaryCriteria": {
+    "CriteriaList": [
+      {
+        "DrugEra": {
+          "CodesetId": 4,
+          "EraLength": {
+            "Value": 30,
+            "Op": "gte"
+          }
+        }
+      }
+    ],
+    "ObservationWindow": {
+      "PriorDays": 365,
+      "PostDays": 0
+    },
+    "PrimaryCriteriaLimit": {
+      "Type": "First"
+    }
+  },
+  "QualifiedLimit": {
+    "Type": "First"
+  },
+  "ExpressionLimit": {
+    "Type": "First"
+  },
   "InclusionRules": [
     {
+      "name": "Without other H2 blocker previous 1 year",
+      "description": "Without other H2 blocker previous 1 year",
       "expression": {
+        "Type": "ALL",
         "CriteriaList": [
           {
-            "RestrictVisit": false,
+            "Criteria": {
+              "DrugEra": {
+                "CodesetId": 1
+              }
+            },
             "StartWindow": {
-              "UseEventEnd": false,
               "Start": {
                 "Days": 365,
                 "Coeff": -1
@@ -269,33 +263,20 @@
                 "Days": 0,
                 "Coeff": 1
               },
-              "UseIndexEnd": null
+              "UseEventEnd": false
             },
-            "IgnoreObservationPeriod": false,
-            "EndWindow": null,
-            "Criteria": {"DrugEra": {
-              "EraStartDate": null,
-              "CorrelatedCriteria": null,
-              "OccurrenceCount": null,
-              "AgeAtStart": null,
-              "GapDays": null,
-              "CodesetId": 1,
-              "AgeAtEnd": null,
-              "First": null,
-              "Gender": null,
-              "EraLength": null,
-              "EraEndDate": null
-            }},
             "Occurrence": {
               "Type": 1,
-              "IsDistinct": false,
               "Count": 0
             }
           },
           {
-            "RestrictVisit": false,
+            "Criteria": {
+              "DrugEra": {
+                "CodesetId": 0
+              }
+            },
             "StartWindow": {
-              "UseEventEnd": false,
               "Start": {
                 "Days": 365,
                 "Coeff": -1
@@ -304,33 +285,20 @@
                 "Days": 0,
                 "Coeff": 1
               },
-              "UseIndexEnd": null
+              "UseEventEnd": false
             },
-            "IgnoreObservationPeriod": false,
-            "EndWindow": null,
-            "Criteria": {"DrugEra": {
-              "EraStartDate": null,
-              "CorrelatedCriteria": null,
-              "OccurrenceCount": null,
-              "AgeAtStart": null,
-              "GapDays": null,
-              "CodesetId": 0,
-              "AgeAtEnd": null,
-              "First": null,
-              "Gender": null,
-              "EraLength": null,
-              "EraEndDate": null
-            }},
             "Occurrence": {
               "Type": 1,
-              "IsDistinct": false,
               "Count": 0
             }
           },
           {
-            "RestrictVisit": false,
+            "Criteria": {
+              "DrugEra": {
+                "CodesetId": 3
+              }
+            },
             "StartWindow": {
-              "UseEventEnd": false,
               "Start": {
                 "Days": 365,
                 "Coeff": -1
@@ -339,33 +307,20 @@
                 "Days": 0,
                 "Coeff": 1
               },
-              "UseIndexEnd": null
+              "UseEventEnd": false
             },
-            "IgnoreObservationPeriod": false,
-            "EndWindow": null,
-            "Criteria": {"DrugEra": {
-              "EraStartDate": null,
-              "CorrelatedCriteria": null,
-              "OccurrenceCount": null,
-              "AgeAtStart": null,
-              "GapDays": null,
-              "CodesetId": 3,
-              "AgeAtEnd": null,
-              "First": null,
-              "Gender": null,
-              "EraLength": null,
-              "EraEndDate": null
-            }},
             "Occurrence": {
               "Type": 1,
-              "IsDistinct": false,
               "Count": 0
             }
           },
           {
-            "RestrictVisit": false,
+            "Criteria": {
+              "DrugEra": {
+                "CodesetId": 5
+              }
+            },
             "StartWindow": {
-              "UseEventEnd": false,
               "Start": {
                 "Days": 365,
                 "Coeff": -1
@@ -374,33 +329,20 @@
                 "Days": 0,
                 "Coeff": 1
               },
-              "UseIndexEnd": null
+              "UseEventEnd": false
             },
-            "IgnoreObservationPeriod": false,
-            "EndWindow": null,
-            "Criteria": {"DrugEra": {
-              "EraStartDate": null,
-              "CorrelatedCriteria": null,
-              "OccurrenceCount": null,
-              "AgeAtStart": null,
-              "GapDays": null,
-              "CodesetId": 5,
-              "AgeAtEnd": null,
-              "First": null,
-              "Gender": null,
-              "EraLength": null,
-              "EraEndDate": null
-            }},
             "Occurrence": {
               "Type": 1,
-              "IsDistinct": false,
               "Count": 0
             }
           },
           {
-            "RestrictVisit": false,
+            "Criteria": {
+              "DrugEra": {
+                "CodesetId": 7
+              }
+            },
             "StartWindow": {
-              "UseEventEnd": false,
               "Start": {
                 "Days": 365,
                 "Coeff": -1
@@ -409,155 +351,154 @@
                 "Days": 0,
                 "Coeff": 1
               },
-              "UseIndexEnd": null
+              "UseEventEnd": false
             },
-            "IgnoreObservationPeriod": false,
-            "EndWindow": null,
-            "Criteria": {"DrugEra": {
-              "EraStartDate": null,
-              "CorrelatedCriteria": null,
-              "OccurrenceCount": null,
-              "AgeAtStart": null,
-              "GapDays": null,
-              "CodesetId": 7,
-              "AgeAtEnd": null,
-              "First": null,
-              "Gender": null,
-              "EraLength": null,
-              "EraEndDate": null
-            }},
             "Occurrence": {
               "Type": 1,
-              "IsDistinct": false,
               "Count": 0
             }
           }
         ],
-        "Type": "ALL",
         "DemographicCriteriaList": [],
-        "Groups": [],
-        "Count": null
-      },
-      "name": "Without other H2 blocker previous 1 year",
-      "description": "Without other H2 blocker previous 1 year"
+        "Groups": []
+      }
     },
     {
-      "expression": {
-        "CriteriaList": [{
-          "RestrictVisit": false,
-          "StartWindow": {
-            "UseEventEnd": false,
-            "Start": {
-              "Days": null,
-              "Coeff": -1
-            },
-            "End": {
-              "Days": 0,
-              "Coeff": 1
-            },
-            "UseIndexEnd": null
-          },
-          "IgnoreObservationPeriod": false,
-          "EndWindow": null,
-          "Criteria": {"ConditionOccurrence": {
-            "OccurrenceEndDate": null,
-            "CorrelatedCriteria": null,
-            "ConditionTypeExclude": false,
-            "CodesetId": 2,
-            "ProviderSpecialty": null,
-            "Gender": null,
-            "VisitType": null,
-            "First": null,
-            "OccurrenceStartDate": null,
-            "ConditionType": null,
-            "ConditionSourceConcept": null,
-            "StopReason": null,
-            "Age": null
-          }},
-          "Occurrence": {
-            "Type": 1,
-            "IsDistinct": false,
-            "Count": 0
-          }
-        }],
-        "Type": "ALL",
-        "DemographicCriteriaList": [],
-        "Groups": [],
-        "Count": null
-      },
       "name": "Without previous cancer",
-      "description": "Without previous cancer"
+      "description": "Without previous cancer",
+      "expression": {
+        "Type": "ALL",
+        "CriteriaList": [
+          {
+            "Criteria": {
+              "ConditionOccurrence": {
+                "CodesetId": 2
+              }
+            },
+            "StartWindow": {
+              "Start": {
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 0,
+                "Coeff": 1
+              },
+              "UseEventEnd": false
+            },
+            "Occurrence": {
+              "Type": 1,
+              "Count": 0
+            }
+          }
+        ],
+        "DemographicCriteriaList": [],
+        "Groups": []
+      }
     },
     {
-      "expression": {
-        "CriteriaList": [{
-          "RestrictVisit": false,
-          "StartWindow": {
-            "UseEventEnd": false,
-            "Start": {
-              "Days": 365,
-              "Coeff": -1
-            },
-            "End": {
-              "Days": 0,
-              "Coeff": 1
-            },
-            "UseIndexEnd": null
-          },
-          "IgnoreObservationPeriod": false,
-          "EndWindow": null,
-          "Criteria": {"ConditionOccurrence": {
-            "OccurrenceEndDate": null,
-            "CorrelatedCriteria": null,
-            "ConditionTypeExclude": false,
-            "CodesetId": 6,
-            "ProviderSpecialty": null,
-            "Gender": null,
-            "VisitType": null,
-            "First": null,
-            "OccurrenceStartDate": null,
-            "ConditionType": null,
-            "ConditionSourceConcept": null,
-            "StopReason": null,
-            "Age": null
-          }},
-          "Occurrence": {
-            "Type": 1,
-            "IsDistinct": false,
-            "Count": 0
-          }
-        }],
-        "Type": "ALL",
-        "DemographicCriteriaList": [],
-        "Groups": [],
-        "Count": null
-      },
       "name": "Without gastric ulcer",
-      "description": "Without gastric ulcer"
+      "description": "Without gastric ulcer",
+      "expression": {
+        "Type": "ALL",
+        "CriteriaList": [
+          {
+            "Criteria": {
+              "ConditionOccurrence": {
+                "CodesetId": 6
+              }
+            },
+            "StartWindow": {
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 0,
+                "Coeff": 1
+              },
+              "UseEventEnd": false
+            },
+            "Occurrence": {
+              "Type": 1,
+              "Count": 0
+            }
+          }
+        ],
+        "DemographicCriteriaList": [],
+        "Groups": []
+      }
+    },
+    {
+      "name": "Without sucralfate and bismuth",
+      "description": "Without sucralfate and bismuth",
+      "expression": {
+        "Type": "ALL",
+        "CriteriaList": [
+          {
+            "Criteria": {
+              "DrugEra": {
+                "CodesetId": 8
+              }
+            },
+            "StartWindow": {
+              "Start": {
+                "Days": 30,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 30,
+                "Coeff": 1
+              },
+              "UseEventEnd": false
+            },
+            "Occurrence": {
+              "Type": 0,
+              "Count": 0
+            }
+          }
+        ],
+        "DemographicCriteriaList": [],
+        "Groups": []
+      }
     }
   ],
-  "PrimaryCriteria": {
-    "CriteriaList": [{"DrugEra": {
-      "EraStartDate": null,
-      "CorrelatedCriteria": null,
-      "OccurrenceCount": null,
-      "AgeAtStart": null,
-      "GapDays": null,
-      "CodesetId": 4,
-      "AgeAtEnd": null,
-      "First": null,
-      "Gender": null,
-      "EraLength": {
-        "Op": "gte",
-        "Extent": null,
-        "Value": 30
-      },
-      "EraEndDate": null
-    }}],
-    "PrimaryCriteriaLimit": {"Type": "First"},
-    "ObservationWindow": {
-      "PostDays": 0,
-      "PriorDays": 365
+  "EndStrategy": {
+    "CustomEra": {
+      "DrugCodesetId": 4,
+      "GapDays": 30,
+      "Offset": 0
     }
-  }
+  },
+  "CensoringCriteria": [
+    {
+      "DrugEra": {
+        "CodesetId": 1
+      }
+    },
+    {
+      "DrugEra": {
+        "CodesetId": 0
+      }
+    },
+    {
+      "DrugEra": {
+        "CodesetId": 3
+      }
+    },
+    {
+      "DrugEra": {
+        "CodesetId": 5
+      }
+    },
+    {
+      "DrugEra": {
+        "CodesetId": 7
+      }
+    }
+  ],
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "CensorWindow": {}
 }

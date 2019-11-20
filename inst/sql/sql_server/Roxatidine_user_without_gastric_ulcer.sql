@@ -6,21 +6,21 @@ CREATE TABLE #Codesets (
 
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 0 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
+(
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (961047)and invalid_reason is null
 
 ) I
 ) C;
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 1 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
+(
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (997276)and invalid_reason is null
 
 ) I
 ) C;
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 2 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
+(
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (443392)and invalid_reason is null
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
@@ -32,28 +32,28 @@ UNION  select c.concept_id
 ) C;
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 3 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
+(
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (953076)and invalid_reason is null
 
 ) I
 ) C;
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 4 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
+(
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (950696)and invalid_reason is null
 
 ) I
 ) C;
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 5 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
+(
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (19011685)and invalid_reason is null
 
 ) I
 ) C;
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 6 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
+(
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4265600)and invalid_reason is null
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
@@ -65,8 +65,15 @@ UNION  select c.concept_id
 ) C;
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 7 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
+(
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (43009003)and invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 8 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (1036228,958134)and invalid_reason is null
 
 ) I
 ) C;
@@ -79,13 +86,13 @@ select P.ordinal as event_id, P.person_id, P.start_date, P.end_date, op_start_da
 FROM
 (
   select E.person_id, E.start_date, E.end_date, row_number() OVER (PARTITION BY E.person_id ORDER BY E.start_date ASC) ordinal, OP.observation_period_start_date as op_start_date, OP.observation_period_end_date as op_end_date, cast(E.visit_occurrence_id as bigint) as visit_occurrence_id
-  FROM 
+  FROM
   (
   -- Begin Drug Era Criteria
 select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date, C.drug_concept_id as TARGET_CONCEPT_ID, CAST(NULL as bigint) as visit_occurrence_id
-from 
+from
 (
-  select de.* 
+  select de.*
   FROM @cdm_database_schema.DRUG_ERA de
 where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 5)
 ) C
@@ -103,11 +110,11 @@ WHERE P.ordinal = 1
 )
 SELECT event_id, person_id, start_date, end_date, op_start_date, op_end_date, visit_occurrence_id
 INTO #qualified_events
-FROM 
+FROM
 (
   select pe.event_id, pe.person_id, pe.start_date, pe.end_date, pe.op_start_date, pe.op_end_date, row_number() over (partition by pe.person_id order by pe.start_date ASC) as ordinal, cast(pe.visit_occurrence_id as bigint) as visit_occurrence_id
   FROM primary_events pe
-  
+
 ) QE
 
 ;
@@ -116,17 +123,17 @@ FROM
 
 select 0 as inclusion_rule_id, person_id, event_id
 INTO #Inclusion_0
-FROM 
+FROM
 (
   select pe.person_id, pe.event_id
   FROM #qualified_events pe
-  
+
 JOIN (
 -- Begin Criteria Group
 select 0 as index_id, person_id, event_id
 FROM
 (
-  select E.person_id, E.event_id 
+  select E.person_id, E.event_id
   FROM #qualified_events E
   INNER JOIN
   (
@@ -137,9 +144,9 @@ LEFT JOIN
 (
   -- Begin Drug Era Criteria
 select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date, C.drug_concept_id as TARGET_CONCEPT_ID, CAST(NULL as bigint) as visit_occurrence_id
-from 
+from
 (
-  select de.* 
+  select de.*
   FROM @cdm_database_schema.DRUG_ERA de
 where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 1)
 ) C
@@ -160,9 +167,9 @@ LEFT JOIN
 (
   -- Begin Drug Era Criteria
 select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date, C.drug_concept_id as TARGET_CONCEPT_ID, CAST(NULL as bigint) as visit_occurrence_id
-from 
+from
 (
-  select de.* 
+  select de.*
   FROM @cdm_database_schema.DRUG_ERA de
 where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 0)
 ) C
@@ -183,9 +190,9 @@ LEFT JOIN
 (
   -- Begin Drug Era Criteria
 select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date, C.drug_concept_id as TARGET_CONCEPT_ID, CAST(NULL as bigint) as visit_occurrence_id
-from 
+from
 (
-  select de.* 
+  select de.*
   FROM @cdm_database_schema.DRUG_ERA de
 where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 3)
 ) C
@@ -206,9 +213,9 @@ LEFT JOIN
 (
   -- Begin Drug Era Criteria
 select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date, C.drug_concept_id as TARGET_CONCEPT_ID, CAST(NULL as bigint) as visit_occurrence_id
-from 
+from
 (
-  select de.* 
+  select de.*
   FROM @cdm_database_schema.DRUG_ERA de
 where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 4)
 ) C
@@ -229,9 +236,9 @@ LEFT JOIN
 (
   -- Begin Drug Era Criteria
 select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date, C.drug_concept_id as TARGET_CONCEPT_ID, CAST(NULL as bigint) as visit_occurrence_id
-from 
+from
 (
-  select de.* 
+  select de.*
   FROM @cdm_database_schema.DRUG_ERA de
 where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 7)
 ) C
@@ -255,17 +262,17 @@ HAVING COUNT(A.TARGET_CONCEPT_ID) <= 0
 
 select 1 as inclusion_rule_id, person_id, event_id
 INTO #Inclusion_1
-FROM 
+FROM
 (
   select pe.person_id, pe.event_id
   FROM #qualified_events pe
-  
+
 JOIN (
 -- Begin Criteria Group
 select 0 as index_id, person_id, event_id
 FROM
 (
-  select E.person_id, E.event_id 
+  select E.person_id, E.event_id
   FROM #qualified_events E
   INNER JOIN
   (
@@ -276,9 +283,9 @@ LEFT JOIN
 (
   -- Begin Condition Occurrence Criteria
 SELECT C.person_id, C.condition_occurrence_id as event_id, C.condition_start_date as start_date, COALESCE(C.condition_end_date, DATEADD(day,1,C.condition_start_date)) as end_date, C.CONDITION_CONCEPT_ID as TARGET_CONCEPT_ID, C.visit_occurrence_id
-FROM 
+FROM
 (
-  SELECT co.* 
+  SELECT co.*
   FROM @cdm_database_schema.CONDITION_OCCURRENCE co
   JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 2))
 ) C
@@ -302,17 +309,17 @@ HAVING COUNT(A.TARGET_CONCEPT_ID) <= 0
 
 select 2 as inclusion_rule_id, person_id, event_id
 INTO #Inclusion_2
-FROM 
+FROM
 (
   select pe.person_id, pe.event_id
   FROM #qualified_events pe
-  
+
 JOIN (
 -- Begin Criteria Group
 select 0 as index_id, person_id, event_id
 FROM
 (
-  select E.person_id, E.event_id 
+  select E.person_id, E.event_id
   FROM #qualified_events E
   INNER JOIN
   (
@@ -323,9 +330,9 @@ LEFT JOIN
 (
   -- Begin Condition Occurrence Criteria
 SELECT C.person_id, C.condition_occurrence_id as event_id, C.condition_start_date as start_date, COALESCE(C.condition_end_date, DATEADD(day,1,C.condition_start_date)) as end_date, C.CONDITION_CONCEPT_ID as TARGET_CONCEPT_ID, C.visit_occurrence_id
-FROM 
+FROM
 (
-  SELECT co.* 
+  SELECT co.*
   FROM @cdm_database_schema.CONDITION_OCCURRENCE co
   JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 6))
 ) C
@@ -347,13 +354,62 @@ HAVING COUNT(A.TARGET_CONCEPT_ID) <= 0
 ) Results
 ;
 
+select 3 as inclusion_rule_id, person_id, event_id
+INTO #Inclusion_3
+FROM
+(
+  select pe.person_id, pe.event_id
+  FROM #qualified_events pe
+
+JOIN (
+-- Begin Criteria Group
+select 0 as index_id, person_id, event_id
+FROM
+(
+  select E.person_id, E.event_id
+  FROM #qualified_events E
+  INNER JOIN
+  (
+    -- Begin Correlated Criteria
+SELECT 0 as index_id, p.person_id, p.event_id
+FROM #qualified_events P
+LEFT JOIN
+(
+  -- Begin Drug Era Criteria
+select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date, C.drug_concept_id as TARGET_CONCEPT_ID, CAST(NULL as bigint) as visit_occurrence_id
+from
+(
+  select de.*
+  FROM @cdm_database_schema.DRUG_ERA de
+where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 8)
+) C
+
+
+-- End Drug Era Criteria
+
+) A on A.person_id = P.person_id and A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-30,P.START_DATE) AND A.START_DATE <= DATEADD(day,30,P.START_DATE)
+GROUP BY p.person_id, p.event_id
+HAVING COUNT(A.TARGET_CONCEPT_ID) = 0
+-- End Correlated Criteria
+
+  ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
+  GROUP BY E.person_id, E.event_id
+  HAVING COUNT(index_id) = 1
+) G
+-- End Criteria Group
+) AC on AC.person_id = pe.person_id AND AC.event_id = pe.event_id
+) Results
+;
+
 SELECT inclusion_rule_id, person_id, event_id
 INTO #inclusion_events
 FROM (select inclusion_rule_id, person_id, event_id from #Inclusion_0
 UNION ALL
 select inclusion_rule_id, person_id, event_id from #Inclusion_1
 UNION ALL
-select inclusion_rule_id, person_id, event_id from #Inclusion_2) I;
+select inclusion_rule_id, person_id, event_id from #Inclusion_2
+UNION ALL
+select inclusion_rule_id, person_id, event_id from #Inclusion_3) I;
 TRUNCATE TABLE #Inclusion_0;
 DROP TABLE #Inclusion_0;
 
@@ -362,6 +418,9 @@ DROP TABLE #Inclusion_1;
 
 TRUNCATE TABLE #Inclusion_2;
 DROP TABLE #Inclusion_2;
+
+TRUNCATE TABLE #Inclusion_3;
+DROP TABLE #Inclusion_3;
 
 
 with cteIncludedEvents(event_id, person_id, start_date, end_date, op_start_date, op_end_date, ordinal) as
@@ -374,10 +433,10 @@ with cteIncludedEvents(event_id, person_id, start_date, end_date, op_start_date,
     LEFT JOIN #inclusion_events I on I.person_id = Q.person_id and I.event_id = Q.event_id
     GROUP BY Q.event_id, Q.person_id, Q.start_date, Q.end_date, Q.op_start_date, Q.op_end_date
   ) MG -- matching groups
-{3 != 0}?{
+
   -- the matching group with all bits set ( POWER(2,# of inclusion rules) - 1 = inclusion_rule_mask
-  WHERE (MG.inclusion_rule_mask = POWER(cast(2 as bigint),3)-1)
-}
+  WHERE (MG.inclusion_rule_mask = POWER(cast(2 as bigint),4)-1)
+
 )
 select event_id, person_id, start_date, end_date, op_start_date, op_end_date
 into #included_events
@@ -394,14 +453,14 @@ with ctePersons(person_id) as (
 select person_id, drug_exposure_start_date, drug_exposure_end_date
 INTO #drugTarget
 FROM (
-	select de.PERSON_ID, DRUG_EXPOSURE_START_DATE,  COALESCE(DRUG_EXPOSURE_END_DATE, DATEADD(day,DAYS_SUPPLY,DRUG_EXPOSURE_START_DATE), DATEADD(day,1,DRUG_EXPOSURE_START_DATE)) as DRUG_EXPOSURE_END_DATE 
+	select de.PERSON_ID, DRUG_EXPOSURE_START_DATE,  COALESCE(DRUG_EXPOSURE_END_DATE, DATEADD(day,DAYS_SUPPLY,DRUG_EXPOSURE_START_DATE), DATEADD(day,1,DRUG_EXPOSURE_START_DATE)) as DRUG_EXPOSURE_END_DATE
 	FROM @cdm_database_schema.DRUG_EXPOSURE de
 	JOIN ctePersons p on de.person_id = p.person_id
 	JOIN #Codesets cs on cs.codeset_id = 5 AND de.drug_concept_id = cs.concept_id
 
 	UNION ALL
 
-	select de.PERSON_ID, DRUG_EXPOSURE_START_DATE,  COALESCE(DRUG_EXPOSURE_END_DATE, DATEADD(day,DAYS_SUPPLY,DRUG_EXPOSURE_START_DATE), DATEADD(day,1,DRUG_EXPOSURE_START_DATE)) as DRUG_EXPOSURE_END_DATE 
+	select de.PERSON_ID, DRUG_EXPOSURE_START_DATE,  COALESCE(DRUG_EXPOSURE_END_DATE, DATEADD(day,DAYS_SUPPLY,DRUG_EXPOSURE_START_DATE), DATEADD(day,1,DRUG_EXPOSURE_START_DATE)) as DRUG_EXPOSURE_END_DATE
 	FROM @cdm_database_schema.DRUG_EXPOSURE de
 	JOIN ctePersons p on de.person_id = p.person_id
 	JOIN #Codesets cs on cs.codeset_id = 5 AND de.drug_source_concept_id = cs.concept_id
@@ -411,20 +470,20 @@ FROM (
 select et.event_id, et.person_id, ERAS.era_end_date as end_date
 INTO #strategy_ends
 from #included_events et
-JOIN 
+JOIN
 (
   select ENDS.person_id, min(drug_exposure_start_date) as era_start_date, DATEADD(day,0, ENDS.era_end_date) as era_end_date
   from
   (
     select de.person_id, de.drug_exposure_start_date, MIN(e.END_DATE) as era_end_date
     FROM #drugTarget DE
-    JOIN 
+    JOIN
     (
       --cteEndDates
       select PERSON_ID, DATEADD(day,-1 * 30,EVENT_DATE) as END_DATE -- unpad the end date by 30
       FROM
       (
-				select PERSON_ID, EVENT_DATE, EVENT_TYPE, 
+				select PERSON_ID, EVENT_DATE, EVENT_TYPE,
 				MAX(START_ORDINAL) OVER (PARTITION BY PERSON_ID ORDER BY event_date, event_type ROWS UNBOUNDED PRECEDING) AS start_ordinal,
 				ROW_NUMBER() OVER (PARTITION BY PERSON_ID ORDER BY EVENT_DATE, EVENT_TYPE) AS OVERALL_ORD -- this re-numbers the inner UNION so all rows are numbered ordered by the event date
 				from
@@ -445,7 +504,7 @@ JOIN
     GROUP BY de.person_id, de.drug_exposure_start_date
   ) ENDS
   GROUP BY ENDS.person_id, ENDS.era_end_date
-) ERAS on ERAS.person_id = et.person_id 
+) ERAS on ERAS.person_id = et.person_id
 WHERE et.start_date between ERAS.era_start_date and ERAS.era_end_date;
 
 TRUNCATE TABLE #drugTarget;
@@ -470,9 +529,9 @@ JOIN
 (
 -- Begin Drug Era Criteria
 select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date, C.drug_concept_id as TARGET_CONCEPT_ID, CAST(NULL as bigint) as visit_occurrence_id
-from 
+from
 (
-  select de.* 
+  select de.*
   FROM @cdm_database_schema.DRUG_ERA de
 where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 1)
 ) C
@@ -490,9 +549,9 @@ JOIN
 (
 -- Begin Drug Era Criteria
 select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date, C.drug_concept_id as TARGET_CONCEPT_ID, CAST(NULL as bigint) as visit_occurrence_id
-from 
+from
 (
-  select de.* 
+  select de.*
   FROM @cdm_database_schema.DRUG_ERA de
 where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 0)
 ) C
@@ -510,9 +569,9 @@ JOIN
 (
 -- Begin Drug Era Criteria
 select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date, C.drug_concept_id as TARGET_CONCEPT_ID, CAST(NULL as bigint) as visit_occurrence_id
-from 
+from
 (
-  select de.* 
+  select de.*
   FROM @cdm_database_schema.DRUG_ERA de
 where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 3)
 ) C
@@ -530,9 +589,9 @@ JOIN
 (
 -- Begin Drug Era Criteria
 select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date, C.drug_concept_id as TARGET_CONCEPT_ID, CAST(NULL as bigint) as visit_occurrence_id
-from 
+from
 (
-  select de.* 
+  select de.*
   FROM @cdm_database_schema.DRUG_ERA de
 where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 4)
 ) C
@@ -550,9 +609,9 @@ JOIN
 (
 -- Begin Drug Era Criteria
 select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date, C.drug_concept_id as TARGET_CONCEPT_ID, CAST(NULL as bigint) as visit_occurrence_id
-from 
+from
 (
-  select de.* 
+  select de.*
   FROM @cdm_database_schema.DRUG_ERA de
 where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 7)
 ) C
@@ -569,7 +628,7 @@ first_ends (person_id, start_date, end_date) as
 (
 	select F.person_id, F.start_date, F.end_date
 	FROM (
-	  select I.event_id, I.person_id, I.start_date, E.end_date, row_number() over (partition by I.person_id, I.event_id order by E.end_date) as ordinal 
+	  select I.event_id, I.person_id, I.start_date, E.end_date, row_number() over (partition by I.person_id, I.event_id order by E.end_date) as ordinal
 	  from #included_events I
 	  join cohort_ends E on I.event_id = E.event_id and I.person_id = E.person_id and E.end_date >= I.start_date
 	) F
@@ -580,7 +639,7 @@ INTO #cohort_rows
 from first_ends;
 
 with cteEndDates (person_id, end_date) AS -- the magic
-(	
+(
 	SELECT
 		person_id
 		, DATEADD(day,-1 * 0, event_date)  as end_date
@@ -590,7 +649,7 @@ with cteEndDates (person_id, end_date) AS -- the magic
 			person_id
 			, event_date
 			, event_type
-			, MAX(start_ordinal) OVER (PARTITION BY person_id ORDER BY event_date, event_type ROWS UNBOUNDED PRECEDING) AS start_ordinal 
+			, MAX(start_ordinal) OVER (PARTITION BY person_id ORDER BY event_date, event_type ROWS UNBOUNDED PRECEDING) AS start_ordinal
 			, ROW_NUMBER() OVER (PARTITION BY person_id ORDER BY event_date, event_type) AS overall_ord
 		FROM
 		(
@@ -600,9 +659,9 @@ with cteEndDates (person_id, end_date) AS -- the magic
 				, -1 AS event_type
 				, ROW_NUMBER() OVER (PARTITION BY person_id ORDER BY start_date) AS start_ordinal
 			FROM #cohort_rows
-		
+
 			UNION ALL
-		
+
 
 			SELECT
 				person_id
@@ -632,139 +691,11 @@ group by person_id, end_date
 
 DELETE FROM @target_database_schema.@target_cohort_table where cohort_definition_id = @target_cohort_id;
 INSERT INTO @target_database_schema.@target_cohort_table (cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)
-select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date 
+select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date
 FROM #final_cohort CO
 ;
 
-{0 != 0}?{
--- Find the event that is the 'best match' per person.  
--- the 'best match' is defiend as the event that satisfies the most inclulsion rules.
--- ties are solved by choosign the event that matches the earliest inclusion rule, and then earliest.
 
-select q.person_id, q.event_id
-into #best_events
-from #qualified_events Q
-join (
-	SELECT R.person_id, R.event_id, ROW_NUMBER() OVER (PARTITION BY R.person_id ORDER BY R.rule_count DESC,R.min_rule_id ASC, R.start_date ASC) AS rank_value
-	FROM (
-		SELECT Q.person_id, Q.event_id, COALESCE(COUNT(DISTINCT I.inclusion_rule_id), 0) AS rule_count, COALESCE(MIN(I.inclusion_rule_id), 0) AS min_rule_id, Q.start_date
-		FROM #qualified_events Q
-		LEFT JOIN #inclusion_events I ON q.person_id = i.person_id AND q.event_id = i.event_id
-		GROUP BY Q.person_id, Q.event_id, Q.start_date
-	) R
-) ranked on Q.person_id = ranked.person_id and Q.event_id = ranked.event_id
-WHERE ranked.rank_value = 1
-;
-
--- modes of generation: (the same tables store the results for the different modes, identified by the mode_id column)
--- 0: all events
--- 1: best event
-
-
--- BEGIN: Inclusion Impact Analysis - event
--- calculte matching group counts
-delete from @results_database_schema.cohort_inclusion_result where cohort_definition_id = @target_cohort_id and mode_id = 0;
-insert into @results_database_schema.cohort_inclusion_result (cohort_definition_id, inclusion_rule_mask, person_count, mode_id)
-select @target_cohort_id as cohort_definition_id, inclusion_rule_mask, count_big(*) as person_count, 0 as mode_id
-from
-(
-  select Q.person_id, Q.event_id, CAST(SUM(coalesce(POWER(cast(2 as bigint), I.inclusion_rule_id), 0)) AS bigint) as inclusion_rule_mask
-  from #qualified_events Q
-  LEFT JOIN #inclusion_events I on q.person_id = i.person_id and q.event_id = i.event_id
-  GROUP BY Q.person_id, Q.event_id
-) MG -- matching groups
-group by inclusion_rule_mask
-;
-
--- calculate gain counts 
-delete from @results_database_schema.cohort_inclusion_stats where cohort_definition_id = @target_cohort_id and mode_id = 0;
-insert into @results_database_schema.cohort_inclusion_stats (cohort_definition_id, rule_sequence, person_count, gain_count, person_total, mode_id)
-select ir.cohort_definition_id, ir.rule_sequence, coalesce(T.person_count, 0) as person_count, coalesce(SR.person_count, 0) gain_count, EventTotal.total, 0 as mode_id
-from @results_database_schema.cohort_inclusion ir
-left join
-(
-  select i.inclusion_rule_id, count_big(i.event_id) as person_count
-  from #qualified_events Q
-  JOIN #inclusion_events i on Q.person_id = I.person_id and Q.event_id = i.event_id
-  group by i.inclusion_rule_id
-) T on ir.rule_sequence = T.inclusion_rule_id
-CROSS JOIN (select count(*) as total_rules from @results_database_schema.cohort_inclusion where cohort_definition_id = @target_cohort_id) RuleTotal
-CROSS JOIN (select count_big(event_id) as total from #qualified_events) EventTotal
-LEFT JOIN @results_database_schema.cohort_inclusion_result SR on SR.mode_id = 0 AND SR.cohort_definition_id = @target_cohort_id AND (POWER(cast(2 as bigint),RuleTotal.total_rules) - POWER(cast(2 as bigint),ir.rule_sequence) - 1) = SR.inclusion_rule_mask -- POWER(2,rule count) - POWER(2,rule sequence) - 1 is the mask for 'all except this rule' 
-WHERE ir.cohort_definition_id = @target_cohort_id
-;
-
--- calculate totals
-delete from @results_database_schema.cohort_summary_stats where cohort_definition_id = @target_cohort_id and mode_id = 0;
-insert into @results_database_schema.cohort_summary_stats (cohort_definition_id, base_count, final_count, mode_id)
-select @target_cohort_id as cohort_definition_id, PC.total as person_count, coalesce(FC.total, 0) as final_count, 0 as mode_id
-FROM
-(select count_big(event_id) as total from #qualified_events) PC,
-(select sum(sr.person_count) as total
-  from @results_database_schema.cohort_inclusion_result sr
-  CROSS JOIN (select count(*) as total_rules from @results_database_schema.cohort_inclusion where cohort_definition_id = @target_cohort_id) RuleTotal
-  where sr.mode_id = 0 and sr.cohort_definition_id = @target_cohort_id and sr.inclusion_rule_mask = POWER(cast(2 as bigint),RuleTotal.total_rules)-1
-) FC
-;
-
--- END: Inclusion Impact Analysis - event
-
--- BEGIN: Inclusion Impact Analysis - person
--- calculte matching group counts
-delete from @results_database_schema.cohort_inclusion_result where cohort_definition_id = @target_cohort_id and mode_id = 1;
-insert into @results_database_schema.cohort_inclusion_result (cohort_definition_id, inclusion_rule_mask, person_count, mode_id)
-select @target_cohort_id as cohort_definition_id, inclusion_rule_mask, count_big(*) as person_count, 1 as mode_id
-from
-(
-  select Q.person_id, Q.event_id, CAST(SUM(coalesce(POWER(cast(2 as bigint), I.inclusion_rule_id), 0)) AS bigint) as inclusion_rule_mask
-  from #best_events Q
-  LEFT JOIN #inclusion_events I on q.person_id = i.person_id and q.event_id = i.event_id
-  GROUP BY Q.person_id, Q.event_id
-) MG -- matching groups
-group by inclusion_rule_mask
-;
-
--- calculate gain counts 
-delete from @results_database_schema.cohort_inclusion_stats where cohort_definition_id = @target_cohort_id and mode_id = 1;
-insert into @results_database_schema.cohort_inclusion_stats (cohort_definition_id, rule_sequence, person_count, gain_count, person_total, mode_id)
-select ir.cohort_definition_id, ir.rule_sequence, coalesce(T.person_count, 0) as person_count, coalesce(SR.person_count, 0) gain_count, EventTotal.total, 1 as mode_id
-from @results_database_schema.cohort_inclusion ir
-left join
-(
-  select i.inclusion_rule_id, count_big(i.event_id) as person_count
-  from #best_events Q
-  JOIN #inclusion_events i on Q.person_id = I.person_id and Q.event_id = i.event_id
-  group by i.inclusion_rule_id
-) T on ir.rule_sequence = T.inclusion_rule_id
-CROSS JOIN (select count(*) as total_rules from @results_database_schema.cohort_inclusion where cohort_definition_id = @target_cohort_id) RuleTotal
-CROSS JOIN (select count_big(event_id) as total from #best_events) EventTotal
-LEFT JOIN @results_database_schema.cohort_inclusion_result SR on SR.mode_id = 1 AND SR.cohort_definition_id = @target_cohort_id AND (POWER(cast(2 as bigint),RuleTotal.total_rules) - POWER(cast(2 as bigint),ir.rule_sequence) - 1) = SR.inclusion_rule_mask -- POWER(2,rule count) - POWER(2,rule sequence) - 1 is the mask for 'all except this rule' 
-WHERE ir.cohort_definition_id = @target_cohort_id
-;
-
--- calculate totals
-delete from @results_database_schema.cohort_summary_stats where cohort_definition_id = @target_cohort_id and mode_id = 1;
-insert into @results_database_schema.cohort_summary_stats (cohort_definition_id, base_count, final_count, mode_id)
-select @target_cohort_id as cohort_definition_id, PC.total as person_count, coalesce(FC.total, 0) as final_count, 1 as mode_id
-FROM
-(select count_big(event_id) as total from #best_events) PC,
-(select sum(sr.person_count) as total
-  from @results_database_schema.cohort_inclusion_result sr
-  CROSS JOIN (select count(*) as total_rules from @results_database_schema.cohort_inclusion where cohort_definition_id = @target_cohort_id) RuleTotal
-  where sr.mode_id = 1 and sr.cohort_definition_id = @target_cohort_id and sr.inclusion_rule_mask = POWER(cast(2 as bigint),RuleTotal.total_rules)-1
-) FC
-;
-
--- END: Inclusion Impact Analysis - person
-
--- BEGIN: Censored Stats
-
--- END: Censored Stats
-
-TRUNCATE TABLE #best_events;
-DROP TABLE #best_events;
-
-}
 
 TRUNCATE TABLE #strategy_ends;
 DROP TABLE #strategy_ends;
