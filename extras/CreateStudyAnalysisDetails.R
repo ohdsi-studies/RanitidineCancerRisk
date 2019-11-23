@@ -62,7 +62,7 @@ createAnalysesDetails <- function(workFolder) {
                                                                                     tolerance = 2e-07,
                                                                                     cvRepetitions = 10),
                                                    errorOnHighCorrelation = TRUE,
-                                                   stopOnError = TRUE, 
+                                                   stopOnError = FALSE, 
                                                    maxCohortSizeForFitting = maxCohortSizeForFitting)
   
   matchOnPsArgs1 <- CohortMethod::createMatchOnPsArgs(maxRatio = 1)

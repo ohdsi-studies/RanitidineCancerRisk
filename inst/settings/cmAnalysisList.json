@@ -188,7 +188,7 @@
     "createPsArgs": {
       "maxCohortSizeForFitting": 2000,
       "errorOnHighCorrelation": true,
-      "stopOnError": true,
+      "stopOnError": false,
       "prior": {
         "priorType": "laplace",
         "variance": 1,
@@ -352,7 +352,7 @@
     "createPsArgs": {
       "maxCohortSizeForFitting": 2000,
       "errorOnHighCorrelation": true,
-      "stopOnError": true,
+      "stopOnError": false,
       "prior": {
         "priorType": "laplace",
         "variance": 1,
@@ -516,7 +516,7 @@
     "createPsArgs": {
       "maxCohortSizeForFitting": 2000,
       "errorOnHighCorrelation": true,
-      "stopOnError": true,
+      "stopOnError": false,
       "prior": {
         "priorType": "laplace",
         "variance": 1,
@@ -797,7 +797,7 @@
     "createPsArgs": {
       "maxCohortSizeForFitting": 2000,
       "errorOnHighCorrelation": true,
-      "stopOnError": true,
+      "stopOnError": false,
       "prior": {
         "priorType": "laplace",
         "variance": 1,
@@ -961,7 +961,7 @@
     "createPsArgs": {
       "maxCohortSizeForFitting": 2000,
       "errorOnHighCorrelation": true,
-      "stopOnError": true,
+      "stopOnError": false,
       "prior": {
         "priorType": "laplace",
         "variance": 1,
@@ -1125,7 +1125,7 @@
     "createPsArgs": {
       "maxCohortSizeForFitting": 2000,
       "errorOnHighCorrelation": true,
-      "stopOnError": true,
+      "stopOnError": false,
       "prior": {
         "priorType": "laplace",
         "variance": 1,
