@@ -1,13 +1,14 @@
 createTcosOfInterest<-function(workFolder,
+                               excludedTargetComparatorConceptIds = c(43009003),
                                outcomeIds=c(549,550),
                                includedCovariateConceptIds="",
                                updateNegativeControls=T,
                                negativeControlConceptIds=NULL){
   conceptSets<-read.csv(file.path(workFolder,"conceptSetExpression.csv"),
                         stringsAsFactors = FALSE)
-  
   colnames(conceptSets)<-gsub("\\.","_",colnames(conceptSets))
   colnames(conceptSets)<-SqlRender::snakeCaseToCamelCase(colnames(conceptSets))
+  conceptSets <- conceptSets[!conceptSets$conceptId %in% excludedTargetComparatorConceptIds,]
   
   drugConceptIds<-conceptSets$conceptId[conceptSets$name=="H2blocker"]
   tcs<-as.data.frame(t(combn(drugConceptIds,2)))
