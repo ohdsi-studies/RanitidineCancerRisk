@@ -11,7 +11,11 @@ createTcosOfInterest<-function(workFolder,
   conceptSets <- conceptSets[!conceptSets$conceptId %in% excludedTargetComparatorConceptIds,]
   
   drugConceptIds<-conceptSets$conceptId[conceptSets$name=="H2blocker"]
-  tcs<-as.data.frame(t(combn(drugConceptIds,2)))
+  
+  #tcs<-as.data.frame(t(combn(drugConceptIds,2))) #combination
+  tcs<-expand.grid(rep(list(drugConceptIds),2)) #permutation without repetition
+  tcs<-tcs[tcs[,1]!=tcs[,2],] #remove identical target and comparator
+  
   colnames(tcs)<-c("targetId","comparatorId")
   
   outcomeIds<-paste0(outcomeIds,collapse=";")

@@ -15,7 +15,7 @@
 # limitations under the License.
 
 createAnalysesDetails <- function(workFolder) {
-  maxCohortSizeForFitting = 2000 #250000
+  maxCohortSizeForFitting = 250000
   
   covarSettings <- FeatureExtraction::createDefaultCovariateSettings(excludedCovariateConceptIds = c(19011685,
                                                                                                      961047,
@@ -36,7 +36,7 @@ createAnalysesDetails <- function(workFolder) {
   
   createOnTreatmentStudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
                                                                       minDaysAtRisk = 1,
-                                                                      riskWindowStart = 0,
+                                                                      riskWindowStart = 1,
                                                                       startAnchor  = "cohort start",
                                                                       riskWindowEnd = 30,
                                                                       endAnchor = "cohort end")
@@ -106,21 +106,21 @@ createAnalysesDetails <- function(workFolder) {
   
   
   createAfterOneYearStudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
-                                                                                 minDaysAtRisk = 365,
-                                                                                 riskWindowStart = 0,
+                                                                                 minDaysAtRisk = 1,
+                                                                                 riskWindowStart = 1,
                                                                                  startAnchor = "cohort start",
-                                                                                 riskWindowEnd = 30,
-                                                                                 endAnchor = "cohort end")
+                                                                                 riskWindowEnd = 9999,
+                                                                                 endAnchor = "cohort start")
   
   cmAnalysis11 <- CohortMethod::createCmAnalysis(analysisId = 11,
-                                                description = "On-treatment after one year, no matching",
+                                                description = "ITT, no matching",
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = createAfterOneYearStudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
   
   cmAnalysis12 <- CohortMethod::createCmAnalysis(analysisId = 12,
-                                                description = "On-treatment after one year, One-on-one matching",
+                                                description = "ITT, One-on-one matching",
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = createAfterOneYearStudyPopArgs,
                                                 createPs = TRUE,
@@ -130,7 +130,7 @@ createAnalysesDetails <- function(workFolder) {
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis13 <- CohortMethod::createCmAnalysis(analysisId = 13,
-                                                description = "On-treatment after one year, Variable ratio matching",
+                                                description = "ITT, Variable ratio matching",
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = createAfterOneYearStudyPopArgs,
                                                 createPs = TRUE,
@@ -141,7 +141,7 @@ createAnalysesDetails <- function(workFolder) {
                                                 fitOutcomeModelArgs = conditionedCox)
   
   cmAnalysis14 <- CohortMethod::createCmAnalysis(analysisId = 14,
-                                                description = "On-treatment after one year, Stratification",
+                                                description = "ITT, Stratification",
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = createAfterOneYearStudyPopArgs,
                                                 createPs = TRUE,

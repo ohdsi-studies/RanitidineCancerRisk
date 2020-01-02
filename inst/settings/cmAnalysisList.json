@@ -59,7 +59,7 @@
       "removeSubjectsWithPriorOutcome": true,
       "priorOutcomeLookback": 99999,
       "minDaysAtRisk": 1,
-      "riskWindowStart": 0,
+      "riskWindowStart": 1,
       "startAnchor": "cohort start",
       "riskWindowEnd": 30,
       "endAnchor": "cohort end",
@@ -177,7 +177,7 @@
       "removeSubjectsWithPriorOutcome": true,
       "priorOutcomeLookback": 99999,
       "minDaysAtRisk": 1,
-      "riskWindowStart": 0,
+      "riskWindowStart": 1,
       "startAnchor": "cohort start",
       "riskWindowEnd": 30,
       "endAnchor": "cohort end",
@@ -186,7 +186,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 2000,
+      "maxCohortSizeForFitting": 250000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -341,7 +341,7 @@
       "removeSubjectsWithPriorOutcome": true,
       "priorOutcomeLookback": 99999,
       "minDaysAtRisk": 1,
-      "riskWindowStart": 0,
+      "riskWindowStart": 1,
       "startAnchor": "cohort start",
       "riskWindowEnd": 30,
       "endAnchor": "cohort end",
@@ -350,7 +350,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 2000,
+      "maxCohortSizeForFitting": 250000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -505,7 +505,7 @@
       "removeSubjectsWithPriorOutcome": true,
       "priorOutcomeLookback": 99999,
       "minDaysAtRisk": 1,
-      "riskWindowStart": 0,
+      "riskWindowStart": 1,
       "startAnchor": "cohort start",
       "riskWindowEnd": 30,
       "endAnchor": "cohort end",
@@ -514,7 +514,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 2000,
+      "maxCohortSizeForFitting": 250000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -610,7 +610,7 @@
   },
   {
     "analysisId": 11,
-    "description": "On-treatment after one year, no matching",
+    "description": "ITT, no matching",
     "getDbCohortMethodDataArgs": {
       "studyStartDate": "",
       "studyEndDate": "",
@@ -667,11 +667,11 @@
       "removeDuplicateSubjects": false,
       "removeSubjectsWithPriorOutcome": true,
       "priorOutcomeLookback": 99999,
-      "minDaysAtRisk": 365,
-      "riskWindowStart": 0,
+      "minDaysAtRisk": 1,
+      "riskWindowStart": 1,
       "startAnchor": "cohort start",
-      "riskWindowEnd": 30,
-      "endAnchor": "cohort end",
+      "riskWindowEnd": 9999,
+      "endAnchor": "cohort start",
       "censorAtNewRiskWindow": false,
       "attr_class": "args"
     },
@@ -728,7 +728,7 @@
   },
   {
     "analysisId": 12,
-    "description": "On-treatment after one year, One-on-one matching",
+    "description": "ITT, One-on-one matching",
     "getDbCohortMethodDataArgs": {
       "studyStartDate": "",
       "studyEndDate": "",
@@ -785,17 +785,17 @@
       "removeDuplicateSubjects": false,
       "removeSubjectsWithPriorOutcome": true,
       "priorOutcomeLookback": 99999,
-      "minDaysAtRisk": 365,
-      "riskWindowStart": 0,
+      "minDaysAtRisk": 1,
+      "riskWindowStart": 1,
       "startAnchor": "cohort start",
-      "riskWindowEnd": 30,
-      "endAnchor": "cohort end",
+      "riskWindowEnd": 9999,
+      "endAnchor": "cohort start",
       "censorAtNewRiskWindow": false,
       "attr_class": "args"
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 2000,
+      "maxCohortSizeForFitting": 250000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -892,7 +892,7 @@
   },
   {
     "analysisId": 13,
-    "description": "On-treatment after one year, Variable ratio matching",
+    "description": "ITT, Variable ratio matching",
     "getDbCohortMethodDataArgs": {
       "studyStartDate": "",
       "studyEndDate": "",
@@ -949,17 +949,17 @@
       "removeDuplicateSubjects": false,
       "removeSubjectsWithPriorOutcome": true,
       "priorOutcomeLookback": 99999,
-      "minDaysAtRisk": 365,
-      "riskWindowStart": 0,
+      "minDaysAtRisk": 1,
+      "riskWindowStart": 1,
       "startAnchor": "cohort start",
-      "riskWindowEnd": 30,
-      "endAnchor": "cohort end",
+      "riskWindowEnd": 9999,
+      "endAnchor": "cohort start",
       "censorAtNewRiskWindow": false,
       "attr_class": "args"
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 2000,
+      "maxCohortSizeForFitting": 250000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -1056,7 +1056,7 @@
   },
   {
     "analysisId": 14,
-    "description": "On-treatment after one year, Stratification",
+    "description": "ITT, Stratification",
     "getDbCohortMethodDataArgs": {
       "studyStartDate": "",
       "studyEndDate": "",
@@ -1113,17 +1113,17 @@
       "removeDuplicateSubjects": false,
       "removeSubjectsWithPriorOutcome": true,
       "priorOutcomeLookback": 99999,
-      "minDaysAtRisk": 365,
-      "riskWindowStart": 0,
+      "minDaysAtRisk": 1,
+      "riskWindowStart": 1,
       "startAnchor": "cohort start",
-      "riskWindowEnd": 30,
-      "endAnchor": "cohort end",
+      "riskWindowEnd": 9999,
+      "endAnchor": "cohort start",
       "censorAtNewRiskWindow": false,
       "attr_class": "args"
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 2000,
+      "maxCohortSizeForFitting": 250000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
