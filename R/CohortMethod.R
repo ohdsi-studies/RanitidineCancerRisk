@@ -46,13 +46,14 @@ runCohortMethod <- function(connectionDetails,
                             cohortTable,
                             oracleTempSchema,
                             outputFolder,
-                            maxCores) {
+                            maxCores,
+                            cmAnalysisListFileName = "cmAnalysisList.json") {
   cmOutputFolder <- file.path(outputFolder, "cmOutput")
   if (!file.exists(cmOutputFolder)) {
     dir.create(cmOutputFolder)
   }
   cmAnalysisListFile <- system.file("settings",
-                                    "cmAnalysisList.json",
+                                    cmAnalysisListFileName,
                                     package = "RanitidineCancerRisk")
   cmAnalysisList <- CohortMethod::loadCmAnalysisList(cmAnalysisListFile)
   tcosList <- createTcos(outputFolder = outputFolder)

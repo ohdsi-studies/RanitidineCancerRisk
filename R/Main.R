@@ -81,12 +81,16 @@ execute <- function(connectionDetails,
                     databaseName = "Unknown",
                     databaseDescription = "Unknown",
                     createCohorts = TRUE,
+                    runFeasibility = FALSE,
                     synthesizePositiveControls = TRUE,
                     runAnalyses = TRUE,
                     runDiagnostics = TRUE,
                     packageResults = TRUE,
                     maxCores = 4,
                     minCellCount= 5) {
+  
+  if (runAnalyses + runFeasibility > 1) stop ("Please set only one of runFeasibility or runAnalyses as TRUE")
+  
   if (!file.exists(outputFolder))
     dir.create(outputFolder, recursive = TRUE)
   if (!is.null(getOption("fftempdir")) && !file.exists(getOption("fftempdir"))) {
@@ -104,6 +108,18 @@ execute <- function(connectionDetails,
                   cohortTable = cohortTable,
                   oracleTempSchema = oracleTempSchema,
                   outputFolder = outputFolder)
+  }
+  
+  if(runFeasibility) {
+    ParallelLogger::logInfo("Running CohortMethod analyses for Feasibility")
+    runCohortMethod(connectionDetails = connectionDetails,
+                    cdmDatabaseSchema = cdmDatabaseSchema,
+                    cohortDatabaseSchema = cohortDatabaseSchema,
+                    cohortTable = cohortTable,
+                    oracleTempSchema = oracleTempSchema,
+                    outputFolder = outputFolder,
+                    maxCores = maxCores,
+                    cmAnalysisListFileName = "cmAnalysisFeasibilityList.json")
   }
   
   # Set doPositiveControlSynthesis to FALSE if you don't want to use synthetic positive controls:
@@ -129,7 +145,8 @@ execute <- function(connectionDetails,
                     cohortTable = cohortTable,
                     oracleTempSchema = oracleTempSchema,
                     outputFolder = outputFolder,
-                    maxCores = maxCores)
+                    maxCores = maxCores,
+                    cmAnalysisListFileName = "cmAnalysisList.json")
   }
   
   if (runDiagnostics) {

@@ -4,9 +4,15 @@
 \alias{synthesizePositiveControls}
 \title{Synthesize positive controls}
 \usage{
-synthesizePositiveControls(connectionDetails, cdmDatabaseSchema,
-  cohortDatabaseSchema, cohortTable = "cohort", oracleTempSchema,
-  outputFolder, maxCores = 1)
+synthesizePositiveControls(
+  connectionDetails,
+  cdmDatabaseSchema,
+  cohortDatabaseSchema,
+  cohortTable = "cohort",
+  oracleTempSchema,
+  outputFolder,
+  maxCores = 1
+)
 }
 \arguments{
 \item{connectionDetails}{An object of type \code{connectionDetails} as created using the

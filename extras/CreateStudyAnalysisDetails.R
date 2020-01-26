@@ -124,7 +124,7 @@ createAnalysesDetails <- function(workFolder) {
                                                                                     tolerance = 2e-07,
                                                                                     cvRepetitions = 10),
                                                    errorOnHighCorrelation = TRUE,
-                                                   stopOnError = TRUE, 
+                                                   stopOnError = F, 
                                                    maxCohortSizeForFitting = maxCohortSizeForFitting)
   
   
@@ -700,6 +700,14 @@ createAnalysesDetails <- function(workFolder) {
                          cmAnalysis43, cmAnalysis44, cmAnalysis45, cmAnalysis46, cmAnalysis47, cmAnalysis48)
   
   CohortMethod::saveCmAnalysisList(cmAnalysisList, file.path(workFolder, "cmAnalysisList.json"))
+  
+  cmAnalysisFeasibilityList <- list(cmAnalysis1, cmAnalysis2, cmAnalysis3, 
+                                    cmAnalysis13, cmAnalysis14, cmAnalysis15, 
+                                    cmAnalysis25, cmAnalysis26, cmAnalysis27, 
+                                    cmAnalysis37, cmAnalysis38, cmAnalysis39
+                                    )
+  
+  CohortMethod::saveCmAnalysisList(cmAnalysisList, file.path(workFolder, "cmAnalysisFeasibilityList.json"))
 }
 
 createPositiveControlSynthesisArgs <- function(workFolder) {
