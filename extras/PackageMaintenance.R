@@ -52,8 +52,9 @@ createPositiveControlSynthesisArgs("inst/settings/")
 # Create TCOs and negative controls----------------------------------------
 source("extras/createTcosOfInterest.r")
 createTcosOfInterest(workFolder="inst/settings/",
-                     excludedTargetComparatorConceptIds = c(43009003),
-                     outcomeIds=c(549,550,761,765,763,764,762,759,760),
+                     excludedTargetComparatorConceptIds = NULL,
+                     secondaryComparison = "2",
+                     outcomeIds = 1:20,
                      includedCovariateConceptIds="",
                      updateNegativeControls=T,
                      negativeControlConceptIds=NULL)

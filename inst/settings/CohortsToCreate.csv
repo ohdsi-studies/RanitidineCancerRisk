@@ -1,16 +1,33 @@
 atlasId,atlasName,cohortId,name
-696,Ranitidine user without gastric ulcer,961047,Ranitidine_user_without_gastric_ulcer
-698,Cimetidine user without gastric ulcer,997276,Cimetidine_user_without_gastric_ulcer
-549,Overall Cancer,549,Cancer
-761,Thyroid Cancer,761,Thyroid_cancer
-765,Colorectal Cancer,765,Colorectal_cancer
-763,Lung cancer,763,Lung_cancer
-764,Stomach cancer,764,Stomach_cancer
-762,Liver cancer,762,Liver_cancer
-759,Prostate cancer,759,Prostate_cancer
-760,Breast cancer,760,Breast_cancer
-550,Gynecomastia,550,Gynecomastia
-697,Lafutidine user without gastric ulcer,43009003,Lafutidine_user_without_gastric_ulcer
-700,Famotidine user without gastric ulcer,953076,Famotidine_user_without_gastric_ulcer
-701,Nizatidine user without gastric ulcer,950696,Nizatidine_user_without_gastric_ulcer
-702,Roxatidine user without gastric ulcer,19011685,Roxatidine_user_without_gastric_ulcer
+9610472,Ranitidine user without gastric ulcer,9610472,Ranitidine_user_without_gastric_ulcer
+9972762,Cimetidine user without gastric ulcer,9972762,Cimetidine_user_without_gastric_ulcer
+430090032,Lafutidine user without gastric ulcer,430090032,Lafutidine_user_without_gastric_ulcer
+9530762,Famotidine user without gastric ulcer,9530762,Famotidine_user_without_gastric_ulcer
+9506962,Nizatidine user without gastric ulcer,9506962,Nizatidine_user_without_gastric_ulcer
+190116852,Roxatidine user without gastric ulcer,190116852,Roxatidine_user_without_gastric_ulcer
+961047,Ranitidine user,961047,Ranitidine_user
+997276,Cimetidine user,997276,Cimetidine_user
+43009003,Lafutidine user,43009003,Lafutidine_user
+953076,Famotidine user,953076,Famotidine_user
+950696,Nizatidine user,950696,Nizatidine_user
+19011685,Roxatidine user,19011685,Roxatidine_user
+1,Overall cancer,1,Cancer
+2,Overall cancer except thyroid cancer,2,Cancer_except_thyroid
+3,Thyroid Cancer,3,Thyroid_cancer
+4,Colon and rectum cancer,4,Colorectal_cancer
+5,Lung cancer,5,Lung_cancer
+6,Stomach cancer,6,Stomach_cancer
+7,Liver cancer,7,Liver_cancer
+8,Prostate cancer,8,Prostate_cancer
+9,Breast cancer,9,Breast_cancer
+10,Bladder cancer,10,Bladder_cancer
+11,Cervix uteri cancer,11,Cervix_uteri_cancer
+12,Corpus uteri cancer,12,Corpus_uteri_cancer
+13,Esophagus cancer,13,Esophagus_cancer
+14,Gall bladder and biliary tract cancer,14,GB_and_biliary_tract_cancer
+15,"Lip, oral cavity and pharynx cancer",15,Head_n_neck_cancer
+16,Leukemia,16,Leukemia
+17,Ovary cancer,17,Ovary_cancer
+18,Pancreas cancer,18,Pancreas_cancer
+19,Prostate cancer,19,Prostate_cancer
+20,Gynecomastia,20,Gynecomastia
