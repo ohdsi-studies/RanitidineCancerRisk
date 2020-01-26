@@ -2,22 +2,84 @@
   "ConceptSets": [
     {
       "id": 0,
-      "name": "Thyroid cancer",
+      "name": "Ovary Cancer",
       "expression": {
         "items": [
           {
             "concept": {
-              "CONCEPT_ID": 4178976,
-              "CONCEPT_NAME": "Malignant tumor of thyroid gland",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "CONCEPT_CODE": "449259009",
+              "CONCEPT_ID": 40486213,
+              "CONCEPT_NAME": "Malignant neoplasm of broad ligament of uterus",
+              "DOMAIN_ID": "Condition",
               "INVALID_REASON": "V",
               "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "363478007",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "SNOMED"
             },
+            "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "CONCEPT_CODE": "363443007",
+              "CONCEPT_ID": 4181351,
+              "CONCEPT_NAME": "Malignant tumor of ovary",
+              "DOMAIN_ID": "Condition",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "SNOMED"
+            },
+            "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "CONCEPT_CODE": "94126000",
+              "CONCEPT_ID": 200052,
+              "CONCEPT_NAME": "Primary malignant neoplasm of uterine adnexa",
+              "DOMAIN_ID": "Condition",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "SNOMED"
+            },
+            "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "CONCEPT_CODE": "94226006",
+              "CONCEPT_ID": 4312824,
+              "CONCEPT_NAME": "Secondary malignant neoplasm of broad ligament",
+              "DOMAIN_ID": "Condition",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "SNOMED"
+            },
+            "isExcluded": true,
+            "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "CONCEPT_CODE": "94455000",
+              "CONCEPT_ID": 199752,
+              "CONCEPT_NAME": "Secondary malignant neoplasm of ovary",
+              "DOMAIN_ID": "Condition",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "SNOMED"
+            },
+            "isExcluded": true,
             "includeDescendants": true
           }
         ]
@@ -29,7 +91,16 @@
       {
         "ConditionOccurrence": {
           "CodesetId": 0,
-          "First": true
+          "First": true,
+          "Gender": [
+            {
+              "CONCEPT_CODE": "F",
+              "CONCEPT_ID": 8532,
+              "CONCEPT_NAME": "FEMALE",
+              "DOMAIN_ID": "Gender",
+              "VOCABULARY_ID": "Gender"
+            }
+          ]
         }
       }
     ],

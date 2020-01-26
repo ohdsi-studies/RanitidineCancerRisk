@@ -2,18 +2,34 @@
   "ConceptSets": [
     {
       "id": 0,
-      "name": "Thyroid cancer",
+      "name": "Pancreas Cancer",
       "expression": {
         "items": [
           {
             "concept": {
-              "CONCEPT_ID": 4178976,
-              "CONCEPT_NAME": "Malignant tumor of thyroid gland",
+              "CONCEPT_ID": 4178966,
+              "CONCEPT_NAME": "Malignant tumor of ampulla of Vater",
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
               "INVALID_REASON": "V",
               "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "363478007",
+              "CONCEPT_CODE": "363417006",
+              "DOMAIN_ID": "Condition",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
+            },
+            "isExcluded": true,
+            "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": 4180793,
+              "CONCEPT_NAME": "Malignant tumor of pancreas",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "363418001",
               "DOMAIN_ID": "Condition",
               "VOCABULARY_ID": "SNOMED",
               "CONCEPT_CLASS_ID": "Clinical Finding"

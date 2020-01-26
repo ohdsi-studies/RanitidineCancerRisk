@@ -2,9 +2,24 @@
   "ConceptSets": [
     {
       "id": 0,
-      "name": "Thyroid cancer",
+      "name": "Malignant neoplasm except thyroid",
       "expression": {
         "items": [
+          {
+            "concept": {
+              "CONCEPT_ID": 443392,
+              "CONCEPT_NAME": "Malignant neoplastic disease",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "363346000",
+              "DOMAIN_ID": "Condition",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
+            },
+            "includeDescendants": true
+          },
           {
             "concept": {
               "CONCEPT_ID": 4178976,
@@ -18,7 +33,38 @@
               "VOCABULARY_ID": "SNOMED",
               "CONCEPT_CLASS_ID": "Clinical Finding"
             },
+            "isExcluded": true,
             "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": 4201622,
+              "CONCEPT_NAME": "Metastasis from malignant tumor of thyroid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "315007008",
+              "DOMAIN_ID": "Condition",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
+            },
+            "isExcluded": true
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": 36717298,
+              "CONCEPT_NAME": "Secondary malignant neoplasm of lymph nodes of neck from thyroid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "13351431000119102",
+              "DOMAIN_ID": "Condition",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
+            },
+            "isExcluded": true
           }
         ]
       }

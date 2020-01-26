@@ -7,25 +7,9 @@ CREATE TABLE #Codesets (
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 0 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 (
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4246127)and invalid_reason is null
-UNION  select c.concept_id
-  from @vocabulary_database_schema.CONCEPT c
-  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4246127)
-  and c.invalid_reason is null
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4091931,377229,4162118,40492021,436045,4089516,4095442,440655,4089652,4090224,4177098,4095313,4181332,4181340,4180786,4177100,4177101,4178963,4180787,4181342,4089520,4089530,4177103,4180783,4180779,4181335,4150793,4181333,4095312,25189,4181338,4178964,4180784,4177243,4177104,4116339,4094722,4094721,4180789,4178965,4181341,4116235,4181336,4180785,22557,4092212,4178962,4181339,4180788,4094720,4181334,4090216,4181337,4177102,4090226,4089655,4131601,253977,140955,440044,22839,133710,444224,28356,432558,438691,4001170,436043,4002498,259748,436643,438982,436042,438080,256633,4156114,4003674,134579,255192,434587,140046,135750,132258,260336,140950,438694,442131,434577,439746,132832,137219,138351,440036,436352,26052,440344,438692,440345,434289,4155171,440335,4247836,137800,438367,439404,432833,134290,434588,28083,436922,435474,436344,439739,435190,433704,254282,136639,259755,439738,4312691,441223,437498,31509,433709,440047,435478,434285,438360,437220,133969,132565,138074,261808,432254)and invalid_reason is null
 
 ) I
-LEFT JOIN
-(
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (198700)and invalid_reason is null
-UNION  select c.concept_id
-  from @vocabulary_database_schema.CONCEPT c
-  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (198700)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
 ) C;
 
 
@@ -54,7 +38,7 @@ WHERE C.ordinal = 1
 	JOIN @cdm_database_schema.observation_period OP on E.person_id = OP.person_id and E.start_date >=  OP.observation_period_start_date and E.start_date <= op.observation_period_end_date
   WHERE DATEADD(day,365,OP.OBSERVATION_PERIOD_START_DATE) <= E.START_DATE AND DATEADD(day,0,E.START_DATE) <= OP.OBSERVATION_PERIOD_END_DATE
 ) P
-WHERE P.ordinal = 1
+
 -- End Primary Events
 
 )
@@ -101,8 +85,8 @@ FROM
   JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 0))
 ) C
 JOIN @cdm_database_schema.VISIT_OCCURRENCE V on C.visit_occurrence_id = V.visit_occurrence_id and C.person_id = V.person_id
-WHERE C.condition_type_concept_id  in (44786627,38000183,38000248,38000199,38000250)
-AND V.visit_concept_id in (9203,9201,262)
+WHERE C.condition_type_concept_id  in (44786627,38000183,38000248,38000199,38000250,38000266,38000268)
+AND V.visit_concept_id in (9203,9201)
 -- End Condition Occurrence Criteria
 
 ) A on A.person_id = P.person_id and A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,0,P.START_DATE) AND A.START_DATE <= P.OP_END_DATE

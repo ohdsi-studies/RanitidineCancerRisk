@@ -16,59 +16,6 @@ UNION  select c.concept_id
 
 ) I
 ) C;
-INSERT INTO #Codesets (codeset_id, concept_id)
-SELECT 1 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-(
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4246127)and invalid_reason is null
-UNION  select c.concept_id
-  from @vocabulary_database_schema.CONCEPT c
-  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4246127)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4312024,198700,44806773)and invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C;
-INSERT INTO #Codesets (codeset_id, concept_id)
-SELECT 2 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-(
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4003021,4001172,4001664,4001171,4246127,4095432,201519)and invalid_reason is null
-
-) I
-) C;
-INSERT INTO #Codesets (codeset_id, concept_id)
-SELECT 3 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-(
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4163261)and invalid_reason is null
-
-) I
-) C;
-INSERT INTO #Codesets (codeset_id, concept_id)
-SELECT 4 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-(
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (81251,4162253,4158563,432845)and invalid_reason is null
-
-) I
-) C;
-INSERT INTO #Codesets (codeset_id, concept_id)
-SELECT 5 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-(
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4178976)and invalid_reason is null
-
-) I
-) C;
-INSERT INTO #Codesets (codeset_id, concept_id)
-SELECT 6 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-(
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4003021,4001172,4001664,4001171,4246127,4095432,201519)and invalid_reason is null
-
-) I
-) C;
 
 
 with primary_events (event_id, person_id, start_date, end_date, op_start_date, op_end_date, visit_occurrence_id) as
@@ -143,11 +90,11 @@ FROM
   JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 0))
 ) C
 JOIN @cdm_database_schema.VISIT_OCCURRENCE V on C.visit_occurrence_id = V.visit_occurrence_id and C.person_id = V.person_id
-WHERE C.condition_type_concept_id  in (44786627)
-AND V.visit_concept_id in (9203,9201)
+WHERE C.condition_type_concept_id  in (44786627,38000183,38000248,38000199,38000250)
+AND V.visit_concept_id in (9203,9201,262)
 -- End Condition Occurrence Criteria
 
-) A on A.person_id = P.person_id and A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,0,P.START_DATE) AND A.START_DATE <= DATEADD(day,180,P.START_DATE)
+) A on A.person_id = P.person_id and A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,0,P.START_DATE) AND A.START_DATE <= P.OP_END_DATE
 GROUP BY p.person_id, p.event_id
 HAVING COUNT(A.TARGET_CONCEPT_ID) >= 1
 -- End Correlated Criteria
@@ -186,7 +133,7 @@ with cteIncludedEvents(event_id, person_id, start_date, end_date, op_start_date,
 select event_id, person_id, start_date, end_date, op_start_date, op_end_date
 into #included_events
 FROM cteIncludedEvents Results
-WHERE Results.ordinal = 1
+
 ;
 
 

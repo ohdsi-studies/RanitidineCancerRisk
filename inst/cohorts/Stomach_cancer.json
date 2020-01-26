@@ -2,541 +2,39 @@
   "ConceptSets": [
     {
       "id": 0,
-      "name": "Malignant neoplastic disease",
+      "name": "Stomach Cancer",
       "expression": {
         "items": [
           {
             "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363346000",
-              "CONCEPT_ID": 443392,
-              "CONCEPT_NAME": "Malignant neoplastic disease",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_ID": 46271647,
+              "CONCEPT_NAME": "Malignant carcinoid tumor of stomach",
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "709830006",
+              "DOMAIN_ID": "Condition",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
             },
+            "isExcluded": true,
             "includeDescendants": true
-          }
-        ]
-      }
-    },
-    {
-      "id": 3,
-      "name": "Prostate cancer (C61)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "399068003",
-              "CONCEPT_ID": 4163261,
-              "CONCEPT_NAME": "Malignant tumor of prostate",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": 4,
-      "name": "Breast cancer (C50)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "126926005",
-              "CONCEPT_ID": 81251,
-              "CONCEPT_NAME": "Neoplasm of breast",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
           },
           {
             "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "372137005",
-              "CONCEPT_ID": 4162253,
-              "CONCEPT_NAME": "Primary malignant neoplasm of breast",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "373089009",
-              "CONCEPT_ID": 4158563,
-              "CONCEPT_NAME": "Primary malignant neoplasm of breast upper inner quadrant",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "93745008",
-              "CONCEPT_ID": 432845,
-              "CONCEPT_NAME": "Primary malignant neoplasm of central portion of female breast",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": 5,
-      "name": "Thyroid cancer (C73)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363478007",
-              "CONCEPT_ID": 4178976,
-              "CONCEPT_NAME": "Malignant tumor of thyroid gland",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": 6,
-      "name": "Liver cancer (C22)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "109844006",
-              "CONCEPT_ID": 4003021,
-              "CONCEPT_NAME": "Angiosarcoma of liver",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "109843000",
-              "CONCEPT_ID": 4001172,
-              "CONCEPT_NAME": "Hepatoblastoma",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "109842005",
-              "CONCEPT_ID": 4001664,
-              "CONCEPT_NAME": "Intrahepatic bile duct carcinoma",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "109841003",
-              "CONCEPT_ID": 4001171,
-              "CONCEPT_NAME": "Liver cell carcinoma",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "93870000",
-              "CONCEPT_ID": 4246127,
-              "CONCEPT_NAME": "Malignant neoplasm of liver",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "187767006",
-              "CONCEPT_ID": 4095432,
-              "CONCEPT_NAME": "Malignant neoplasm of liver and intrahepatic bile ducts",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "95214007",
-              "CONCEPT_ID": 201519,
-              "CONCEPT_NAME": "Primary malignant neoplasm of liver",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": 8,
-      "name": "Lung cancer (C33-C34)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "372065009",
-              "CONCEPT_ID": 4157333,
-              "CONCEPT_NAME": "Malignant neoplasm of main bronchus",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "187864008",
-              "CONCEPT_ID": 4092217,
-              "CONCEPT_NAME": "Malignant neoplasm of middle lobe, bronchus or lung",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "269464000",
-              "CONCEPT_ID": 4151250,
-              "CONCEPT_NAME": "Malignant neoplasm of upper lobe, bronchus or lung",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "93734005",
-              "CONCEPT_ID": 442139,
-              "CONCEPT_NAME": "Primary malignant neoplasm of bronchus",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": 9,
-      "name": "Stomach cancer (C16)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "187742008",
-              "CONCEPT_ID": 4095320,
-              "CONCEPT_NAME": "Malignant tumor of body of stomach",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "187732006",
-              "CONCEPT_ID": 4094856,
-              "CONCEPT_NAME": "Malignant tumor of cardia",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "187741001",
-              "CONCEPT_ID": 4095319,
-              "CONCEPT_NAME": "Malignant tumor of fundus of stomach",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363349007",
               "CONCEPT_ID": 443387,
               "CONCEPT_NAME": "Malignant tumor of stomach",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": 10,
-      "name": "Colorectal cancer (C18-20)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "187757001",
-              "CONCEPT_ID": 4089661,
-              "CONCEPT_NAME": "Malignant neoplasm, overlapping lesion of colon",
-              "DOMAIN_ID": "Condition",
               "INVALID_REASON": "V",
               "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363411007",
-              "CONCEPT_ID": 443383,
-              "CONCEPT_NAME": "Malignant tumor of appendix",
+              "CONCEPT_CODE": "363349007",
               "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363412000",
-              "CONCEPT_ID": 435754,
-              "CONCEPT_NAME": "Malignant tumor of ascending colon",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363350007",
-              "CONCEPT_ID": 443391,
-              "CONCEPT_NAME": "Malignant tumor of cecum",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363406005",
-              "CONCEPT_ID": 4180790,
-              "CONCEPT_NAME": "Malignant tumor of colon",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363409003",
-              "CONCEPT_ID": 443382,
-              "CONCEPT_NAME": "Malignant tumor of descending colon",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363407001",
-              "CONCEPT_ID": 4180791,
-              "CONCEPT_NAME": "Malignant tumor of hepatic flexure",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363414004",
-              "CONCEPT_ID": 4180792,
-              "CONCEPT_NAME": "Malignant tumor of rectosigmoid junction",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363351006",
-              "CONCEPT_ID": 443390,
-              "CONCEPT_NAME": "Malignant tumor of rectum",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363410008",
-              "CONCEPT_ID": 443381,
-              "CONCEPT_NAME": "Malignant tumor of sigmoid colon",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363413005",
-              "CONCEPT_ID": 4181344,
-              "CONCEPT_NAME": "Malignant tumor of splenic flexure",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363408006",
-              "CONCEPT_ID": 443384,
-              "CONCEPT_NAME": "Malignant tumor of transverse colon",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
-            }
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
+            },
+            "includeDescendants": true
           }
         ]
       }
@@ -546,7 +44,7 @@
     "CriteriaList": [
       {
         "ConditionOccurrence": {
-          "CodesetId": 9,
+          "CodesetId": 0,
           "First": true
         }
       }
@@ -563,7 +61,7 @@
     "Type": "First"
   },
   "ExpressionLimit": {
-    "Type": "First"
+    "Type": "All"
   },
   "InclusionRules": [
     {
@@ -574,7 +72,7 @@
           {
             "Criteria": {
               "ConditionOccurrence": {
-                "CodesetId": 9,
+                "CodesetId": 0,
                 "ConditionType": [
                   {
                     "CONCEPT_CODE": "OMOP generated",
@@ -582,6 +80,34 @@
                     "CONCEPT_NAME": "Primary Condition",
                     "DOMAIN_ID": "Type Concept",
                     "VOCABULARY_ID": "Condition Type"
+                  },
+                  {
+                    "CONCEPT_CODE": "OMOP generated",
+                    "CONCEPT_ID": 38000183,
+                    "CONCEPT_NAME": "Inpatient detail - primary",
+                    "DOMAIN_ID": "Type Concept",
+                    "VOCABULARY_ID": "Condition Type"
+                  },
+                  {
+                    "CONCEPT_CODE": "OMOP generated",
+                    "CONCEPT_ID": 38000248,
+                    "CONCEPT_NAME": "Inpatient detail - primary position",
+                    "DOMAIN_ID": "Type Concept",
+                    "VOCABULARY_ID": "Procedure Type"
+                  },
+                  {
+                    "CONCEPT_CODE": "OMOP generated",
+                    "CONCEPT_ID": 38000199,
+                    "CONCEPT_NAME": "Inpatient header - primary",
+                    "DOMAIN_ID": "Type Concept",
+                    "VOCABULARY_ID": "Condition Type"
+                  },
+                  {
+                    "CONCEPT_CODE": "OMOP generated",
+                    "CONCEPT_ID": 38000250,
+                    "CONCEPT_NAME": "Inpatient header - primary position",
+                    "DOMAIN_ID": "Type Concept",
+                    "VOCABULARY_ID": "Procedure Type"
                   }
                 ],
                 "VisitType": [
@@ -598,6 +124,13 @@
                     "CONCEPT_NAME": "Inpatient Visit",
                     "DOMAIN_ID": "Visit",
                     "VOCABULARY_ID": "Visit"
+                  },
+                  {
+                    "CONCEPT_CODE": "ERIP",
+                    "CONCEPT_ID": 262,
+                    "CONCEPT_NAME": "Emergency Room and Inpatient Visit",
+                    "DOMAIN_ID": "Visit",
+                    "VOCABULARY_ID": "Visit"
                   }
                 ]
               }
@@ -608,7 +141,6 @@
                 "Coeff": 1
               },
               "End": {
-                "Days": 180,
                 "Coeff": 1
               },
               "UseEventEnd": false

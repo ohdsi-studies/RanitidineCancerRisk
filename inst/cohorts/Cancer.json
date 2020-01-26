@@ -2,7 +2,7 @@
   "ConceptSets": [
     {
       "id": 0,
-      "name": "Malignant neoplastic disease",
+      "name": "Malignant neoplasm",
       "expression": {
         "items": [
           {
@@ -19,394 +19,6 @@
               "CONCEPT_CLASS_ID": "Clinical Finding"
             },
             "includeDescendants": true
-          }
-        ]
-      }
-    },
-    {
-      "id": 1,
-      "name": "[JHCho] Liver cancer",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": 4246127,
-              "CONCEPT_NAME": "Malignant neoplasm of liver",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "93870000",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            },
-            "includeDescendants": true
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4312024,
-              "CONCEPT_NAME": "Secondary malignant neoplasm of intrahepatic bile ducts",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "94349006",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            },
-            "isExcluded": true
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 198700,
-              "CONCEPT_NAME": "Secondary malignant neoplasm of liver",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "94381002",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            },
-            "isExcluded": true
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 44806773,
-              "CONCEPT_NAME": "Secondary malignant neoplasm of liver and intrahepatic bile duct",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "813671000000107",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            },
-            "isExcluded": true
-          }
-        ]
-      }
-    },
-    {
-      "id": 2,
-      "name": "Liver cancer (C22)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": 4003021,
-              "CONCEPT_NAME": "Angiosarcoma of liver",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "109844006",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4001172,
-              "CONCEPT_NAME": "Hepatoblastoma",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "109843000",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4001664,
-              "CONCEPT_NAME": "Intrahepatic bile duct carcinoma",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "109842005",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4001171,
-              "CONCEPT_NAME": "Liver cell carcinoma",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "109841003",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4246127,
-              "CONCEPT_NAME": "Malignant neoplasm of liver",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "93870000",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4095432,
-              "CONCEPT_NAME": "Malignant neoplasm of liver and intrahepatic bile ducts",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "187767006",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 201519,
-              "CONCEPT_NAME": "Primary malignant neoplasm of liver",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "95214007",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": 3,
-      "name": "Prostate cancer (C61)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": 4163261,
-              "CONCEPT_NAME": "Malignant tumor of prostate",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "399068003",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": 4,
-      "name": "Breast cancer (C50)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": 81251,
-              "CONCEPT_NAME": "Neoplasm of breast",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "126926005",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4162253,
-              "CONCEPT_NAME": "Primary malignant neoplasm of breast",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "372137005",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4158563,
-              "CONCEPT_NAME": "Primary malignant neoplasm of breast upper inner quadrant",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "373089009",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 432845,
-              "CONCEPT_NAME": "Primary malignant neoplasm of central portion of female breast",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "93745008",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": 5,
-      "name": "Thyroid cancer (C73)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": 4178976,
-              "CONCEPT_NAME": "Malignant tumor of thyroid gland",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "363478007",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": 6,
-      "name": "Liver cancer (C22)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": 4003021,
-              "CONCEPT_NAME": "Angiosarcoma of liver",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "109844006",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4001172,
-              "CONCEPT_NAME": "Hepatoblastoma",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "109843000",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4001664,
-              "CONCEPT_NAME": "Intrahepatic bile duct carcinoma",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "109842005",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4001171,
-              "CONCEPT_NAME": "Liver cell carcinoma",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "109841003",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4246127,
-              "CONCEPT_NAME": "Malignant neoplasm of liver",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "93870000",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 4095432,
-              "CONCEPT_NAME": "Malignant neoplasm of liver and intrahepatic bile ducts",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "187767006",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 201519,
-              "CONCEPT_NAME": "Primary malignant neoplasm of liver",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "95214007",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            }
           }
         ]
       }
@@ -433,7 +45,7 @@
     "Type": "First"
   },
   "ExpressionLimit": {
-    "Type": "First"
+    "Type": "All"
   },
   "InclusionRules": [
     {
@@ -452,6 +64,34 @@
                     "CONCEPT_NAME": "Primary Condition",
                     "DOMAIN_ID": "Type Concept",
                     "VOCABULARY_ID": "Condition Type"
+                  },
+                  {
+                    "CONCEPT_CODE": "OMOP generated",
+                    "CONCEPT_ID": 38000183,
+                    "CONCEPT_NAME": "Inpatient detail - primary",
+                    "DOMAIN_ID": "Type Concept",
+                    "VOCABULARY_ID": "Condition Type"
+                  },
+                  {
+                    "CONCEPT_CODE": "OMOP generated",
+                    "CONCEPT_ID": 38000248,
+                    "CONCEPT_NAME": "Inpatient detail - primary position",
+                    "DOMAIN_ID": "Type Concept",
+                    "VOCABULARY_ID": "Procedure Type"
+                  },
+                  {
+                    "CONCEPT_CODE": "OMOP generated",
+                    "CONCEPT_ID": 38000199,
+                    "CONCEPT_NAME": "Inpatient header - primary",
+                    "DOMAIN_ID": "Type Concept",
+                    "VOCABULARY_ID": "Condition Type"
+                  },
+                  {
+                    "CONCEPT_CODE": "OMOP generated",
+                    "CONCEPT_ID": 38000250,
+                    "CONCEPT_NAME": "Inpatient header - primary position",
+                    "DOMAIN_ID": "Type Concept",
+                    "VOCABULARY_ID": "Procedure Type"
                   }
                 ],
                 "VisitType": [
@@ -468,6 +108,13 @@
                     "CONCEPT_NAME": "Inpatient Visit",
                     "DOMAIN_ID": "Visit",
                     "VOCABULARY_ID": "Visit"
+                  },
+                  {
+                    "CONCEPT_CODE": "ERIP",
+                    "CONCEPT_ID": 262,
+                    "CONCEPT_NAME": "Emergency Room and Inpatient Visit",
+                    "DOMAIN_ID": "Visit",
+                    "VOCABULARY_ID": "Visit"
                   }
                 ]
               }
@@ -478,7 +125,6 @@
                 "Coeff": 1
               },
               "End": {
-                "Days": 180,
                 "Coeff": 1
               },
               "UseEventEnd": false
