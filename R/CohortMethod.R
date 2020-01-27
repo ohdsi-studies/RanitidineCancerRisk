@@ -56,7 +56,12 @@ runCohortMethod <- function(connectionDetails,
                                     cmAnalysisListFileName,
                                     package = "RanitidineCancerRisk")
   cmAnalysisList <- CohortMethod::loadCmAnalysisList(cmAnalysisListFile)
-  tcosList <- createTcos(outputFolder = outputFolder)
+  tcosList <- createTcos(outputFolder = outputFolder,
+                         connectionDetails = connectionDetails,
+                         cdmDatabaseSchema = cdmDatabaseSchema,
+                         cohortDatabaseSchema = cohortDatabaseSchema,
+                         cohortTable = cohortTable,
+                         oracleTempSchema = oracleTempSchema)
   outcomesOfInterest <- getOutcomesOfInterest()
   results <- CohortMethod::runCmAnalyses(connectionDetails = connectionDetails,
                                          cdmDatabaseSchema = cdmDatabaseSchema,
@@ -134,12 +139,36 @@ addAnalysisDescription <- function(data, IdColumnName = "analysisId", nameColumn
   return(data)
 }
 
-createTcos <- function(outputFolder) {
+createTcos <- function(outputFolder,
+                       connectionDetails,
+                       cdmDatabaseSchema,
+                       cohortDatabaseSchema,
+                       cohortTable,
+                       oracleTempSchema) {
+  
+  ParallelLogger::logInfo("Counting cohorts for feasibility test")
+  sql <- SqlRender::loadRenderTranslateSql("GetCounts.sql",
+                                           "RanitidineCancerRisk",
+                                           dbms = connectionDetails$dbms,
+                                           oracleTempSchema = oracleTempSchema,
+                                           cdm_database_schema = cdmDatabaseSchema,
+                                           work_database_schema = cohortDatabaseSchema,
+                                           study_cohort_table = cohortTable)
+  
+  conn <- DatabaseConnector::connect(connectionDetails)
+  counts <- DatabaseConnector::querySql(conn, sql)
+  colnames(counts) <- SqlRender::snakeCaseToCamelCase(colnames(counts))
+  counts <- addCohortNames(counts)
+  DatabaseConnector::disconnect(conn)
+  
   pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "RanitidineCancerRisk")
   tcosOfInterest <- read.csv(pathToCsv, stringsAsFactors = FALSE)
   allControls <- getAllControls(outputFolder)
   tcs <- unique(rbind(tcosOfInterest[, c("targetId", "comparatorId")],
                       allControls[, c("targetId", "comparatorId")]))
+  #subsetting tcs to only those have counts in the database
+  tcs<- tcs [(tcs$targetId %in% counts$cohortDefinitionId)&(tcs$comparatorId %in% counts$cohortDefinitionId),]
+  
   createTco <- function(i) {
     targetId <- tcs$targetId[i]
     comparatorId <- tcs$comparatorId[i]
