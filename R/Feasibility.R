@@ -1,4 +1,4 @@
-# Copyright 2018 Observational Health Data Sciences and Informatics
+# Copyright 2020 Observational Health Data Sciences and Informatics
 #
 # This file is part of RanitidineCancerRisk
 #
@@ -47,7 +47,7 @@
 #' @param databaseDescription  A short description (several sentences) of the database.
 #' @param createCohorts        Create the cohortTable table with the exposure and outcome cohorts?
 #' @param runFeasibility        Perform feasibility test?
-#' @param runDiagnostics       Compute study diagnostics?
+#' @param runFeasibilityDiagnostics       Compute study diagnostics?
 #' @param feasibilityResults   Should results of feasibility test be packaged for later sharing?     
 #' @param maxCores             How many parallel cores should be used? If more cores are made available
 #'                             this can speed up the analyses.
@@ -61,7 +61,7 @@
 #'                                              password = "secret",
 #'                                              server = "myserver")
 #'
-#' execute(connectionDetails,
+#' runFeasibility(connectionDetails,
 #'         cdmDatabaseSchema = "cdm_data",
 #'         cohortDatabaseSchema = "study_results",
 #'         cohortTable = "cohort",
@@ -108,7 +108,7 @@ runFeasibility <- function(connectionDetails,
   }
   #chage the outputFolder to the feasiblityExport
   feasibilityOutputFolder = file.path(outputFolder,
-                                      "feasibilityExport")
+                                      "feasibility")
   if (!file.exists(feasibilityOutputFolder))
     dir.create(feasibilityOutputFolder, recursive = TRUE)
   
@@ -383,7 +383,7 @@ exportResultFeas<- function(outputFolder,
   
   # Add all to zip file -------------------------------------------------------------------------------
   ParallelLogger::logInfo("Adding results to zip file")
-  zipName <- file.path(exportFolder, paste0("Results", databaseId, ".zip"))
+  zipName <- file.path(exportFolder, paste0("FeasibilityResults", databaseId, ".zip"))
   files <- list.files(exportFolder, pattern = ".*\\.csv$")
   oldWd <- setwd(exportFolder)
   on.exit(setwd(oldWd))

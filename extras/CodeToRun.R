@@ -21,7 +21,7 @@ cdmDatabaseSchema <- "cdm_truven_mdcd_v699.dbo"
 
 # The name of the database schema and table where the study-specific cohorts will be instantiated:
 cohortDatabaseSchema <- "scratch.dbo"
-cohortTable <- "mschuemi_skeleton"
+cohortTable <- "chan_rani"
 
 # Some meta-information that will be used by the export function:
 databaseId <- "Synpuf"
@@ -31,6 +31,25 @@ databaseDescription <- "Medicare Claims Synthetic Public Use Files (SynPUFs) wer
 # For Oracle: define a schema that can be used to emulate temp tables:
 oracleTempSchema <- NULL
 
+# Please conduct feasibility test first
+runFeasibilit(connectionDetails = connectionDetails,
+              cdmDatabaseSchema = cdmDatabaseSchema,
+              cohortDatabaseSchema = cohortDatabaseSchema,
+              cohortTable = cohortTable,
+              oracleTempSchema = oracleTempSchema,
+              outputFolder = outputFolder,
+              databaseId = databaseId,
+              databaseName = databaseName,
+              databaseDescription = databaseDescription,
+              createCohorts = TRUE,
+              runFeasibility = TRUE,
+              runFeasibilityDiagnostics = TRUE,
+              feasibilityResults = TRUE,
+              maxCores = 1,
+              minCellCount= 5) 
+
+
+# Please proceed to execute the study after confirmation of the results from the feasibility test
 execute(connectionDetails = connectionDetails,
         cdmDatabaseSchema = cdmDatabaseSchema,
         cohortDatabaseSchema = cohortDatabaseSchema,
@@ -40,7 +59,7 @@ execute(connectionDetails = connectionDetails,
         databaseId = databaseId,
         databaseName = databaseName,
         databaseDescription = databaseDescription,
-        createCohorts = TRUE,
+        createCohorts = FALSE, #You don't need to cohort again after feasibility test
         synthesizePositiveControls = TRUE,
         runAnalyses = TRUE,
         runDiagnostics = TRUE,

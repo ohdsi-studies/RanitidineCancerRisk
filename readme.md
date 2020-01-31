@@ -1,6 +1,20 @@
-RanitidineCancerRisk
+Cancer Risk between H2 blockers
 ==============================
 
+<img src="https://img.shields.io/badge/Study%20Status-Design%20Finalized-brightgreen.svg" alt="Study Status: Design Finalized">
+
+- Analytics use case(s): **Population-Level Estimation**
+- Study type: **Clinical Application**
+- Tags: **OHDSI-Korea, FEEDER-NET**
+- Study lead: **Seng Chan You, Seung In Seo, Chan Hyuk Park**
+- Study lead forums tag: **[SCYou](https://forums.ohdsi.org/u/SCYou)**
+- Study start date: **January 31, 2020**
+- Study end date: 
+- Protocol: Not avialble now
+- Publications: 
+- Results explorer: 
+
+This study aims to compare the risk of cancer between H2 blockers
 
 Requirements
 ============
@@ -20,13 +34,13 @@ How to run
 	```r
 	install.packages("devtools")
 	library(devtools)
-	install_github("ohdsi/SqlRender", ref = "v1.6.0")
-	install_github("ohdsi/DatabaseConnector", ref = "v2.2.1")
-	install_github("ohdsi/OhdsiSharing", ref = "v0.1.3")
-	install_github("ohdsi/FeatureExtraction", ref = "v2.2.1")
-	install_github("ohdsi/CohortMethod", ref = "v3.0.2")
-	install_github("ohdsi/EmpiricalCalibration", ref = "v1.4.0")
-	install_github("ohdsi/MethodEvaluation", ref = "v1.0.1")
+	install_github("ohdsi/SqlRender")
+	install_github("ohdsi/DatabaseConnector")
+	install_github("ohdsi/OhdsiSharing")
+	install_github("ohdsi/FeatureExtraction")
+	install_github("ohdsi/CohortMethod")
+	install_github("ohdsi/EmpiricalCalibration")
+	install_github("ohdsi/MethodEvaluation")
 	```
 
 	If you experience problems on Windows where rJava can't find Java, one solution may be to add `args = "--no-multiarch"` to each `install_github` call, for example:
@@ -41,8 +55,8 @@ How to run
 
   To do: Need to provide some instructions for installing the study package itself.
 	
-3. Once installed, you can execute the study by modifying and using the following code:
-	
+3. Once installed, please execute **Feasibility test** first by using following code. Then Send the file ```feasibility/export/FeasibilityResults<DatabaseId>.zip``` in the output folder to the study coordinator (SCYou, applegna@gmail.com)
+
 	```r
 	library(RanitidineCancerRisk)
 	
@@ -80,6 +94,26 @@ How to run
 	# For Oracle: define a schema that can be used to emulate temp tables:
 	oracleTempSchema <- NULL
 	
+	runFeasibilit(connectionDetails = connectionDetails,
+            cdmDatabaseSchema = cdmDatabaseSchema,
+            cohortDatabaseSchema = cohortDatabaseSchema,
+            cohortTable = cohortTable,
+            oracleTempSchema = oracleTempSchema,
+            outputFolder = outputFolder,
+            databaseId = databaseId,
+            databaseName = databaseName,
+            databaseDescription = databaseDescription,
+            createCohorts = TRUE,
+            runFeasibility = TRUE,
+            runFeasibilityDiagnostics = TRUE,
+            feasibilityResults = TRUE,
+            maxCores = 4,
+            minCellCount= 5) 
+	```
+
+4. After confirmation of the feasibility test, please proceed to execute the study.
+
+	```
 	execute(connectionDetails = connectionDetails,
 		cdmDatabaseSchema = cdmDatabaseSchema,
 		cohortDatabaseSchema = cohortDatabaseSchema,
@@ -89,6 +123,7 @@ How to run
 		databaseId = databaseId
 		databaseName = databaseName,
 		databaseDescription = databaseDescription,
+		onTreatmentWithBlankingPeriod = TRUE,
 		createCohorts = TRUE,
 		synthesizePositiveControls = TRUE,
 		runAnalyses = TRUE,
@@ -97,16 +132,10 @@ How to run
 		maxCores = maxCores,
 		minCellCount = minCellCount)
 	```
-
-4. Upload the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator:
-
-	```r
-	submitResults("export/Results<DatabaseId>.zip", key = "<key>", secret = "<secret>")
-	```
 	
-	Where ```key``` and ```secret``` are the credentials provided to you personally by the study coordinator.
-		
-5. To view the results, use the Shiny app:
+5. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator (SCYou, applegna@gmail.com):
+
+6. To view the results, use the Shiny app:
 
 	```r
 	prepareForEvidenceExplorer("Result<databaseId>.zip", "/shinyData")
@@ -127,4 +156,4 @@ RanitidineCancerRisk was developed in ATLAS and R Studio.
 
 ### Development status
 
-Unknown
+Under development

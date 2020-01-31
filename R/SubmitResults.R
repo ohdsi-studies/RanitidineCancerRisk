@@ -1,4 +1,4 @@
-# Copyright 2018 Observational Health Data Sciences and Informatics
+# Copyright 2020 Observational Health Data Sciences and Informatics
 #
 # This file is part of RanitidineCancerRisk
 #
@@ -30,16 +30,19 @@
 #' TRUE if the upload was successful.
 #'
 #' @export
-submitResults <- function(outputFolder, key, secret) {
-  zipName <- file.path(outputFolder, "StudyResults.zip")
+submitResults <- function(resultsZipFile, key, secret) {
+  #zipName <- file.path(outputFolder, "StudyResults.zip")
+  zipName <- resultsZipFile
   if (!file.exists(zipName)) {
     stop(paste("Cannot find file", zipName))
   }
   writeLines(paste0("Uploading file '", zipName, "' to study coordinating center"))
   result <- OhdsiSharing::putS3File(file = zipName,
-                                    bucket = "ohdsi-study-skeleton",
+                                    bucket = "ranitidinecancerrisk",
+                                    region = "ap-northeast-2",
                                     key = key,
-                                    secret = secret)
+                                    secret = secret,
+                                    appendUuid = FALSE)
   if (result) {
     writeLines("Upload complete")
   } else {
