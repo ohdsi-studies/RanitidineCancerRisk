@@ -87,6 +87,9 @@ execute <- function(connectionDetails,
                     packageResults = TRUE,
                     maxCores = 4,
                     minCellCount= 5) {
+  
+  if (runAnalyses + runFeasibility > 1) stop ("Please set only one of runFeasibility or runAnalyses as TRUE")
+  
   if (!file.exists(outputFolder))
     dir.create(outputFolder, recursive = TRUE)
   if (!is.null(getOption("fftempdir")) && !file.exists(getOption("fftempdir"))) {
@@ -129,7 +132,8 @@ execute <- function(connectionDetails,
                     cohortTable = cohortTable,
                     oracleTempSchema = oracleTempSchema,
                     outputFolder = outputFolder,
-                    maxCores = maxCores)
+                    maxCores = maxCores,
+                    cmAnalysisListFileName = "cmAnalysisList.json")
   }
   
   if (runDiagnostics) {

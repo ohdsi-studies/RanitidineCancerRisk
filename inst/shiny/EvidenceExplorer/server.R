@@ -208,9 +208,9 @@ shinyServer(function(input, output, session) {
     if (is.null(row)) {
       return(NULL)
     } else {
-      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target]
-      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator]
-      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome]
+      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target][1]
+      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator][1]
+      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome][1]
       attrition <- getAttrition(connection = connection,
                                 targetId = targetId,
                                 comparatorId = comparatorId,
@@ -310,9 +310,9 @@ shinyServer(function(input, output, session) {
     if (is.null(row)) {
       return(NULL)
     } else {
-      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target]
-      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator]
-      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome]
+      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target][1]
+      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator][1]
+      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome][1]
       ps <- getPs(connection = connection,
                   targetId = targetId,
                   comparatorId = comparatorId,
@@ -455,9 +455,9 @@ shinyServer(function(input, output, session) {
     if (blind || is.null(row)) {
       return(NULL)
     } else {
-      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target]
-      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator]
-      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome]
+      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target][1]
+      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator][1]
+      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome][1]
       km <- getKaplanMeier(connection = connection,
                                    targetId = targetId,
                                    comparatorId = comparatorId,
@@ -506,9 +506,9 @@ shinyServer(function(input, output, session) {
     if (is.null(row)) {
       return(NULL)
     } else {
-      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target]
-      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator]
-      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome]
+      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target][1]
+      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator][1]
+      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome][1]
       subgroupResults <- getSubgroupResults(connection = connection,
                                             targetIds = targetId,
                                             comparatorIds = comparatorId,

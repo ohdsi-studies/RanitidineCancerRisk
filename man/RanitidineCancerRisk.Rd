@@ -3,7 +3,6 @@
 \docType{package}
 \name{RanitidineCancerRisk}
 \alias{RanitidineCancerRisk}
-\alias{RanitidineCancerRisk-package}
 \title{RanitidineCancerRisk}
 \description{
 RanitidineCancerRisk

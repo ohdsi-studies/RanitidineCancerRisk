@@ -2,8 +2,8 @@ Package: RanitidineCancerRisk
 Type: Package
 Title: A Package Skeleton for Comparative Effectiveness Studies
 Version: 0.0.1
-Author: Martijn Schuemie [aut, cre]
-Maintainer: Martijn J. Schuemie <schuemie@ohdsi.org>
+Author: Seng Chan You [aut, cre]
+Maintainer: Seng Chan You <applegna@gmail.com>
 Description: A skeleton package, to be used as a starting point when implementing comprative effect studies.
 Depends:
     DatabaseConnector (>= 2.2.0)
@@ -26,8 +26,9 @@ Suggests:
     rmarkdown,
     DT,
     shiny,
-    OhdsiRTools
+    OhdsiRTools,
+    ROhdsiWebApi
 License: Apache License 2.0
 VignetteBuilder: knitr
 LazyData: TRUE
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
