@@ -94,7 +94,7 @@ How to run
 	# For Oracle: define a schema that can be used to emulate temp tables:
 	oracleTempSchema <- NULL
 	
-	runFeasibilit(connectionDetails = connectionDetails,
+	runFeasibility(connectionDetails = connectionDetails,
             cdmDatabaseSchema = cdmDatabaseSchema,
             cohortDatabaseSchema = cohortDatabaseSchema,
             cohortTable = cohortTable,
