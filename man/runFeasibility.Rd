@@ -2,7 +2,7 @@
 % Please edit documentation in R/Feasibility.R
 \name{runFeasibility}
 \alias{runFeasibility}
-\title{Execute the Study}
+\title{Execute Feasibility test for the study}
 \usage{
 runFeasibility(
   connectionDetails,
@@ -15,55 +15,82 @@ runFeasibility(
   databaseName = "Unknown",
   databaseDescription = "Unknown",
   createCohorts = TRUE,
-  runDiagnostics = TRUE,
+  runFeasibility = TRUE,
+  runFeasibilityDiagnostics = TRUE,
+  feasibilityResults = TRUE,
+  maxCores = 4,
   minCellCount = 5
 )
 }
 \arguments{
 \item{connectionDetails}{An object of type \code{connectionDetails} as created using the
-\code{\link[DatabaseConnector]{createConnectionDetails}} function in
-the DatabaseConnector package.}
+\code{\link[DatabaseConnector]{createConnectionDetails}} function in the
+DatabaseConnector package.}
 
 \item{cdmDatabaseSchema}{Schema name where your patient-level data in OMOP CDM format resides.
 Note that for SQL Server, this should include both the database and
 schema name, for example 'cdm_data.dbo'.}
 
-\item{cohortDatabaseSchema}{Schema name where intermediate data can be stored. You will need to
-have write priviliges in this schema. Note that for SQL Server, this
-should include both the database and schema name, for example
-'cdm_data.dbo'.}
+\item{cohortDatabaseSchema}{Schema name where intermediate data can be stored. You will need to have
+write priviliges in this schema. Note that for SQL Server, this should
+include both the database and schema name, for example 'cdm_data.dbo'.}
 
-\item{cohortTable}{The name of the table that will be created in the work database
-schema. This table will hold the exposure and outcome cohorts used in
-this study.}
+\item{cohortTable}{The name of the table that will be created in the work database schema.
+This table will hold the exposure and outcome cohorts used in this
+study.}
 
 \item{oracleTempSchema}{Should be used in Oracle to specify a schema where the user has write
 priviliges for storing temporary tables.}
 
-\item{outputFolder}{Name of local folder to place results; make sure to use forward
-slashes (/). Do not use a folder on a network drive since this greatly
-impacts performance.}
+\item{outputFolder}{Name of local folder to place results; make sure to use forward slashes
+(/). Do not use a folder on a network drive since this greatly impacts
+performance.}
 
-\item{databaseId}{A short string for identifying the database (e.g. 'Synpuf').}
+\item{databaseId}{A short string for identifying the database (e.g.
+'Synpuf').}
 
-\item{databaseName}{The full name of the database (e.g. 'Medicare Claims Synthetic Public
-Use Files (SynPUFs)').}
+\item{databaseName}{The full name of the database (e.g. 'Medicare Claims
+Synthetic Public Use Files (SynPUFs)').}
 
 \item{databaseDescription}{A short description (several sentences) of the database.}
 
 \item{createCohorts}{Create the cohortTable table with the exposure and outcome cohorts?}
 
-\item{runDiagnostics}{Run and export the study diagnostics?}
+\item{runFeasibility}{Perform feasibility test?}
 
-\item{minCellCount}{The minimum number of subjects contributing to a count before it can
-be included in packaged results.}
+\item{feasibilityResults}{Should results of feasibility test be packaged for later sharing?}
+
+\item{maxCores}{How many parallel cores should be used? If more cores are made available
+this can speed up the analyses.}
+
+\item{minCellCount}{The minimum number of subjects contributing to a count before it can be included 
+in packaged results.}
+
+\item{runDiagnostics}{Compute study diagnostics?}
 }
 \description{
-Execute the Study
+Execute Feasibility test for the study
 }
 \details{
-This function executes the SkeletonComparativeEffectStudy Study. The \code{createCohorts},
-\code{synthesizePositiveControls}, \code{runAnalyses}, and \code{runDiagnostics} arguments are
-intended to be used to run parts of the full study at a time, but none of the parts are considered
-to be optional.
+This function executes the feasibility test for RanitidineCancerRisk Study.
+
+The \code{createCohorts}, \code{synthesizePositiveControls}, \code{runAnalyses}, and \code{runDiagnostics} arguments
+are intended to be used to run parts of the full study at a time, but none of the parts are considerd to be optional.
+}
+\examples{
+\dontrun{
+connectionDetails <- createConnectionDetails(dbms = "postgresql",
+                                             user = "joe",
+                                             password = "secret",
+                                             server = "myserver")
+
+execute(connectionDetails,
+        cdmDatabaseSchema = "cdm_data",
+        cohortDatabaseSchema = "study_results",
+        cohortTable = "cohort",
+        oracleTempSchema = NULL,
+        outputFolder = "c:/temp/study_results",
+        maxCores = 4)
+}
+
 }

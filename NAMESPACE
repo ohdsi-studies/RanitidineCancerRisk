@@ -2,8 +2,10 @@
 
 export(createCohorts)
 export(execute)
+export(exportResultFeas)
 export(exportResults)
 export(generateDiagnostics)
+export(generateFeasibilityDiagnostics)
 export(launchEvidenceExplorer)
 export(prepareForEvidenceExplorer)
 export(runCohortMethod)

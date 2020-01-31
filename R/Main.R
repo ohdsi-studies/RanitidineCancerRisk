@@ -81,7 +81,6 @@ execute <- function(connectionDetails,
                     databaseName = "Unknown",
                     databaseDescription = "Unknown",
                     createCohorts = TRUE,
-                    runFeasibility = FALSE,
                     synthesizePositiveControls = TRUE,
                     runAnalyses = TRUE,
                     runDiagnostics = TRUE,
@@ -108,18 +107,6 @@ execute <- function(connectionDetails,
                   cohortTable = cohortTable,
                   oracleTempSchema = oracleTempSchema,
                   outputFolder = outputFolder)
-  }
-  
-  if(runFeasibility) {
-    ParallelLogger::logInfo("Running CohortMethod analyses for Feasibility")
-    runCohortMethod(connectionDetails = connectionDetails,
-                    cdmDatabaseSchema = cdmDatabaseSchema,
-                    cohortDatabaseSchema = cohortDatabaseSchema,
-                    cohortTable = cohortTable,
-                    oracleTempSchema = oracleTempSchema,
-                    outputFolder = outputFolder,
-                    maxCores = maxCores,
-                    cmAnalysisListFileName = "cmAnalysisFeasibilityList.json")
   }
   
   # Set doPositiveControlSynthesis to FALSE if you don't want to use synthetic positive controls:

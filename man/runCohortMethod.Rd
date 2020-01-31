@@ -11,7 +11,8 @@ runCohortMethod(
   cohortTable,
   oracleTempSchema,
   outputFolder,
-  maxCores
+  maxCores,
+  cmAnalysisListFileName = "cmAnalysisList.json"
 )
 }
 \arguments{

@@ -16,15 +16,7 @@
 
 createAnalysesDetails <- function(workFolder) {
   maxCohortSizeForFitting = 250000
-  minCovarSettings <- FeatureExtraction::createCovariateSettings(useDemographicsGender = TRUE,
-                                                                 useDemographicsAge = TRUE,
-                                                                 useDemographicsAgeGroup = TRUE,
-                                                                 useDemographicsRace = TRUE, 
-                                                                 useDemographicsEthnicity = TRUE,
-                                                                 useDemographicsIndexYear = TRUE,
-                                                                 useDemographicsPriorObservationTime = TRUE,
-                                                                 useDemographicsPostObservationTime = TRUE,
-                                                                 useDemographicsTimeInCohort = TRUE)
+  
   covarSettings <- FeatureExtraction::createDefaultCovariateSettings(excludedCovariateConceptIds = c(19011685,
                                                                                                      961047,
                                                                                                      950696, 
@@ -32,15 +24,6 @@ createAnalysesDetails <- function(workFolder) {
                                                                                                      953076,
                                                                                                      997276),
                                                                      addDescendantsToExclude = TRUE)
-  
-  minDbCmDataArgs <- CohortMethod::createGetDbCohortMethodDataArgs(washoutPeriod = 365,
-                                                                   restrictToCommonPeriod = TRUE,
-                                                                   firstExposureOnly = FALSE,
-                                                                   removeDuplicateSubjects = "keep first",
-                                                                   studyStartDate = "",
-                                                                   studyEndDate = "",
-                                                                   excludeDrugsFromCovariates = FALSE,
-                                                                   covariateSettings = minCovarSettings)
   
   getDbCmDataArgs <- CohortMethod::createGetDbCohortMethodDataArgs(washoutPeriod = 365,
                                                                    restrictToCommonPeriod = TRUE,
@@ -228,19 +211,19 @@ createAnalysesDetails <- function(workFolder) {
   #Without matching
   cmAnalysis1 <- CohortMethod::createCmAnalysis(analysisId = 1,
                                                 description = description1,
-                                                getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = OnTreatment1to0StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis2 <- CohortMethod::createCmAnalysis(analysisId = 2,
                                                 description = description2,
-                                                getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = OnTreatment30to0StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis3 <- CohortMethod::createCmAnalysis(analysisId = 3,
                                                 description = description3,
-                                                getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = OnTreatment365to0StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
@@ -344,19 +327,19 @@ createAnalysesDetails <- function(workFolder) {
   #Without matching
   cmAnalysis13 <- CohortMethod::createCmAnalysis(analysisId = 13,
                                                 description = description13,
-                                                getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = OnTreatment1to365StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis14 <- CohortMethod::createCmAnalysis(analysisId = 14,
                                                 description = description14,
-                                                getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = OnTreatment30to365StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis15 <- CohortMethod::createCmAnalysis(analysisId = 15,
                                                 description = description15,
-                                                getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = OnTreatment365to365StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
@@ -459,19 +442,19 @@ createAnalysesDetails <- function(workFolder) {
   #Without matching
   cmAnalysis25 <- CohortMethod::createCmAnalysis(analysisId = 25,
                                                 description = description25,
-                                                getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = OnTreatment1to1095StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis26 <- CohortMethod::createCmAnalysis(analysisId = 26,
                                                 description = description26,
-                                                getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = OnTreatment30to1095StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis27 <- CohortMethod::createCmAnalysis(analysisId = 27,
                                                 description = description27,
-                                                getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = OnTreatment365to1095StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
@@ -575,19 +558,19 @@ createAnalysesDetails <- function(workFolder) {
   #Without matching
   cmAnalysis37 <- CohortMethod::createCmAnalysis(analysisId = 37,
                                                 description = description37,
-                                                getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = ITTBlankingOf1StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis38 <- CohortMethod::createCmAnalysis(analysisId = 38,
                                                 description = description38,
-                                                getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = ITTBlankingOf30StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis39 <- CohortMethod::createCmAnalysis(analysisId = 39,
                                                 description = description39,
-                                                getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
                                                 createStudyPopArgs = ITTBlankingOf365StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
@@ -718,14 +701,9 @@ createAnalysesDetails <- function(workFolder) {
   
   CohortMethod::saveCmAnalysisList(cmAnalysisList, file.path(workFolder, "cmAnalysisList.json"))
   
-  cmAnalysisFeasibilityList <- list(cmAnalysis1, cmAnalysis2, cmAnalysis3, 
-                                    cmAnalysis13, cmAnalysis14, cmAnalysis15, 
-                                    cmAnalysis25, cmAnalysis26, cmAnalysis27, 
-                                    cmAnalysis37, cmAnalysis38, cmAnalysis39
-                                    )
-  
-  CohortMethod::saveCmAnalysisList(cmAnalysisList, file.path(workFolder, "cmAnalysisFeasibilityList.json"))
 }
+
+
 
 createPositiveControlSynthesisArgs <- function(workFolder) {
   settings <- list(
@@ -767,3 +745,239 @@ createPositiveControlSynthesisArgs <- function(workFolder) {
   ParallelLogger::saveSettingsToJson(settings, file.path(workFolder, "positiveControlSynthArgs.json"))
 }
 
+createFeasibilityAnalysesDetails <- function(workFolder) {
+  maxCohortSizeForFitting = 1000
+  minCovarSettings <- FeatureExtraction::createCovariateSettings(useDemographicsGender = TRUE,
+                                                                 useDemographicsAge = TRUE,
+                                                                 useDemographicsAgeGroup = TRUE,
+                                                                 useDemographicsRace = TRUE, 
+                                                                 useDemographicsEthnicity = TRUE,
+                                                                 useDemographicsIndexYear = TRUE,
+                                                                 useDemographicsPriorObservationTime = TRUE,
+                                                                 useDemographicsPostObservationTime = TRUE,
+                                                                 useDemographicsTimeInCohort = TRUE)
+  
+  minDbCmDataArgs <- CohortMethod::createGetDbCohortMethodDataArgs(washoutPeriod = 365,
+                                                                   restrictToCommonPeriod = TRUE,
+                                                                   firstExposureOnly = FALSE,
+                                                                   removeDuplicateSubjects = "keep first",
+                                                                   studyStartDate = "",
+                                                                   studyEndDate = "",
+                                                                   excludeDrugsFromCovariates = FALSE,
+                                                                   covariateSettings = minCovarSettings)
+  
+  OnTreatment1to0StudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
+                                                                               minDaysAtRisk = 1,
+                                                                               riskWindowStart = 1,
+                                                                               startAnchor  = "cohort start",
+                                                                               riskWindowEnd = 0,
+                                                                               endAnchor = "cohort end")
+  
+  OnTreatment30to0StudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
+                                                                                minDaysAtRisk = 1,
+                                                                                riskWindowStart = 30,
+                                                                                startAnchor  = "cohort start",
+                                                                                riskWindowEnd = 0,
+                                                                                endAnchor = "cohort end")
+  
+  OnTreatment365to0StudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
+                                                                                 minDaysAtRisk = 1,
+                                                                                 riskWindowStart = 365,
+                                                                                 startAnchor  = "cohort start",
+                                                                                 riskWindowEnd = 0,
+                                                                                 endAnchor = "cohort end")
+  
+  OnTreatment1to365StudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
+                                                                                 minDaysAtRisk = 1,
+                                                                                 riskWindowStart = 1,
+                                                                                 startAnchor  = "cohort start",
+                                                                                 riskWindowEnd = 365,
+                                                                                 endAnchor = "cohort end")
+  
+  OnTreatment30to365StudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
+                                                                                  minDaysAtRisk = 1,
+                                                                                  riskWindowStart = 30,
+                                                                                  startAnchor  = "cohort start",
+                                                                                  riskWindowEnd = 365,
+                                                                                  endAnchor = "cohort end")
+  
+  OnTreatment365to365StudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
+                                                                                   minDaysAtRisk = 1,
+                                                                                   riskWindowStart = 365,
+                                                                                   startAnchor  = "cohort start",
+                                                                                   riskWindowEnd = 365,
+                                                                                   endAnchor = "cohort end")
+  
+  OnTreatment1to1095StudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
+                                                                                  minDaysAtRisk = 1,
+                                                                                  riskWindowStart = 1,
+                                                                                  startAnchor  = "cohort start",
+                                                                                  riskWindowEnd = 1095,
+                                                                                  endAnchor = "cohort end")
+  
+  OnTreatment30to1095StudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
+                                                                                   minDaysAtRisk = 1,
+                                                                                   riskWindowStart = 30,
+                                                                                   startAnchor  = "cohort start",
+                                                                                   riskWindowEnd = 1095,
+                                                                                   endAnchor = "cohort end")
+  
+  OnTreatment365to1095StudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
+                                                                                    minDaysAtRisk = 1,
+                                                                                    riskWindowStart = 365,
+                                                                                    startAnchor  = "cohort start",
+                                                                                    riskWindowEnd = 1095,
+                                                                                    endAnchor = "cohort end")
+  
+  ITTBlankingOf1StudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
+                                                                              minDaysAtRisk = 1,
+                                                                              riskWindowStart = 1,
+                                                                              startAnchor  = "cohort start",
+                                                                              riskWindowEnd = 9999,
+                                                                              endAnchor = "cohort end")
+  
+  ITTBlankingOf30StudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
+                                                                               minDaysAtRisk = 1,
+                                                                               riskWindowStart = 30,
+                                                                               startAnchor  = "cohort start",
+                                                                               riskWindowEnd = 9999,
+                                                                               endAnchor = "cohort end")
+  
+  ITTBlankingOf365StudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(removeSubjectsWithPriorOutcome = TRUE,
+                                                                                minDaysAtRisk = 1,
+                                                                                riskWindowStart = 365,
+                                                                                startAnchor  = "cohort start",
+                                                                                riskWindowEnd = 9999,
+                                                                                endAnchor = "cohort end")
+  
+  # createPsArgs <- CohortMethod::createCreatePsArgs(control = Cyclops::createControl(cvType = "auto",
+  #                                                                                   startingVariance = 0.01,
+  #                                                                                   noiseLevel = "quiet",
+  #                                                                                   tolerance = 2e-07,
+  #                                                                                   cvRepetitions = 10),
+  #                                                  errorOnHighCorrelation = TRUE,
+  #                                                  stopOnError = F, 
+  #                                                  maxCohortSizeForFitting = maxCohortSizeForFitting)
+  
+  
+  unConditionedCox <- CohortMethod::createFitOutcomeModelArgs(useCovariates = FALSE,
+                                                              modelType = "cox",
+                                                              stratified = FALSE)
+  
+  conditionedCox <- CohortMethod::createFitOutcomeModelArgs(useCovariates = FALSE,
+                                                            modelType = "cox",
+                                                            stratified = TRUE)
+  
+  oneToOneMatchOnPsArgs <- CohortMethod::createMatchOnPsArgs(maxRatio = 1)
+  
+  variableRatioMatchOnPsArgs <- CohortMethod::createMatchOnPsArgs(maxRatio = 100)
+  
+  stratificationMatchOnPsArgs <- CohortMethod::createStratifyByPsArgs(numberOfStrata = 10)
+  
+  description1 = "No PS matching, On-treatment"
+  description2 = "No PS matching, On-treatment, with blanking period of 30 days"
+  description3 = "No PS matching, On-treatment, with blanking period of 1 year"
+  
+  description13 = "No PS matching, 1 Year added to on-treatment"
+  description14 = "No PS matching, 1 Year added to on-treatment, with blanking period of 30 days"
+  description15 = "No PS matching, 1 Year added to on-treatment, with blanking period of 1 year"
+  
+  description25 = "No PS matching, 3 Year added to on-treatment"
+  description26 = "No PS matching, 3 Year added to on-treatment, with blanking period of 30 days"
+  description27 = "No PS matching, 3 Year added to on-treatment, with blanking period of 1 year"
+  
+  description37 = "No PS matching, ITT"
+  description38 = "No PS matching, ITT, with blanking period of 30 days"
+  description39 = "No PS matching, ITT, with blanking period of 1 year"
+  
+  
+  ####1-12####
+  #Without matching
+  cmAnalysis991 <- CohortMethod::createCmAnalysis(analysisId = 991,
+                                                  description = description1,
+                                                  getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                  createStudyPopArgs = OnTreatment1to0StudyPopArgs,
+                                                  fitOutcomeModel = TRUE,
+                                                  fitOutcomeModelArgs = unConditionedCox)
+  cmAnalysis992 <- CohortMethod::createCmAnalysis(analysisId = 992,
+                                                  description = description2,
+                                                  getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                  createStudyPopArgs = OnTreatment30to0StudyPopArgs,
+                                                  fitOutcomeModel = TRUE,
+                                                  fitOutcomeModelArgs = unConditionedCox)
+  cmAnalysis993 <- CohortMethod::createCmAnalysis(analysisId = 993,
+                                                  description = description3,
+                                                  getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                  createStudyPopArgs = OnTreatment365to0StudyPopArgs,
+                                                  fitOutcomeModel = TRUE,
+                                                  fitOutcomeModelArgs = unConditionedCox)
+  
+  ####13-24####
+  #Without matching
+  cmAnalysis913 <- CohortMethod::createCmAnalysis(analysisId = 913,
+                                                  description = description13,
+                                                  getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                  createStudyPopArgs = OnTreatment1to365StudyPopArgs,
+                                                  fitOutcomeModel = TRUE,
+                                                  fitOutcomeModelArgs = unConditionedCox)
+  cmAnalysis914 <- CohortMethod::createCmAnalysis(analysisId = 914,
+                                                  description = description14,
+                                                  getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                  createStudyPopArgs = OnTreatment30to365StudyPopArgs,
+                                                  fitOutcomeModel = TRUE,
+                                                  fitOutcomeModelArgs = unConditionedCox)
+  cmAnalysis915 <- CohortMethod::createCmAnalysis(analysisId = 915,
+                                                  description = description15,
+                                                  getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                  createStudyPopArgs = OnTreatment365to365StudyPopArgs,
+                                                  fitOutcomeModel = TRUE,
+                                                  fitOutcomeModelArgs = unConditionedCox)
+  ####25-36####
+  #Without matching
+  cmAnalysis925 <- CohortMethod::createCmAnalysis(analysisId = 925,
+                                                  description = description25,
+                                                  getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                  createStudyPopArgs = OnTreatment1to1095StudyPopArgs,
+                                                  fitOutcomeModel = TRUE,
+                                                  fitOutcomeModelArgs = unConditionedCox)
+  cmAnalysis926 <- CohortMethod::createCmAnalysis(analysisId = 926,
+                                                  description = description26,
+                                                  getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                  createStudyPopArgs = OnTreatment30to1095StudyPopArgs,
+                                                  fitOutcomeModel = TRUE,
+                                                  fitOutcomeModelArgs = unConditionedCox)
+  cmAnalysis927 <- CohortMethod::createCmAnalysis(analysisId = 927,
+                                                  description = description27,
+                                                  getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                  createStudyPopArgs = OnTreatment365to1095StudyPopArgs,
+                                                  fitOutcomeModel = TRUE,
+                                                  fitOutcomeModelArgs = unConditionedCox)
+  ####37-48####
+  #Without matching
+  cmAnalysis937 <- CohortMethod::createCmAnalysis(analysisId = 937,
+                                                  description = description37,
+                                                  getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                  createStudyPopArgs = ITTBlankingOf1StudyPopArgs,
+                                                  fitOutcomeModel = TRUE,
+                                                  fitOutcomeModelArgs = unConditionedCox)
+  cmAnalysis938 <- CohortMethod::createCmAnalysis(analysisId = 938,
+                                                  description = description38,
+                                                  getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                  createStudyPopArgs = ITTBlankingOf30StudyPopArgs,
+                                                  fitOutcomeModel = TRUE,
+                                                  fitOutcomeModelArgs = unConditionedCox)
+  cmAnalysis939 <- CohortMethod::createCmAnalysis(analysisId = 939,
+                                                  description = description39,
+                                                  getDbCohortMethodDataArgs = minDbCmDataArgs,
+                                                  createStudyPopArgs = ITTBlankingOf365StudyPopArgs,
+                                                  fitOutcomeModel = TRUE,
+                                                  fitOutcomeModelArgs = unConditionedCox)
+  
+  cmAnalysisFeasibilityList <- list(cmAnalysis991, cmAnalysis992, cmAnalysis993, 
+                                    cmAnalysis913, cmAnalysis914, cmAnalysis915, 
+                                    cmAnalysis925, cmAnalysis926, cmAnalysis927, 
+                                    cmAnalysis937, cmAnalysis938, cmAnalysis939
+  )
+  
+  CohortMethod::saveCmAnalysisList(cmAnalysisFeasibilityList, file.path(workFolder, "cmAnalysisFeasibilityList.json"))
+}

@@ -48,6 +48,7 @@ OhdsiRTools::insertCohortDefinitionSetInPackage(fileName = "CohortsToCreate.csv"
 source("extras/CreateStudyAnalysisDetails.R")
 createAnalysesDetails("inst/settings/")
 createPositiveControlSynthesisArgs("inst/settings/")
+createFeasibilityAnalysesDetails("inst/settings/")
 
 # Create TCOs and negative controls----------------------------------------
 source("extras/createTcosOfInterest.r")

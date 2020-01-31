@@ -17,7 +17,6 @@ Imports:
     ff,
     ffbase,
     MethodEvaluation (>= 0.3.1),
-    StudyDiagnostics,
     OhdsiSharing,
 	  ParallelLogger,
 	  survival,
