@@ -32,7 +32,7 @@ databaseDescription <- "Medicare Claims Synthetic Public Use Files (SynPUFs) wer
 oracleTempSchema <- NULL
 
 # Please conduct feasibility test first
-runFeasibilit(connectionDetails = connectionDetails,
+runFeasibility(connectionDetails = connectionDetails,
               cdmDatabaseSchema = cdmDatabaseSchema,
               cohortDatabaseSchema = cohortDatabaseSchema,
               cohortTable = cohortTable,
