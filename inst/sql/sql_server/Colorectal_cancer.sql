@@ -107,7 +107,7 @@ FROM
   JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 0))
 ) C
 JOIN @cdm_database_schema.VISIT_OCCURRENCE V on C.visit_occurrence_id = V.visit_occurrence_id and C.person_id = V.person_id
-WHERE C.condition_type_concept_id  in (44786627,38000183,38000248,38000199,38000250)
+WHERE C.condition_type_concept_id  in (44786627,38000183,38000248,38000199,38000250,44786628)
 AND V.visit_concept_id in (9203,9201,262)
 -- End Condition Occurrence Criteria
 

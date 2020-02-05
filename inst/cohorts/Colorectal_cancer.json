@@ -7,16 +7,16 @@
         "items": [
           {
             "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "443492008",
               "CONCEPT_ID": 40481907,
               "CONCEPT_NAME": "Carcinoid tumor",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "443492008",
+              "DOMAIN_ID": "Condition",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
             },
             "isExcluded": true,
             "includeDescendants": true
@@ -53,46 +53,46 @@
           },
           {
             "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363350007",
               "CONCEPT_ID": 443391,
               "CONCEPT_NAME": "Malignant tumor of cecum",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "363350007",
+              "DOMAIN_ID": "Condition",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
             },
             "includeDescendants": true
           },
           {
             "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363406005",
               "CONCEPT_ID": 4180790,
               "CONCEPT_NAME": "Malignant tumor of colon",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "363406005",
+              "DOMAIN_ID": "Condition",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
             },
             "includeDescendants": true
           },
           {
             "concept": {
-              "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "363351006",
               "CONCEPT_ID": 443390,
               "CONCEPT_NAME": "Malignant tumor of rectum",
-              "DOMAIN_ID": "Condition",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "SNOMED"
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "363351006",
+              "DOMAIN_ID": "Condition",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
             },
             "includeDescendants": true
           }
@@ -139,6 +139,8 @@
                     "CONCEPT_ID": 44786627,
                     "CONCEPT_NAME": "Primary Condition",
                     "DOMAIN_ID": "Type Concept",
+                    "INVALID_REASON_CAPTION": "Unknown",
+                    "STANDARD_CONCEPT_CAPTION": "Unknown",
                     "VOCABULARY_ID": "Condition Type"
                   },
                   {
@@ -146,6 +148,8 @@
                     "CONCEPT_ID": 38000183,
                     "CONCEPT_NAME": "Inpatient detail - primary",
                     "DOMAIN_ID": "Type Concept",
+                    "INVALID_REASON_CAPTION": "Unknown",
+                    "STANDARD_CONCEPT_CAPTION": "Unknown",
                     "VOCABULARY_ID": "Condition Type"
                   },
                   {
@@ -153,6 +157,8 @@
                     "CONCEPT_ID": 38000248,
                     "CONCEPT_NAME": "Inpatient detail - primary position",
                     "DOMAIN_ID": "Type Concept",
+                    "INVALID_REASON_CAPTION": "Unknown",
+                    "STANDARD_CONCEPT_CAPTION": "Unknown",
                     "VOCABULARY_ID": "Procedure Type"
                   },
                   {
@@ -160,6 +166,8 @@
                     "CONCEPT_ID": 38000199,
                     "CONCEPT_NAME": "Inpatient header - primary",
                     "DOMAIN_ID": "Type Concept",
+                    "INVALID_REASON_CAPTION": "Unknown",
+                    "STANDARD_CONCEPT_CAPTION": "Unknown",
                     "VOCABULARY_ID": "Condition Type"
                   },
                   {
@@ -167,7 +175,18 @@
                     "CONCEPT_ID": 38000250,
                     "CONCEPT_NAME": "Inpatient header - primary position",
                     "DOMAIN_ID": "Type Concept",
+                    "INVALID_REASON_CAPTION": "Unknown",
+                    "STANDARD_CONCEPT_CAPTION": "Unknown",
                     "VOCABULARY_ID": "Procedure Type"
+                  },
+                  {
+                    "CONCEPT_CODE": "OMOP generated",
+                    "CONCEPT_ID": 44786628,
+                    "CONCEPT_NAME": "First Position Condition",
+                    "DOMAIN_ID": "Type Concept",
+                    "INVALID_REASON_CAPTION": "Unknown",
+                    "STANDARD_CONCEPT_CAPTION": "Unknown",
+                    "VOCABULARY_ID": "Condition Type"
                   }
                 ],
                 "VisitType": [
@@ -176,6 +195,8 @@
                     "CONCEPT_ID": 9203,
                     "CONCEPT_NAME": "Emergency Room Visit",
                     "DOMAIN_ID": "Visit",
+                    "INVALID_REASON_CAPTION": "Unknown",
+                    "STANDARD_CONCEPT_CAPTION": "Unknown",
                     "VOCABULARY_ID": "Visit"
                   },
                   {
@@ -183,6 +204,8 @@
                     "CONCEPT_ID": 9201,
                     "CONCEPT_NAME": "Inpatient Visit",
                     "DOMAIN_ID": "Visit",
+                    "INVALID_REASON_CAPTION": "Unknown",
+                    "STANDARD_CONCEPT_CAPTION": "Unknown",
                     "VOCABULARY_ID": "Visit"
                   },
                   {
@@ -190,6 +213,8 @@
                     "CONCEPT_ID": 262,
                     "CONCEPT_NAME": "Emergency Room and Inpatient Visit",
                     "DOMAIN_ID": "Visit",
+                    "INVALID_REASON_CAPTION": "Unknown",
+                    "STANDARD_CONCEPT_CAPTION": "Unknown",
                     "VOCABULARY_ID": "Visit"
                   }
                 ]
@@ -221,5 +246,6 @@
     "CollapseType": "ERA",
     "EraPad": 0
   },
-  "CensorWindow": {}
+  "CensorWindow": {},
+  "cdmVersionRange": ">=5.0.0"
 }
