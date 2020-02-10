@@ -1028,28 +1028,28 @@ createFeasibilityAnalysesDetails <- function(workFolder) {
                                                   fitOutcomeModel = TRUE,
                                                   fitOutcomeModelArgs = unConditionedCox)
   
-  cmAnalysis2998 <- CohortMethod::createCmAnalysis(analysisId = 939,
+  cmAnalysis2998 <- CohortMethod::createCmAnalysis(analysisId = 2998,
                                                    description = paste0(description39,", interaction:elderly (age >= 65)"),
                                                    getDbCohortMethodDataArgs = interactionDbCmDataArgs,
                                                    createStudyPopArgs = ITTBlankingOf365StudyPopArgs,
                                                    fitOutcomeModel = TRUE,
                                                    fitOutcomeModelArgs = unConditionedCox)
   
-  cmAnalysis3998 <- CohortMethod::createCmAnalysis(analysisId = 939,
+  cmAnalysis3998 <- CohortMethod::createCmAnalysis(analysisId = 3998,
                                                    description = paste0(description39,", interaction:cumulative drug dose than 365 unit"),
                                                    getDbCohortMethodDataArgs = interactionDbCmDataArgs,
                                                    createStudyPopArgs = ITTBlankingOf365StudyPopArgs,
                                                    fitOutcomeModel = TRUE,
                                                    fitOutcomeModelArgs = unConditionedCox)
   
-  cmAnalysis4998 <- CohortMethod::createCmAnalysis(analysisId = 939,
+  cmAnalysis4998 <- CohortMethod::createCmAnalysis(analysisId = 4998,
                                                    description = paste0(description39,", interaction:cumulative drug dose than 730 unit"),
                                                    getDbCohortMethodDataArgs = interactionDbCmDataArgs,
                                                    createStudyPopArgs = ITTBlankingOf365StudyPopArgs,
                                                    fitOutcomeModel = TRUE,
                                                    fitOutcomeModelArgs = unConditionedCox)
   
-  cmAnalysis5998 <- CohortMethod::createCmAnalysis(analysisId = 939,
+  cmAnalysis5998 <- CohortMethod::createCmAnalysis(analysisId = 5998,
                                                    description = paste0(description39,", interaction:cumulative drug dose than 1095 unit"),
                                                    getDbCohortMethodDataArgs = interactionDbCmDataArgs,
                                                    createStudyPopArgs = ITTBlankingOf365StudyPopArgs,

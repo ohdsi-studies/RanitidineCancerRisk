@@ -1350,7 +1350,7 @@
     "attr_class": "cmAnalysis"
   },
   {
-    "analysisId": 939,
+    "analysisId": 2998,
     "description": "No PS matching, ITT, with blanking period of 1 year, interaction:elderly (age >= 65)",
     "getDbCohortMethodDataArgs": {
       "studyStartDate": "",
@@ -1464,7 +1464,7 @@
     "attr_class": "cmAnalysis"
   },
   {
-    "analysisId": 939,
+    "analysisId": 3998,
     "description": "No PS matching, ITT, with blanking period of 1 year, interaction:cumulative drug dose than 365 unit",
     "getDbCohortMethodDataArgs": {
       "studyStartDate": "",
@@ -1578,7 +1578,7 @@
     "attr_class": "cmAnalysis"
   },
   {
-    "analysisId": 939,
+    "analysisId": 4998,
     "description": "No PS matching, ITT, with blanking period of 1 year, interaction:cumulative drug dose than 730 unit",
     "getDbCohortMethodDataArgs": {
       "studyStartDate": "",
@@ -1692,7 +1692,7 @@
     "attr_class": "cmAnalysis"
   },
   {
-    "analysisId": 939,
+    "analysisId": 5998,
     "description": "No PS matching, ITT, with blanking period of 1 year, interaction:cumulative drug dose than 1095 unit",
     "getDbCohortMethodDataArgs": {
       "studyStartDate": "",
