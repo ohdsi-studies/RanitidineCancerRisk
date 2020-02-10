@@ -58,6 +58,8 @@ Synthetic Public Use Files (SynPUFs)').}
 
 \item{runFeasibility}{Perform feasibility test?}
 
+\item{runFeasibilityDiagnostics}{Compute study diagnostics?}
+
 \item{feasibilityResults}{Should results of feasibility test be packaged for later sharing?}
 
 \item{maxCores}{How many parallel cores should be used? If more cores are made available
@@ -65,8 +67,6 @@ this can speed up the analyses.}
 
 \item{minCellCount}{The minimum number of subjects contributing to a count before it can be included 
 in packaged results.}
-
-\item{runDiagnostics}{Compute study diagnostics?}
 }
 \description{
 Execute Feasibility test for the study
@@ -84,7 +84,7 @@ connectionDetails <- createConnectionDetails(dbms = "postgresql",
                                              password = "secret",
                                              server = "myserver")
 
-execute(connectionDetails,
+runFeasibility(connectionDetails,
         cdmDatabaseSchema = "cdm_data",
         cohortDatabaseSchema = "study_results",
         cohortTable = "cohort",
