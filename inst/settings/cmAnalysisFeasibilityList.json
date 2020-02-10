@@ -1311,6 +1311,7 @@
       "stratified": false,
       "useCovariates": false,
       "inversePtWeighting": false,
+      "interactionCovariateIds": 1998,
       "prior": {
         "priorType": "laplace",
         "variance": 1,
@@ -1425,6 +1426,7 @@
       "stratified": false,
       "useCovariates": false,
       "inversePtWeighting": false,
+      "interactionCovariateIds": 2998,
       "prior": {
         "priorType": "laplace",
         "variance": 1,
@@ -1539,6 +1541,7 @@
       "stratified": false,
       "useCovariates": false,
       "inversePtWeighting": false,
+      "interactionCovariateIds": 3998,
       "prior": {
         "priorType": "laplace",
         "variance": 1,
@@ -1653,6 +1656,7 @@
       "stratified": false,
       "useCovariates": false,
       "inversePtWeighting": false,
+      "interactionCovariateIds": 4998,
       "prior": {
         "priorType": "laplace",
         "variance": 1,
@@ -1767,6 +1771,7 @@
       "stratified": false,
       "useCovariates": false,
       "inversePtWeighting": false,
+      "interactionCovariateIds": 5998,
       "prior": {
         "priorType": "laplace",
         "variance": 1,
