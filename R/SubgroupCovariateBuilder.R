@@ -38,7 +38,7 @@ createSubgroupCovariateSettings <- function(windowStart = -365, windowEnd = -1,
                             shortTermWindowStart = shortTermWindowStart,
                             MaintenanceWindowEnd = MaintenanceWindowEnd,
                             analysisId = analysisId)
-  attr(covariateSettings, "fun") <- "TicagrelorVsClopidogrel::getDbSubgroupCovariateData"
+  attr(covariateSettings, "fun") <- "RanitidineCancerRisk::getDbSubgroupCovariateData"
   class(covariateSettings) <- "covariateSettings"
   return(covariateSettings)
 }
