@@ -53,7 +53,9 @@ How to run
 	
 2. In 'R', use the following code to install the RanitidineCancerRisk package:
 
-  To do: Need to provide some instructions for installing the study package itself.
+  ```r
+	install_github("ohdsi-studies/RanitidineCancerRisk", args = "--no-multiarch")
+  ```
 	
 3. Once installed, please execute **Feasibility test** first by using following code. Then Send the file ```feasibility/export/FeasibilityResults<DatabaseId>.zip``` in the output folder to the study coordinator (SCYou, applegna@gmail.com)
 
