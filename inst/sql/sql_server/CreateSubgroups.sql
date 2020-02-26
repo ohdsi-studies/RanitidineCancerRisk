@@ -55,11 +55,11 @@ CREATE TABLE #Codesets (
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 999 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 (
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (443392)and invalid_reason is null
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (43009003, 953076, 950696, 19011685, 997276, 961047)and invalid_reason is null
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (443392)
+  and ca.ancestor_concept_id in (43009003, 953076, 950696, 19011685, 997276, 961047)
   and c.invalid_reason is null
 
 ) I
@@ -102,7 +102,7 @@ INTO #cov_3
 FROM
 (
   SELECT DISTINCT @row_id_field AS row_id, SUM(ex.quantity) AS cumulative_amount, SUM(ex.days_supply) AS days_supply_sum
-    FROM @cdm_database_schema.DRUG_EXPOSURE EX
+    FROM @cdm_database_schema.DRUG_EXPOSURE ex
     INNER JOIN @cohort_temp_table c
     ON C.subject_id = ex.person_id
     AND drug_exposure_start_date >= c.cohort_start_date
