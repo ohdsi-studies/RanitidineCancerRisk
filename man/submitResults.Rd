@@ -4,16 +4,16 @@
 \alias{submitResults}
 \title{Submit the study results to the study coordinating center}
 \usage{
-submitResults(outputFolder, key, secret)
+submitResults(resultsZipFile, key, secret)
 }
 \arguments{
-\item{outputFolder}{Name of local folder where the results were generated; make sure to use forward slashes
-(/). Do not use a folder on a network drive since this greatly impacts
-performance.}
-
 \item{key}{The key string as provided by the study coordinator}
 
 \item{secret}{The secret string as provided by the study coordinator}
+
+\item{outputFolder}{Name of local folder where the results were generated; make sure to use forward slashes
+(/). Do not use a folder on a network drive since this greatly impacts
+performance.}
 }
 \value{
 TRUE if the upload was successful.
