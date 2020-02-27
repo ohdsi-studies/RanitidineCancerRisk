@@ -546,6 +546,19 @@ calibrate <- function(subset, allControls) {
     subset$calibratedCi95Ub <- exp(calibratedCi$logUb95Rr)
     subset$calibratedLogRr <- calibratedCi$logRr
     subset$calibratedSeLogRr <- calibratedCi$seLogRr
+  }else if( (nrow(pcs) <= 5) & (nrow(ncs) > 5) ){
+    #if there are enough negative controls but not positive controls
+    controls <- merge(subset, allControls[, c("targetId", "comparatorId", "outcomeId", "targetEffectSize")])
+    model <- EmpiricalCalibration::convertNullToErrorModel(null)
+    
+    calibratedCi <- EmpiricalCalibration::calibrateConfidenceInterval(logRr = subset$logRr,
+                                                                      seLogRr = subset$seLogRr,
+                                                                      model = model)
+    subset$calibratedRr <- exp(calibratedCi$logRr)
+    subset$calibratedCi95Lb <- exp(calibratedCi$logLb95Rr)
+    subset$calibratedCi95Ub <- exp(calibratedCi$logUb95Rr)
+    subset$calibratedLogRr <- calibratedCi$logRr
+    subset$calibratedSeLogRr <- calibratedCi$seLogRr
   } else {
     subset$calibratedRr <- rep(NA, nrow(subset))
     subset$calibratedCi95Lb <- rep(NA, nrow(subset))

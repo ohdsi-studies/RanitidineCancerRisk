@@ -178,7 +178,7 @@ generateFeasibilityDiagnostics <- function(outputFolder, maxCores) {
   cluster <- ParallelLogger::makeCluster(min(4, maxCores))
   ParallelLogger::clusterApply(cluster = cluster, 
                                x = subsets, 
-                               fun = createDiagnosticsForSubset, 
+                               fun = createDiagnosticsForSubsetFeas, 
                                allControls = allControls, 
                                outputFolder = outputFolder, 
                                cmOutputFolder = cmOutputFolder, 
@@ -186,7 +186,7 @@ generateFeasibilityDiagnostics <- function(outputFolder, maxCores) {
   ParallelLogger::stopCluster(cluster)
 }
 
-createDiagnosticsForSubset <- function(subset, allControls, outputFolder, cmOutputFolder, diagnosticsFolder) {
+createDiagnosticsForSubsetFeas <- function(subset, allControls, outputFolder, cmOutputFolder, diagnosticsFolder) {
   targetId <- subset$targetId[1]
   comparatorId <- subset$comparatorId[1]
   analysisId <- subset$analysisId[1]
@@ -452,7 +452,7 @@ exportMainResultFeas <- function(outputFolder,
   rm(analysesSum)  # Free up memory
   results <- ParallelLogger::clusterApply(cluster,
                                           subsets,
-                                          calibrateFeas,
+                                          calibrate,
                                           allControls = allControls)
   ParallelLogger::stopCluster(cluster)
   rm(subsets)  # Free up memory
@@ -538,98 +538,6 @@ exportMainResultFeas <- function(outputFolder,
     write.csv(interactions, fileName, row.names = FALSE)
     rm(interactions)  # Free up memory
   }
-}
-
-calibrateFeas <- function(subset, allControls) {
-  ncs <- subset[subset$outcomeId %in% allControls$outcomeId[allControls$targetEffectSize == 1], ]
-  ncs <- ncs[!is.na(ncs$seLogRr), ]
-  # if (nrow(ncs) > 5) {
-  #   null <- EmpiricalCalibration::fitMcmcNull(ncs$logRr, ncs$seLogRr)
-  #   calibratedP <- EmpiricalCalibration::calibrateP(null = null,
-  #                                                   logRr = subset$logRr,
-  #                                                   seLogRr = subset$seLogRr)
-  #   subset$calibratedP <- calibratedP$p
-  # } else {
-  #   subset$calibratedP <- rep(NA, nrow(subset))
-  # }
-  subset$calibratedP <- rep(NA, nrow(subset))
-  
-  pcs <- subset[subset$outcomeId %in% allControls$outcomeId[allControls$targetEffectSize != 1], ]
-  pcs <- pcs[!is.na(pcs$seLogRr), ]
-  # if (nrow(pcs) > 5) {
-  #   controls <- merge(subset, allControls[, c("targetId", "comparatorId", "outcomeId", "targetEffectSize")])
-  #   model <- EmpiricalCalibration::fitSystematicErrorModel(logRr = controls$logRr,
-  #                                                          seLogRr = controls$seLogRr,
-  #                                                          trueLogRr = log(controls$targetEffectSize),
-  #                                                          estimateCovarianceMatrix = FALSE)
-  #   calibratedCi <- EmpiricalCalibration::calibrateConfidenceInterval(logRr = subset$logRr,
-  #                                                                     seLogRr = subset$seLogRr,
-  #                                                                     model = model)
-  #   subset$calibratedRr <- exp(calibratedCi$logRr)
-  #   subset$calibratedCi95Lb <- exp(calibratedCi$logLb95Rr)
-  #   subset$calibratedCi95Ub <- exp(calibratedCi$logUb95Rr)
-  #   subset$calibratedLogRr <- calibratedCi$logRr
-  #   subset$calibratedSeLogRr <- calibratedCi$seLogRr
-  # } else {
-  #   subset$calibratedRr <- rep(NA, nrow(subset))
-  #   subset$calibratedCi95Lb <- rep(NA, nrow(subset))
-  #   subset$calibratedCi95Ub <- rep(NA, nrow(subset))
-  #   subset$calibratedLogRr <- rep(NA, nrow(subset))
-  #   subset$calibratedSeLogRr <- rep(NA, nrow(subset))
-  # }
-  subset$calibratedRr <- rep(NA, nrow(subset))
-  subset$calibratedCi95Lb <- rep(NA, nrow(subset))
-  subset$calibratedCi95Ub <- rep(NA, nrow(subset))
-  subset$calibratedLogRr <- rep(NA, nrow(subset))
-  subset$calibratedSeLogRr <- rep(NA, nrow(subset))
-  subset$i2 <- rep(NA, nrow(subset))
-  subset <- subset[, c("targetId",
-                       "comparatorId",
-                       "outcomeId",
-                       "analysisId",
-                       "rr",
-                       "ci95lb",
-                       "ci95ub",
-                       "p",
-                       "i2",
-                       "logRr",
-                       "seLogRr",
-                       "target",
-                       "comparator",
-                       "targetDays",
-                       "comparatorDays",
-                       "eventsTarget",
-                       "eventsComparator",
-                       "calibratedP",
-                       "calibratedRr",
-                       "calibratedCi95Lb",
-                       "calibratedCi95Ub",
-                       "calibratedLogRr",
-                       "calibratedSeLogRr")]
-  colnames(subset) <- c("targetId",
-                        "comparatorId",
-                        "outcomeId",
-                        "analysisId",
-                        "rr",
-                        "ci95Lb",
-                        "ci95Ub",
-                        "p",
-                        "i2",
-                        "logRr",
-                        "seLogRr",
-                        "targetSubjects",
-                        "comparatorSubjects",
-                        "targetDays",
-                        "comparatorDays",
-                        "targetOutcomes",
-                        "comparatorOutcomes",
-                        "calibratedP",
-                        "calibratedRr",
-                        "calibratedCi95Lb",
-                        "calibratedCi95Ub",
-                        "calibratedLogRr",
-                        "calibratedSeLogRr")
-  return(subset)
 }
 
 exportDiagnosticsFeas <- function(outputFolder,
