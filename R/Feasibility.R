@@ -57,7 +57,7 @@
 #' @examples
 #' \dontrun{
 #' connectionDetails <- createConnectionDetails(dbms = "postgresql",
-#'                                              user = "joe",
+#'                                        c      user = "joe",
 #'                                              password = "secret",
 #'                                              server = "myserver")
 #'
@@ -121,7 +121,8 @@ runFeasibility <- function(connectionDetails,
                     oracleTempSchema = oracleTempSchema,
                     outputFolder = feasibilityOutputFolder,
                     maxCores = maxCores,
-                    cmAnalysisListFileName = "cmAnalysisFeasibilityList.json")
+                    cmAnalysisListFileName = "cmAnalysisFeasibilityList.json",
+                    minNumCohortForStudy = 1)
   }
   
   if (runFeasibilityDiagnostics) {
