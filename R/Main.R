@@ -133,7 +133,8 @@ execute <- function(connectionDetails,
                     oracleTempSchema = oracleTempSchema,
                     outputFolder = outputFolder,
                     maxCores = maxCores,
-                    cmAnalysisListFileName = "cmAnalysisList.json")
+                    cmAnalysisListFileName = "cmAnalysisList.json",
+                    minNumCohortForStudy = )
   }
   
   if (runDiagnostics) {

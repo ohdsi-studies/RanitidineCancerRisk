@@ -47,7 +47,9 @@ runCohortMethod <- function(connectionDetails,
                             oracleTempSchema,
                             outputFolder,
                             maxCores,
-                            cmAnalysisListFileName = "cmAnalysisList.json") {
+                            cmAnalysisListFileName = "cmAnalysisList.json",
+                            minNumCohortForStudy = 1) {
+  
   cmOutputFolder <- file.path(outputFolder, "cmOutput")
   if (!file.exists(cmOutputFolder)) {
     dir.create(cmOutputFolder)
@@ -61,7 +63,8 @@ runCohortMethod <- function(connectionDetails,
                          cdmDatabaseSchema = cdmDatabaseSchema,
                          cohortDatabaseSchema = cohortDatabaseSchema,
                          cohortTable = cohortTable,
-                         oracleTempSchema = oracleTempSchema)
+                         oracleTempSchema = oracleTempSchema,
+                         minNumCohortForStudy = minNumCohortForStudy)
   outcomesOfInterest <- getOutcomesOfInterest()
   results <- CohortMethod::runCmAnalyses(connectionDetails = connectionDetails,
                                          cdmDatabaseSchema = cdmDatabaseSchema,
@@ -144,9 +147,11 @@ createTcos <- function(outputFolder,
                        cdmDatabaseSchema,
                        cohortDatabaseSchema,
                        cohortTable,
-                       oracleTempSchema) {
+                       oracleTempSchema,
+                       feasibilityTest,
+                       minNumCohortForStudy = 1) {
   
-  ParallelLogger::logInfo("Counting cohorts for feasibility test")
+  ParallelLogger::logInfo("Counting cohorts")
   sql <- SqlRender::loadRenderTranslateSql("GetCounts.sql",
                                            "RanitidineCancerRisk",
                                            dbms = connectionDetails$dbms,
@@ -166,8 +171,10 @@ createTcos <- function(outputFolder,
   allControls <- getAllControls(outputFolder)
   tcs <- unique(rbind(tcosOfInterest[, c("targetId", "comparatorId")],
                       allControls[, c("targetId", "comparatorId")]))
-  #subsetting tcs to only those have counts in the database
-  tcs<- tcs [(tcs$targetId %in% counts$cohortDefinitionId)&(tcs$comparatorId %in% counts$cohortDefinitionId),]
+  #subsetting tcs to only those have counts more than pre-specified minimum cohort counts in the database
+  tcs<- tcs [(tcs$targetId %in% counts$cohortDefinitionId[counts$cohortCount >= minNumCohortForStudy])&
+               (tcs$comparatorId %in% counts$cohortDefinitionId[counts$cohortCount >= minNumCohortForStudy]),]
+  
   
   createTco <- function(i) {
     targetId <- tcs$targetId[i]
