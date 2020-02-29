@@ -27,6 +27,11 @@ Requirements
 
 See [this video](https://youtu.be/K9_0s2Rchbo) for instructions on how to set up the R environment on Windows.
 
+- Required fields of CDM include:
+	- (Mandatory) CONCEPT, CONCEPT_RELATIONSHIP, CONCEPT_ANCESTOR (You can download these tables from the [ATHENA](http://athena.ohdsi.org/))
+	- (Mandatory) PERSON, OBSERVATION_PERIOD, VISIT_OCCURRENCE, CONDITION_OCCURRENCE, DRUG_EXPOSURE, DRUG_ERA
+	- (Optioinal) PROCEDURE_OCCURRENCE, OBSERVATION, DEATH
+
 How to run
 ==========
 1. In `R`, use the following code to install the dependencies:
