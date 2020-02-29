@@ -10,7 +10,7 @@ Cancer Risk between H2 blockers
 - Study lead forums tag: **[SCYou](https://forums.ohdsi.org/u/SCYou)**
 - Study start date: **January 31, 2020**
 - Study end date: 
-- Protocol: Not avialble now
+- Protocol: [Protocol](https://github.com/ohdsi-studies/RanitidineCancerRisk/blob/master/documents/)
 - Publications: 
 - Results explorer: 
 
@@ -113,9 +113,9 @@ How to run
             minCellCount= 5) 
 	```
 
-4. After confirmation of the feasibility test, please proceed to execute the study.
+4. After sending the result from feasibility test and confirmation, please proceed to execute the study.
 
-	```
+	```r
 	execute(connectionDetails = connectionDetails,
 		cdmDatabaseSchema = cdmDatabaseSchema,
 		cohortDatabaseSchema = cohortDatabaseSchema,
