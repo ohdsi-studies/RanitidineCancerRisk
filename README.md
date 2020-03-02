@@ -140,7 +140,7 @@ How to run
 		minCellCount = minCellCount)
 	```
 	
-5. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator (SCYou, applegna@gmail.com):
+5. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator (SCYou, chandryou@ajou.ac.kr or applegna@gmail.com):
 
 6. To view the results, use the Shiny app:
 
