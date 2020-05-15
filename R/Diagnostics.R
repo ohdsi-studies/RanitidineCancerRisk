@@ -74,13 +74,13 @@ createDiagnosticsForSubset <- function(subset, allControls, outputFolder, cmOutp
   ParallelLogger::logDebug("Subset has ", validNcs, " valid negative control estimates")
   if (validNcs >= 5) {
     null <- EmpiricalCalibration::fitMcmcNull(negControlSubset$logRr, negControlSubset$seLogRr)
-    fileName <-  file.path(diagnosticsFolder, paste0("nullDistribution_a", analysisId, "_t", targetId, "_c", comparatorId, ".png"))
-    EmpiricalCalibration::plotCalibrationEffect(logRrNegatives = negControlSubset$logRr,
-                                                seLogRrNegatives = negControlSubset$seLogRr,
-                                                null = null,
-                                                showCis = TRUE,
-                                                title = title,
-                                                fileName = fileName)
+    # fileName <-  file.path(diagnosticsFolder, paste0("nullDistribution_a", analysisId, "_t", targetId, "_c", comparatorId, ".png"))
+    # EmpiricalCalibration::plotCalibrationEffect(logRrNegatives = negControlSubset$logRr,
+    #                                             seLogRrNegatives = negControlSubset$seLogRr,
+    #                                             null = null,
+    #                                             showCis = TRUE,
+    #                                             title = title,
+    #                                             fileName = fileName)
   } else {
     null <- NULL
   }
@@ -94,22 +94,22 @@ createDiagnosticsForSubset <- function(subset, allControls, outputFolder, cmOutp
                                                            trueLogRr = log(controlSubset$targetEffectSize), 
                                                            estimateCovarianceMatrix = FALSE)
     
-    fileName <-  file.path(diagnosticsFolder, paste0("controls_a", analysisId, "_t", targetId, "_c", comparatorId, ".png"))
-    EmpiricalCalibration::plotCiCalibrationEffect(logRr = controlSubset$logRr, 
-                                                  seLogRr = controlSubset$seLogRr, 
-                                                  trueLogRr = log(controlSubset$targetEffectSize),
-                                                  model = model,
-                                                  title = title,
-                                                  fileName = fileName)
+    # fileName <-  file.path(diagnosticsFolder, paste0("controls_a", analysisId, "_t", targetId, "_c", comparatorId, ".png"))
+    # EmpiricalCalibration::plotCiCalibrationEffect(logRr = controlSubset$logRr, 
+    #                                               seLogRr = controlSubset$seLogRr, 
+    #                                               trueLogRr = log(controlSubset$targetEffectSize),
+    #                                               model = model,
+    #                                               title = title,
+    #                                               fileName = fileName)
     
-    fileName <-  file.path(diagnosticsFolder, paste0("ciCoverage_a", analysisId, "_t", targetId, "_c", comparatorId, ".png"))
-    evaluation <- EmpiricalCalibration::evaluateCiCalibration(logRr = controlSubset$logRr, 
-                                                              seLogRr = controlSubset$seLogRr, 
-                                                              trueLogRr = log(controlSubset$targetEffectSize),
-                                                              crossValidationGroup = controlSubset$oldOutcomeId)
-    EmpiricalCalibration::plotCiCoverage(evaluation = evaluation,
-                                         title = title,
-                                         fileName = fileName)
+    # fileName <-  file.path(diagnosticsFolder, paste0("ciCoverage_a", analysisId, "_t", targetId, "_c", comparatorId, ".png"))
+    # evaluation <- EmpiricalCalibration::evaluateCiCalibration(logRr = controlSubset$logRr, 
+    #                                                           seLogRr = controlSubset$seLogRr, 
+    #                                                           trueLogRr = log(controlSubset$targetEffectSize),
+    #                                                           crossValidationGroup = controlSubset$oldOutcomeId)
+    # EmpiricalCalibration::plotCiCoverage(evaluation = evaluation,
+    #                                      title = title,
+    #                                      fileName = fileName)
   } 
   
   # Statistical power --------------------------------------------------------------------------------------
@@ -158,37 +158,37 @@ createDiagnosticsForSubset <- function(subset, allControls, outputFolder, cmOutp
       outcomeTitle <- paste(paste(subset$targetName[1], subset$comparatorName[1], sep = " - "), 
                             subset$outcomeName[subset$outcomeId == outcomeId], 
                             subset$analysisDescription[1], sep = "\n")
-      fileName = file.path(diagnosticsFolder, 
-                           sprintf("balanceScatter_t%s_c%s_o%s_a%s.png", targetId, comparatorId, outcomeId, analysisId))
-      balanceScatterPlot <- CohortMethod::plotCovariateBalanceScatterPlot(balance = balance,
-                                                                          beforeLabel = "Before PS adjustment",
-                                                                          afterLabel =  "After PS adjustment",
-                                                                          showCovariateCountLabel = TRUE,
-                                                                          showMaxLabel = TRUE,
-                                                                          title = outcomeTitle,
-                                                                          fileName = fileName)
-      
-      fileName = file.path(diagnosticsFolder, 
-                           sprintf("balanceTop_t%s_c%s_o%s_a%s.png", targetId, comparatorId, outcomeId, analysisId))
-      balanceTopPlot <- CohortMethod::plotCovariateBalanceOfTopVariables(balance = balance,
-                                                                         beforeLabel = "Before PS adjustment",
-                                                                         afterLabel =  "After PS adjustment",
-                                                                         title = outcomeTitle,
-                                                                         fileName = fileName)
+      # fileName = file.path(diagnosticsFolder, 
+      #                      sprintf("balanceScatter_t%s_c%s_o%s_a%s.png", targetId, comparatorId, outcomeId, analysisId))
+      # balanceScatterPlot <- CohortMethod::plotCovariateBalanceScatterPlot(balance = balance,
+      #                                                                     beforeLabel = "Before PS adjustment",
+      #                                                                     afterLabel =  "After PS adjustment",
+      #                                                                     showCovariateCountLabel = TRUE,
+      #                                                                     showMaxLabel = TRUE,
+      #                                                                     title = outcomeTitle,
+      #                                                                     fileName = fileName)
+      # 
+      # fileName = file.path(diagnosticsFolder, 
+      #                      sprintf("balanceTop_t%s_c%s_o%s_a%s.png", targetId, comparatorId, outcomeId, analysisId))
+      # balanceTopPlot <- CohortMethod::plotCovariateBalanceOfTopVariables(balance = balance,
+      #                                                                    beforeLabel = "Before PS adjustment",
+      #                                                                    afterLabel =  "After PS adjustment",
+      #                                                                    title = outcomeTitle,
+      #                                                                    fileName = fileName)
     }
   }
   # Propensity score distribution --------------------------------------------------------------------------
   psFile <- subset$sharedPsFile[1]
   if (psFile != "") {
     ps <- readRDS(file.path(cmOutputFolder, psFile))
-    fileName <-  file.path(diagnosticsFolder, paste0("ps_a", analysisId, "_t", targetId, "_c", comparatorId, ".png"))
-    CohortMethod::plotPs(data = ps,
-                         targetLabel = subset$targetName[1],
-                         comparatorLabel = subset$comparatorName[1],
-                         showCountsLabel = TRUE,
-                         showAucLabel = TRUE,
-                         showEquiposeLabel = TRUE,
-                         title = subset$analysisDescription[1],
-                         fileName = fileName)
+    # fileName <-  file.path(diagnosticsFolder, paste0("ps_a", analysisId, "_t", targetId, "_c", comparatorId, ".png"))
+    # CohortMethod::plotPs(data = ps,
+    #                      targetLabel = subset$targetName[1],
+    #                      comparatorLabel = subset$comparatorName[1],
+    #                      showCountsLabel = TRUE,
+    #                      showAucLabel = TRUE,
+    #                      showEquiposeLabel = TRUE,
+    #                      title = subset$analysisDescription[1],
+    #                      fileName = fileName)
   }
 }
