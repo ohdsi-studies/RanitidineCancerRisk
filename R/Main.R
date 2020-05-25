@@ -88,7 +88,7 @@ execute <- function(connectionDetails,
                     maxCores = 4,
                     minCellCount= 5) {
   
-  if (runAnalyses + runFeasibility > 1) stop ("Please set only one of runFeasibility or runAnalyses as TRUE")
+  #if (runAnalyses + runFeasibility > 1) stop ("Please set only one of runFeasibility or runAnalyses as TRUE")
   
   if (!file.exists(outputFolder))
     dir.create(outputFolder, recursive = TRUE)
