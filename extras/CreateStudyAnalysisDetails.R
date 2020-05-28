@@ -142,69 +142,69 @@ createAnalysesDetails <- function(workFolder) {
   
   stratificationMatchOnPsArgs <- CohortMethod::createStratifyByPsArgs(numberOfStrata = 10)
   
-  description1 = "No PS matching, On-treatment"
-  description2 = "No PS matching, On-treatment, with blanking period of 30 days"
-  description3 = "No PS matching, On-treatment, with blanking period of 1 year"
+  description1 = "No PS matching, on-treatment"
+  # description2 = "No PS matching, On-treatment, with blanking period of 30 days"
+  description3 = "No PS matching, on-treatment, with 1-year blanking period"
   
-  description4 = "1:1 PS matching, On-treatment"
-  description5 = "1:1 PS matching, On-treatment, with blanking period of 30 days"
-  description6 = "1:1 PS matching, On-treatment, with blanking period of 1 year"
+  description4 = "1:1 PS matching, on-treatment"
+  # description5 = "1:1 PS matching, On-treatment, with blanking period of 30 days"
+  description6 = "1:1 PS matching, on-treatment, with 1-year blanking period"
   
-  description7 = "Variable-ratio PS matching, On-treatment"
-  description8 = "Variable-ratio PS matching, with blanking period of 30 days"
-  description9 = "Variable-ratio PS matching, with blanking period of 1 year"
+  description7 = "Variable-ratio PS matching, on-treatment"
+  # description8 = "Variable-ratio PS matching, with blanking period of 30 days"
+  description9 = "Variable-ratio PS matching, on-treatment, with 1-year blanking period"
   
   description10 = "PS stratification, On-treatment"
-  description11 = "PS stratification, On-treatment, with blanking period of 30 days"
-  description12 = "PS stratification, On-treatment, with blanking period of 1 year"
+  # description11 = "PS stratification, On-treatment, with blanking period of 30 days"
+  description12 = "PS stratification, on-treatment, with 1-year blanking period"
   
-  description13 = "No PS matching, 1 Year added to on-treatment"
-  description14 = "No PS matching, 1 Year added to on-treatment, with blanking period of 30 days"
-  description15 = "No PS matching, 1 Year added to on-treatment, with blanking period of 1 year"
+  description13 = "No PS matching, on-treatment, with 1-year lag period"
+  # description14 = "No PS matching, 1 Year added to on-treatment, with blanking period of 30 days"
+  description15 = "No PS matching, on-treatment, with 1-year lag period, with 1-year blanking period"
   
   description16 = "1:1 PS matching, 1 Year added to on-treatment"
-  description17 = "1:1 PS matching, 1 Year added to on-treatment, with blanking period of 30 days"
-  description18 = "1:1 PS matching, 1 Year added to on-treatment, with blanking period of 1 year"
+  # description17 = "1:1 PS matching, 1 Year added to on-treatment, with blanking period of 30 days"
+  description18 = "1:1 PS matching, on-treatment, with 1-year lag period, with 1-year blanking period"
   
   description19 = "Variable-ratio PS matching, 1 Year added to on-treatment"
-  description20 = "Variable-ratio PS matching, 1 Year added to on-treatment, with blanking period of 30 days"
-  description21 = "Variable-ratio PS matching, 1 Year added to on-treatment, with blanking period of 1 year"
+  # description20 = "Variable-ratio PS matching, 1 Year added to on-treatment, with blanking period of 30 days"
+  description21 = "Variable-ratio PS matching, on-treatment, with 1-year lag period, with 1-year blanking period"
   
   description22 = "PS stratification, 1 Year added to on-treatment"
-  description23 = "PS stratification, 1 Year added to on-treatment, with blanking period of 30 days"
-  description24 = "PS stratification, 1 Year added to on-treatment, with blanking period of 1 year"
+  # description23 = "PS stratification, 1 Year added to on-treatment, with blanking period of 30 days"
+  description24 = "PS stratification, on-treatment, with 1-year lag period, with 1-year blanking period"
   
-  description25 = "No PS matching, 3 Year added to on-treatment"
-  description26 = "No PS matching, 3 Year added to on-treatment, with blanking period of 30 days"
-  description27 = "No PS matching, 3 Year added to on-treatment, with blanking period of 1 year"
+  #  description25 = "No PS matching, 3 Year added to on-treatment"
+  #  description26 = "No PS matching, 3 Year added to on-treatment, with blanking period of 30 days"
+  #  description27 = "No PS matching, 3 Year added to on-treatment, with blanking period of 1 year"
   
-  description28 = "1:1 PS matching, 3 Year added to on-treatment"
-  description29 = "1:1 PS matching, 3 Year added to on-treatment, with blanking period of 30 days"
-  description30 = "1:1 PS matching, 3 Year added to on-treatment, with blanking period of 1 year"
+  #  description28 = "1:1 PS matching, 3 Year added to on-treatment"
+  #  description29 = "1:1 PS matching, 3 Year added to on-treatment, with blanking period of 30 days"
+  #  description30 = "1:1 PS matching, 3 Year added to on-treatment, with blanking period of 1 year"
   
-  description31 = "Variable-ratio PS matching, 3 Year added to on-treatment"
-  description32 = "Variable-ratio PS matching, 3 Year added to on-treatment, with blanking period of 30 days"
-  description33 = "Variable-ratio PS matching, 3 Year added to on-treatment, with blanking period of 1 year"
+  #  description31 = "Variable-ratio PS matching, 3 Year added to on-treatment"
+  #  description32 = "Variable-ratio PS matching, 3 Year added to on-treatment, with blanking period of 30 days"
+  #  description33 = "Variable-ratio PS matching, 3 Year added to on-treatment, with blanking period of 1 year"
   
-  description34 = "PS stratification, 3 Year added to on-treatment"
-  description35 = "PS stratification, 3 Year added to on-treatment, with blanking period of 30 days"
-  description36 = "PS stratification, 3 Year added to on-treatment, with blanking period of 1 year"
+  #  description34 = "PS stratification, 3 Year added to on-treatment"
+  #  description35 = "PS stratification, 3 Year added to on-treatment, with blanking period of 30 days"
+  #  description36 = "PS stratification, 3 Year added to on-treatment, with blanking period of 1 year"
   
   description37 = "No PS matching, ITT"
-  description38 = "No PS matching, ITT, with blanking period of 30 days"
-  description39 = "No PS matching, ITT, with blanking period of 1 year"
+  # description38 = "No PS matching, ITT, with blanking period of 30 days"
+  description39 = "No PS matching, ITT, with 1-year blanking period"
   
   description40 = "1:1 PS matching, ITT"
-  description41 = "1:1 PS matching, ITT, with blanking period of 30 days"
-  description42 = "1:1 PS matching, ITT, with blanking period of 1 year"
+  # description41 = "1:1 PS matching, ITT, with blanking period of 30 days"
+  description42 = "1:1 PS matching, ITT, with 1-year blanking period"
   
   description43 = "Variable-ratio PS matching, ITT"
-  description44 = "Variable-ratio PS matching, ITT, with blanking period of 30 days"
-  description45 = "Variable-ratio PS matching, ITT, with blanking period of 1 year"
+  # description44 = "Variable-ratio PS matching, ITT, with blanking period of 30 days"
+  description45 = "Variable-ratio PS matching, ITT, with 1-year blanking period"
   
   description46 = "PS stratification, ITT"
-  description47 = "PS stratification, ITT, with blanking period of 30 days"
-  description48 = "PS stratification, ITT, with blanking period of 1 year"
+  # description47 = "PS stratification, ITT, with blanking period of 30 days"
+  description48 = "PS stratification, ITT, with 1-year blanking period"
   
   
   ####1-12####
@@ -215,12 +215,12 @@ createAnalysesDetails <- function(workFolder) {
                                                 createStudyPopArgs = OnTreatment1to0StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
-  cmAnalysis2 <- CohortMethod::createCmAnalysis(analysisId = 2,
-                                                description = description2,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment30to0StudyPopArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = unConditionedCox)
+  # cmAnalysis2 <- CohortMethod::createCmAnalysis(analysisId = 2,
+  #                                               description = description2,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment30to0StudyPopArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis3 <- CohortMethod::createCmAnalysis(analysisId = 3,
                                                 description = description3,
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
@@ -238,16 +238,16 @@ createAnalysesDetails <- function(workFolder) {
                                                 matchOnPsArgs = oneToOneMatchOnPsArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
-  cmAnalysis5 <- CohortMethod::createCmAnalysis(analysisId = 5,
-                                                description = description5,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment30to0StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                matchOnPs = TRUE,
-                                                matchOnPsArgs = oneToOneMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = unConditionedCox)
+  # cmAnalysis5 <- CohortMethod::createCmAnalysis(analysisId = 5,
+  #                                               description = description5,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment30to0StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               matchOnPs = TRUE,
+  #                                               matchOnPsArgs = oneToOneMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis6 <- CohortMethod::createCmAnalysis(analysisId = 6,
                                                 description = description6,
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
@@ -269,16 +269,16 @@ createAnalysesDetails <- function(workFolder) {
                                                 matchOnPsArgs = variableRatioMatchOnPsArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = conditionedCox)
-  cmAnalysis8 <- CohortMethod::createCmAnalysis(analysisId = 8,
-                                                description = description8,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment30to0StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                matchOnPs = TRUE,
-                                                matchOnPsArgs = variableRatioMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = conditionedCox)
+  # cmAnalysis8 <- CohortMethod::createCmAnalysis(analysisId = 8,
+  #                                               description = description8,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment30to0StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               matchOnPs = TRUE,
+  #                                               matchOnPsArgs = variableRatioMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = conditionedCox)
   cmAnalysis9 <- CohortMethod::createCmAnalysis(analysisId = 9,
                                                 description = description9,
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
@@ -301,16 +301,16 @@ createAnalysesDetails <- function(workFolder) {
                                                 stratifyByPsArgs = stratificationMatchOnPsArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = conditionedCox)
-  cmAnalysis11 <- CohortMethod::createCmAnalysis(analysisId = 11,
-                                                description = description11,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment30to0StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                stratifyByPs = TRUE,
-                                                stratifyByPsArgs = stratificationMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = conditionedCox)
+  # cmAnalysis11 <- CohortMethod::createCmAnalysis(analysisId = 11,
+  #                                               description = description11,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment30to0StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               stratifyByPs = TRUE,
+  #                                               stratifyByPsArgs = stratificationMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = conditionedCox)
   cmAnalysis12 <- CohortMethod::createCmAnalysis(analysisId = 12,
                                                 description = description12,
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
@@ -331,12 +331,12 @@ createAnalysesDetails <- function(workFolder) {
                                                 createStudyPopArgs = OnTreatment1to365StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
-  cmAnalysis14 <- CohortMethod::createCmAnalysis(analysisId = 14,
-                                                description = description14,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment30to365StudyPopArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = unConditionedCox)
+  # cmAnalysis14 <- CohortMethod::createCmAnalysis(analysisId = 14,
+  #                                               description = description14,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment30to365StudyPopArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis15 <- CohortMethod::createCmAnalysis(analysisId = 15,
                                                 description = description15,
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
@@ -354,16 +354,16 @@ createAnalysesDetails <- function(workFolder) {
                                                 matchOnPsArgs = oneToOneMatchOnPsArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
-  cmAnalysis17 <- CohortMethod::createCmAnalysis(analysisId = 17,
-                                                description = description17,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment30to365StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                matchOnPs = TRUE,
-                                                matchOnPsArgs = oneToOneMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = unConditionedCox)
+  # cmAnalysis17 <- CohortMethod::createCmAnalysis(analysisId = 17,
+  #                                               description = description17,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment30to365StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               matchOnPs = TRUE,
+  #                                               matchOnPsArgs = oneToOneMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis18 <- CohortMethod::createCmAnalysis(analysisId = 18,
                                                 description = description18,
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
@@ -385,16 +385,16 @@ createAnalysesDetails <- function(workFolder) {
                                                 matchOnPsArgs = variableRatioMatchOnPsArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = conditionedCox)
-  cmAnalysis20 <- CohortMethod::createCmAnalysis(analysisId = 20,
-                                                description = description20,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment30to365StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                matchOnPs = TRUE,
-                                                matchOnPsArgs = variableRatioMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = conditionedCox)
+  # cmAnalysis20 <- CohortMethod::createCmAnalysis(analysisId = 20,
+  #                                               description = description20,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment30to365StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               matchOnPs = TRUE,
+  #                                               matchOnPsArgs = variableRatioMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = conditionedCox)
   cmAnalysis21 <- CohortMethod::createCmAnalysis(analysisId = 21,
                                                 description = description21,
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
@@ -417,16 +417,16 @@ createAnalysesDetails <- function(workFolder) {
                                                 stratifyByPsArgs = stratificationMatchOnPsArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = conditionedCox)
-  cmAnalysis23 <- CohortMethod::createCmAnalysis(analysisId = 23,
-                                                description = description23,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment30to365StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                stratifyByPs = TRUE,
-                                                stratifyByPsArgs = stratificationMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = conditionedCox)
+  # cmAnalysis23 <- CohortMethod::createCmAnalysis(analysisId = 23,
+  #                                               description = description23,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment30to365StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               stratifyByPs = TRUE,
+  #                                               stratifyByPsArgs = stratificationMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = conditionedCox)
   cmAnalysis24 <- CohortMethod::createCmAnalysis(analysisId = 24,
                                                 description = description24,
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
@@ -438,120 +438,120 @@ createAnalysesDetails <- function(workFolder) {
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = conditionedCox)
   
-  ####25-36####
-  #Without matching
-  cmAnalysis25 <- CohortMethod::createCmAnalysis(analysisId = 25,
-                                                description = description25,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment1to1095StudyPopArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = unConditionedCox)
-  cmAnalysis26 <- CohortMethod::createCmAnalysis(analysisId = 26,
-                                                description = description26,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment30to1095StudyPopArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = unConditionedCox)
-  cmAnalysis27 <- CohortMethod::createCmAnalysis(analysisId = 27,
-                                                description = description27,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment365to1095StudyPopArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = unConditionedCox)
-  #1:1 PS matching
-  cmAnalysis28 <- CohortMethod::createCmAnalysis(analysisId = 28,
-                                                description = description28,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment1to1095StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                matchOnPs = TRUE,
-                                                matchOnPsArgs = oneToOneMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = unConditionedCox)
-  cmAnalysis29 <- CohortMethod::createCmAnalysis(analysisId = 29,
-                                                description = description29,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment30to1095StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                matchOnPs = TRUE,
-                                                matchOnPsArgs = oneToOneMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = unConditionedCox)
-  cmAnalysis30 <- CohortMethod::createCmAnalysis(analysisId = 30,
-                                                description = description30,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment365to1095StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                matchOnPs = TRUE,
-                                                matchOnPsArgs = oneToOneMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = unConditionedCox)
-  #Variable-ratio PS matching
-  cmAnalysis31 <- CohortMethod::createCmAnalysis(analysisId = 31,
-                                                description = description31,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment1to1095StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                matchOnPs = TRUE,
-                                                matchOnPsArgs = variableRatioMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = conditionedCox)
-  cmAnalysis32 <- CohortMethod::createCmAnalysis(analysisId = 32,
-                                                description = description32,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment30to1095StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                matchOnPs = TRUE,
-                                                matchOnPsArgs = variableRatioMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = conditionedCox)
-  cmAnalysis33 <- CohortMethod::createCmAnalysis(analysisId = 33,
-                                                description = description33,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment365to1095StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                matchOnPs = TRUE,
-                                                matchOnPsArgs = variableRatioMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = conditionedCox)
-  
-  #PS stratification
-  cmAnalysis34 <- CohortMethod::createCmAnalysis(analysisId = 34,
-                                                description = description34,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment1to1095StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                stratifyByPs = TRUE,
-                                                stratifyByPsArgs = stratificationMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = conditionedCox)
-  cmAnalysis35 <- CohortMethod::createCmAnalysis(analysisId = 35,
-                                                description = description35,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment30to1095StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                stratifyByPs = TRUE,
-                                                stratifyByPsArgs = stratificationMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = conditionedCox)
-  cmAnalysis36 <- CohortMethod::createCmAnalysis(analysisId = 36,
-                                                description = description36,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = OnTreatment365to1095StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                stratifyByPs = TRUE,
-                                                stratifyByPsArgs = stratificationMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = conditionedCox)
+  # ####25-36####
+  # #Without matching
+  # cmAnalysis25 <- CohortMethod::createCmAnalysis(analysisId = 25,
+  #                                               description = description25,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment1to1095StudyPopArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = unConditionedCox)
+  # cmAnalysis26 <- CohortMethod::createCmAnalysis(analysisId = 26,
+  #                                               description = description26,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment30to1095StudyPopArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = unConditionedCox)
+  # cmAnalysis27 <- CohortMethod::createCmAnalysis(analysisId = 27,
+  #                                               description = description27,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment365to1095StudyPopArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = unConditionedCox)
+  # #1:1 PS matching
+  # cmAnalysis28 <- CohortMethod::createCmAnalysis(analysisId = 28,
+  #                                               description = description28,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment1to1095StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               matchOnPs = TRUE,
+  #                                               matchOnPsArgs = oneToOneMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = unConditionedCox)
+  # cmAnalysis29 <- CohortMethod::createCmAnalysis(analysisId = 29,
+  #                                               description = description29,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment30to1095StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               matchOnPs = TRUE,
+  #                                               matchOnPsArgs = oneToOneMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = unConditionedCox)
+  # cmAnalysis30 <- CohortMethod::createCmAnalysis(analysisId = 30,
+  #                                               description = description30,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment365to1095StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               matchOnPs = TRUE,
+  #                                               matchOnPsArgs = oneToOneMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = unConditionedCox)
+  # #Variable-ratio PS matching
+  # cmAnalysis31 <- CohortMethod::createCmAnalysis(analysisId = 31,
+  #                                               description = description31,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment1to1095StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               matchOnPs = TRUE,
+  #                                               matchOnPsArgs = variableRatioMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = conditionedCox)
+  # cmAnalysis32 <- CohortMethod::createCmAnalysis(analysisId = 32,
+  #                                               description = description32,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment30to1095StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               matchOnPs = TRUE,
+  #                                               matchOnPsArgs = variableRatioMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = conditionedCox)
+  # cmAnalysis33 <- CohortMethod::createCmAnalysis(analysisId = 33,
+  #                                               description = description33,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment365to1095StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               matchOnPs = TRUE,
+  #                                               matchOnPsArgs = variableRatioMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = conditionedCox)
+  # 
+  # #PS stratification
+  # cmAnalysis34 <- CohortMethod::createCmAnalysis(analysisId = 34,
+  #                                               description = description34,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment1to1095StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               stratifyByPs = TRUE,
+  #                                               stratifyByPsArgs = stratificationMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = conditionedCox)
+  # cmAnalysis35 <- CohortMethod::createCmAnalysis(analysisId = 35,
+  #                                               description = description35,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment30to1095StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               stratifyByPs = TRUE,
+  #                                               stratifyByPsArgs = stratificationMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = conditionedCox)
+  # cmAnalysis36 <- CohortMethod::createCmAnalysis(analysisId = 36,
+  #                                               description = description36,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = OnTreatment365to1095StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               stratifyByPs = TRUE,
+  #                                               stratifyByPsArgs = stratificationMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = conditionedCox)
   
   
   ####37-48####
@@ -562,12 +562,12 @@ createAnalysesDetails <- function(workFolder) {
                                                 createStudyPopArgs = ITTBlankingOf1StudyPopArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
-  cmAnalysis38 <- CohortMethod::createCmAnalysis(analysisId = 38,
-                                                description = description38,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = ITTBlankingOf30StudyPopArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = unConditionedCox)
+  # cmAnalysis38 <- CohortMethod::createCmAnalysis(analysisId = 38,
+  #                                               description = description38,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = ITTBlankingOf30StudyPopArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis39 <- CohortMethod::createCmAnalysis(analysisId = 39,
                                                 description = description39,
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
@@ -585,16 +585,16 @@ createAnalysesDetails <- function(workFolder) {
                                                 matchOnPsArgs = oneToOneMatchOnPsArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = unConditionedCox)
-  cmAnalysis41 <- CohortMethod::createCmAnalysis(analysisId = 41,
-                                                description = description41,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = ITTBlankingOf30StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                matchOnPs = TRUE,
-                                                matchOnPsArgs = oneToOneMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = unConditionedCox)
+  # cmAnalysis41 <- CohortMethod::createCmAnalysis(analysisId = 41,
+  #                                               description = description41,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = ITTBlankingOf30StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               matchOnPs = TRUE,
+  #                                               matchOnPsArgs = oneToOneMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = unConditionedCox)
   cmAnalysis42 <- CohortMethod::createCmAnalysis(analysisId = 42,
                                                 description = description42,
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
@@ -616,16 +616,16 @@ createAnalysesDetails <- function(workFolder) {
                                                 matchOnPsArgs = variableRatioMatchOnPsArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = conditionedCox)
-  cmAnalysis44 <- CohortMethod::createCmAnalysis(analysisId = 44,
-                                                description = description44,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = ITTBlankingOf30StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                matchOnPs = TRUE,
-                                                matchOnPsArgs = variableRatioMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = conditionedCox)
+  # cmAnalysis44 <- CohortMethod::createCmAnalysis(analysisId = 44,
+  #                                               description = description44,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = ITTBlankingOf30StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               matchOnPs = TRUE,
+  #                                               matchOnPsArgs = variableRatioMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = conditionedCox)
   cmAnalysis45 <- CohortMethod::createCmAnalysis(analysisId = 45,
                                                 description = description45,
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
@@ -648,16 +648,16 @@ createAnalysesDetails <- function(workFolder) {
                                                 stratifyByPsArgs = stratificationMatchOnPsArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = conditionedCox)
-  cmAnalysis47 <- CohortMethod::createCmAnalysis(analysisId = 47,
-                                                description = description47,
-                                                getDbCohortMethodDataArgs = getDbCmDataArgs,
-                                                createStudyPopArgs = ITTBlankingOf30StudyPopArgs,
-                                                createPs = TRUE,
-                                                createPsArgs = createPsArgs,
-                                                stratifyByPs = TRUE,
-                                                stratifyByPsArgs = stratificationMatchOnPsArgs,
-                                                fitOutcomeModel = TRUE,
-                                                fitOutcomeModelArgs = conditionedCox)
+  # cmAnalysis47 <- CohortMethod::createCmAnalysis(analysisId = 47,
+  #                                               description = description47,
+  #                                               getDbCohortMethodDataArgs = getDbCmDataArgs,
+  #                                               createStudyPopArgs = ITTBlankingOf30StudyPopArgs,
+  #                                               createPs = TRUE,
+  #                                               createPsArgs = createPsArgs,
+  #                                               stratifyByPs = TRUE,
+  #                                               stratifyByPsArgs = stratificationMatchOnPsArgs,
+  #                                               fitOutcomeModel = TRUE,
+  #                                               fitOutcomeModelArgs = conditionedCox)
   cmAnalysis48 <- CohortMethod::createCmAnalysis(analysisId = 48,
                                                 description = description48,
                                                 getDbCohortMethodDataArgs = getDbCmDataArgs,
@@ -668,6 +668,107 @@ createAnalysesDetails <- function(workFolder) {
                                                 stratifyByPsArgs = stratificationMatchOnPsArgs,
                                                 fitOutcomeModel = TRUE,
                                                 fitOutcomeModelArgs = conditionedCox)
+  
+  ####Interaction terms####
+  subGroupCovariateSettings <- RanitidineCancerRisk::createSubgroupCovariateSettings(windowStart = -365, 
+                                                                                     windowEnd = -1,
+                                                                                     shortTermWindowStart = -7,
+                                                                                     MaintenanceWindowEnd = 365,
+                                                                                     analysisId = 998)
+
+  interactionDbCmDataArgs <- CohortMethod::createGetDbCohortMethodDataArgs(washoutPeriod = 365,
+                                                                           restrictToCommonPeriod = TRUE,
+                                                                           firstExposureOnly = FALSE,
+                                                                           removeDuplicateSubjects = "keep first",
+                                                                           studyStartDate = "",
+                                                                           studyEndDate = "",
+                                                                           excludeDrugsFromCovariates = FALSE,
+                                                                           covariateSettings = list(covarSettings, subGroupCovariateSettings))
+  
+  fitOutcomeModelArgsI1998 <- CohortMethod::createFitOutcomeModelArgs(useCovariates = FALSE,
+                                                                      modelType = "cox",
+                                                                      stratified = FALSE,
+                                                                      #prior = defaultPrior,
+                                                                      interactionCovariateIds = 1998)
+  
+  fitOutcomeModelArgsI2998 <- CohortMethod::createFitOutcomeModelArgs(useCovariates = FALSE,
+                                                                      modelType = "cox",
+                                                                      stratified = FALSE,
+                                                                      #prior = defaultPrior,
+                                                                      interactionCovariateIds = 2998)
+  
+  fitOutcomeModelArgsI3998 <- CohortMethod::createFitOutcomeModelArgs(useCovariates = FALSE,
+                                                                      modelType = "cox",
+                                                                      stratified = FALSE,
+                                                                      #prior = defaultPrior,
+                                                                      interactionCovariateIds = 3998)
+  
+  fitOutcomeModelArgsI4998 <- CohortMethod::createFitOutcomeModelArgs(useCovariates = FALSE,
+                                                                      modelType = "cox",
+                                                                      stratified = FALSE,
+                                                                      #prior = defaultPrior,
+                                                                      interactionCovariateIds = 4998)
+  
+  fitOutcomeModelArgsI5998 <- CohortMethod::createFitOutcomeModelArgs(useCovariates = FALSE,
+                                                                      modelType = "cox",
+                                                                      stratified = FALSE,
+                                                                      #prior = defaultPrior,
+                                                                      interactionCovariateIds = 5998)
+  
+  cmAnalysis1998 <- CohortMethod::createCmAnalysis(analysisId = 1998,
+                                                   description = paste0(description39,", interaction:female"),
+                                                   getDbCohortMethodDataArgs = interactionDbCmDataArgs,
+                                                   createStudyPopArgs = ITTBlankingOf365StudyPopArgs,
+                                                   fitOutcomeModel = TRUE,
+                                                   fitOutcomeModelArgs = fitOutcomeModelArgsI1998,
+                                                   createPs = TRUE,
+                                                   createPsArgs = createPsArgs,
+                                                   matchOnPs = TRUE,
+                                                   matchOnPsArgs = oneToOneMatchOnPsArgs)
+  
+  cmAnalysis2998 <- CohortMethod::createCmAnalysis(analysisId = 2998,
+                                                   description = paste0(description39,", interaction:elderly (age >= 65)"),
+                                                   getDbCohortMethodDataArgs = interactionDbCmDataArgs,
+                                                   createStudyPopArgs = ITTBlankingOf365StudyPopArgs,
+                                                   fitOutcomeModel = TRUE,
+                                                   fitOutcomeModelArgs = fitOutcomeModelArgsI2998,
+                                                   createPs = TRUE,
+                                                   createPsArgs = createPsArgs,
+                                                   matchOnPs = TRUE,
+                                                   matchOnPsArgs = oneToOneMatchOnPsArgs)
+  
+  cmAnalysis3998 <- CohortMethod::createCmAnalysis(analysisId = 3998,
+                                                   description = paste0(description39,", interaction:cumulative drug dose than 365 unit"),
+                                                   getDbCohortMethodDataArgs = interactionDbCmDataArgs,
+                                                   createStudyPopArgs = ITTBlankingOf365StudyPopArgs,
+                                                   fitOutcomeModel = TRUE,
+                                                   fitOutcomeModelArgs = fitOutcomeModelArgsI3998,
+                                                   createPs = TRUE,
+                                                   createPsArgs = createPsArgs,
+                                                   matchOnPs = TRUE,
+                                                   matchOnPsArgs = oneToOneMatchOnPsArgs)
+  
+  cmAnalysis4998 <- CohortMethod::createCmAnalysis(analysisId = 4998,
+                                                   description = paste0(description39,", interaction:cumulative drug dose than 730 unit"),
+                                                   getDbCohortMethodDataArgs = interactionDbCmDataArgs,
+                                                   createStudyPopArgs = ITTBlankingOf365StudyPopArgs,
+                                                   fitOutcomeModel = TRUE,
+                                                   fitOutcomeModelArgs = fitOutcomeModelArgsI4998,
+                                                   createPs = TRUE,
+                                                   createPsArgs = createPsArgs,
+                                                   matchOnPs = TRUE,
+                                                   matchOnPsArgs = oneToOneMatchOnPsArgs)
+  
+  cmAnalysis5998 <- CohortMethod::createCmAnalysis(analysisId = 5998,
+                                                   description = paste0(description39,", interaction:cumulative drug dose than 1095 unit"),
+                                                   getDbCohortMethodDataArgs = interactionDbCmDataArgs,
+                                                   createStudyPopArgs = ITTBlankingOf365StudyPopArgs,
+                                                   fitOutcomeModel = TRUE,
+                                                   fitOutcomeModelArgs = fitOutcomeModelArgsI5998,
+                                                   createPs = TRUE,
+                                                   createPsArgs = createPsArgs,
+                                                   matchOnPs = TRUE,
+                                                   matchOnPsArgs = oneToOneMatchOnPsArgs)
   
   # interactionCovariateIds <- c(8532001, 201826210, 21600960413) # Female, T2DM, concurent use of antithrombotic agents
   # 
@@ -690,14 +791,23 @@ createAnalysesDetails <- function(workFolder) {
   
   #paste0("cmAnalysis",1:48,collapse=", ")
   
-  cmAnalysisList <- list(cmAnalysis1, cmAnalysis2, cmAnalysis3, cmAnalysis4, cmAnalysis5, cmAnalysis6, 
-                         cmAnalysis7, cmAnalysis8, cmAnalysis9, cmAnalysis10, cmAnalysis11, cmAnalysis12, 
-                         cmAnalysis13, cmAnalysis14, cmAnalysis15, cmAnalysis16, cmAnalysis17, cmAnalysis18, 
-                         cmAnalysis19, cmAnalysis20, cmAnalysis21, cmAnalysis22, cmAnalysis23, cmAnalysis24, 
-                         cmAnalysis25, cmAnalysis26, cmAnalysis27, cmAnalysis28, cmAnalysis29, cmAnalysis30, 
-                         cmAnalysis31, cmAnalysis32, cmAnalysis33, cmAnalysis34, cmAnalysis35, cmAnalysis36, 
-                         cmAnalysis37, cmAnalysis38, cmAnalysis39, cmAnalysis40, cmAnalysis41, cmAnalysis42, 
-                         cmAnalysis43, cmAnalysis44, cmAnalysis45, cmAnalysis46, cmAnalysis47, cmAnalysis48)
+  cmAnalysisList <- list(cmAnalysis1, #cmAnalysis2, 
+                         cmAnalysis3, cmAnalysis4, #cmAnalysis5, 
+                         cmAnalysis6, cmAnalysis7, #cmAnalysis8, 
+                         cmAnalysis9, cmAnalysis10, #cmAnalysis11, 
+                         cmAnalysis12, cmAnalysis13, #cmAnalysis14, 
+                         cmAnalysis15, cmAnalysis16, #cmAnalysis17, 
+                         cmAnalysis18, cmAnalysis19, #cmAnalysis20, 
+                         cmAnalysis21, cmAnalysis22, #cmAnalysis23, 
+                         cmAnalysis24, 
+                         #cmAnalysis25, cmAnalysis26, cmAnalysis27, cmAnalysis28, cmAnalysis29, cmAnalysis30, cmAnalysis31, cmAnalysis32, cmAnalysis33, cmAnalysis34, cmAnalysis35, cmAnalysis36, 
+                         cmAnalysis37, #cmAnalysis38, 
+                         cmAnalysis39, cmAnalysis40, #cmAnalysis41, 
+                         cmAnalysis42, cmAnalysis43, 
+                         #cmAnalysis44, 
+                         cmAnalysis45, cmAnalysis46, #cmAnalysis47, 
+                         cmAnalysis48,
+                         cmAnalysis1998, cmAnalysis2998, cmAnalysis3998, cmAnalysis4998, cmAnalysis5998)
   
   CohortMethod::saveCmAnalysisList(cmAnalysisList, file.path(workFolder, "cmAnalysisList.json"))
   
