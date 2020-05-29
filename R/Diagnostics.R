@@ -89,10 +89,10 @@ createDiagnosticsForSubset <- function(subset, allControls, outputFolder, cmOutp
   validPcs <- sum(!is.na(controlSubset$seLogRr[controlSubset$targetEffectSize != 1]))
   ParallelLogger::logDebug("Subset has ", validPcs, " valid positive control estimates")
   if (validPcs >= 10) {
-    model <- EmpiricalCalibration::fitSystematicErrorModel(logRr = controlSubset$logRr, 
-                                                           seLogRr = controlSubset$seLogRr, 
-                                                           trueLogRr = log(controlSubset$targetEffectSize), 
-                                                           estimateCovarianceMatrix = FALSE)
+    # model <- EmpiricalCalibration::fitSystematicErrorModel(logRr = controlSubset$logRr, 
+    #                                                        seLogRr = controlSubset$seLogRr, 
+    #                                                        trueLogRr = log(controlSubset$targetEffectSize), 
+    #                                                        estimateCovarianceMatrix = FALSE)
     
     # fileName <-  file.path(diagnosticsFolder, paste0("controls_a", analysisId, "_t", targetId, "_c", comparatorId, ".png"))
     # EmpiricalCalibration::plotCiCalibrationEffect(logRr = controlSubset$logRr, 
@@ -150,14 +150,14 @@ createDiagnosticsForSubset <- function(subset, allControls, outputFolder, cmOutp
                                  "balance",
                                  sprintf("bal_t%s_c%s_o%s_a%s.rds", targetId, comparatorId, outcomeId, analysisId))
     if (file.exists(balanceFileName)) {
-      balance <- readRDS(balanceFileName)
-      fileName = file.path(diagnosticsFolder, 
-                           sprintf("bal_t%s_c%s_o%s_a%s.csv", targetId, comparatorId, outcomeId, analysisId))
-      write.csv(balance, fileName, row.names = FALSE)
+      # balance <- readRDS(balanceFileName)
+      # fileName = file.path(diagnosticsFolder, 
+      #                      sprintf("bal_t%s_c%s_o%s_a%s.csv", targetId, comparatorId, outcomeId, analysisId))
+      # write.csv(balance, fileName, row.names = FALSE)
       
-      outcomeTitle <- paste(paste(subset$targetName[1], subset$comparatorName[1], sep = " - "), 
-                            subset$outcomeName[subset$outcomeId == outcomeId], 
-                            subset$analysisDescription[1], sep = "\n")
+      # outcomeTitle <- paste(paste(subset$targetName[1], subset$comparatorName[1], sep = " - "), 
+      #                       subset$outcomeName[subset$outcomeId == outcomeId], 
+      #                       subset$analysisDescription[1], sep = "\n")
       # fileName = file.path(diagnosticsFolder, 
       #                      sprintf("balanceScatter_t%s_c%s_o%s_a%s.png", targetId, comparatorId, outcomeId, analysisId))
       # balanceScatterPlot <- CohortMethod::plotCovariateBalanceScatterPlot(balance = balance,
@@ -180,7 +180,7 @@ createDiagnosticsForSubset <- function(subset, allControls, outputFolder, cmOutp
   # Propensity score distribution --------------------------------------------------------------------------
   psFile <- subset$sharedPsFile[1]
   if (psFile != "") {
-    ps <- readRDS(file.path(cmOutputFolder, psFile))
+    # ps <- readRDS(file.path(cmOutputFolder, psFile))
     # fileName <-  file.path(diagnosticsFolder, paste0("ps_a", analysisId, "_t", targetId, "_c", comparatorId, ".png"))
     # CohortMethod::plotPs(data = ps,
     #                      targetLabel = subset$targetName[1],
