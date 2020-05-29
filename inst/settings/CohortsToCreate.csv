@@ -31,3 +31,4 @@ atlasId,atlasName,cohortId,name
 18,Pancreas cancer,18,Pancreas_cancer
 19,Prostate cancer,19,Prostate_cancer
 20,Cancer mortality,20,Cancer_death
+21,Overall cancer except skin cancer,21,Cancer_except_skin
