@@ -51,3 +51,23 @@ createTcosOfInterest<-function(workFolder,
   
 }
 
+## Only update negative controls
+# negativeControls <- read.csv(file.path("inst","settings","NegativeControls.csv"),
+#                              stringsAsFactors = FALSE)
+# nrow(uniqueNegativeControls)
+# uniqueNegativeControls<-unique(negativeControls[,c("outcomeId", "outcomeName")])
+# tcosOfInterest <- read.csv(file.path("inst","settings","TcosOfInterest.csv"),
+#                            stringsAsFactors = FALSE)
+# nrow(tcosOfInterest)
+# for(i in 1:nrow(tcosOfInterest)){
+#   if(i==1){negativeControls=data.frame()}
+#   negativeControl<-uniqueNegativeControls
+#   negativeControl$targetId<-tcosOfInterest$targetId[i]
+#   negativeControl$comparatorId<-tcosOfInterest$comparatorId[i]
+#   negativeControl$type<-"outcome"
+# 
+#   negativeControls<-rbind(negativeControls,negativeControl)
+# 
+# }
+# nrow(negativeControls)
+# write.csv(negativeControls,file.path("inst","settings","NegativeControls.csv"), row.names=FALSE)
