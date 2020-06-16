@@ -17,7 +17,8 @@
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
               "VOCABULARY_ID": "RxNorm"
-            }
+            },
+            "includeDescendants": true
           }
         ]
       }
@@ -39,7 +40,8 @@
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
               "VOCABULARY_ID": "RxNorm"
-            }
+            },
+            "includeDescendants": true
           }
         ]
       }
@@ -84,7 +86,8 @@
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
               "VOCABULARY_ID": "RxNorm"
-            }
+            },
+            "includeDescendants": true
           }
         ]
       }
@@ -106,7 +109,8 @@
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
               "VOCABULARY_ID": "RxNorm"
-            }
+            },
+            "includeDescendants": true
           }
         ]
       }
@@ -128,7 +132,8 @@
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
               "VOCABULARY_ID": "RxNorm"
-            }
+            },
+            "includeDescendants": true
           }
         ]
       }
@@ -173,7 +178,8 @@
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
               "VOCABULARY_ID": "RxNorm Extension"
-            }
+            },
+            "includeDescendants": true
           }
         ]
       }
@@ -195,7 +201,8 @@
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
               "VOCABULARY_ID": "RxNorm"
-            }
+            },
+            "includeDescendants": true
           },
           {
             "concept": {
@@ -209,7 +216,8 @@
               "STANDARD_CONCEPT": "S",
               "STANDARD_CONCEPT_CAPTION": "Standard",
               "VOCABULARY_ID": "RxNorm"
-            }
+            },
+            "includeDescendants": true
           }
         ]
       }
@@ -250,7 +258,7 @@
         "CriteriaList": [
           {
             "Criteria": {
-              "DrugEra": {
+              "DrugExposure": {
                 "CodesetId": 1
               }
             },
@@ -272,7 +280,7 @@
           },
           {
             "Criteria": {
-              "DrugEra": {
+              "DrugExposure": {
                 "CodesetId": 3
               }
             },
@@ -294,7 +302,7 @@
           },
           {
             "Criteria": {
-              "DrugEra": {
+              "DrugExposure": {
                 "CodesetId": 4
               }
             },
@@ -316,7 +324,7 @@
           },
           {
             "Criteria": {
-              "DrugEra": {
+              "DrugExposure": {
                 "CodesetId": 5
               }
             },
@@ -338,7 +346,7 @@
           },
           {
             "Criteria": {
-              "DrugEra": {
+              "DrugExposure": {
                 "CodesetId": 0
               }
             },
@@ -436,7 +444,7 @@
         "CriteriaList": [
           {
             "Criteria": {
-              "DrugEra": {
+              "DrugExposure": {
                 "CodesetId": 8
               }
             },
@@ -500,5 +508,6 @@
     "CollapseType": "ERA",
     "EraPad": 0
   },
-  "CensorWindow": {}
+  "CensorWindow": {},
+  "cdmVersionRange": ">=5.0.0"
 }
