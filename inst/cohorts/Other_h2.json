@@ -20,7 +20,7 @@
             },
             "includeDescendants": true
           }
-        ]
+          ]
       }
     },
     {
@@ -43,7 +43,7 @@
             },
             "includeDescendants": true
           }
-        ]
+          ]
       }
     },
     {
@@ -66,7 +66,7 @@
             },
             "includeDescendants": true
           }
-        ]
+          ]
       }
     },
     {
@@ -89,7 +89,7 @@
             },
             "includeDescendants": true
           }
-        ]
+          ]
       }
     },
     {
@@ -112,7 +112,7 @@
             },
             "includeDescendants": true
           }
-        ]
+          ]
       }
     },
     {
@@ -135,7 +135,7 @@
             },
             "includeDescendants": true
           }
-        ]
+          ]
       }
     },
     {
@@ -158,7 +158,7 @@
             },
             "includeDescendants": true
           }
-        ]
+          ]
       }
     },
     {
@@ -181,12 +181,12 @@
             },
             "includeDescendants": true
           }
-        ]
+          ]
       }
     },
     {
       "id": 8,
-      "name": "Bismuth and Sucralfate",
+      "name": "Bismuth or sucralfate",
       "expression": {
         "items": [
           {
@@ -219,22 +219,90 @@
             },
             "includeDescendants": true
           }
-        ]
+          ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "H2 blockers except ranitidine and nizatidine",
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "2541",
+              "CONCEPT_ID": 997276,
+              "CONCEPT_NAME": "Cimetidine",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            },
+            "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "4278",
+              "CONCEPT_ID": 953076,
+              "CONCEPT_NAME": "Famotidine",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            },
+            "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "OMOP4700429",
+              "CONCEPT_ID": 43009003,
+              "CONCEPT_NAME": "lafutidine",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm Extension"
+            },
+            "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "114817",
+              "CONCEPT_ID": 19011685,
+              "CONCEPT_NAME": "roxatidine",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            },
+            "includeDescendants": true
+          }
+          ]
       }
     }
-  ],
+    ],
   "PrimaryCriteria": {
     "CriteriaList": [
       {
         "DrugEra": {
-          "CodesetId": 7,
+          "CodesetId": 9,
           "EraLength": {
             "Value": 30,
             "Op": "gte"
           }
         }
       }
-    ],
+      ],
     "ObservationWindow": {
       "PriorDays": 365,
       "PostDays": 0
@@ -251,37 +319,15 @@
   },
   "InclusionRules": [
     {
-      "name": "Without other H2 blocker previous 1 year",
-      "description": "Without other H2 blocker previous 1 year",
+      "name": "Without ranitidine and nitazidine previous 1 year",
+      "description": "Without ranitidine and nitazidine previous 1 year",
       "expression": {
         "Type": "ALL",
         "CriteriaList": [
           {
             "Criteria": {
               "DrugExposure": {
-                "CodesetId": 1
-              }
-            },
-            "StartWindow": {
-              "Start": {
-                "Days": 365,
-                "Coeff": -1
-              },
-              "End": {
-                "Days": 0,
-                "Coeff": 1
-              },
-              "UseEventEnd": false
-            },
-            "Occurrence": {
-              "Type": 1,
-              "Count": 0
-            }
-          },
-          {
-            "Criteria": {
-              "DrugExposure": {
-                "CodesetId": 3
+                "CodesetId": 0
               }
             },
             "StartWindow": {
@@ -321,52 +367,8 @@
               "Type": 1,
               "Count": 0
             }
-          },
-          {
-            "Criteria": {
-              "DrugExposure": {
-                "CodesetId": 5
-              }
-            },
-            "StartWindow": {
-              "Start": {
-                "Days": 365,
-                "Coeff": -1
-              },
-              "End": {
-                "Days": 0,
-                "Coeff": 1
-              },
-              "UseEventEnd": false
-            },
-            "Occurrence": {
-              "Type": 1,
-              "Count": 0
-            }
-          },
-          {
-            "Criteria": {
-              "DrugExposure": {
-                "CodesetId": 0
-              }
-            },
-            "StartWindow": {
-              "Start": {
-                "Days": 365,
-                "Coeff": -1
-              },
-              "End": {
-                "Days": 0,
-                "Coeff": 1
-              },
-              "UseEventEnd": false
-            },
-            "Occurrence": {
-              "Type": 1,
-              "Count": 0
-            }
           }
-        ],
+          ],
         "DemographicCriteriaList": [],
         "Groups": []
       }
@@ -398,14 +400,14 @@
               "Count": 0
             }
           }
-        ],
+          ],
         "DemographicCriteriaList": [],
         "Groups": []
       }
     },
     {
-      "name": "Without bismuth and sucralfate",
-      "description": "Without bismuth and sucralfate",
+      "name": "Without sucralfate and bismuth",
+      "description": "Without sucralfate and bismuth",
       "expression": {
         "Type": "ALL",
         "CriteriaList": [
@@ -431,15 +433,15 @@
               "Count": 0
             }
           }
-        ],
+          ],
         "DemographicCriteriaList": [],
         "Groups": []
       }
     }
-  ],
+    ],
   "EndStrategy": {
     "CustomEra": {
-      "DrugCodesetId": 7,
+      "DrugCodesetId": 9,
       "GapDays": 30,
       "Offset": 0
     }
@@ -447,30 +449,15 @@
   "CensoringCriteria": [
     {
       "DrugEra": {
-        "CodesetId": 1
-      }
-    },
-    {
-      "DrugEra": {
-        "CodesetId": 3
+        "CodesetId": 0
       }
     },
     {
       "DrugEra": {
         "CodesetId": 4
       }
-    },
-    {
-      "DrugEra": {
-        "CodesetId": 5
-      }
-    },
-    {
-      "DrugEra": {
-        "CodesetId": 0
-      }
     }
-  ],
+    ],
   "CollapseSettings": {
     "CollapseType": "ERA",
     "EraPad": 0

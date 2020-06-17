@@ -48,7 +48,7 @@ runCohortMethod <- function(connectionDetails,
                             outputFolder,
                             maxCores,
                             cmAnalysisListFileName = "cmAnalysisList.json",
-                            minNumCohortForStudy = 1) {
+                            minNumCohortForStudy = 500) {
   
   cmOutputFolder <- file.path(outputFolder, "cmOutput")
   if (!file.exists(cmOutputFolder)) {

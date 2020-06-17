@@ -61,13 +61,13 @@ exportResults <- function(outputFolder,
                     exportFolder = exportFolder,
                     databaseId = databaseId,
                     minCellCount = minCellCount,
-                    maxCores = maxCores)
+                    maxCores = 1)
   
   exportDiagnostics(outputFolder = outputFolder,
                     exportFolder = exportFolder,
                     databaseId = databaseId,
                     minCellCount = minCellCount,
-                    maxCores = maxCores)
+                    maxCores = 1)
   
   # Add all to zip file -------------------------------------------------------------------------------
   ParallelLogger::logInfo("Adding results to zip file")
@@ -241,9 +241,9 @@ exportMetadata <- function(outputFolder,
   
   ParallelLogger::logInfo("- exposure_summary table")
   minDates <- rbind(data.frame(exposureId = info$targetId,
-                                   minDate = info$targetMinDate),
-                        data.frame(exposureId = info$comparatorId,
-                                   minDate = info$comparatorMinDate))
+                               minDate = info$targetMinDate),
+                    data.frame(exposureId = info$comparatorId,
+                               minDate = info$comparatorMinDate))
   minDates <- aggregate(minDate ~ exposureId, minDates, min)
   maxDates <- rbind(data.frame(exposureId = info$targetId,
                                maxDate = info$targetMaxDate),
@@ -355,7 +355,7 @@ exportMetadata <- function(outputFolder,
                                      "cmOutput",
                                      reference$strataFile[i]))
     }
-   
+    
     targetDist <- quantile(strataPop$survivalTime[strataPop$treatment == 1],
                            c(0, 0.1, 0.25, 0.5, 0.85, 0.9, 1))
     comparatorDist <- quantile(strataPop$survivalTime[strataPop$treatment == 0],
@@ -421,10 +421,11 @@ exportMainResults <- function(outputFolder,
   
   
   ParallelLogger::logInfo("- cohort_method_result table")
+  cluster <- ParallelLogger::makeCluster(min(4, maxCores))
   analysesSum <- read.csv(file.path(outputFolder, "analysisSummary.csv"))
+  #analysesSum <- analysesSum[!is.na(analysesSum$logRr),] #remove the size of dataframe
   allControls <- getAllControls(outputFolder)
   ParallelLogger::logInfo("  Performing empirical calibration on main effects")
-  cluster <- ParallelLogger::makeCluster(min(4, maxCores))
   subsets <- split(analysesSum,
                    paste(analysesSum$targetId, analysesSum$comparatorId, analysesSum$analysisId))
   rm(analysesSum)  # Free up memory
@@ -532,21 +533,22 @@ calibrate <- function(subset, allControls) {
   }
   pcs <- subset[subset$outcomeId %in% allControls$outcomeId[allControls$targetEffectSize != 1], ]
   pcs <- pcs[!is.na(pcs$seLogRr), ]
-  if (nrow(pcs) > 5) {
-    controls <- merge(subset, allControls[, c("targetId", "comparatorId", "outcomeId", "targetEffectSize")])
-    model <- EmpiricalCalibration::fitSystematicErrorModel(logRr = controls$logRr,
-                                                           seLogRr = controls$seLogRr,
-                                                           trueLogRr = log(controls$targetEffectSize),
-                                                           estimateCovarianceMatrix = FALSE)
-    calibratedCi <- EmpiricalCalibration::calibrateConfidenceInterval(logRr = subset$logRr,
-                                                                      seLogRr = subset$seLogRr,
-                                                                      model = model)
-    subset$calibratedRr <- exp(calibratedCi$logRr)
-    subset$calibratedCi95Lb <- exp(calibratedCi$logLb95Rr)
-    subset$calibratedCi95Ub <- exp(calibratedCi$logUb95Rr)
-    subset$calibratedLogRr <- calibratedCi$logRr
-    subset$calibratedSeLogRr <- calibratedCi$seLogRr
-  }else if( (nrow(pcs) <= 5) & (nrow(ncs) > 5) ){
+  # if (nrow(pcs) > 5) {
+  #   controls <- merge(subset, allControls[, c("targetId", "comparatorId", "outcomeId", "targetEffectSize")])
+  #   model <- EmpiricalCalibration::fitSystematicErrorModel(logRr = controls$logRr,
+  #                                                          seLogRr = controls$seLogRr,
+  #                                                          trueLogRr = log(controls$targetEffectSize),
+  #                                                          estimateCovarianceMatrix = FALSE)
+  #   calibratedCi <- EmpiricalCalibration::calibrateConfidenceInterval(logRr = subset$logRr,
+  #                                                                     seLogRr = subset$seLogRr,
+  #                                                                     model = model)
+  #   subset$calibratedRr <- exp(calibratedCi$logRr)
+  #   subset$calibratedCi95Lb <- exp(calibratedCi$logLb95Rr)
+  #   subset$calibratedCi95Ub <- exp(calibratedCi$logUb95Rr)
+  #   subset$calibratedLogRr <- calibratedCi$logRr
+  #   subset$calibratedSeLogRr <- calibratedCi$seLogRr
+  # }else 
+  if( nrow(ncs) > 5 ){
     #if there are enough negative controls but not positive controls
     controls <- merge(subset, allControls[, c("targetId", "comparatorId", "outcomeId", "targetEffectSize")])
     model <- EmpiricalCalibration::convertNullToErrorModel(null)

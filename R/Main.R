@@ -134,7 +134,7 @@ execute <- function(connectionDetails,
                     outputFolder = outputFolder,
                     maxCores = maxCores,
                     cmAnalysisListFileName = "cmAnalysisList.json",
-                    minNumCohortForStudy = )
+                    minNumCohortForStudy = 500)
   }
   
   if (runDiagnostics) {
