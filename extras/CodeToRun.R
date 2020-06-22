@@ -31,25 +31,7 @@ databaseDescription <- "Medicare Claims Synthetic Public Use Files (SynPUFs) wer
 # For Oracle: define a schema that can be used to emulate temp tables:
 oracleTempSchema <- NULL
 
-# Please conduct feasibility test first
-runFeasibility(connectionDetails = connectionDetails,
-              cdmDatabaseSchema = cdmDatabaseSchema,
-              cohortDatabaseSchema = cohortDatabaseSchema,
-              cohortTable = cohortTable,
-              oracleTempSchema = oracleTempSchema,
-              outputFolder = outputFolder,
-              databaseId = databaseId,
-              databaseName = databaseName,
-              databaseDescription = databaseDescription,
-              createCohorts = TRUE,
-              runFeasibility = TRUE,
-              runFeasibilityDiagnostics = TRUE,
-              feasibilityResults = TRUE,
-              maxCores = 1,
-              minCellCount= 5) 
-
-
-# Please proceed to execute the study after confirmation of the results from the feasibility test
+# Execute the code
 execute(connectionDetails = connectionDetails,
         cdmDatabaseSchema = cdmDatabaseSchema,
         cohortDatabaseSchema = cohortDatabaseSchema,
@@ -59,7 +41,7 @@ execute(connectionDetails = connectionDetails,
         databaseId = databaseId,
         databaseName = databaseName,
         databaseDescription = databaseDescription,
-        createCohorts = FALSE, #You don't need to cohort again after feasibility test
+        createCohorts = TRUE, 
         synthesizePositiveControls = TRUE,
         runAnalyses = TRUE,
         runDiagnostics = TRUE,
