@@ -43,20 +43,20 @@ exportResults <- function(outputFolder,
   
   exportAnalyses(outputFolder = outputFolder,
                  exportFolder = exportFolder)
-  
+
   exportExposures(outputFolder = outputFolder,
                   exportFolder = exportFolder)
-  
+
   exportOutcomes(outputFolder = outputFolder,
                  exportFolder = exportFolder)
-  
+
   exportMetadata(outputFolder = outputFolder,
                  exportFolder = exportFolder,
                  databaseId = databaseId,
                  databaseName = databaseName,
                  databaseDescription = databaseDescription,
                  minCellCount = minCellCount)
-  
+
   exportMainResults(outputFolder = outputFolder,
                     exportFolder = exportFolder,
                     databaseId = databaseId,
@@ -766,6 +766,7 @@ exportDiagnostics <- function(outputFolder,
         d0 <- density(ps$preferenceScore[ps$treatment == 0], from = 0, to = 1, n = 100)
         
         result <- data.frame(databaseId = databaseId,
+                             analysisId = reference$analysisId[i],
                              targetId = reference$targetId[i],
                              comparatorId = reference$comparatorId[i],
                              preferenceScore = d1$x,
