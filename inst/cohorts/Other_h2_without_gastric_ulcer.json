@@ -20,7 +20,7 @@
             },
             "includeDescendants": true
           }
-          ]
+        ]
       }
     },
     {
@@ -43,7 +43,7 @@
             },
             "includeDescendants": true
           }
-          ]
+        ]
       }
     },
     {
@@ -66,7 +66,7 @@
             },
             "includeDescendants": true
           }
-          ]
+        ]
       }
     },
     {
@@ -89,7 +89,7 @@
             },
             "includeDescendants": true
           }
-          ]
+        ]
       }
     },
     {
@@ -112,7 +112,7 @@
             },
             "includeDescendants": true
           }
-          ]
+        ]
       }
     },
     {
@@ -135,7 +135,7 @@
             },
             "includeDescendants": true
           }
-          ]
+        ]
       }
     },
     {
@@ -158,7 +158,7 @@
             },
             "includeDescendants": true
           }
-          ]
+        ]
       }
     },
     {
@@ -181,7 +181,7 @@
             },
             "includeDescendants": true
           }
-          ]
+        ]
       }
     },
     {
@@ -219,29 +219,14 @@
             },
             "includeDescendants": true
           }
-          ]
+        ]
       }
     },
     {
       "id": 9,
-      "name": "H2 blockers except ranitidine and nizatidine",
+      "name": "H2 blockers except ranitidine, nizatidine, and cimetidine",
       "expression": {
         "items": [
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Ingredient",
-              "CONCEPT_CODE": "2541",
-              "CONCEPT_ID": 997276,
-              "CONCEPT_NAME": "Cimetidine",
-              "DOMAIN_ID": "Drug",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "RxNorm"
-            },
-            "includeDescendants": true
-          },
           {
             "concept": {
               "CONCEPT_CLASS_ID": "Ingredient",
@@ -287,10 +272,10 @@
             },
             "includeDescendants": true
           }
-          ]
+        ]
       }
     }
-    ],
+  ],
   "PrimaryCriteria": {
     "CriteriaList": [
       {
@@ -302,7 +287,7 @@
           }
         }
       }
-      ],
+    ],
     "ObservationWindow": {
       "PriorDays": 365,
       "PostDays": 0
@@ -367,8 +352,30 @@
               "Type": 1,
               "Count": 0
             }
+          },
+          {
+            "Criteria": {
+              "DrugExposure": {
+                "CodesetId": 1
+              }
+            },
+            "StartWindow": {
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 0,
+                "Coeff": 1
+              },
+              "UseEventEnd": false
+            },
+            "Occurrence": {
+              "Type": 1,
+              "Count": 0
+            }
           }
-          ],
+        ],
         "DemographicCriteriaList": [],
         "Groups": []
       }
@@ -401,7 +408,7 @@
               "Count": 0
             }
           }
-          ],
+        ],
         "DemographicCriteriaList": [],
         "Groups": []
       }
@@ -433,7 +440,7 @@
               "Count": 0
             }
           }
-          ],
+        ],
         "DemographicCriteriaList": [],
         "Groups": []
       }
@@ -466,12 +473,12 @@
               "Count": 0
             }
           }
-          ],
+        ],
         "DemographicCriteriaList": [],
         "Groups": []
       }
     }
-    ],
+  ],
   "EndStrategy": {
     "CustomEra": {
       "DrugCodesetId": 9,
@@ -489,8 +496,13 @@
       "DrugEra": {
         "CodesetId": 4
       }
+    },
+    {
+      "DrugEra": {
+        "CodesetId": 1
+      }
     }
-    ],
+  ],
   "CollapseSettings": {
     "CollapseType": "ERA",
     "EraPad": 0
