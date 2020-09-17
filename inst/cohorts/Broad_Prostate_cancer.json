@@ -1,0 +1,69 @@
+{
+  "ConceptSets": [
+    {
+      "id": 0,
+      "name": "Prostate cancer",
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "CONCEPT_CODE": "399068003",
+              "CONCEPT_ID": 4163261,
+              "CONCEPT_NAME": "Malignant tumor of prostate",
+              "DOMAIN_ID": "Condition",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "SNOMED"
+            },
+            "includeDescendants": true
+          }
+        ]
+      }
+    }
+  ],
+  "PrimaryCriteria": {
+    "CriteriaList": [
+      {
+        "ConditionOccurrence": {
+          "CodesetId": 0,
+          "First": true,
+          "Gender": [
+            {
+              "CONCEPT_CODE": "M",
+              "CONCEPT_ID": 8507,
+              "CONCEPT_NAME": "MALE",
+              "DOMAIN_ID": "Gender",
+              "INVALID_REASON_CAPTION": "Unknown",
+              "STANDARD_CONCEPT_CAPTION": "Unknown",
+              "VOCABULARY_ID": "Gender"
+            }
+          ]
+        }
+      }
+    ],
+    "ObservationWindow": {
+      "PriorDays": 365,
+      "PostDays": 0
+    },
+    "PrimaryCriteriaLimit": {
+      "Type": "First"
+    }
+  },
+  "QualifiedLimit": {
+    "Type": "First"
+  },
+  "ExpressionLimit": {
+    "Type": "All"
+  },
+  "InclusionRules": [],
+  "CensoringCriteria": [],
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "CensorWindow": {},
+  "cdmVersionRange": ">=5.0.0"
+}
