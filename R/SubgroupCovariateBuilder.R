@@ -82,6 +82,8 @@ getDbSubgroupCovariateData <- function(connection,
   if (aggregated)
     stop("Aggregation not supported")
   writeLines("Creating covariates indicating subgroups of interest")
+  covariateData <- Andromeda::andromeda()
+  
   sql <- SqlRender::loadRenderTranslateSql("CreateSubgroups.sql",
                                            packageName = "RanitidineCancerRisk",
                                            dbms = connection@dbms,
@@ -102,8 +104,13 @@ getDbSubgroupCovariateData <- function(connection,
                                            packageName = "RanitidineCancerRisk",
                                            dbms = connection@dbms,
                                            oracleTempSchema = oracleTempSchema)
-  covariates <- DatabaseConnector::querySql.ffdf(connection, sql)
-  colnames(covariates) <- SqlRender::snakeCaseToCamelCase(colnames(covariates))
+  DatabaseConnector::querySqlToAndromeda(connection = connection, 
+                                         sql = sql, 
+                                         andromeda = covariateData, 
+                                         andromedaTableName = "covariates",
+                                         snakeCaseToCamelCase = TRUE)
+  # covariates <- DatabaseConnector::querySql.ffdf(connection, sql)
+  # colnames(covariates) <- SqlRender::snakeCaseToCamelCase(colnames(covariates))
   
   sql <- SqlRender::loadRenderTranslateSql("DropSubgroupTempTables.sql",
                                            packageName = "RanitidineCancerRisk",
@@ -119,7 +126,8 @@ getDbSubgroupCovariateData <- function(connection,
                                                "Subgroup: Cumulative drug dose than 1095 unit"),
                              analysisId = as.numeric(covariateSettings$analysisId),
                              conceptId = 0)
-  covariateRef <- ff::as.ffdf(covariateRef)
+  covariateData$covariateRef <- covariateRef
+  # covariateRef <- ff::as.ffdf(covariateRef)
   
   # Construct analysis reference:
   analysisRef <- data.frame(analysisId = as.numeric(covariateSettings$analysisId),
@@ -131,13 +139,14 @@ getDbSubgroupCovariateData <- function(connection,
                             #MaintenanceWindowEnd = as.numeric(covariateSettings$MaintenanceWindowEnd),
                             isBinary = "Y",
                             missingMeansZero = "Y")
-  analysisRef <- ff::as.ffdf(analysisRef)
+  covariateData$analysisRef <- analysisRef
+  # analysisRef <- ff::as.ffdf(analysisRef)
   # Construct analysis reference:
   metaData <- list(sql = sql, call = match.call())
-  result <- list(covariates = covariates,
-                 covariateRef = covariateRef,
-                 analysisRef = analysisRef,
-                 metaData = metaData)
-  class(result) <- "covariateData"
-  return(result)
+  # result <- Andromeda::andromeda(covariates = covariates,
+  #                                covariateRef = covariateRef,
+  #                                analysisRef = analysisRef)
+  attr(covariateData, "metaData") <- metaData
+  class(covariateData) <- "CovariateData"
+  return(covariateData)
 }

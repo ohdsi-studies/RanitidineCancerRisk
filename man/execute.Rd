@@ -17,7 +17,6 @@ execute(
   createCohorts = TRUE,
   synthesizePositiveControls = TRUE,
   runAnalyses = TRUE,
-  runDiagnostics = TRUE,
   packageResults = TRUE,
   maxCores = 4,
   minCellCount = 5
@@ -60,8 +59,6 @@ Synthetic Public Use Files (SynPUFs)').}
 \item{synthesizePositiveControls}{Should positive controls be synthesized?}
 
 \item{runAnalyses}{Perform the cohort method analyses?}
-
-\item{runDiagnostics}{Compute study diagnostics?}
 
 \item{packageResults}{Should results be packaged for later sharing?}
 

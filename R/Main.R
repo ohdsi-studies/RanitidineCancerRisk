@@ -47,7 +47,6 @@
 #' @param createCohorts        Create the cohortTable table with the exposure and outcome cohorts?
 #' @param synthesizePositiveControls  Should positive controls be synthesized?
 #' @param runAnalyses          Perform the cohort method analyses?
-#' @param runDiagnostics       Compute study diagnostics?
 #' @param packageResults       Should results be packaged for later sharing?     
 #' @param maxCores             How many parallel cores should be used? If more cores are made available
 #'                             this can speed up the analyses.
@@ -83,7 +82,6 @@ execute <- function(connectionDetails,
                     createCohorts = TRUE,
                     synthesizePositiveControls = TRUE,
                     runAnalyses = TRUE,
-                    runDiagnostics = TRUE,
                     packageResults = TRUE,
                     maxCores = 4,
                     minCellCount= 5) {
@@ -92,12 +90,11 @@ execute <- function(connectionDetails,
   
   if (!file.exists(outputFolder))
     dir.create(outputFolder, recursive = TRUE)
-  if (!is.null(getOption("fftempdir")) && !file.exists(getOption("fftempdir"))) {
-    warning("fftempdir '", getOption("fftempdir"), "' not found. Attempting to create folder")
-    dir.create(getOption("fftempdir"), recursive = TRUE)
-  }
   
   ParallelLogger::addDefaultFileLogger(file.path(outputFolder, "log.txt"))
+  ParallelLogger::addDefaultErrorReportLogger(file.path(outputFolder, "errorReportR.txt"))
+  on.exit(ParallelLogger::unregisterLogger("DEFAULT_FILE_LOGGER", silent = TRUE))
+  on.exit(ParallelLogger::unregisterLogger("DEFAULT_ERRORREPORT_LOGGER", silent = TRUE), add = TRUE)
   
   if (createCohorts) {
     ParallelLogger::logInfo("Creating exposure and outcome cohorts")
@@ -135,12 +132,6 @@ execute <- function(connectionDetails,
                     maxCores = maxCores,
                     cmAnalysisListFileName = "cmAnalysisList.json",
                     minNumCohortForStudy = 500)
-  }
-  
-  if (runDiagnostics) {
-    ParallelLogger::logInfo("Running diagnostics")
-    generateDiagnostics(outputFolder = outputFolder,
-                        maxCores = maxCores)
   }
   
   if (packageResults) {

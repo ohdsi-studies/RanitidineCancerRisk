@@ -4,31 +4,38 @@ Title: A Package Skeleton for Comparative Effectiveness Studies
 Version: 0.0.1
 Author: Seng Chan You [aut, cre]
 Maintainer: Seng Chan You <applegna@gmail.com>
-Description: A skeleton package, to be used as a starting point when implementing comprative effect studies.
+Description: A stucy package for Comparative Effectiveness Studies of Cancer risk between Ranitidine users and H2 blocker users
 Depends:
-    DatabaseConnector (>= 2.2.0)
+    R(>= 3.5.0),
+    DatabaseConnector (>= 3.0.0)
 Imports:
-    SqlRender,
-    EmpiricalCalibration,
-    Cyclops,
-    FeatureExtraction,
-    CohortMethod (>= 3.0.1),
+    SqlRender (>= 1.6.8),
+    EmpiricalCalibration (>= 2.0.2),
+    Cyclops (>= 3.0.0),
+    FeatureExtraction (>= 3.0.1),
+    CohortMethod (>= 4.0.0),
     ggplot2,
-    ff,
-    ffbase,
-    MethodEvaluation (>= 0.3.1),
-    OhdsiSharing,
-	  ParallelLogger,
-	  survival,
-	  plyr
+    Andromeda (>= 0.3.2),
+    dplyr,
+    tibble,
+    readr,
+    rlang,
+    MethodEvaluation (>= 2.0.0),
+    OhdsiSharing (>= 0.2.2),
+	ParallelLogger (>= 2.0.0),
+	survival,
+	plyr
 Suggests:
     knitr,
     rmarkdown,
     DT,
-    shiny,
-    OhdsiRTools,
-    ROhdsiWebApi
+    shiny
+Remotes:
+    ohdsi/FeatureExtraction,
+    ohdsi/CohortMethod,
+    ohdsi/MethodEvaluation,
+    ohdsi/OhdsiSharing
 License: Apache License 2.0
 VignetteBuilder: knitr
 LazyData: TRUE
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1

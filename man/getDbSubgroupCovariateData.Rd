@@ -8,6 +8,7 @@ getDbSubgroupCovariateData(
   connection,
   oracleTempSchema = NULL,
   cdmDatabaseSchema,
+  vocabularyDatabaseSchema = cdmDatabaseSchema,
   cohortTable = "#cohort_person",
   cohortId = -1,
   cdmVersion = "5",

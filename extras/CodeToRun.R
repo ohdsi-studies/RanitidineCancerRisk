@@ -1,7 +1,7 @@
 library(RanitidineCancerRisk)
 
-# Optional: specify where the temporary files (used by the ff package) will be created:
-options(fftempdir = "s:/FFtemp")
+# Optional: specify where the temporary files (used by the Andromeda package) will be created:
+options(andromedaTempFolder = "s:/andromedaTemp")
 
 # Maximum number of cores to be used:
 maxCores <- parallel::detectCores()
@@ -44,7 +44,6 @@ execute(connectionDetails = connectionDetails,
         createCohorts = TRUE, 
         synthesizePositiveControls = TRUE,
         runAnalyses = TRUE,
-        runDiagnostics = TRUE,
         packageResults = TRUE,
         maxCores = maxCores)
 
@@ -54,3 +53,8 @@ dataFolder <- file.path(outputFolder, "shinyData")
 prepareForEvidenceExplorer(resultsZipFile = resultsZipFile, dataFolder = dataFolder)
 
 launchEvidenceExplorer(dataFolder = dataFolder, blind = TRUE, launch.browser = FALSE)
+
+# Upload the results to the OHDSI SFTP server:
+privateKeyFileName <- ""
+userName <- ""
+uploadResults(outputFolder, privateKeyFileName, userName)

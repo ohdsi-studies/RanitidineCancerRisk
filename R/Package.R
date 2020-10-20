@@ -16,11 +16,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#' RanitidineCancerRisk
-#'
-#' @docType package
-#' @name RanitidineCancerRisk
+#' @keywords internal
+"_PACKAGE"
+
 #' @importFrom stats aggregate density pnorm qnorm quantile
 #' @importFrom utils read.csv write.csv install.packages menu setTxtProgressBar txtProgressBar write.table
+#' @importFrom rlang .data
+#' @import dplyr
 #' @import DatabaseConnector
 NULL

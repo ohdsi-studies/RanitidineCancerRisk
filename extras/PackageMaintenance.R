@@ -20,7 +20,7 @@ OhdsiRTools::checkUsagePackage("RanitidineCancerRisk")
 OhdsiRTools::updateCopyrightYearFolder()
 
 # Create manual -----------------------------------------------------------
-shell("rm extras/RanitidineCancerRisk.pdf")
+unlink("extras/SkeletonComparativeEffectStudy.pdf")
 shell("R CMD Rd2pdf ./ --output=extras/RanitidineCancerRisk.pdf")
 
 # Create vignettes ---------------------------------------------------------
@@ -37,12 +37,12 @@ rmarkdown::render("vignettes/DataModel.Rmd",
                                           number_sections = TRUE))
 
 # Insert cohort definitions from ATLAS into package -----------------------
-OhdsiRTools::insertCohortDefinitionSetInPackage(fileName = "CohortsToCreate.csv",
-                                                baseUrl = Sys.getenv("baseUrl"),
-                                                insertTableSql = TRUE,
-                                                insertCohortCreationR = TRUE,
-                                                generateStats = FALSE,
-                                                packageName = "RanitidineCancerRisk")
+ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = "CohortsToCreate.csv",
+                                                 baseUrl = Sys.getenv("baseUrl"),
+                                                 insertTableSql = TRUE,
+                                                 insertCohortCreationR = TRUE,
+                                                 generateStats = FALSE,
+                                                 packageName = "RanitidineCancerRisk")
 
 # Create analysis details -------------------------------------------------
 source("extras/CreateStudyAnalysisDetails.R")

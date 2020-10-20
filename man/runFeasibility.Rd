@@ -80,7 +80,7 @@ are intended to be used to run parts of the full study at a time, but none of th
 \examples{
 \dontrun{
 connectionDetails <- createConnectionDetails(dbms = "postgresql",
-                                             user = "joe",
+                                       c      user = "joe",
                                              password = "secret",
                                              server = "myserver")
 
