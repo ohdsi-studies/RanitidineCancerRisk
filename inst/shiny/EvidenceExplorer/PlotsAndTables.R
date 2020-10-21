@@ -3,7 +3,7 @@ createTitle <- function(tcoDbs) {
   tcoDbs$comparatorName <- exposures$exposureName[match(tcoDbs$comparatorId, exposures$exposureId)]
   tcoDbs$outcomeName <- outcomes$outcomeName[match(tcoDbs$outcomeId, outcomes$outcomeId)]
   tcoDbs$indicationId <- exposures$indicationId[match(tcoDbs$targetId, exposures$exposureId)]
-
+  
   titles <- paste(tcoDbs$outcomeName,
                   "risk in new-users of",
                   uncapitalize(tcoDbs$targetName),
@@ -54,11 +54,11 @@ createAbstract <- function(tcoDb) {
 }
 
 writeAbstract <- function(outcomeName,
-                           targetName,
-                           comparatorName,
-                           databaseId,
-                           studyPeriod,
-                           mainResults) {
+                          targetName,
+                          comparatorName,
+                          databaseId,
+                          studyPeriod,
+                          mainResults) {
   
   minYear <- substr(studyPeriod$minDate, 1, 4)
   maxYear <- substr(studyPeriod$maxDate, 1, 4)
@@ -74,7 +74,7 @@ writeAbstract <- function(outcomeName,
     " risk as compared to ", comparatorName, " [HR: ", prettyHr(mainResults[1, "calibratedRr"]), ", 95% confidence interval (CI) ", 
     prettyHr(mainResults[1, "calibratedCi95Lb"]), " - ", prettyHr(mainResults[1, "calibratedCi95Ub"]), "]."
   )
-
+  
   abstract
 }
 
@@ -165,7 +165,6 @@ preparePowerTable <- function(mainResults, analyses) {
   return(table)
 }
 
-
 prepareSubgroupTable <- function(subgroupResults, output = "latex") {
   rnd <- function(x) {
     ifelse(x > 10, sprintf("%.1f", x), sprintf("%.2f", x))
@@ -177,7 +176,7 @@ prepareSubgroupTable <- function(subgroupResults, output = "latex") {
                                 " - ",
                                 rnd(subgroupResults$ci95Ub),
                                 ")")
-
+  
   subgroupResults$hrr[is.na(subgroupResults$rrr)] <- ""
   subgroupResults$p <- sprintf("%.2f", subgroupResults$p)
   subgroupResults$p[subgroupResults$p == "NA"] <- ""
@@ -232,7 +231,7 @@ prepareTable1 <- function(balance,
     space <- "&nbsp;"
   }
   specifications <- read.csv(pathToCsv, stringsAsFactors = FALSE)
-
+  
   fixCase <- function(label) {
     idx <- (toupper(label) == label)
     if (any(idx)) {
@@ -241,7 +240,7 @@ prepareTable1 <- function(balance,
     }
     return(label)
   }
-
+  
   formatPercent <- function(x) {
     result <- format(round(100 * x, percentDigits), digits = percentDigits + 1, justify = "right")
     result <- gsub("^-", "<", result)
@@ -249,14 +248,14 @@ prepareTable1 <- function(balance,
     result <- gsub(" ", space, result)
     return(result)
   }
-
+  
   formatStdDiff <- function(x) {
     result <- format(round(x, stdDiffDigits), digits = stdDiffDigits + 1, justify = "right")
     result <- gsub("NA", "", result)
     result <- gsub(" ", space, result)
     return(result)
   }
-
+  
   resultsTable <- data.frame()
   for (i in 1:nrow(specifications)) {
     if (specifications$analysisId[i] == "") {
@@ -274,43 +273,43 @@ prepareTable1 <- function(balance,
         if (any(idx)) {
           balanceSubset <- balance[idx, ]
           if (is.null(covariateIds)) {
-          balanceSubset <- balanceSubset[order(balanceSubset$covariateId), ]
+            balanceSubset <- balanceSubset[order(balanceSubset$covariateId), ]
           } else {
-          balanceSubset <- merge(balanceSubset, data.frame(covariateId = covariateIds,
-                                                           rn = 1:length(covariateIds)))
-          balanceSubset <- balanceSubset[order(balanceSubset$rn, balanceSubset$covariateId), ]
+            balanceSubset <- merge(balanceSubset, data.frame(covariateId = covariateIds,
+                                                             rn = 1:length(covariateIds)))
+            balanceSubset <- balanceSubset[order(balanceSubset$rn, balanceSubset$covariateId), ]
           }
           balanceSubset$covariateName <- fixCase(gsub("^.*: ", "", balanceSubset$covariateName))
           if (specifications$covariateIds[i] == "" || length(covariateIds) > 1) {
-          resultsTable <- rbind(resultsTable, data.frame(Characteristic = specifications$label[i],
-                                                         beforeMatchingMeanTreated = NA,
-                                                         beforeMatchingMeanComparator = NA,
-                                                         beforeMatchingStdDiff = NA,
-                                                         afterMatchingMeanTreated = NA,
-                                                         afterMatchingMeanComparator = NA,
-                                                         afterMatchingStdDiff = NA,
-                                                         stringsAsFactors = FALSE))
-          resultsTable <- rbind(resultsTable, data.frame(Characteristic = paste0(space,
-                                                                                 space,
-                                                                                 space,
-                                                                                 space,
-                                                                                 balanceSubset$covariateName),
-                                                         beforeMatchingMeanTreated = balanceSubset$beforeMatchingMeanTreated,
-                                                         beforeMatchingMeanComparator = balanceSubset$beforeMatchingMeanComparator,
-                                                         beforeMatchingStdDiff = balanceSubset$beforeMatchingStdDiff,
-                                                         afterMatchingMeanTreated = balanceSubset$afterMatchingMeanTreated,
-                                                         afterMatchingMeanComparator = balanceSubset$afterMatchingMeanComparator,
-                                                         afterMatchingStdDiff = balanceSubset$afterMatchingStdDiff,
-                                                         stringsAsFactors = FALSE))
+            resultsTable <- rbind(resultsTable, data.frame(Characteristic = specifications$label[i],
+                                                           beforeMatchingMeanTreated = NA,
+                                                           beforeMatchingMeanComparator = NA,
+                                                           beforeMatchingStdDiff = NA,
+                                                           afterMatchingMeanTreated = NA,
+                                                           afterMatchingMeanComparator = NA,
+                                                           afterMatchingStdDiff = NA,
+                                                           stringsAsFactors = FALSE))
+            resultsTable <- rbind(resultsTable, data.frame(Characteristic = paste0(space,
+                                                                                   space,
+                                                                                   space,
+                                                                                   space,
+                                                                                   balanceSubset$covariateName),
+                                                           beforeMatchingMeanTreated = balanceSubset$beforeMatchingMeanTreated,
+                                                           beforeMatchingMeanComparator = balanceSubset$beforeMatchingMeanComparator,
+                                                           beforeMatchingStdDiff = balanceSubset$beforeMatchingStdDiff,
+                                                           afterMatchingMeanTreated = balanceSubset$afterMatchingMeanTreated,
+                                                           afterMatchingMeanComparator = balanceSubset$afterMatchingMeanComparator,
+                                                           afterMatchingStdDiff = balanceSubset$afterMatchingStdDiff,
+                                                           stringsAsFactors = FALSE))
           } else {
-          resultsTable <- rbind(resultsTable, data.frame(Characteristic = specifications$label[i],
-                                                         beforeMatchingMeanTreated = balanceSubset$beforeMatchingMeanTreated,
-                                                         beforeMatchingMeanComparator = balanceSubset$beforeMatchingMeanComparator,
-                                                         beforeMatchingStdDiff = balanceSubset$beforeMatchingStdDiff,
-                                                         afterMatchingMeanTreated = balanceSubset$afterMatchingMeanTreated,
-                                                         afterMatchingMeanComparator = balanceSubset$afterMatchingMeanComparator,
-                                                         afterMatchingStdDiff = balanceSubset$afterMatchingStdDiff,
-                                                         stringsAsFactors = FALSE))
+            resultsTable <- rbind(resultsTable, data.frame(Characteristic = specifications$label[i],
+                                                           beforeMatchingMeanTreated = balanceSubset$beforeMatchingMeanTreated,
+                                                           beforeMatchingMeanComparator = balanceSubset$beforeMatchingMeanComparator,
+                                                           beforeMatchingStdDiff = balanceSubset$beforeMatchingStdDiff,
+                                                           afterMatchingMeanTreated = balanceSubset$afterMatchingMeanTreated,
+                                                           afterMatchingMeanComparator = balanceSubset$afterMatchingMeanComparator,
+                                                           afterMatchingStdDiff = balanceSubset$afterMatchingStdDiff,
+                                                           stringsAsFactors = FALSE))
           }
         }
       }
@@ -322,14 +321,14 @@ prepareTable1 <- function(balance,
   resultsTable$afterMatchingMeanTreated <- formatPercent(resultsTable$afterMatchingMeanTreated)
   resultsTable$afterMatchingMeanComparator <- formatPercent(resultsTable$afterMatchingMeanComparator)
   resultsTable$afterMatchingStdDiff <- formatStdDiff(resultsTable$afterMatchingStdDiff)
-
+  
   headerRow <- as.data.frame(t(rep("", ncol(resultsTable))))
   colnames(headerRow) <- colnames(resultsTable)
   headerRow$beforeMatchingMeanTreated <- targetLabel
   headerRow$beforeMatchingMeanComparator <- comparatorLabel
   headerRow$afterMatchingMeanTreated <- targetLabel
   headerRow$afterMatchingMeanComparator <- comparatorLabel
-
+  
   subHeaderRow <- as.data.frame(t(rep("", ncol(resultsTable))))
   colnames(subHeaderRow) <- colnames(resultsTable)
   subHeaderRow$Characteristic <- "Characteristic"
@@ -339,9 +338,9 @@ prepareTable1 <- function(balance,
   subHeaderRow$afterMatchingMeanTreated <- "%"
   subHeaderRow$afterMatchingMeanComparator <- "%"
   subHeaderRow$afterMatchingStdDiff <- "Std. diff"
-
+  
   resultsTable <- rbind(headerRow, subHeaderRow, resultsTable)
-
+  
   colnames(resultsTable) <- rep("", ncol(resultsTable))
   colnames(resultsTable)[2] <- beforeLabel
   colnames(resultsTable)[5] <- afterLabel
@@ -355,20 +354,20 @@ plotPs <- function(ps, targetName, comparatorName) {
   theme <- ggplot2::element_text(colour = "#000000", size = 12, margin = ggplot2::margin(0, 0.5, 0, 0.1, "cm"))
   plot <- ggplot2::ggplot(ps,
                           ggplot2::aes(x = x, y = y, color = group, group = group, fill = group)) +
-          ggplot2::geom_density(stat = "identity") +
-          ggplot2::scale_fill_manual(values = c(rgb(0.8, 0, 0, alpha = 0.5),
-                                                rgb(0, 0, 0.8, alpha = 0.5))) +
-          ggplot2::scale_color_manual(values = c(rgb(0.8, 0, 0, alpha = 0.5),
-                                                 rgb(0, 0, 0.8, alpha = 0.5))) +
-          ggplot2::scale_x_continuous("Preference score", limits = c(0, 1)) +
-          ggplot2::scale_y_continuous("Density") +
-          ggplot2::theme(legend.title = ggplot2::element_blank(),
-                         panel.grid.major = ggplot2::element_blank(),
-                         panel.grid.minor = ggplot2::element_blank(),
-                         legend.position = "top",
-                         legend.text = theme,
-                         axis.text = theme,
-                         axis.title = theme)
+    ggplot2::geom_density(stat = "identity") +
+    ggplot2::scale_fill_manual(values = c(rgb(0.8, 0, 0, alpha = 0.5),
+                                          rgb(0, 0, 0.8, alpha = 0.5))) +
+    ggplot2::scale_color_manual(values = c(rgb(0.8, 0, 0, alpha = 0.5),
+                                           rgb(0, 0, 0.8, alpha = 0.5))) +
+    ggplot2::scale_x_continuous("Preference score", limits = c(0, 1)) +
+    ggplot2::scale_y_continuous("Density") +
+    ggplot2::theme(legend.title = ggplot2::element_blank(),
+                   panel.grid.major = ggplot2::element_blank(),
+                   panel.grid.minor = ggplot2::element_blank(),
+                   legend.position = "top",
+                   legend.text = theme,
+                   axis.text = theme,
+                   axis.title = theme)
   return(plot)
 }
 
@@ -392,18 +391,18 @@ plotAllPs <- function(ps) {
     ggplot2::scale_y_continuous("Density") +
     ggplot2::facet_grid(targetName ~ comparatorName) +
     ggplot2::theme(legend.title = ggplot2::element_blank(),
-          axis.title.x = ggplot2::element_blank(),
-          axis.text.x = ggplot2::element_blank(),
-          axis.ticks.x = ggplot2::element_blank(),
-          axis.title.y = ggplot2::element_blank(),
-          axis.text.y = ggplot2::element_blank(),
-          axis.ticks.y = ggplot2::element_blank(),
-          panel.grid.major = ggplot2::element_blank(),
-          panel.grid.minor = ggplot2::element_blank(),
-          strip.text.x = ggplot2::element_text(size = 12, angle = 90, vjust = 0),
-          strip.text.y = ggplot2::element_text(size = 12, angle = 0, hjust = 0),
-          panel.spacing = ggplot2::unit(0.1, "lines"),
-          legend.position = "none")
+                   axis.title.x = ggplot2::element_blank(),
+                   axis.text.x = ggplot2::element_blank(),
+                   axis.ticks.x = ggplot2::element_blank(),
+                   axis.title.y = ggplot2::element_blank(),
+                   axis.text.y = ggplot2::element_blank(),
+                   axis.ticks.y = ggplot2::element_blank(),
+                   panel.grid.major = ggplot2::element_blank(),
+                   panel.grid.minor = ggplot2::element_blank(),
+                   strip.text.x = ggplot2::element_text(size = 12, angle = 90, vjust = 0),
+                   strip.text.y = ggplot2::element_text(size = 12, angle = 0, hjust = 0),
+                   panel.spacing = ggplot2::unit(0.1, "lines"),
+                   legend.position = "none")
   return(plot)
 }
 
@@ -437,7 +436,7 @@ plotKaplanMeier <- function(kaplanMeier, targetName, comparatorName) {
                            lower = kaplanMeier$comparatorSurvivalLb,
                            upper = kaplanMeier$comparatorSurvivalUb,
                            strata = paste0(" ", comparatorName)))
-
+  
   xlims <- c(-max(data$time)/40, max(data$time))
   ylims <- c(min(data$lower), 1)
   xLabel <- "Time in days"
@@ -449,20 +448,20 @@ plotKaplanMeier <- function(kaplanMeier, targetName, comparatorName) {
                                              fill = strata,
                                              ymin = lower,
                                              ymax = upper)) +
-          ggplot2::geom_ribbon(color = rgb(0, 0, 0, alpha = 0)) +
-          ggplot2::geom_step(size = 1) +
-          ggplot2::scale_color_manual(values = c(rgb(0.8, 0, 0, alpha = 0.8),
-                                                 rgb(0, 0, 0.8, alpha = 0.8))) +
-          ggplot2::scale_fill_manual(values = c(rgb(0.8, 0, 0, alpha = 0.3),
-                                                rgb(0, 0, 0.8, alpha = 0.3))) +
-          ggplot2::scale_x_continuous(xLabel, limits = xlims, breaks = xBreaks) +
-          ggplot2::scale_y_continuous(yLabel, limits = ylims) +
-          ggplot2::theme(legend.title = ggplot2::element_blank(),
-                         legend.position = "top",
-                         legend.key.size = ggplot2::unit(1, "lines"),
-                         plot.title = ggplot2::element_text(hjust = 0.5)) +
-          ggplot2::theme(axis.title.y = ggplot2::element_text(vjust = -10))
-
+    ggplot2::geom_ribbon(color = rgb(0, 0, 0, alpha = 0)) +
+    ggplot2::geom_step(size = 1) +
+    ggplot2::scale_color_manual(values = c(rgb(0.8, 0, 0, alpha = 0.8),
+                                           rgb(0, 0, 0.8, alpha = 0.8))) +
+    ggplot2::scale_fill_manual(values = c(rgb(0.8, 0, 0, alpha = 0.3),
+                                          rgb(0, 0, 0.8, alpha = 0.3))) +
+    ggplot2::scale_x_continuous(xLabel, limits = xlims, breaks = xBreaks) +
+    ggplot2::scale_y_continuous(yLabel, limits = ylims) +
+    ggplot2::theme(legend.title = ggplot2::element_blank(),
+                   legend.position = "top",
+                   legend.key.size = ggplot2::unit(1, "lines"),
+                   plot.title = ggplot2::element_text(hjust = 0.5)) +
+    ggplot2::theme(axis.title.y = ggplot2::element_text(vjust = -10))
+  
   targetAtRisk <- kaplanMeier$targetAtRisk[!is.na(kaplanMeier$targetAtRisk)]
   comparatorAtRisk <- kaplanMeier$comparatorAtRisk[!is.na(kaplanMeier$comparatorAtRisk)]
   labels <- data.frame(x = c(0, xBreaks, xBreaks),
@@ -476,14 +475,14 @@ plotKaplanMeier <- function(kaplanMeier, targetName, comparatorName) {
   dataTable <- ggplot2::ggplot(labels, ggplot2::aes(x = x, y = y, label = label)) + ggplot2::geom_text(size = 3.5, vjust = 0.5) + ggplot2::scale_x_continuous(xLabel,
                                                                                                                                                               limits = xlims,
                                                                                                                                                               breaks = xBreaks) + ggplot2::theme(panel.grid.major = ggplot2::element_blank(),
-                                                                                                                                                                                                                         panel.grid.minor = ggplot2::element_blank(),
-                                                                                                                                                                                                                         legend.position = "none",
-                                                                                                                                                                                                                         panel.border = ggplot2::element_blank(),
-                                                                                                                                                                                                                         panel.background = ggplot2::element_blank(),
-                                                                                                                                                                                                                         axis.text.x = ggplot2::element_text(color = "white"),
-                                                                                                                                                                                                                         axis.title.x = ggplot2::element_text(color = "white"),
-                                                                                                                                                                                                                         axis.title.y = ggplot2::element_blank(),
-                                                                                                                                                                                                                         axis.ticks = ggplot2::element_line(color = "white"))
+                                                                                                                                                                                                 panel.grid.minor = ggplot2::element_blank(),
+                                                                                                                                                                                                 legend.position = "none",
+                                                                                                                                                                                                 panel.border = ggplot2::element_blank(),
+                                                                                                                                                                                                 panel.background = ggplot2::element_blank(),
+                                                                                                                                                                                                 axis.text.x = ggplot2::element_text(color = "white"),
+                                                                                                                                                                                                 axis.title.x = ggplot2::element_text(color = "white"),
+                                                                                                                                                                                                 axis.title.y = ggplot2::element_blank(),
+                                                                                                                                                                                                 axis.ticks = ggplot2::element_line(color = "white"))
   plots <- list(plot, dataTable)
   grobs <- widths <- list()
   for (i in 1:length(plots)) {
@@ -521,13 +520,13 @@ getCoverage <- function(controlResults) {
   if (nrow(d) == 0) {
     return(NULL)
   }
-
+  
   d$Group <- as.factor(d$trueRr)
   d$Significant <- d$ci95Lb > d$trueRr | d$ci95Ub < d$trueRr
-
+  
   temp2 <- aggregate(Significant ~ Group + yGroup, data = d, mean)
   temp2$coverage <- (1 - temp2$Significant)
-
+  
   data.frame(true = temp2$Group, group = temp2$yGroup, coverage = temp2$coverage)
 }
 
@@ -558,74 +557,74 @@ plotScatter <- function(controlResults) {
   temp2 <- aggregate(Significant ~ Group + yGroup, data = d, mean)
   temp1$nLabel <- paste0(formatC(temp1$Significant, big.mark = ","), " estimates")
   temp1$Significant <- NULL
-
+  
   temp2$meanLabel <- paste0(formatC(100 * (1 - temp2$Significant), digits = 1, format = "f"),
                             "% of CIs include ",
                             temp2$Group)
   temp2$Significant <- NULL
   dd <- merge(temp1, temp2)
   dd$tes <- as.numeric(as.character(dd$Group))
-
+  
   breaks <- c(0.1, 0.25, 0.5, 1, 2, 4, 6, 8, 10)
   theme <- ggplot2::element_text(colour = "#000000", size = 12)
   themeRA <- ggplot2::element_text(colour = "#000000", size = 12, hjust = 1)
   themeLA <- ggplot2::element_text(colour = "#000000", size = 12, hjust = 0)
-
+  
   d$Group <- paste("True hazard ratio =", d$Group)
   dd$Group <- paste("True hazard ratio =", dd$Group)
   alpha <- 1 - min(0.95 * (nrow(d)/nrow(dd)/50000)^0.1, 0.95)
   plot <- ggplot2::ggplot(d, ggplot2::aes(x = logRr, y = seLogRr), environment = environment()) +
-          ggplot2::geom_vline(xintercept = log(breaks), colour = "#AAAAAA", lty = 1, size = 0.5) +
-          ggplot2::geom_abline(ggplot2::aes(intercept = (-log(tes))/qnorm(0.025), slope = 1/qnorm(0.025)),
-                               colour = rgb(0.8, 0, 0),
-                               linetype = "dashed",
-                               size = 1,
-                               alpha = 0.5,
-                               data = dd) +
-          ggplot2::geom_abline(ggplot2::aes(intercept = (-log(tes))/qnorm(0.975), slope = 1/qnorm(0.975)),
-                               colour = rgb(0.8, 0, 0),
-                               linetype = "dashed",
-                               size = 1,
-                               alpha = 0.5,
-                               data = dd) +
-          ggplot2::geom_point(size = size,
-                              color = rgb(0, 0, 0, alpha = 0.05),
-                              alpha = alpha,
-                              shape = 16) +
-          ggplot2::geom_hline(yintercept = 0) +
-          ggplot2::geom_label(x = log(0.15),
-                              y = 0.9,
-                              alpha = 1,
-                              hjust = "left",
-                              ggplot2::aes(label = nLabel),
-                              size = 5,
-                              data = dd) +
-          ggplot2::geom_label(x = log(0.15),
-                              y = labelY,
-                              alpha = 1,
-                              hjust = "left",
-                              ggplot2::aes(label = meanLabel),
-                              size = 5,
-                              data = dd) +
-          ggplot2::scale_x_continuous("Hazard ratio",
-                                      limits = log(c(0.1, 10)),
-                                      breaks = log(breaks),
-                                      labels = breaks) +
-          ggplot2::scale_y_continuous("Standard Error", limits = c(0, 1)) +
-          ggplot2::facet_grid(yGroup ~ Group) +
-          ggplot2::theme(panel.grid.minor = ggplot2::element_blank(),
-                         panel.background = ggplot2::element_blank(),
-                         panel.grid.major = ggplot2::element_blank(),
-                         axis.ticks = ggplot2::element_blank(),
-                         axis.text.y = themeRA,
-                         axis.text.x = theme,
-                         axis.title = theme,
-                         legend.key = ggplot2::element_blank(),
-                         strip.text.x = theme,
-                         strip.text.y = theme,
-                         strip.background = ggplot2::element_blank(),
-                         legend.position = "none")
-
+    ggplot2::geom_vline(xintercept = log(breaks), colour = "#AAAAAA", lty = 1, size = 0.5) +
+    ggplot2::geom_abline(ggplot2::aes(intercept = (-log(tes))/qnorm(0.025), slope = 1/qnorm(0.025)),
+                         colour = rgb(0.8, 0, 0),
+                         linetype = "dashed",
+                         size = 1,
+                         alpha = 0.5,
+                         data = dd) +
+    ggplot2::geom_abline(ggplot2::aes(intercept = (-log(tes))/qnorm(0.975), slope = 1/qnorm(0.975)),
+                         colour = rgb(0.8, 0, 0),
+                         linetype = "dashed",
+                         size = 1,
+                         alpha = 0.5,
+                         data = dd) +
+    ggplot2::geom_point(size = size,
+                        color = rgb(0, 0, 0, alpha = 0.05),
+                        alpha = alpha,
+                        shape = 16) +
+    ggplot2::geom_hline(yintercept = 0) +
+    ggplot2::geom_label(x = log(0.15),
+                        y = 0.9,
+                        alpha = 1,
+                        hjust = "left",
+                        ggplot2::aes(label = nLabel),
+                        size = 5,
+                        data = dd) +
+    ggplot2::geom_label(x = log(0.15),
+                        y = labelY,
+                        alpha = 1,
+                        hjust = "left",
+                        ggplot2::aes(label = meanLabel),
+                        size = 5,
+                        data = dd) +
+    ggplot2::scale_x_continuous("Hazard ratio",
+                                limits = log(c(0.1, 10)),
+                                breaks = log(breaks),
+                                labels = breaks) +
+    ggplot2::scale_y_continuous("Standard Error", limits = c(0, 1)) +
+    ggplot2::facet_grid(yGroup ~ Group) +
+    ggplot2::theme(panel.grid.minor = ggplot2::element_blank(),
+                   panel.background = ggplot2::element_blank(),
+                   panel.grid.major = ggplot2::element_blank(),
+                   axis.ticks = ggplot2::element_blank(),
+                   axis.text.y = themeRA,
+                   axis.text.x = theme,
+                   axis.title = theme,
+                   legend.key = ggplot2::element_blank(),
+                   strip.text.x = theme,
+                   strip.text.y = theme,
+                   strip.background = ggplot2::element_blank(),
+                   legend.position = "none")
+  
   return(plot)
 }
 
@@ -719,8 +718,8 @@ drawAttritionDiagram <- function(attrition,
   for (i in 2:nrow(attrition)) {
     data <- addStep(data, attrition, i)
   }
-
-
+  
+  
   data$leftBoxText[length(data$leftBoxText) + 1] <- paste("Study population:\n",
                                                           targetLabel,
                                                           ": n = ",
@@ -733,7 +732,7 @@ drawAttritionDiagram <- function(attrition,
   leftBoxText <- data$leftBoxText
   rightBoxText <- data$rightBoxText
   nSteps <- length(leftBoxText)
-
+  
   boxHeight <- (1/nSteps) - 0.03
   boxWidth <- 0.45
   shadowOffset <- 0.01
@@ -744,7 +743,7 @@ drawAttritionDiagram <- function(attrition,
   y <- function(y) {
     return(1 - (y - 0.5) * (1/nSteps))
   }
-
+  
   downArrow <- function(p, x1, y1, x2, y2) {
     p <- p + ggplot2::geom_segment(ggplot2::aes_string(x = x1, y = y1, xend = x2, yend = y2))
     p <- p + ggplot2::geom_segment(ggplot2::aes_string(x = x2,
@@ -792,7 +791,7 @@ drawAttritionDiagram <- function(attrition,
                                 size = 3.7)
     return(p)
   }
-
+  
   p <- ggplot2::ggplot()
   for (i in 2:nSteps - 1) {
     p <- downArrow(p, x(1), y(i) - (boxHeight/2), x(1), y(i + 1) + (boxHeight/2))
@@ -823,7 +822,7 @@ drawAttritionDiagram <- function(attrition,
                           axis.text = ggplot2::element_blank(),
                           axis.title = ggplot2::element_blank(),
                           axis.ticks = ggplot2::element_blank())
-
+  
   return(p)
 }
 
@@ -960,5 +959,15 @@ createDocument <- function(targetId,
   }
   
   invisible(outputFile)
+}
+
+preparePropensityModelTable <- function(model) {
+  rnd <- function(x) {
+    ifelse(x > 10, sprintf("%.1f", x), sprintf("%.2f", x))
+  }
+  table <- model[order(-abs(model$coefficient)), c("coefficient", "covariateName")]
+  table$coefficient <- sprintf("%.2f", table$coefficient)
+  colnames(table) <- c("Beta", "Covariate")
+  return(table)
 }
 

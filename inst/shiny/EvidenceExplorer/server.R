@@ -24,8 +24,13 @@ mainColumnNames <- c("<span title=\"Analysis\">Analysis</span>",
                      "<span title=\"Two-sided p-value (calibrated)\">Cal.P</span>")
 
 shinyServer(function(input, output, session) {
+  if (blind) {
+    hideTab(inputId = "detailsTabsetPanel", target = "Kaplan-Meier")
+  }
+  if (!exists("cmInteractionResult")) {
+    hideTab(inputId = "detailsTabsetPanel", target = "Subgroups")
+  }
   
-
   observe({
     targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target]
     comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator]
@@ -54,6 +59,7 @@ shinyServer(function(input, output, session) {
                               outcomeIds = outcomeId,
                               databaseIds = databaseIds,
                               analysisIds = analysisIds)
+    results <- results[order(results$analysisId), ]
     if (blind) {
       results$rr <- rep(NA, nrow(results))
       results$ci95Ub <- rep(NA, nrow(results))
@@ -68,9 +74,9 @@ shinyServer(function(input, output, session) {
       results$calibratedSeLogRr <- rep(NA, nrow(results))
       results$calibratedP <- rep(NA, nrow(results))
     }
-   return(results)
+    return(results)
   })
-
+  
   selectedRow <- reactive({
     idx <- input$mainTable_rows_selected
     if (is.null(idx)) {
@@ -84,36 +90,36 @@ shinyServer(function(input, output, session) {
       return(row)
     }
   })
-
+  
   output$rowIsSelected <- reactive({
     return(!is.null(selectedRow()))
   })
   outputOptions(output, "rowIsSelected", suspendWhenHidden = FALSE)
   
   balance <- reactive({
-     row <- selectedRow()
-     if (is.null(row)) {
-       return(NULL)
-     } else {
-       targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target]
-       comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator]
-       outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome]
-       balance <- getCovariateBalance(connection = connection,
-                                      targetId = targetId,
-                                      comparatorId = comparatorId,
-                                      databaseId = row$databaseId,
-                                      analysisId = row$analysisId,
-                                      outcomeId = outcomeId)
-       return(balance)
-     }
+    row <- selectedRow()
+    if (is.null(row)) {
+      return(NULL)
+    } else {
+      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target]
+      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator]
+      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome]
+      balance <- getCovariateBalance(connection = connection,
+                                     targetId = targetId,
+                                     comparatorId = comparatorId,
+                                     databaseId = row$databaseId,
+                                     analysisId = row$analysisId,
+                                     outcomeId = outcomeId)
+      return(balance)
+    }
   })
-
+  
   output$mainTable <- renderDataTable({
     table <- resultSubset()
     if (is.null(table) || nrow(table) == 0) {
       return(NULL)
     }
-    table <- merge(table, cohortMethodAnalysis)
+    table$description <- cohortMethodAnalysis$description[match(table$analysisId, cohortMethodAnalysis$analysisId)]
     table <- table[, mainColumns]
     table$rr <- prettyHr(table$rr)
     table$ci95Lb <- prettyHr(table$ci95Lb)
@@ -151,7 +157,7 @@ shinyServer(function(input, output, session) {
       return(NULL)
     }
   })
-
+  
   output$powerTable <- renderTable({
     row <- selectedRow()
     if (is.null(row)) {
@@ -171,19 +177,19 @@ shinyServer(function(input, output, session) {
       return(table)
     }
   })
-
+  
   output$timeAtRiskTableCaption <- renderUI({
     row <- selectedRow()
     if (!is.null(row)) {
       text <- "<strong>Table 1b.</strong> Time (days) at risk distribution expressed as
       minimum (min), 25th percentile (P25), median, 75th percentile (P75), and maximum (max) in the target
-     (<em>%s</em>) and comparator (<em>%s</em>) cohort after propensity score adjustment."
+      (<em>%s</em>) and comparator (<em>%s</em>) cohort after propensity score adjustment."
       return(HTML(sprintf(text, input$target, input$comparator)))
     } else {
       return(NULL)
     }
   })
-
+  
   output$timeAtRiskTable <- renderTable({
     row <- selectedRow()
     if (is.null(row)) {
@@ -202,15 +208,15 @@ shinyServer(function(input, output, session) {
       return(table)
     }
   })
-
+  
   attritionPlot <- reactive({
     row <- selectedRow()
     if (is.null(row)) {
       return(NULL)
     } else {
-      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target][1]
-      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator][1]
-      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome][1]
+      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target]
+      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator]
+      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome]
       attrition <- getAttrition(connection = connection,
                                 targetId = targetId,
                                 comparatorId = comparatorId,
@@ -229,14 +235,14 @@ shinyServer(function(input, output, session) {
   output$downloadAttritionPlotPng <- downloadHandler(filename = "Attrition.png", 
                                                      contentType = "image/png", 
                                                      content = function(file) {
-    ggplot2::ggsave(file, plot = attritionPlot(), width = 6, height = 7, dpi = 400)
-  })
-
+                                                       ggplot2::ggsave(file, plot = attritionPlot(), width = 6, height = 7, dpi = 400)
+                                                     })
+  
   output$downloadAttritionPlotPdf <- downloadHandler(filename = "Attrition.pdf", 
                                                      contentType = "application/pdf", 
                                                      content = function(file) {
-    ggplot2::ggsave(file = file, plot = attritionPlot(), width = 6, height = 7)
-  })
+                                                       ggplot2::ggsave(file = file, plot = attritionPlot(), width = 6, height = 7)
+                                                     })
   
   output$attritionPlotCaption <- renderUI({
     row <- selectedRow()
@@ -248,7 +254,7 @@ shinyServer(function(input, output, session) {
       return(HTML(sprintf(text, input$target, input$comparator)))
     }
   })
-
+  
   output$table1Caption <- renderUI({
     row <- selectedRow()
     if (is.null(row)) {
@@ -260,7 +266,7 @@ shinyServer(function(input, output, session) {
       return(HTML(sprintf(text, input$target, input$comparator)))
     }
   })
-
+  
   output$table1Table <- renderDataTable({
     row <- selectedRow()
     if (is.null(row)) {
@@ -273,7 +279,7 @@ shinyServer(function(input, output, session) {
       table1 <- prepareTable1(balance = bal,
                               beforeLabel = paste("Before PS adjustment"),
                               afterLabel = paste("After PS adjustment"))
-
+      
       container <- htmltools::withTags(table(
         class = 'display',
         thead(
@@ -304,18 +310,51 @@ shinyServer(function(input, output, session) {
       return(table1)
     }
   })
-
+  
+  output$propensityModelTable <- renderDataTable({
+    row <- selectedRow()
+    if (is.null(row)) {
+      return(NULL)
+    } else {
+      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target]
+      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator]
+      model <- getPropensityModel(connection = connection,
+                                  targetId = targetId,
+                                  comparatorId = comparatorId,
+                                  databaseId = row$databaseId,
+                                  analysisId = row$analysisId)
+      
+      table <- preparePropensityModelTable(model)
+      print(nrow(table))
+      options = list(columnDefs = list(list(className = 'dt-right',  targets = 0)),
+                     pageLength = 15,
+                     searching = FALSE,
+                     lengthChange = TRUE,
+                     ordering = TRUE,
+                     paging = TRUE)
+      selection = list(mode = "single", target = "row")
+      table <- datatable(table,
+                         options = options,
+                         selection = selection,
+                         rownames = FALSE,
+                         escape = FALSE,
+                         class = "stripe nowrap compact")
+      return(table)
+    }
+  })
+  
   psDistPlot <- reactive({
     row <- selectedRow()
     if (is.null(row)) {
       return(NULL)
     } else {
-      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target][1]
-      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator][1]
-      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome][1]
+      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target]
+      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator]
+      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome]
       ps <- getPs(connection = connection,
-                  targetId = targetId,
-                  comparatorId = comparatorId,
+                  targetIds = targetId,
+                  comparatorIds = comparatorId,
+                  analysisId = row$analysisId,
                   databaseId = row$databaseId)
       plot <- plotPs(ps, input$target, input$comparator)
       return(plot)
@@ -337,7 +376,7 @@ shinyServer(function(input, output, session) {
                                                   content = function(file) {
                                                     ggplot2::ggsave(file = file, plot = psDistPlot(), width = 5, height = 3.5)
                                                   })
-
+  
   balancePlot <- reactive({
     bal <- balance()
     if (is.null(bal) || nrow(bal) == 0) {
@@ -357,16 +396,16 @@ shinyServer(function(input, output, session) {
   })
   
   output$downloadBalancePlotPng <- downloadHandler(filename = "Balance.png", 
-                                                  contentType = "image/png", 
-                                                  content = function(file) {
-                                                    ggplot2::ggsave(file, plot = balancePlot(), width = 4, height = 4, dpi = 400)
-                                                  })
+                                                   contentType = "image/png", 
+                                                   content = function(file) {
+                                                     ggplot2::ggsave(file, plot = balancePlot(), width = 4, height = 4, dpi = 400)
+                                                   })
   
   output$downloadBalancePlotPdf <- downloadHandler(filename = "Balance.pdf", 
-                                                  contentType = "application/pdf", 
-                                                  content = function(file) {
-                                                    ggplot2::ggsave(file = file, plot = balancePlot(), width = 4, height = 4)
-                                                  })
+                                                   contentType = "application/pdf", 
+                                                   content = function(file) {
+                                                     ggplot2::ggsave(file = file, plot = balancePlot(), width = 4, height = 4)
+                                                   })
   
   output$balancePlotCaption <- renderUI({
     bal <- balance()
@@ -380,7 +419,7 @@ shinyServer(function(input, output, session) {
       return(HTML(sprintf(text)))
     }
   })
-
+  
   output$hoverInfoBalanceScatter <- renderUI({
     bal <- balance()
     if (is.null(bal) || nrow(bal) == 0) {
@@ -415,7 +454,7 @@ shinyServer(function(input, output, session) {
       )
     }
   })
-
+  
   systematicErrorPlot <- reactive({
     row <- selectedRow()
     if (is.null(row)) {
@@ -428,7 +467,7 @@ shinyServer(function(input, output, session) {
                                           comparatorId = comparatorId,
                                           analysisId = row$analysisId,
                                           databaseId = row$databaseId)
-
+      
       plot <- plotScatter(controlResults)
       return(plot)
     }
@@ -439,31 +478,31 @@ shinyServer(function(input, output, session) {
   })
   
   output$downloadSystematicErrorPlotPng <- downloadHandler(filename = "SystematicError.png", 
-                                                   contentType = "image/png", 
-                                                   content = function(file) {
-                                                     ggplot2::ggsave(file, plot = systematicErrorPlot(), width = 12, height = 5.5, dpi = 400)
-                                                   })
+                                                           contentType = "image/png", 
+                                                           content = function(file) {
+                                                             ggplot2::ggsave(file, plot = systematicErrorPlot(), width = 12, height = 5.5, dpi = 400)
+                                                           })
   
   output$downloadSystematicErrorPlotPdf <- downloadHandler(filename = "SystematicError.pdf", 
-                                                   contentType = "application/pdf", 
-                                                   content = function(file) {
-                                                     ggplot2::ggsave(file = file, plot = systematicErrorPlot(), width = 12, height = 5.5)
-                                                   })
-
+                                                           contentType = "application/pdf", 
+                                                           content = function(file) {
+                                                             ggplot2::ggsave(file = file, plot = systematicErrorPlot(), width = 12, height = 5.5)
+                                                           })
+  
   kaplanMeierPlot <- reactive({
     row <- selectedRow()
-    if (blind || is.null(row)) {
+    if (is.null(row)) {
       return(NULL)
     } else {
-      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target][1]
-      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator][1]
-      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome][1]
+      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target]
+      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator]
+      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome]
       km <- getKaplanMeier(connection = connection,
-                                   targetId = targetId,
-                                   comparatorId = comparatorId,
-                                   outcomeId = outcomeId,
-                                   databaseId = row$databaseId,
-                                   analysisId = row$analysisId)
+                           targetId = targetId,
+                           comparatorId = comparatorId,
+                           outcomeId = outcomeId,
+                           databaseId = row$databaseId,
+                           analysisId = row$analysisId)
       plot <- plotKaplanMeier(kaplanMeier = km,
                               targetName = input$target,
                               comparatorName = input$comparator)
@@ -476,16 +515,16 @@ shinyServer(function(input, output, session) {
   }, res = 100)
   
   output$downloadKaplanMeierPlotPng <- downloadHandler(filename = "KaplanMeier.png", 
-                                                   contentType = "image/png", 
-                                                   content = function(file) {
-                                                     ggplot2::ggsave(file, plot = kaplanMeierPlot(), width = 7, height = 5, dpi = 400)
-                                                   })
+                                                       contentType = "image/png", 
+                                                       content = function(file) {
+                                                         ggplot2::ggsave(file, plot = kaplanMeierPlot(), width = 7, height = 5, dpi = 400)
+                                                       })
   
   output$downloadKaplanMeierPlotPdf <- downloadHandler(filename = "KaplanMeier.pdf", 
-                                                   contentType = "application/pdf", 
-                                                   content = function(file) {
-                                                     ggplot2::ggsave(file = file, plot = kaplanMeierPlot(), width = 7, height = 5)
-                                                   })
+                                                       contentType = "application/pdf", 
+                                                       content = function(file) {
+                                                         ggplot2::ggsave(file = file, plot = kaplanMeierPlot(), width = 7, height = 5)
+                                                       })
   
   output$kaplanMeierPlotPlotCaption <- renderUI({
     row <- selectedRow()
@@ -500,15 +539,15 @@ shinyServer(function(input, output, session) {
       return(HTML(sprintf(text, input$target, input$comparator)))
     }
   })
-
+  
   interactionEffects <- reactive({
     row <- selectedRow()
     if (is.null(row)) {
       return(NULL)
     } else {
-      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target][1]
-      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator][1]
-      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome][1]
+      targetId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$target]
+      comparatorId <- exposureOfInterest$exposureId[exposureOfInterest$exposureName == input$comparator]
+      outcomeId <- outcomeOfInterest$outcomeId[outcomeOfInterest$outcomeName == input$outcome]
       subgroupResults <- getSubgroupResults(connection = connection,
                                             targetIds = targetId,
                                             comparatorIds = comparatorId,
@@ -531,7 +570,7 @@ shinyServer(function(input, output, session) {
       }
     }
   })
-
+  
   output$subgroupTableCaption <- renderUI({
     row <- selectedRow()
     if (is.null(row)) {
@@ -544,7 +583,7 @@ shinyServer(function(input, output, session) {
       return(HTML(sprintf(text, input$target, input$comparator)))
     }
   })
-
+  
   output$subgroupTable <- renderDataTable({
     row <- selectedRow()
     if (is.null(row)) {
@@ -573,4 +612,4 @@ shinyServer(function(input, output, session) {
       return(subgroupTable)
     }
   })
-})
+  })

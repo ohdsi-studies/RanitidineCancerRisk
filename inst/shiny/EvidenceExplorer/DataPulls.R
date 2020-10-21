@@ -34,12 +34,12 @@ getIndications <- function(connection) {
 
 getSubgroups <- function(connection) {
   sql <- "SELECT DISTINCT interaction_covariate_id AS subgroup_id, covariate_name AS subgroup_name 
-    FROM (
-      SELECT DISTINCT interaction_covariate_id
-      FROM cm_interaction_result
-    ) ids
-    INNER JOIN covariate
-    ON interaction_covariate_id = covariate_id"
+  FROM (
+  SELECT DISTINCT interaction_covariate_id
+  FROM cm_interaction_result
+  ) ids
+  INNER JOIN covariate
+  ON interaction_covariate_id = covariate_id"
   sql <- SqlRender::translateSql(sql, targetDialect = connection@dbms)$sql
   subgroups <- querySql(connection, sql)
   colnames(subgroups) <- SqlRender::snakeCaseToCamelCase(colnames(subgroups))
@@ -50,8 +50,8 @@ getSubgroups <- function(connection) {
 
 getExposures <- function(connection) {
   sql <- "SELECT * FROM (
-    SELECT exposure_id, exposure_name, indication_id FROM single_exposure_of_interest
-    UNION ALL SELECT exposure_id, exposure_name, indication_id FROM combi_exposure_of_interest
+  SELECT exposure_id, exposure_name, indication_id FROM single_exposure_of_interest
+  UNION ALL SELECT exposure_id, exposure_name, indication_id FROM combi_exposure_of_interest
   ) exposure
   INNER JOIN exposure_group
   ON exposure.exposure_id = exposure_group.exposure_id;"
@@ -172,7 +172,7 @@ getMainResults <- function(connection,
                            analysisIds = c()) {
   idx <- rep(TRUE, nrow(cohortMethodResult))
   if (length(targetIds) != 0) {
-     idx <- idx & cohortMethodResult$targetId %in% targetIds
+    idx <- idx & cohortMethodResult$targetId %in% targetIds
   }
   if (length(comparatorIds) != 0) {
     idx <- idx & cohortMethodResult$comparatorId %in% comparatorIds
@@ -263,10 +263,10 @@ getCmFollowUpDist <- function(connection,
                               databaseId,
                               analysisId) {
   followUpDist <- cmFollowUpDist[cmFollowUpDist$targetId == targetId &
-                                 cmFollowUpDist$comparatorId == comparatorId &
-                                 cmFollowUpDist$outcomeId == outcomeId &
-                                 cmFollowUpDist$analysisId == analysisId &
-                                 cmFollowUpDist$databaseId == databaseId, ]
+                                   cmFollowUpDist$comparatorId == comparatorId &
+                                   cmFollowUpDist$outcomeId == outcomeId &
+                                   cmFollowUpDist$analysisId == analysisId &
+                                   cmFollowUpDist$databaseId == databaseId, ]
   return(followUpDist)
 }
 
@@ -277,10 +277,12 @@ getCovariateBalance <- function(connection,
                                 analysisId,
                                 outcomeId = NULL) {
   file <- sprintf("covariate_balance_t%s_c%s_%s.rds", targetId, comparatorId, databaseId)
+  print(file)
   balance <- readRDS(file.path(dataFolder, file))
   colnames(balance) <- SqlRender::snakeCaseToCamelCase(colnames(balance))
   balance <- balance[balance$analysisId == analysisId & balance$outcomeId == outcomeId, ]
-  balance <- merge(balance, covariate[covariate$databaseId == databaseId, c("covariateId", "covariateAnalysisId", "covariateName")])
+  balance <- merge(balance, covariate[covariate$databaseId == databaseId & covariate$analysisId == analysisId, 
+                                      c("covariateId", "covariateAnalysisId", "covariateName")])
   balance <- balance[ c("covariateId",
                         "covariateName",
                         "covariateAnalysisId", 
@@ -304,10 +306,11 @@ getCovariateBalance <- function(connection,
   return(balance)
 }
 
-getPs <- function(connection, targetIds, comparatorIds, databaseId) {
+getPs <- function(connection, targetIds, comparatorIds, analysisId, databaseId) {
   file <- sprintf("preference_score_dist_t%s_c%s_%s.rds", targetIds, comparatorIds, databaseId)
   ps <- readRDS(file.path(dataFolder, file))
   colnames(ps) <- SqlRender::snakeCaseToCamelCase(colnames(ps))
+  ps <- ps[ps$analysisId == analysisId, ]
   return(ps)
 }
 
@@ -353,4 +356,19 @@ getStudyPeriod <- function(connection, targetId, comparatorId, databaseId) {
   studyPeriod <- querySql(connection, sql)
   colnames(studyPeriod) <- SqlRender::snakeCaseToCamelCase(colnames(studyPeriod))
   return(studyPeriod)
+}
+
+getPropensityModel <- function(connection, targetId, comparatorId, analysisId, databaseId) {
+  model <- propensityModel[propensityModel$targetId == targetId &
+                             propensityModel$comparatorId == comparatorId &
+                             propensityModel$analysisId == analysisId &
+                             propensityModel$databaseId == databaseId, ]
+  covariateSubset <- covariate[covariate$databaseId == databaseId & covariate$analysisId == analysisId, 
+                               c("covariateId", "covariateName")]
+  covariateSubset <- rbind(covariateSubset, 
+                           data.frame(covariateId = 0,
+                                      covariateName = "Intercept"))
+  model <- merge(model, covariateSubset)
+  model <- model[, c("coefficient", "covariateId", "covariateName")]
+  return(model)
 }
