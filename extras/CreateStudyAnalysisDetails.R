@@ -1164,6 +1164,12 @@ createFeasibilityAnalysesDetails <- function(workFolder) {
                                                                       #prior = defaultPrior,
                                                                       interactionCovariateIds = 5998)
   
+  fitOutcomeModelArgsI6998 <- CohortMethod::createFitOutcomeModelArgs(useCovariates = FALSE,
+                                                                      modelType = "cox",
+                                                                      stratified = FALSE,
+                                                                      #prior = defaultPrior,
+                                                                      interactionCovariateIds = 6998)
+  
   cmAnalysis1998 <- CohortMethod::createCmAnalysis(analysisId = 1998,
                                                   description = paste0(description39,", interaction:female"),
                                                   getDbCohortMethodDataArgs = interactionDbCmDataArgs,
@@ -1199,10 +1205,17 @@ createFeasibilityAnalysesDetails <- function(workFolder) {
                                                    fitOutcomeModel = TRUE,
                                                    fitOutcomeModelArgs = fitOutcomeModelArgsI5998)
   
+  cmAnalysis6998 <- CohortMethod::createCmAnalysis(analysisId = 6998,
+                                                   description = paste0(description39,", interaction:gastric ulcer history within previous 1 year"),
+                                                   getDbCohortMethodDataArgs = interactionDbCmDataArgs,
+                                                   createStudyPopArgs = ITTBlankingOf365StudyPopArgs,
+                                                   fitOutcomeModel = TRUE,
+                                                   fitOutcomeModelArgs = fitOutcomeModelArgsI6998)
+  
   cmAnalysisFeasibilityList <- list(cmAnalysis991, cmAnalysis993, 
                                     cmAnalysis913, cmAnalysis915, 
                                     cmAnalysis937, cmAnalysis939,
-                                    cmAnalysis1998, cmAnalysis2998, cmAnalysis3998, cmAnalysis4998, cmAnalysis5998
+                                    cmAnalysis1998, cmAnalysis2998, cmAnalysis3998, cmAnalysis4998, cmAnalysis5998, cmAnalysis6998
   )
   
   CohortMethod::saveCmAnalysisList(cmAnalysisFeasibilityList, file.path(workFolder, "cmAnalysisFeasibilityList.json"))

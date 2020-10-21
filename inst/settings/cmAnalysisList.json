@@ -224,6 +224,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 1,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,
@@ -384,6 +385,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 100,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,
@@ -817,6 +819,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 1,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,
@@ -977,6 +980,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 100,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,
@@ -1524,6 +1528,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 1,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,
@@ -1684,6 +1689,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 1,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,
@@ -1844,6 +1850,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 100,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,
@@ -2004,6 +2011,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 100,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,
@@ -2493,6 +2501,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 1,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,
@@ -2665,6 +2674,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 1,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,
@@ -2837,6 +2847,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 1,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,
@@ -3009,6 +3020,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 1,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,
@@ -3181,6 +3193,7 @@
       "caliper": 0.2,
       "caliperScale": "standardized logit",
       "maxRatio": 1,
+      "allowReverseMatch": false,
       "attr_class": "args"
     },
     "matchOnPsAndCovariates": false,

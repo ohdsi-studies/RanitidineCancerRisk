@@ -1,10 +1,4 @@
 atlasId,atlasName,cohortId,name
-9992,Ranitidine user without gastric ulcer,9992,Ranitidine_user_without_gastric_ulcer
-9972762,Cimetidine user without gastric ulcer,9972762,Cimetidine_user_without_gastric_ulcer
-430090032,Lafutidine user without gastric ulcer,430090032,Lafutidine_user_without_gastric_ulcer
-9530762,Famotidine user without gastric ulcer,9530762,Famotidine_user_without_gastric_ulcer
-9506962,Nizatidine user without gastric ulcer,9506962,Nizatidine_user_without_gastric_ulcer
-190116852,Roxatidine user without gastric ulcer,190116852,Roxatidine_user_without_gastric_ulcer
 9991,Ranitidine user,9991,Ranitidine_user
 997276,Cimetidine user,997276,Cimetidine_user
 43009003,Lafutidine user,43009003,Lafutidine_user
@@ -33,4 +27,3 @@ atlasId,atlasName,cohortId,name
 20,Cancer mortality,20,Cancer_death
 21,Overall cancer except skin cancer,21,Cancer_except_skin
 9998,Other H2 blocker user,9998,Other_h2
-9999,Other H2 blocker user without gastric ulcer,9999,Other_h2_without_gastric_ulcer
