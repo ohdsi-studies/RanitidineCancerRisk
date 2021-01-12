@@ -167,7 +167,7 @@
 		},
 		"bit" : {
 			"Package" : "bit",
-			"Version" : "1.1-13",
+			"Version" : "4.0.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
