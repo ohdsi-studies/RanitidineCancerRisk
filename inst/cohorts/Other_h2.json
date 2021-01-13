@@ -284,6 +284,10 @@
           "EraLength": {
             "Value": 30,
             "Op": "gte"
+          },
+          "AgeAtStart": {
+            "Value": 19,
+            "Op": "gt"
           }
         }
       }
@@ -430,7 +434,7 @@
                 "Coeff": -1
               },
               "End": {
-                "Days": 30,
+                "Days": 0,
                 "Coeff": 1
               },
               "UseEventEnd": false

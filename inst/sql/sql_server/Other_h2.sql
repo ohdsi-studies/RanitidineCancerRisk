@@ -147,8 +147,9 @@ from
   FROM @cdm_database_schema.DRUG_ERA de
 where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 9)
 ) C
-
+JOIN @cdm_database_schema.PERSON P on C.person_id = P.person_id
 WHERE DATEDIFF(d,C.drug_era_start_date, C.drug_era_end_date) >= 30
+AND YEAR(C.drug_era_start_date) - P.year_of_birth > 19
 -- End Drug Era Criteria
 
   ) E
@@ -355,7 +356,7 @@ JOIN #Codesets codesets on ((de.drug_concept_id = codesets.concept_id and codese
 
 -- End Drug Exposure Criteria
 
-) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-30,P.START_DATE) AND A.START_DATE <= DATEADD(day,30,P.START_DATE)
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-30,P.START_DATE) AND A.START_DATE <= DATEADD(day,0,P.START_DATE)
 GROUP BY p.person_id, p.event_id
 HAVING COUNT(A.TARGET_CONCEPT_ID) = 0
 -- End Correlated Criteria

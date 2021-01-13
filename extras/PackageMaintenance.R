@@ -20,7 +20,7 @@ OhdsiRTools::checkUsagePackage("RanitidineCancerRisk")
 OhdsiRTools::updateCopyrightYearFolder()
 
 # Create manual -----------------------------------------------------------
-unlink("extras/SkeletonComparativeEffectStudy.pdf")
+unlink("extras/RanitidineCancerRisk.pdf")
 shell("R CMD Rd2pdf ./ --output=extras/RanitidineCancerRisk.pdf")
 
 # Create vignettes ---------------------------------------------------------
@@ -61,4 +61,4 @@ createTcosOfInterest(workFolder="inst/settings/",
                      negativeControlConceptIds=NULL)
 
 # Store environment in which the study was executed -----------------------
-OhdsiRTools::insertEnvironmentSnapshotInPackage("RanitidineCancerRisk")
+OhdsiRTools::createRenvLockFile("RanitidineCancerRisk")
