@@ -9,10 +9,10 @@ Cancer Risk between H2 blockers
 - Study lead: **Seng Chan You, Seung In Seo, Chan Hyuk Park**
 - Study lead forums tag: **[SCYou](https://forums.ohdsi.org/u/SCYou)**
 - Study start date: **January 31, 2020**
-- Study end date: 
+- Study end date:
 - Protocol: [Protocol](https://github.com/ohdsi-studies/RanitidineCancerRisk/blob/master/documents/)
-- Publications: 
-- Results explorer: 
+- Publications:
+- Results explorer:
 
 This study aims to compare the risk of cancer between H2 blockers
 
@@ -34,7 +34,8 @@ See [this video](https://youtu.be/K9_0s2Rchbo) for instructions on how to set up
 
 How to run
 ==========
-1. In `R`, use the following code to install the dependencies:
+1. We strongly recommend using `renv` to build project-specific R environment as guided [here](StudyPackageSetup.md)
+ 	 Otherwise, in `R`, use the following code to install the dependencies:
 
 	```r
 	install.packages("devtools")
@@ -49,106 +50,83 @@ How to run
 	```
 
 	If you experience problems on Windows where rJava can't find Java, one solution may be to add `args = "--no-multiarch"` to each `install_github` call, for example:
-	
+
 	```r
 	install_github("ohdsi/SqlRender", args = "--no-multiarch")
 	```
-	
+
 	Alternatively, ensure that you have installed both 32-bit and 64-bit JDK versions, as mentioned in the [video tutorial](https://youtu.be/K9_0s2Rchbo).
-	
+
 2. In 'R', use the following code to install the RanitidineCancerRisk package:
 
   ```r
 	install_github("ohdsi-studies/RanitidineCancerRisk", args = "--no-multiarch")
   ```
-	
-3. Once installed, please execute **Feasibility test** first by using following code. Then Send the file ```feasibility/export/FeasibilityResults<DatabaseId>.zip``` in the output folder to the study coordinator (SCYou, applegna@gmail.com)
+
+3. Once installed, please execute the following code. Then Send the file ```./export/Results_<DatabaseId>.zip``` in the output folder to the study coordinator (SCYou, applegna@gmail.com)
 
 	```r
 	library(RanitidineCancerRisk)
-	
+
 	# Optional: specify where the temporary files (used by the ff package) will be created:
 	options(fftempdir = "c:/FFtemp")
-	
+
 	# Maximum number of cores to be used:
 	maxCores <- parallel::detectCores()
-	
+
 	# Minimum cell count when exporting data:
 	minCellCount <- 5
-	
+
 	# The folder where the study intermediate and result files will be written:
 	outputFolder <- "c:/RanitidineCancerRisk"
-	
+
 	# Details for connecting to the server:
 	# See ?DatabaseConnector::createConnectionDetails for help
 	connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = "postgresql",
 									server = "some.server.com/ohdsi",
 									user = "joe",
 									password = "secret")
-	
+
 	# The name of the database schema where the CDM data can be found:
 	cdmDatabaseSchema <- "cdm_synpuf"
-	
+
 	# The name of the database schema and table where the study-specific cohorts will be instantiated:
 	cohortDatabaseSchema <- "scratch.dbo"
 	cohortTable <- "my_study_cohorts"
-	
+
 	# Some meta-information that will be used by the export function:
 	databaseId <- "Synpuf"
 	databaseName <- "Medicare Claims Synthetic Public Use Files (SynPUFs)"
 	databaseDescription <- "Medicare Claims Synthetic Public Use Files (SynPUFs) were created to allow interested parties to gain familiarity using Medicare claims data while protecting beneficiary privacy. These files are intended to promote development of software and applications that utilize files in this format, train researchers on the use and complexities of Centers for Medicare and Medicaid Services (CMS) claims, and support safe data mining innovations. The SynPUFs were created by combining randomized information from multiple unique beneficiaries and changing variable values. This randomization and combining of beneficiary information ensures privacy of health information."
-	
+
 	# For Oracle: define a schema that can be used to emulate temp tables:
 	oracleTempSchema <- NULL
-	
-	runFeasibility(connectionDetails = connectionDetails,
-            cdmDatabaseSchema = cdmDatabaseSchema,
-            cohortDatabaseSchema = cohortDatabaseSchema,
-            cohortTable = cohortTable,
-            oracleTempSchema = oracleTempSchema,
-            outputFolder = outputFolder,
-            databaseId = databaseId,
-            databaseName = databaseName,
-            databaseDescription = databaseDescription,
-            createCohorts = TRUE,
-            runFeasibility = TRUE,
-            runFeasibilityDiagnostics = TRUE,
-            feasibilityResults = TRUE,
-            maxCores = 4,
-            minCellCount= 5) 
-	```
 
-4. After sending the result from feasibility test and confirmation, please proceed to execute the study.
-
-	```r
 	execute(connectionDetails = connectionDetails,
-		cdmDatabaseSchema = cdmDatabaseSchema,
-		cohortDatabaseSchema = cohortDatabaseSchema,
-		cohortTable = cohortTable,
-		oracleTempSchema = oracleTempSchema,
-		outputFolder = outputFolder,
-		databaseId = databaseId
-		databaseName = databaseName,
-		databaseDescription = databaseDescription,
-		onTreatmentWithBlankingPeriod = TRUE,
-		createCohorts = TRUE,
-		synthesizePositiveControls = TRUE,
-		runAnalyses = TRUE,
-		runDiagnostics = TRUE,
-		packageResults = TRUE
-		maxCores = maxCores,
-		minCellCount = minCellCount)
+	        cdmDatabaseSchema = cdmDatabaseSchema,
+	        cohortDatabaseSchema = cohortDatabaseSchema,
+	        cohortTable = cohortTable,
+	        oracleTempSchema = oracleTempSchema,
+	        outputFolder = outputFolder,
+	        databaseId = databaseId,
+	        databaseName = databaseName,
+	        databaseDescription = databaseDescription,
+	        createCohorts = TRUE,
+	        synthesizePositiveControls = TRUE,
+	        runAnalyses = TRUE,
+	        packageResults = TRUE,
+	        maxCores = maxCores)
 	```
-	
-5. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator (SCYou, chandryou@ajou.ac.kr or applegna@gmail.com):
 
-6. To view the results, use the Shiny app:
+4. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator (SCYou, seng.chan.you@ohdsi.org or applegna@gmail.com):
+
+5. To view the results, use the Shiny app:
 
 	```r
 	prepareForEvidenceExplorer("Result<databaseId>.zip", "/shinyData")
 	launchEvidenceExplorer("/shinyData", blind = TRUE)
 	```
-  
+
   Note that you can save plots from within the Shiny app. It is possible to view results from more than one database by applying `prepareForEvidenceExplorer` to the Results file from each database, and using the same data folder. Set `blind = FALSE` if you wish to be unblinded to the final results.
 
 

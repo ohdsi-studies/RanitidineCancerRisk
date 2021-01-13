@@ -703,6 +703,16 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "3bc8405c637d988801ec5ea88372d0c2"
+    },
+    "RanitidineCancerRisk": {
+      "Package" : "RanitidineCancerRisk",
+      "Version" : "0.5",
+      "Source" : "GitHub",
+      "RemoteType" : "github",
+      "RemoteHost" : "api.github.com",
+      "RemoteRepo" : "RanitidineCancerRisk",
+      "RemoteUsername" : "ohdsi-studies",
+      "RemoteRef" : "v0.5"
     }
   }
 }
