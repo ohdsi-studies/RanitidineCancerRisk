@@ -34,7 +34,7 @@ See [this video](https://youtu.be/K9_0s2Rchbo) for instructions on how to set up
 
 How to run
 ==========
-1. We strongly recommend using `renv` to build project-specific R environment as guided [here](StudyPackageSetup.md)
+1. We strongly recommend using `renv` to build project-specific R environment as guided [here](StudyPackageSetup.md).
  	 Otherwise, in `R`, use the following code to install the dependencies:
 
 	```r
