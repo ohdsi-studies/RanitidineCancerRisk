@@ -45,8 +45,6 @@ DROP TABLE #cov_4;
 IF OBJECT_ID('tempdb..#cov_5', 'U') IS NOT NULL
 DROP TABLE #cov_5;
 
-IF OBJECT_ID('tempdb..#cov_6', 'U') IS NOT NULL
-DROP TABLE #cov_6;
 
 CREATE TABLE #Codesets (
   codeset_id int NOT NULL,
@@ -67,21 +65,7 @@ UNION  select c.concept_id
 ) I
 ) C;
 
-/*
---Concept set for Gastric ulcer
-INSERT INTO #Codesets (codeset_id, concept_id)
-SELECT 9991 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-(
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4265600)and invalid_reason is null
-UNION  select c.concept_id
-  from @vocabulary_database_schema.CONCEPT c
-  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4265600)
-  and c.invalid_reason is null
 
-) I
-) C;
-*/
 --1. female
 SELECT DISTINCT row_id,
 CAST(1000 + @analysis_id AS BIGINT) AS covariate_id,
@@ -175,26 +159,6 @@ FROM
   
 ) AS Y
 WHERE cumulative_amount > 1095;
-
---6. Gastric ulcer
-SELECT DISTINCT row_id,
-        CAST(6000 + @analysis_id AS BIGINT) AS covariate_id,
-        1 AS covariate_value
-INTO #cov_6
-FROM (
-	SELECT DISTINCT @row_id_field AS row_id
-	FROM @cohort_temp_table c
-	INNER JOIN @cdm_database_schema.condition_occurrence co
-		ON c.subject_id = co.person_id
-			AND co.condition_start_date <= DATEADD(DAY, -365, c.cohort_start_date)
-			AND co.condition_start_date >= DATEADD(DAY, 0, c.cohort_start_date)
-{@cohort_id != -1} ? {			AND c.cohort_definition_id = @cohort_id}
-			AND co.condition_concept_id IN (
-				SELECT descendant_concept_id
-				FROM @cdm_database_schema.concept_ancestor
-				WHERE ancestor_concept_id IN (4265600) /*concepts for gastric ulcer: 4265600*/
-				)
-	) tmp;
 
 TRUNCATE TABLE #codesets;
 
