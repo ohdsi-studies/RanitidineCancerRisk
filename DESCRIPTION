@@ -1,7 +1,7 @@
 Package: RanitidineCancerRisk
 Type: Package
 Title: A Package Skeleton for Comparative Effectiveness Studies
-Version: 0.0.1
+Version: 0.5
 Author: Seng Chan You [aut, cre]
 Maintainer: Seng Chan You <applegna@gmail.com>
 Description: A stucy package for Comparative Effectiveness Studies of Cancer risk between Ranitidine users and H2 blocker users
