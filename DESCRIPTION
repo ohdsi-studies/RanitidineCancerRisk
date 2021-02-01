@@ -1,12 +1,12 @@
 Package: RanitidineCancerRisk
 Type: Package
-Title: A Package Skeleton for Comparative Effectiveness Studies
+Title: A Package to compare the risks of cancer between H2 blockers
 Version: 0.5
 Author: Seng Chan You [aut, cre]
-Maintainer: Seng Chan You <applegna@gmail.com>
+Maintainer: Seng Chan You <seng.chan.you@ohdsi.org>
 Description: A stucy package for Comparative Effectiveness Studies of Cancer risk between Ranitidine users and H2 blocker users
 Depends:
-    R(>= 3.5.0),
+    R(>= 3.6.0),
     DatabaseConnector (>= 3.0.0)
 Imports:
     SqlRender (>= 1.6.8),
@@ -24,12 +24,16 @@ Imports:
     OhdsiSharing (>= 0.2.2),
 	ParallelLogger (>= 2.0.0),
 	survival,
-	plyr
+	plyr,
+	magrittr,
+    zip,
+    methods
 Suggests:
     knitr,
     rmarkdown,
     DT,
-    shiny
+    shiny,
+    testthat
 Remotes:
     ohdsi/FeatureExtraction,
     ohdsi/CohortMethod,
