@@ -118,9 +118,24 @@ How to run
 	        maxCores = maxCores)
 	```
 
-4. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator (SCYou, seng.chan.you@ohdsi.org or applegna@gmail.com):
+4. To upload the result file to the AWS S3 study repository, please contact to the study coordinator to get the key and secret code (SCYou, seng.chan.you@ohdsi.org or applegna@gmail.com). The execute the code below to send the result file named as ```export/Results<DatabaseId>.zip```:
 
-5. To view the results, use the Shiny app:
+	```r
+	install.packages("aws.s3")
+
+	file <- "your file name"
+	object <- basename(file)
+	aws.s3::put_object(file = file,
+			   object = object,
+			   bucket = "ohdsiranitidinecancerrisk",
+			   key= "",
+			   secret = "",
+			   region = "ap-northeast-2",
+			   check_region = F
+			   )
+	```
+
+6. To view the results, use the Shiny app:
 
 	```r
 	prepareForEvidenceExplorer("Result<databaseId>.zip", "/shinyData")
