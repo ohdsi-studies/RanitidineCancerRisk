@@ -41,3 +41,6 @@ vignettes/*.pdf
 
 # Results data
 inst/shiny/ResultsExplorer/data
+
+# Mac
+.DS_Store
