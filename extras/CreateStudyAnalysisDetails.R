@@ -15,7 +15,7 @@
 # limitations under the License.
 
 createAnalysesDetails <- function(workFolder) {
-  maxCohortSizeForFitting = 250000
+  maxCohortSizeForFitting = 50000
   covarSettings <- FeatureExtraction::createCovariateSettings(useDemographicsGender = TRUE,
                                               useDemographicsAge = TRUE, 
                                               useDemographicsAgeGroup = TRUE,

@@ -179,7 +179,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -341,7 +341,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -503,7 +503,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -778,7 +778,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -940,7 +940,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -1102,7 +1102,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -1492,7 +1492,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -1654,7 +1654,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -1816,7 +1816,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -1978,7 +1978,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -2140,7 +2140,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -2300,7 +2300,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -2471,7 +2471,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -2645,7 +2645,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -2819,7 +2819,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -2993,7 +2993,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
@@ -3167,7 +3167,7 @@
     },
     "createPs": true,
     "createPsArgs": {
-      "maxCohortSizeForFitting": 250000,
+      "maxCohortSizeForFitting": 50000,
       "errorOnHighCorrelation": true,
       "stopOnError": false,
       "prior": {
