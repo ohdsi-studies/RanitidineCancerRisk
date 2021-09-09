@@ -20,16 +20,22 @@
 #' This function generates tables and figures for the report on the study results.
 #'
 #' @param shinyFolder          A folder name containing shiny result. make sure to use forward slashes (/). D
-#' @param maExportFolder       A local folder where the meta-anlysis results will be written.
+#' @param maExportFolder       A local folder where the meta-analysis results will be written.
 #' @param maxCores             How many parallel cores should be used? If more cores are made available
 #'                             this can speed up the analyses.
+#' @param interactions
+#' @param positiveControlOutcome
+#' @param diagnostics
+#' @param databaseId                             
 #'
 #' @export
 doMetaAnalysis <- function(shinyFolder, 
                            maExportFolder, 
                            maxCores,
                            interactions,
-                           positiveControlOutcome = FALSE) {
+                           positiveControlOutcome = FALSE,
+                           diagnostics = NULL,
+                           databaseId = "Meta-analysis") {
   if (!file.exists(maExportFolder)) {
     dir.create(maExportFolder, recursive = TRUE)
   }
@@ -39,7 +45,9 @@ doMetaAnalysis <- function(shinyFolder,
                  maExportFolder = maExportFolder,
                  maxCores = maxCores,
                  interactions = FALSE,
-                 positiveControlOutcome = FALSE)
+                 positiveControlOutcome = FALSE,
+                 diagnostics = diagnostics,
+                 databaseId = databaseId)
   if(interactions){
     ParallelLogger::logInfo("Performing meta-analysis for interaction effects")
     doMaEffectType(exportFolders = exportFolders,
@@ -50,13 +58,13 @@ doMetaAnalysis <- function(shinyFolder,
   }
   
   ParallelLogger::logInfo("Creating database table")
-  database <- data.frame(database_id = "Meta-analysis",
+  database <- data.frame(database_id = databaseId,
                          database_name = "Random effects meta-analysis",
                          description = "Random effects meta-analysis using the DerSimonian-Laird estimator.",
                          is_meta_analysis = 1)
   fileName <- file.path(maExportFolder, "database.csv")
   write.csv(database, fileName, row.names = FALSE)
-  saveRDS(database, file.path(shinyFolder, "database_Meta-analysis.rds"))
+  saveRDS(database, file.path(shinyFolder, sprintf("database_%s.rds", databaseId)))
   
 }
 
@@ -69,13 +77,15 @@ doMetaAnalysis <- function(shinyFolder,
 #' @param maExportFolder       A local folder where the meta-anlysis results will be written.
 #' @param maxCores             How many parallel cores should be used? If more cores are made available
 #'                             this can speed up the analyses.
+#' @param databaseId           desginated databaseId (default = 'Meta-analysis')
 #'
 #' @export
 doAddtionalMetaAnalysis <- function(shinyFolder, 
                                     maExportFolder, 
                                     maxCores,
                                     interactions = F,
-                                    positiveControlOutcome = FALSE) {
+                                    positiveControlOutcome = FALSE, 
+                                    databaseId = "Meta-analysis") {
   if (!file.exists(maExportFolder)) {
     dir.create(maExportFolder, recursive = TRUE)
   }
@@ -96,7 +106,7 @@ doAddtionalMetaAnalysis <- function(shinyFolder,
   }
   
   ParallelLogger::logInfo("Creating database table")
-  database <- data.frame(database_id = "Meta-analysis",
+  database <- data.frame(database_id = databaseId,
                          database_name = "Random effects meta-analysis",
                          description = "Random effects meta-analysis using the DerSimonian-Laird estimator.",
                          is_meta_analysis = 1)
@@ -110,8 +120,14 @@ doMaEffectType <- function(shinyFolder,
                            maExportFolder,
                            maxCores,
                            interactions,
-                           positiveControlOutcome=FALSE) {
+                           positiveControlOutcome=FALSE,
+                           diagnostics = NULL, 
+                           databaseId = "Meta-analysis") {
   cohortMethodResultList <- list.files(shinyFolder, "^cohort_method_result.*.rds$", full.names = TRUE)
+  if(grep("Meta-analysis", cohortMethodResultList)){
+    ParallelLogger::logWarn(cohortMethodResultList[grep("Meta-analysis", cohortMethodResultList)]," is excluded from meta-analysis since it seems a result of meta-analysis")
+    cohortMethodResultList <- cohortMethodResultList[-grep("Meta-analysis", cohortMethodResultList)]
+  }
   loadShinyResults <- function(shinyFile){
     ParallelLogger::logInfo("Loading main results from ", shinyFile, " for meta-analysis")
     results<-readRDS(shinyFile)
@@ -173,16 +189,23 @@ doMaEffectType <- function(shinyFolder,
     return(results)
   }
   if (interactions) {
-    allResults <- lapply(exportFolders, loadInteractionResults)
+    allResults <- lapply(exportFolder, loadInteractionResults)
   } else {
     #allResults <- lapply(exportFolders, loadMainResults)
     allResults <- lapply(cohortMethodResultList,loadShinyResults)
   }
   allResults <- do.call(rbind, allResults)
+  if(!is.null(diagnostics)){
+    allResults <- unique(
+      dplyr::inner_join(allResults, diagnostics[,c("targetId","comparatorId","analysisId","databaseId")],
+                        by = c("targetId","comparatorId","analysisId","databaseId"))
+    )
+  }
+  
   groups <- split(allResults, paste(allResults$targetId, allResults$comparatorId, allResults$analysisId))
   rm(allResults)
   cluster <- ParallelLogger::makeCluster(min(maxCores, 10))
-  results <- ParallelLogger::clusterApply(cluster, groups, computeGroupMetaAnalysis, interactions = interactions)
+  results <- ParallelLogger::clusterApply(cluster, groups, computeGroupMetaAnalysis, interactions = interactions, databaseId = databaseId)
   ParallelLogger::stopCluster(cluster)
   # results <- plyr::compact(results)
   results <- do.call(rbind, results)
@@ -197,12 +220,12 @@ doMaEffectType <- function(shinyFolder,
     colnames(results) <- SqlRender::camelCaseToSnakeCase(colnames(results))
     fileName <-  file.path(maExportFolder, paste0("cm_interaction_result.csv"))
     write.csv(results, fileName, row.names = FALSE)
-    saveRDS(results, file.path(shinyFolder, "m_interaction_result_Meta-analysis.rds"))
+    saveRDS(results, file.path(shinyFolder, sprintf("m_interaction_result_%s.rds", databaseId)))
   } else {
     colnames(results) <- SqlRender::camelCaseToSnakeCase(colnames(results))
     fileName <-  file.path(maExportFolder, paste0("cohort_method_result.csv"))
     write.csv(results, fileName, row.names = FALSE)
-    saveRDS(results, file.path(shinyFolder, "cohort_method_result_Meta-analysis.rds"))
+    saveRDS(results, file.path(shinyFolder, sprintf("cohort_method_result_%s.rds", databaseId)))
   }
 }
 
@@ -212,6 +235,11 @@ doAddMaEffectType <- function(shinyFolder,
                               interactions,
                               positiveControlOutcome=FALSE){
   cohortMethodResultList <- list.files(shinyFolder, "^cohort_method_result.*.rds$", full.names = TRUE)
+  if(grep("Meta-analysis", cohortMethodResultList)){
+    ParallelLogger::logWarn(cohortMethodResultList[grep("Meta-analysis", cohortMethodResultList)]," is excluded from meta-analysis since it seems a result of meta-analysis")
+    cohortMethodResultList <- cohortMethodResultList[-grep("Meta-analysis", cohortMethodResultList)]
+  }
+  
   loadShinyResults <- function(shinyFile){
     ParallelLogger::logInfo("Loading main results from ", shinyFile, " for meta-analysis")
     results<-readRDS(shinyFile)
@@ -287,7 +315,7 @@ doAddMaEffectType <- function(shinyFolder,
   #saveRDS(results, file.path(shinyFolder, "cohort_method_result_Meta-analysis.rds"))
 }
 
-computeGroupMetaAnalysis <- function(group, interactions) {
+computeGroupMetaAnalysis <- function(group, interactions, databaseId = "Meta-analysis") {
   # group <- groups[[1]]
   if (nrow(group) == 0) {
     return(NULL)
@@ -297,7 +325,7 @@ computeGroupMetaAnalysis <- function(group, interactions) {
   comparatorId <- group$comparatorId[1]
   ParallelLogger::logTrace("Performing meta-analysis for target ", targetId, ", comparator ", comparatorId, ", analysis ", analysisId)
   outcomeGroups <- split(group, group$outcomeId)
-  outcomeGroupResults <- lapply(outcomeGroups, computeSingleMetaAnalysis)
+  outcomeGroupResults <- lapply(outcomeGroups, computeSingleMetaAnalysis,databaseId)
   groupResults <- do.call(rbind, outcomeGroupResults)
   ncs <- groupResults[groupResults$trueEffectSize == 1, ]
   validNcs <- ncs[!is.na(ncs$seLogRr), ]
@@ -374,7 +402,8 @@ sumMinCellCount <- function(counts) {
   return(total)
 }
 
-computeSingleMetaAnalysis <- function(outcomeGroup) {
+computeSingleMetaAnalysis <- function(outcomeGroup,
+                                      databaseId = "Meta-analysis") {
   # outcomeGroup <- outcomeGroups[[1]]
   maRow <- outcomeGroup[1, ]
   outcomeGroup <- outcomeGroup[!is.na(outcomeGroup$seLogRr), ]
@@ -416,11 +445,12 @@ computeSingleMetaAnalysis <- function(outcomeGroup) {
     maRow$logRr <- rnd$TE
     maRow$seLogRr <- rnd$seTE
   }
-  maRow$databaseId <- "Meta-analysis"
+  maRow$databaseId <- databaseId
   return(maRow)
 }
 
-computeSingleAddMetaAnalysis <- function(outcomeGroup) {
+computeSingleAddMetaAnalysis <- function(outcomeGroup,
+                                         databaseId = "Meta-analysis") {
   # outcomeGroup <- outcomeGroups[[1]]
   maRow <- outcomeGroup[1, ]
   outcomeGroup <- outcomeGroup[!is.na(outcomeGroup$seLogRr), ]
@@ -538,6 +568,6 @@ computeSingleAddMetaAnalysis <- function(outcomeGroup) {
     #     maRow$irdPvalFixed = NA
     # }
   }
-  maRow$databaseId <- "Meta-analysis"
+  maRow$databaseId <- databaseId
   return(maRow)
 }
