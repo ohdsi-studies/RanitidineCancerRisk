@@ -359,10 +359,10 @@ doMeta <- function(data,
                    comparatorName = "clopidogrel",
                    outcomeName = "GI bleeding",
                    calibration=F){
-  data <- data %>% filter(.data$targetId == .GlobalEnv$targetId,
-                          .data$comparatorId == .GlobalEnv$comparatorId,
-                          .data$outcomeId == .GlobalEnv$outcomeId,
-                          .data$analysisId == .GlobalEnv$analysisId)
+  data <- data %>% filter(.data$targetId == !!targetId,
+                          .data$comparatorId == !!comparatorId,
+                          .data$outcomeId == !!outcomeId,
+                          .data$analysisId == !!analysisId)
   databaseIds <- data$databaseId
   if(calibration){
     logRr = data$calibratedLogRr
@@ -410,7 +410,8 @@ doMeta <- function(data,
 
 forestPlotGenerator<-function(metaResult,
                               space = "             ",
-                              limited=F){
+                              limited = F,
+                              subgroup = F){
   meta=metaResult$meta
   targetName = metaResult$targetName
   comparatorName = metaResult$comparatorName
@@ -433,68 +434,107 @@ forestPlotGenerator<-function(metaResult,
     )
     leftLabs= c("Source", "Total","Event","Total","Event","HR","95% CI")
   }
+  if(!subgroup){
+    forestPlot<-meta::forest.meta(meta,
+                                  studlab=TRUE,
+                                  
+                                  #overall=TRUE,
+                                  #pooled.totals=meta$comb.random, 
+                                  pooled.total =TRUE,
+                                  pooled.events=TRUE,
+                                  leftcols = leftCols,
+                                  rightcols=F,
+                                  #col.study="black",
+                                  #col.square="gray",
+                                  #col.inside="white",
+                                  #col.diamond="gray",
+                                  #col.diamond.lines="black",
+                                  leftlabs = leftLabs,
+                                  lab.e = paste0(space,targetName),
+                                  lab.c = paste0(space,comparatorName),
+                                  lab.e.attach.to.col = c("n.e"),
+                                  lab.c.attach.to.col = c("n.c"),
+                                  # leftlabs = c("Event rate", "Event rate"#, "HR (95% CI)"
+                                  #              ),
+                                  # rightcols = c("w.random"),
+                                  fontsize=12,
+                                  comb.fixed = FALSE,
+                                  comb.random = TRUE,
+                                  text.random = "Overall",
+                                  col.diamond.random = "royalblue",
+                                  col.diamond.lines = "black",
+                                  #xlab = "Hazard Ratio (95% CI)",
+                                  
+                                  digits = 2,
+                                  digits.pval =3,
+                                  digits.I2 = 1,
+                                  just.studlab="left",
+                                  #just.addcols ="right",
+                                  just.addcols.left= "right",
+                                  #just.addcols.right= "right",
+                                  just = "center",
+                                  xlim = c(round(1/xLim,2),xLim),
+                                  plotwidth ="8cm",
+                                  #layout="JAMA",
+                                  spacing =1,
+                                  addrow.overall=TRUE,
+                                  print.I2 = TRUE,
+                                  # overall.hetstat = T,
+                                  # hetstat= F,
+                                  # print.I2=F,
+                                  print.pval.I2=F,
+                                  print.tau2 = F,
+                                  # print.Q	=F,
+                                  print.pval.Q = F,
+                                  # zero.pval = F,
+                                  # print.Rb  = F,
+                                  #smlab = "",
+                                  #sortvar=TE,
+                                  label.lef = sprintf("Favors\n%s",targetName),#capitalize(targetName)),
+                                  label.right = sprintf("Favors\n%s",comparatorName),#capitalize(comparatorName)),
+                                  scientific.pval = F,#meta::gs("scientific.pval"), 
+                                  big.mark =","#meta::gs("big.mark),
+                                  
+    )
+  }else{
+    forestPlot<-meta::forest.meta(meta,
+                                  studlab=TRUE,
+                                  pooled.total =TRUE,
+                                  pooled.events=TRUE,
+                                  leftcols = leftCols,
+                                  rightcols=F,
+                                  leftlabs = leftLabs,
+                                  lab.e = paste0(space,targetName),
+                                  lab.c = paste0(space,comparatorName),
+                                  lab.e.attach.to.col = c("n.e"),
+                                  lab.c.attach.to.col = c("n.c"),
+                                  fontsize=12,
+                                  comb.fixed = FALSE,
+                                  comb.random = TRUE,
+                                  text.random = "Overall",
+                                  col.diamond.random = "royalblue",
+                                  col.diamond.lines = "black",
+                                  digits = 2,
+                                  digits.pval =3,
+                                  digits.I2 = 1,
+                                  just.studlab="left",
+                                  just.addcols.left= "right",
+                                  just = "center",
+                                  xlim = c(round(1/xLim,2),xLim),
+                                  plotwidth ="8cm",
+                                  spacing =1,
+                                  addrow.overall=TRUE,
+                                  print.I2 = TRUE,
+                                  print.pval.I2=F,
+                                  print.tau2 = F,
+                                  print.pval.Q = F,
+                                  label.lef = sprintf("Favors\n%s",targetName),#capitalize(targetName)),
+                                  label.right = sprintf("Favors\n%s",comparatorName),#capitalize(comparatorName)),
+                                  scientific.pval = F,#meta::gs("scientific.pval"), 
+                                  big.mark =","#meta::gs("big.mark),
+    )
+  }
   
-  forestPlot<-meta::forest.meta(meta,
-                                studlab=TRUE,
-                                
-                                #overall=TRUE,
-                                #pooled.totals=meta$comb.random, 
-                                pooled.total =TRUE,
-                                pooled.events=TRUE,
-                                leftcols = leftCols,
-                                rightcols=F,
-                                #col.study="black",
-                                #col.square="gray",
-                                #col.inside="white",
-                                #col.diamond="gray",
-                                #col.diamond.lines="black",
-                                leftlabs = leftLabs,
-                                lab.e = paste0(space,targetName),
-                                lab.c = paste0(space,comparatorName),
-                                lab.e.attach.to.col = c("n.e"),
-                                lab.c.attach.to.col = c("n.c"),
-                                # leftlabs = c("Event rate", "Event rate"#, "HR (95% CI)"
-                                #              ),
-                                # rightcols = c("w.random"),
-                                fontsize=12,
-                                comb.fixed = FALSE,
-                                comb.random = TRUE,
-                                text.random = "Overall",
-                                col.diamond.random = "royalblue",
-                                col.diamond.lines = "black",
-                                #xlab = "Hazard Ratio (95% CI)",
-                                
-                                digits = 2,
-                                digits.pval =3,
-                                digits.I2 = 1,
-                                just.studlab="left",
-                                #just.addcols ="right",
-                                just.addcols.left= "right",
-                                #just.addcols.right= "right",
-                                just = "center",
-                                xlim = c(round(1/xLim,2),xLim),
-                                plotwidth ="8cm",
-                                #layout="JAMA",
-                                spacing =1,
-                                addrow.overall=TRUE,
-                                print.I2 = TRUE,
-                                # overall.hetstat = T,
-                                # hetstat= F,
-                                # print.I2=F,
-                                print.pval.I2=F,
-                                print.tau2 = F,
-                                # print.Q	=F,
-                                print.pval.Q = F,
-                                # zero.pval = F,
-                                # print.Rb  = F,
-                                #smlab = "",
-                                #sortvar=TE,
-                                label.lef = sprintf("Favors\n%s",targetName),#capitalize(targetName)),
-                                label.right = sprintf("Favors\n%s",comparatorName),#capitalize(comparatorName)),
-                                scientific.pval = F,#meta::gs("scientific.pval"), 
-                                big.mark =","#meta::gs("big.mark),
-                                
-  )
   
   
   
@@ -728,3 +768,173 @@ plotScatter <- function(controlResults,
   
   return(plot)
 }
+
+
+gridForest <- function(results, breaks = c(0.9,1,1.1,1.2), 
+                       outlierMoverLower= 0.03,outlierMoverUpper= 0.1,
+                       outlierMoverUse = T,
+                       xLimits=c(0.85,1.3),
+                       varX = "outcomeName",
+                       varY = "TAR",
+                       # cols = NULL,
+                       xLab = "Definition of the Outcomes",
+                       yLab = "Hazard Ratio (95% Confidence Interval)"){
+  #hrExpression<-expression("Hazard Ratio (95% Confidence Interval) \n Favor Clopidogrel     Favor Tiacgrelor")
+  hrExpression <- yLab
+  shapeValue = c(17,21)#shape for closed and open center
+  # if(is.null(cols)) cols = as.numeric(results$Adjustment)
+  if (min(as.numeric(results$Significance))==2) shapeValue = c(21,17)
+  if(outlierMoverUse){
+    resultPlot<-ggplot2::ggplot(data=results,
+                                aes(x = Adjustment,y = rr, ymin =  ci95Lb, ymax = ci95Ub, shape =  Significance))+
+      ggplot2::geom_pointrange(aes(col = Adjustment, shape=Significance), size = 0.6
+      )+
+      scale_shape_manual(values=shapeValue)+ #shape for closed and open center
+      geom_hline(yintercept=1, linetype="dotted")+
+      #ggplot2::geom_hline(aes(fill=Adjustment),yintercept =1, linetype=2)+
+      xlab(xLab)+ ylab(hrExpression)+
+      ggplot2::geom_errorbar(aes(ymin=ci95Lb, ymax=ci95Ub,col=Adjustment),width=0.2,cex=1) +
+      geom_segment(aes(x = Adjustment, xend = Adjustment, y = rr, yend = rr - ci95LbOut-outlierMoverLower,col=Adjustment),
+                   arrow = ggplot2::arrow(angle=45,
+                                          unit (0.3,"cm")),
+                   size=1, show.legend=FALSE, na.rm = T)+
+      geom_segment(aes(x = Adjustment, xend = Adjustment, y = rr, yend = rr - ci95UbOut+outlierMoverUpper,col=Adjustment),
+                   arrow = ggplot2::arrow(angle=45,
+                                          unit (0.3,"cm")),
+                   size=1, show.legend=FALSE, na.rm = T)+
+      ggplot2::facet_grid(as.formula(paste0(varX,"~",varY)))+
+      #facet_wrap(~matching,strip.position="left",nrow=9,scales = "free_y") +
+      ggplot2::theme(plot.title=element_text(size=18,face="bold"),
+                     axis.text.y=element_blank(),
+                     axis.ticks.y=element_blank(),
+                     axis.text.x=element_text(face="bold"),
+                     axis.title=element_text(size=18,face="bold"),
+                     strip.text.y = element_text(hjust=0,vjust = 1,angle=180,face="bold"),
+                     strip.text.x = element_blank()
+      )+
+      ggplot2::coord_flip(ylim = xLimits)+scale_y_continuous(trans='log10', breaks = breaks
+      )+
+      ggplot2::theme_bw()+
+      ggplot2::theme(axis.text.y=element_blank(),
+                     panel.grid.major.y = element_blank(),
+                     axis.ticks.y=element_blank())+
+      scale_x_discrete(limits=rev(levels(results$Adjustment))) +
+      scale_fill_brewer(palette = "Greens")
+  }else{
+    resultPlot<-ggplot2::ggplot(data=results,
+                                aes(x = Adjustment,y = rr, ymin =  ci95Lb, ymax = ci95Ub, shape =  Significance))+
+      ggplot2::geom_pointrange(aes(col=Adjustment, shape=Significance), size = 0.6
+      )+
+      scale_shape_manual(values=shapeValue)+ #shape for closed and open center
+      geom_hline(yintercept=1, linetype="dotted")+
+      #ggplot2::geom_hline(aes(fill=Adjustment),yintercept =1, linetype=2)+
+      xlab(xLab)+ ylab(hrExpression)+
+      ggplot2::geom_errorbar(aes(ymin=ci95Lb, ymax=ci95Ub,col=Adjustment),width=0.2,cex=1) +
+      
+      ggplot2::facet_grid(as.formula(paste0(varX,"~",varY)))+
+      #facet_wrap(~matching,strip.position="left",nrow=9,scales = "free_y") +
+      ggplot2::theme(plot.title=element_text(size=18,face="bold"),
+                     axis.text.y=element_blank(),
+                     axis.ticks.y=element_blank(),
+                     axis.text.x=element_text(face="bold"),
+                     axis.title=element_text(size=18,face="bold"),
+                     strip.text.y = element_text(hjust=0,vjust = 1,angle=180,face="bold"),
+                     strip.text.x = element_blank()
+      )+
+      ggplot2::coord_flip(ylim = xLimits)+scale_y_continuous(trans='log10', breaks = breaks
+      )+
+      ggplot2::theme_bw()+
+      ggplot2::theme(axis.text.y=element_blank(),
+                     panel.grid.major.y = element_blank(),
+                     axis.ticks.y=element_blank())+
+      scale_x_discrete(limits=rev(levels(results$Adjustment)))
+  }
+  
+  
+  return(resultPlot)
+}
+####loadShinyResults####
+loadShinyResults <- function(shinyFile){
+  ParallelLogger::logInfo("Loading main results from ", shinyFile, " for meta-analysis")
+  results<-readRDS(shinyFile)
+  colnames(results) <- SqlRender::snakeCaseToCamelCase(colnames(results))
+  colnames(results)[colnames(results) == "ci95lb"] <- "ci95Lb"
+  colnames(results)[colnames(results) == "ci95ub"] <- "ci95Ub"
+  
+  ncs <- readRDS(gsub("cohort_method_result","negative_control_outcome",shinyFile))
+  colnames(ncs) <- SqlRender::snakeCaseToCamelCase(colnames(ncs))
+  results$trueEffectSize <- NA
+  idx <- results$outcomeId %in% ncs$outcomeId
+  results$trueEffectSize[idx] <- 1
+  return(results)
+}
+
+
+###Calculation of aggregated balance (for only categorical values)
+aggregateCategoricalBalance <- function(data){
+  # reference: Dongsheng Yang and Jarrod E. Dalton. “A Unified Approach to Measuring the Effect Size between Two Groups Using SAS®,” SAS Global Forum 2012
+  beforeMatchingNumTreated <- sum(data$beforeMatchingMeanTreated*data$beforeTargetPop, na.rm = T)
+  beforeMatchingNumComparator  <- sum(data$beforeMatchingMeanComparator*data$beforeComparatorPop, na.rm = T)
+  afterMatchingNumTreated <- sum(data$afterMatchingMeanTreated*data$afterTargetPop, na.rm = T)
+  afterMatchingNumComparator  <- sum(data$afterMatchingMeanComparator*data$afterComparatorPop, na.rm = T)
+  
+  beforeMatchingMeanTreated <- sum(data$beforeMatchingMeanTreated*data$beforeTargetPop, na.rm = T)/data$beforeTargetPopAll[1]
+  beforeMatchingMeanComparator  <- sum(data$beforeMatchingMeanComparator*data$beforeComparatorPop, na.rm = T)/data$beforeComparatorPopAll[1]
+  afterMatchingMeanTreated <- sum(data$afterMatchingMeanTreated*data$afterTargetPop, na.rm = T)/data$afterTargetPopAll[1]
+  afterMatchingMeanComparator  <- sum(data$afterMatchingMeanComparator*data$afterComparatorPop, na.rm = T)/data$afterComparatorPopAll[1]
+  
+  # beforeMatchingMeanTreated <- sum(data$beforeMatchingMeanTreated*data$beforeTargetPop, na.rm = T)/sum(data$beforeTargetPop)
+  # beforeMatchingMeanComparator  <- sum(data$beforeMatchingMeanComparator*data$beforeComparatorPop, na.rm = T)/sum(data$beforeComparatorPop)
+  # afterMatchingMeanTreated <- sum(data$afterMatchingMeanTreated*data$afterTargetPop, na.rm = T)/sum(data$afterTargetPop)
+  # afterMatchingMeanComparator  <- sum(data$afterMatchingMeanComparator*data$afterComparatorPop, na.rm = T)/sum(data$afterComparatorPop)
+  
+  beforeMatchingStdDiff <- # aggregated sd was calculated as: (sum of sd of t and c)/2
+    (beforeMatchingMeanTreated - beforeMatchingMeanComparator) / 
+    sqrt((beforeMatchingMeanTreated*(1-beforeMatchingMeanTreated) + beforeMatchingMeanComparator*(1-beforeMatchingMeanComparator))/2) ##using average of squared sd to calculate SD
+  afterMatchingStdDiff <- # aggregated sd was calculated as: (sum of sd of t and c)/2
+    (afterMatchingMeanTreated - afterMatchingMeanComparator) / 
+    sqrt((afterMatchingMeanTreated*(1-afterMatchingMeanTreated) + afterMatchingMeanComparator*(1-afterMatchingMeanComparator))/2) ##using average of squared sd to calculate SD
+  
+  aggregatedReseult <- data.frame(
+    covariateId = unique(data$covariateId)[1],
+    covariateName = unique(data$covariateName)[1],
+    analysisId = unique(data$analysisId)[1],
+    beforeMatchingNumTreated = beforeMatchingNumTreated,
+    beforeMatchingMeanTreated = beforeMatchingMeanTreated,
+    beforeMatchingNumComparator = beforeMatchingNumComparator,
+    beforeMatchingMeanComparator = beforeMatchingMeanComparator,
+    beforeMatchingStdDiff = beforeMatchingStdDiff,
+    afterMatchingNumTreated = afterMatchingNumTreated, 
+    afterMatchingMeanTreated = afterMatchingMeanTreated,
+    afterMatchingNumComparator = afterMatchingNumComparator,
+    afterMatchingMeanComparator = afterMatchingMeanComparator,
+    afterMatchingStdDiff = afterMatchingStdDiff,
+    absBeforeMatchingStdDiff = abs(beforeMatchingStdDiff),
+    absAfterMatchingStdDiff = abs(afterMatchingStdDiff)
+  )
+  return(aggregatedReseult)
+}
+# beforeMatchingTotalPop <- sum(aggBals$beforeTargetPop, aggBals$beforeComparatorPop)
+# beforeMatchingWithCovTarget <- sum(with(aggBals, beforeMatchingMeanTreated*beforeTargetPop))
+# beforeMatchingWithCovComparator <- sum(with(aggBals, beforeMatchingMeanComparator*beforeComparatorPop))
+# beforeMatchingWithCovTotal <- beforeMatchingWithCovTarget + beforeMatchingWithCovComparator
+# beforeMatchingWithoutCovTarget <- sum(aggBals$beforeTargetPop) - sum(with(aggBals, beforeMatchingMeanTreated*beforeTargetPop))
+# beforeMatchingWithoutCovComparator <- sum(aggBals$beforeComparatorPop)- sum(with(aggBals, beforeMatchingMeanComparator*beforeComparatorPop))
+# beforeMatchingWithoutCovTotal <- beforeMatchingWithoutCovTarget + beforeMatchingWithoutCovComparator
+# beforeMatchingTotalMean <- (beforeMatchingMeanTreated*sum(aggBals$beforeTargetPop)+beforeMatchingMeanComparator*sum(aggBals$beforeComparatorPop))/beforeMatchingTotalPop
+
+# afterMatchingTotalPop <- sum(aggBals$afterTargetPop, aggBals$afterComparatorPop)
+# afterMatchingWithCovTarget <- sum(with(aggBals, afterMatchingMeanTreated*afterTargetPop))
+# afterMatchingWithCovComparator <- sum(with(aggBals, afterMatchingMeanComparator*afterComparatorPop))
+# afterMatchingWithCovTotal <- afterMatchingWithCovTarget + afterMatchingWithCovComparator
+# afterMatchingWithoutCovTarget <- sum(aggBals$afterTargetPop) - sum(with(aggBals, afterMatchingMeanTreated*afterTargetPop))
+# afterMatchingWithoutCovComparator <- sum(aggBals$afterComparatorPop)- sum(with(aggBals, afterMatchingMeanComparator*afterComparatorPop))
+# afterMatchingWithoutCovTotal <- afterMatchingWithoutCovTarget + afterMatchingWithoutCovComparator
+# afterMatchingTotalMean <- (afterMatchingMeanTreated*sum(aggBals$afterTargetPop)+afterMatchingMeanComparator*sum(aggBals$afterComparatorPop))/afterMatchingTotalPop
+
+# beforeMatchingStdDiff <- (beforeMatchingMeanTreated - beforeMatchingMeanComparator) / 
+#   sqrt(( (beforeMatchingTotalMean^2)*beforeMatchingWithoutCovTotal+((1-beforeMatchingTotalMean)^2)*beforeMatchingWithCovTotal)/
+#          (beforeMatchingTotalPop)) ##using average of squared sd to calculate SD
+# afterMatchingStdDiff <- (afterMatchingMeanTreated - afterMatchingMeanComparator) / 
+#   sqrt(( (afterMatchingTotalMean^2)*afterMatchingWithoutCovTotal+((1-afterMatchingTotalMean)^2)*afterMatchingWithCovTotal)/
+#          (afterMatchingTotalPop)) ##using average of squared sd to calculate SD
